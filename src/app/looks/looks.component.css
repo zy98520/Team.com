@@ -1,0 +1,171 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+#mycarousel img{
+  margin: 0 auto;
+}
+#mycarousel{
+  margin-top: -20px;
+}
+.man,.woman{
+  font-size: 16px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 20px;
+}
+.woman a{
+
+  color: #ff4ba7;
+}
+.man a{
+  color: #010101;
+}
+.row a{
+  cursor: pointer;
+}
+.row{
+  margin-top: 20px;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.looks-man span:hover{
+
+  cursor: pointer;
+}
+.woman1{
+
+}
+@keyframes a {
+  from{
+    height:0px;
+    bottom:0px;
+    color:transparent;
+  }
+  to{
+    width: 100px;
+    height: 150px;
+    bottom:0px;
+    color: #010101;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px;
+  }
+}
+@keyframes a1 {
+  from{
+    font-weight: 600;
+    font-size: 20px;
+    width: 100px;
+    height: 150px;
+    bottom:0px;
+    color: #010101;
+    text-align: center;
+    line-height: 150px;
+  }
+  to{
+    height: 0px;
+    bottom:0px;
+    color:transparent;
+
+  }
+}
+@keyframes a2 {
+  from{
+    height:0px;
+    bottom:0px;
+    color:transparent;
+  }
+  to{
+    width: 150px;
+    height: 254px;
+    bottom:0px;
+    color: #010101;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px;
+  }
+}
+@keyframes a3 {
+  from{
+    font-weight: 600;
+    font-size: 20px;
+    width: 150px;
+    height: 254px;
+    bottom:0px;
+    color: #010101;
+    text-align: center;
+    line-height: 150px;
+  }
+  to{
+    height: 0px;
+    bottom:0px;
+    color:transparent;
+
+  }
+}
+.word{
+  line-height: 150px;
+
+  /*animation-fill-mode: forwards;*/
+  position: absolute;
+  color: transparent;
+}
+.hh{
+  background-color: rgba(255, 255, 255, 0.51);
+  animation: a 1s;
+  animation-fill-mode:forwards;
+  width: 100px;
+  text-align: center;
+
+}
+.hh1{
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: a1 1s;
+  animation-fill-mode:forwards;
+  width: 100px;
+  text-align: center;
+
+}
+.hh2{
+  background-color: rgba(255, 255, 255, 0.51);
+  animation: a2 1s;
+  animation-fill-mode:forwards;
+  width: 150px;
+  text-align: center;
+
+}
+.hh3{
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: a3 1s;
+  animation-fill-mode:forwards;
+  width: 150px;
+  text-align: center;
+
+}
+.foot{
+  width: 100%;
+  height: 283px;
+  background-color: black;
+  text-align: center;
+}
+.foot1{
+  width: 100%;
+  height: 75px;
+  background-color: black;
+  text-align: center;
+}
+.animated-2x {
+  animation-duration:.2s;
+  animation-fill-mode: both;
+
+}
+/*.animated .infinite {*/
+/*animation-iteration-count: infinite;*/
+/*}*/
