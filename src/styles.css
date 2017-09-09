@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.foot{
+  width: 100%;
+  height: 283px;
+  background-color: black;
+  text-align: center;
+}
+.foot1{
+  width: 100%;
+  height: 75px;
+  background-color: black;
+  text-align: center;
+}
+.animated-2x {
+  animation-duration:.2s;
+  animation-fill-mode: both;
+
+}
