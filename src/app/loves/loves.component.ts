@@ -4,12 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-loves',
   templateUrl: './loves.component.html',
   styleUrls: ['./loves.component.css']
+
 })
 export class LovesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+
   }
 
 }

@@ -9,6 +9,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LooksComponent } from './looks/looks.component';
 import { FishionWeekComponent } from './fishion-week/fishion-week.component';
 import { LovesComponent } from './loves/loves.component';
+import { GirlsComponent } from './looks/girls/girls.component';
+import { BoysComponent } from './looks/boys/boys.component';
+
 
 
 const routes: Routes = [
@@ -25,6 +28,14 @@ const routes: Routes = [
   {
     path: 'shares',
     component: SearchComponent
+  },
+  {
+    path: 'girls',
+    component: GirlsComponent
+  },
+  {
+    path: 'boys',
+    component: BoysComponent
   },
   {
     path: 'looks',

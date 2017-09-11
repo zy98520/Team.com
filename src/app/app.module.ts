@@ -17,6 +17,8 @@ import { SharesComponent } from './shares/shares.component';
 
 //导入路由
 import {AppRoutingModule} from './app-routing.module';
+import { GirlsComponent } from './looks/girls/girls.component';
+import { BoysComponent } from './looks/boys/boys.component';
 
 
 
@@ -30,7 +32,9 @@ import {AppRoutingModule} from './app-routing.module';
     PageNotFoundComponent,
     FishionWeekComponent,
     LovesComponent,
-    SharesComponent
+    SharesComponent,
+    GirlsComponent,
+    BoysComponent
   ],
   imports: [
     BrowserModule,
