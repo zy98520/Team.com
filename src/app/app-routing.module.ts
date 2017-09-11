@@ -7,11 +7,13 @@ import { IndexComponent } from './index/index.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LooksComponent } from './looks/looks.component';
-import { FishionWeekComponent } from './fishion-week/fishion-week.component';
 import { LovesComponent } from './loves/loves.component';
 import { GirlsComponent } from './looks/girls/girls.component';
 import { BoysComponent } from './looks/boys/boys.component';
-
+import { FashionWeekComponent } from './fashion-week/fashion-week.component';
+import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
+import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
+import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,22 @@ const routes: Routes = [
     path: 'loves',
   component: LovesComponent
 },
+  {
+    path: 'fashion-week',
+    component: FashionWeekComponent
+  },
+  {
+    path: 'fashion-ying',
+    component: FashionYingComponent
+  },
+  {
+    path: 'fashion-wu',
+    component: FashionWuComponent
+  },
+  {
+    path: 'fashion-ou',
+    component: FashionOuComponent
+  },
   {
     path: 'shares',
     component: SearchComponent
@@ -40,10 +58,6 @@ const routes: Routes = [
   {
     path: 'looks',
     component: LooksComponent
-  },
-  {
-    path: 'fishion-week',
-    component: FishionWeekComponent
   },
   {
     path: '',
