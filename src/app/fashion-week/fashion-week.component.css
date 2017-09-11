@@ -1,0 +1,251 @@
+body{margin: 0;
+  padding: 0 ;
+  display: block;
+  overflow-x: hidden;
+}
+
+.top{
+  width: 100%;
+  margin-top: -15px;
+  text-align: center;
+}
+.top img{
+  margin: 0 auto;
+}
+.show_title{
+  margin-top: 5px;
+  margin-bottom: 15px;
+
+}
+.p1_title{
+  margin:0 auto;
+  width: 500px;
+  height: 66px;
+}
+#mycarousel{text-align: center;
+}
+.carousel-inner ul{
+  list-style: none;
+  height: 700px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left:85px;
+}
+
+.carousel-inner img{
+  width: 226px;
+  height: 341px ;
+}
+.carousel-inner li{
+  float: left;
+  width: 230px;
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 10px;text-align: center;
+
+}
+.carousel-inner li:hover{
+  opacity: 0.7;
+}
+
+.btns {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.btns input{
+  border: 1px solid black;
+}
+.middle_div{
+  background-color: rgba(49, 49, 49, 0.97);
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  height: 160px;
+  line-height: 160px;
+}
+.middle_div .dao{
+  display: inline;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+}
+.show_review{
+  width: 600px;
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 500;
+  height: 100px;
+  margin-top: 40px;
+
+}
+.review{
+  display: inline;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+}
+
+@media screen and (max-width: 850px){
+  .middle_div{display: none}
+}
+
+.street_title img{margin: 0 auto }
+.street{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.street img{
+  width: 278px;
+  height: 410px;
+  margin-top: 10px;
+
+}
+.street img:hover{
+  opacity: 0.5;
+}
+.star{
+  height: 700px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.98);
+
+}
+.star .star_title img{
+  margin: 0 auto;
+
+}
+.star .star_show img{
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.7;
+  border:solid 6px rgba(0, 0, 0, 0.98);
+}
+.star .star_show img:hover{
+  border:solid 6px white;
+  box-sizing: border-box;
+  opacity: 1;
+}
+/*上滑动字幕*/
+.review_show{
+  width: 1468px;
+  height:620px;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 0;
+
+}
+#review1{
+  width:283px;
+  height: 351px;
+  background-image: url(" ../../assets/images/review7.jpg");
+  box-shadow: 4px 4px 4px 2px rgba(43, 43, 43, 0.92);
+  margin-left : 10px;
+  margin-top: -20px;
+  box-sizing: border-box;
+
+
+}
+
+#a{
+  width: 283px;
+  height: 351px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.46);
+  line-height: 25px;
+  margin-top: 0;
+  font-size: 16px;
+  color: #e8eafe;
+  position: absolute;
+  display: none;
+
+}
+
+#review2{
+  width: 490px;
+  height: 580px;
+  background-image: url("../../assets/images/reviews8.jpg");
+  margin-top: -350px;
+  margin-left: 320px;
+  left: 20px;
+  background-position: center;
+}
+
+#b{ width: 490px;
+  height: 100px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.92);
+  margin-top: 490px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+#review3{
+  width: 219px;
+  height: 317px;
+  background-image: url("../../assets/images/reviews2.jpg");
+  margin-top: -350px;
+  margin-left: 510px;
+  background-position: center;
+}
+
+#c{ width: 219px;
+  height: 317px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.51);
+  margin-top: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  display: none;
+  line-height: 27px;
+}
+#review4{
+  width: 230px;
+  height: 279px;
+  background-image: url("../../assets/images/zx.jpg");
+  margin-top: -318px;
+  margin-left: 750px;
+  background-position: center;
+}
+#review5{
+  width:313px;
+  height: 211px;
+  background-image: url(" ../../assets/images/reviews12.jpg");
+  margin-left: -320px;
+  margin-top: 100px;
+
+}
+#e{
+  width: 313px;
+  height: 211px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.46);
+  line-height: 25px;
+  font-size: 16px;
+  color: #e8eafe;
+  position: absolute;
+  display: none;
+}
+#review6{
+  width:375px;
+  height: 240px;
+  background-image: url(" ../../assets/images/reviews1.jpg");
+  margin-left: 510px;
+  margin-top: -250px;
+
+}
+#f{
+  width: 375px;
+  height: 240px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.46);
+  line-height: 25px;
+  font-size: 16px;
+  color: #e8eafe;
+  position: absolute;
+  display: none;
+}
+
