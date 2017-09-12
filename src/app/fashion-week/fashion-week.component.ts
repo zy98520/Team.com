@@ -1,4 +1,4 @@
-import {AfterContentInit, Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 declare var $: any;
 @Component({
@@ -30,11 +30,12 @@ export class FashionWeekComponent implements OnInit {
     this.show(this.newyok);
   }
   public ying(): void {
-    this.router.navigateByUrl('stars-ying');
+    this.router.navigateByUrl('fashion-ying');
   }
-  public wu(): void {this.router.navigateByUrl('stars-ying');
+  public wu(): void {
+    this.router.navigateByUrl('fashion-wu');
   }
   public ou(): void {
-    this.router.navigateByUrl('stars-ying');
+    this.router.navigateByUrl('fashion-ou');
   }
 }
