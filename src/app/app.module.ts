@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 
-//导入路由
+// 导入路由
 import {AppRoutingModule} from './app-routing.module';
 import { GirlsComponent } from './looks/girls/girls.component';
 import { BoysComponent } from './looks/boys/boys.component';
@@ -24,6 +24,7 @@ import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.compone
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
+import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ServicesComponent } from './services/services.component';
 
 
@@ -46,7 +47,8 @@ import { ServicesComponent } from './services/services.component';
     FashionOuComponent,
     ShoppingComponent,
     ShappingCarComponent,
-    ServicesComponent
+    ServicesComponent,
+    PersonalCenterComponent
   ],
   imports: [
     BrowserModule,

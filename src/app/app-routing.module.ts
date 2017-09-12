@@ -4,7 +4,7 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
-import { SearchComponent } from './search/search.component';
+import { SharesComponent} from './shares/shares.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LooksComponent } from './looks/looks.component';
 import { LovesComponent } from './loves/loves.component';
@@ -14,6 +14,9 @@ import { FashionWeekComponent } from './fashion-week/fashion-week.component';
 import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
 import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
+import { PersonalCenterComponent } from './personal-center/personal-center.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 
 
 const routes: Routes = [
@@ -45,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: 'shares',
-    component: SearchComponent
+    component: SharesComponent
   },
   {
     path: 'girls',
@@ -58,6 +61,18 @@ const routes: Routes = [
   {
     path: 'looks',
     component: LooksComponent
+  },
+  {
+    path: 'personal-center',
+    component: PersonalCenterComponent
+  },
+  {
+    path: 'shopping',
+    component: ShoppingComponent
+  },
+  {
+    path: 'shapping-car',
+    component: ShappingCarComponent
   },
   {
     path: '',

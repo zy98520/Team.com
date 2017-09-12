@@ -1,0 +1,98 @@
+* { margin: 0; padding: 0;}
+ul { list-style-type: none;}
+body {
+  overflow-x: hidden;
+}
+
+@-webkit-keyframes flipOutYtest {
+  from {
+    -webkit-transform: perspective(1400px);
+  }
+
+  40% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 60deg);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 180deg);
+    opacity: 0;
+  }
+}
+.test{
+  -webkit-animation: flipOutYtest 0.75s linear;
+  -webkit-animation-fill-mode: both;
+}
+@-webkit-keyframes flipInYtest {
+  from {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -180deg);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -90deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -60deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(1400px);
+    opacity: 1;
+  }
+}
+.test2{
+  -webkit-animation: flipInYtest 0.75s linear;
+  -webkit-animation-fill-mode: both;
+}
+
+.well{
+  width: 1200px;
+  min-height:400px;
+  margin-left:90px;
+  padding-left:130px;
+  height: auto;
+  overflow: hidden;
+}
+.well .well-item{
+  position: relative;
+  float: left;
+  width:25%;
+  min-height:400px;
+  margin: 2%; }
+.well .well-item img{
+  width: 100%;
+  min-height:400px;
+}
+.correct{
+  position: absolute;
+  width: 100%;
+}
+.opposite{
+  min-height: 400px;
+  width: 100%;
+}
+.opposite div{
+  min-height: 400px;
+  width: 100%;
+}
+.opposite-content{
+  display: table;
+  width: 100%;
+  min-height: 400px;
+  background-color: #D95E22;
+}
+.opposite-content-text{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 24px; }
