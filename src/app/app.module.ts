@@ -22,6 +22,9 @@ import { FashionWeekComponent } from './fashion-week/fashion-week.component';
 import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
 import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
+import { ServicesComponent } from './services/services.component';
 
 
 
@@ -40,7 +43,10 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
     FashionWeekComponent,
     FashionYingComponent,
     FashionWuComponent,
-    FashionOuComponent
+    FashionOuComponent,
+    ShoppingComponent,
+    ShappingCarComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
