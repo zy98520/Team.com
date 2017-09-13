@@ -1,7 +1,7 @@
 /**
  * Created by lzhan on 2017/9/3.
  */
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { SharesComponent} from './shares/shares.component';

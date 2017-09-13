@@ -15,7 +15,7 @@ this.http.post(this.url + '/login', user).subscribe(function (result) {
 function (error) {
   console.log(error.message);
 }
-)
+);
 }
   regist(user, callback) {
 

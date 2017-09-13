@@ -15,7 +15,7 @@ import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
 
-//导入路由
+
 import {AppRoutingModule} from './app-routing.module';
 import { GirlsComponent } from './looks/girls/girls.component';
 import { BoysComponent } from './looks/boys/boys.component';
@@ -26,7 +26,9 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { UsersService} from './services/users.service';
+
+import { GlobalPropertyService } from './services/global-property.service';
+
 
 
 
@@ -49,7 +51,6 @@ import { UsersService} from './services/users.service';
     PersonalCenterComponent,
     ShoppingComponent,
     ShappingCarComponent,
-    UsersService,
     PersonalCenterComponent,
     RegistComponent,
   ],
@@ -59,7 +60,7 @@ import { UsersService} from './services/users.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GlobalPropertyService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-declare var $: any;
+declare let $: any;
 @Component({
   selector: 'app-fashion-week',
   templateUrl: './fashion-week.component.html',
