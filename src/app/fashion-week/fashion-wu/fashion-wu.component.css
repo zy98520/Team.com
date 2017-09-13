@@ -156,8 +156,8 @@ margin-right: 20px;
   height: 800px;
   background-color:#D9C2B7 }
 .wuBig{
-  width: 1330px;
-  height:1982px;
+  width: 1400px;
+  height:1828px;
   background-image: url("../../../assets/wu-img/wu5.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -168,8 +168,8 @@ margin-right: 20px;
 .wGood3 ul{
   width: 200px;
   height: 480px;
-  top: 10px;
-  left: 430px;
+  top: 200px;
+  left: 480px;
 position: absolute;
 
 }
@@ -177,21 +177,27 @@ position: absolute;
 margin-top: 10px;
   list-style: none;
 }
+.wGood3 ul li img{
+  width: 110px;height: 120px;
+}
 
 .wGood4 ul{
-  width: 181px;
+  width: 151px;
   height: 480px;
-  top: 10px;
-  left: 0;
-  padding-left: 0;
+  top: 50px;
+  left: -80px;
   position: absolute;
 
 }
 .wGood4 ul li{
   margin-top: 10px;
   list-style: none;
-
 }
+.wGood4 ul li img{
+  width: 120px;
+  height: 141px;
+}
+
 
 .n03{
   width: 133px;
@@ -244,7 +250,6 @@ margin-top: 10px;
   width: 150px;
   height: 400px;
   margin-top: 10px;
-
   color:#FFFFFF;
 }
 .wu-good-all{
