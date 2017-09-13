@@ -26,8 +26,7 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { PersonalCenterComponent } from './personal-center/personal-center.component';
-import { ServicesComponent } from './services/services.component';
+import { UsersService} from './services/users.service';
 
 
 
@@ -47,11 +46,12 @@ import { ServicesComponent } from './services/services.component';
     FashionYingComponent,
     FashionWuComponent,
     FashionOuComponent,
-    PersonalCenterComponent
+    PersonalCenterComponent,
     ShoppingComponent,
     ShappingCarComponent,
-    ServicesComponent,
-    PersonalCenterComponent
+    UsersService,
+    PersonalCenterComponent,
+    RegistComponent,
   ],
   imports: [
     BrowserModule,
