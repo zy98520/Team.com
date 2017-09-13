@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
+import { RegistComponent } from './regist/regist.component';
 
 //导入路由
 import {AppRoutingModule} from './app-routing.module';
@@ -22,6 +23,10 @@ import { FashionWeekComponent } from './fashion-week/fashion-week.component';
 import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
 import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
+import { PersonalCenterComponent } from './personal-center/personal-center.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
+import { UsersService} from './services/users.service';
 
 
 
@@ -40,7 +45,13 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
     FashionWeekComponent,
     FashionYingComponent,
     FashionWuComponent,
-    FashionOuComponent
+    FashionOuComponent,
+    PersonalCenterComponent,
+    ShoppingComponent,
+    ShappingCarComponent,
+    UsersService,
+    PersonalCenterComponent,
+    RegistComponent,
   ],
   imports: [
     BrowserModule,

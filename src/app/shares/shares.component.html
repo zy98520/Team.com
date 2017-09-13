@@ -1,3 +1,176 @@
-<p>
-  shares works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <div class="well">
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares1.jpg" height="400" width="219"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  耶耶耶
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares2.jpg" height="400" width="221"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares3.jpg" height="400" width="221"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+      <div class="well">
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares4.jpg" height="400" width="219"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  请我吃烤鱼！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/phone6.jpg" height="400" width="200">
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares6.jpg" height="400" width="221"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+      <div class="well">
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares7.jpg" height="400" width="219"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  请我吃烤鱼！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares8.jpg" height="400" width="221"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well-item">
+          <div class="correct">
+            <img src="../../assets/shares_images/shares9.jpg" height="400" width="221"/>
+          </div>
+          <div class="opposite">
+            <div class="">
+              <div class="opposite-content">
+                <div class="opposite-content-text">
+                  吃吃
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<form #comForm="ngForm" class="form-horizontal">
+  <textarea name="com" id="comment" #com="ngModel" [(ngModel)]="_comment" class="col-xs-12 col-sm-6 col-sm-offset-3"
+            cols="30" rows="10"></textarea>
+  <input class="btn" id="btn1" (click)="sendshare(comForm)" type="button" value="发送">
+  <div class="col-xs-12" style="height:50px;background-color: rgba(128,128,128,0.12);line-height: 50px;">
+    <span>评论显示区</span>
+    <p style="text-align: right"><a (click)="refresh()" style="cursor: pointer">刷新</a></p></div>
+  <div class="col-lg-8 col-lg-offset-2" id="container">
+    <div id="ever" *ngFor="let comment of comments;let index=index;" class="col-xs-12 col-sm-10">
+      <div class="col-xs-3" style="background:rgba(255,192,203,0.42); height:50px;">
+        <span><i></i></span><span><p>{{comment.username}}</p><p>
+                            {{comment.sharedate}}</p></span></div>
+      <div class="col-xs-12 col-sm-10 " id="show"><p>{{comment.sharetext}}</p>
+        <p style="text-align: right"><span class="glyphicon glyphicon-thumbs-up" (click)="index1==index" id="praise">
+          </span><input type="button" id="num1" value={{sum}}>
+          &nbsp; &nbsp; <span class="glyphicon glyphicon-pencil" (click)="index1=index"></span></p></div>
+
+      <div *ngIf="index==index1" class="col-xs-12 col-sm-8">
+        <textarea name="backcom" id="backcom" #backcom="ngModel" [(ngModel)]="_backcomment"
+                  class="col-xs-12 col-sm-6 col-sm-offset-3" cols="80" rows="5"></textarea>
+        <input type="button" value="发送" (click)="backsend(index1,comForm)" class="btn"></div>
+      <!--<div *ngIf="index1=='false'">{{backcomment [0][0].username}}-->
+        <!--&lt;!&ndash;&nbsp;&nbsp;{{backcomment[0][1].backdate}}&ndash;&gt;-->
+      <!--</div>-->
+    </div>
+
+  </div>
+
+</form>
+
+
