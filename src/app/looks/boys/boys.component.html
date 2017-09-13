@@ -6,10 +6,10 @@
 
   <div class="col-md-12  navbar  newNav" >
     <ul class=" nav navbar-nav" id="fix">
-      <li class="active" (click)="show(sunny)"><a >阳光搭</a></li>
-      <li  (click)="show(youngs)"><a >文艺搭</a></li>
-      <li (click)="show(mature)"><a >成熟搭</a></li>
-      <li style="border: none;" (click)="show(chao)"><a >帅气搭</a></li>
+      <li class="active" (click)="show(sunny,0,8)"><a >阳光搭</a></li>
+      <li  (click)="show(youngs,9,8)"><a >文艺搭</a></li>
+      <li (click)="show(mature,16,8)"><a >成熟搭</a></li>
+      <li style="border: none;" (click)="show(chao,24,8)"><a >帅气搭</a></li>
     </ul>
   </div>
 
@@ -18,68 +18,10 @@
       <div  *ngFor="let item of url2" class="col-md-12 title1">{{item}}</div>
       <div *ngFor="let item of url3" class="col-md-10 col-md-push-2 title2">{{item}}</div>
       <ul class="col-md-12">
-        <li *ngFor="let item of url1"><a><img src="../../../assets/boys-img/{{item}}.jpg" alt=""></a>
+        <li *ngFor="let item of shows"><a (click)="godetail(item.goodsid)"><img src="../../../assets/boys-img/{{item.goodspic}}.jpg" alt=""></a>
         <div *ngFor="let item of url4" class="buy1"><a>{{item}}</a></div>
         </li>
       </ul>
-      <!--<ul>-->
-        <!--<li>-->
-         <!--<a><img src="../../../assets/boys-img/boys1.jpg"></a>-->
-          <!--<div class="name">男韩版宽松印花短袖撞色OV风...</div>-->
-          <!--<div class="price">￥69.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-        <!--</li>-->
-
-        <!--<li>-->
-          <!--<a><img src="../../../assets/boys-img/boys2.jpg"></a>-->
-          <!--<div class="name">男士新款短袖圆领日系落肩袖...</div>-->
-          <!--<div class="price">￥88.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-        <!--</li>-->
-        <!--<li><a><img src="../../../assets/boys-img/boys3.jpg"></a>-->
-          <!--<div class="name"> 撞色短袖个性印花圆领...</div>-->
-          <!--<div class="price">￥99.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-        <!--</li>-->
-        <!--<li><a><img src="../../../assets/boys-img/boys4.jpg"></a>-->
-          <!--<div class="name">追风少年印花短袖个性撞色...</div>-->
-          <!--<div class="price">￥99.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-        <!--</li>-->
-      <!--</ul>-->
-      <!--<div class="col-md-12 title1">春季+花样美男 阳光帅气迷死美眉</div>-->
-      <!--<ul>-->
-        <!--<li>-->
-          <!--<a><img src="../../../assets/boys-img/boys5.jpg"></a>-->
-          <!--<div class="name">文艺粗针麻花长袖针织开衫...</div>-->
-          <!--<div class="price">￥139.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-
-        <!--</li>-->
-
-        <!--<li><a><img src="../../../assets/boys-img/boys6.jpg"></a>-->
-          <!--<div class="name">小步格调春季款前后v领显瘦...</div>-->
-          <!--<div class="price">￥69.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-        <!--</li>-->
-        <!--<li><a><img src="../../../assets/boys-img/boys7.jpg"></a>-->
-          <!--<div class="name">夏装新款衬衣宽松百搭小碎花...</div>-->
-          <!--<div class="price">￥67.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a><img src="../../../assets/boys-img/boys8.jpg"></a>-->
-          <!--<div class="name">圆领兔绒毛衣女宽松套头...</div>-->
-          <!--<div class="price">￥89.00 </div>-->
-          <!--<div class="buy1"><a>立即购买</a></div>-->
-
-        <!--</li>-->
-      <!--</ul>-->
     </div>
   </div>
 </div>

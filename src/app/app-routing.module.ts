@@ -14,14 +14,28 @@ import { FashionWeekComponent } from './fashion-week/fashion-week.component';
 import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
 import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
+import { LoginComponent } from './login/login.component';
+import { RegistComponent } from './regist/regist.component';
+import { SharesComponent } from './shares/shares.component';
+
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 
 
 const routes: Routes = [
-
-
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'showboys',
+    component: BoysComponent
+  },
+  {
+    path: 'regist',
+    component: RegistComponent
+  },
   {
     path: 'index/:val',
     component: IndexComponent
@@ -30,6 +44,10 @@ const routes: Routes = [
     path: 'loves',
   component: LovesComponent
 },
+  {
+    path: 'comment',
+    component: SharesComponent
+  },
   {
     path: 'fashion-week',
     component: FashionWeekComponent
