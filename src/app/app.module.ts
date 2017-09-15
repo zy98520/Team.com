@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
-import { PayComponent } from './shopping/pay/pay.component';
+import { PayComponent } from './personal-center/pay/pay.component';
 
 
 import {AppRoutingModule} from './app-routing.module';
@@ -28,6 +28,7 @@ import { PersonalCenterComponent } from './personal-center/personal-center.compo
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { GlobalPropertyService } from './services/global-property.service';
+import { PaytoComponent } from './personal-center/payto/payto.component';
 
 
 
@@ -55,6 +56,7 @@ import { GlobalPropertyService } from './services/global-property.service';
     PersonalCenterComponent,
     RegistComponent,
     PayComponent,
+    PaytoComponent,
   ],
   imports: [
     BrowserModule,

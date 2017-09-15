@@ -11,6 +11,9 @@ tip:string='';
 
   ngOnInit() {
     $(function () {
+      $('#editor').on('click',function () {
+        $('#center_hidden_id').css({"display":"block"});
+      });
       $('#useAddress').on('click',function () {
         $('#center_hidden_id').css({"display":"block"});
       });
@@ -18,7 +21,6 @@ tip:string='';
       $('#cancel_address_id1').on('click',function () {
         $('#center_hidden_id').css({"display":"none"});
       });
-
 
       $('#postMail_id').on('blur', function () {
         if ($('#postMail_id').val() == '') {
@@ -63,20 +65,19 @@ tip:string='';
         }
         else {
           $('#consignee_tel_id').css('border', '1px solid grey');
-          $('.inform_tel').html('');
+          $('#confirm_tel_id').html('');
         }
       });
 
       $('#cancel_address_id').on('click',function () {
         if($('#postMail_id').val()!=''||$('#street_address_id').val()!=''||$('#consignee_name_id').val()!=''||$('#consignee_tel_id').val()!='')
         {
-          $('#confirm_postMail_id').html('请输入正确的邮政编码').css('color','red');
+          $('#center_hidden_id').css({"display":"none"});
         }
 
-        $('#postMail_id').on('blur', function () {
           if ($('#postMail_id').val() == '') {
             $('#postMail_id').css('border', '1px solid red');
-            $('#confirm_postMail_id').html('请输入正确的邮政编码').css('color', 'red');
+            $('#confirm_postMail_id').html('请输入邮政编码').css('color', 'red');
           }
           else if ((/^[1-9][0-9]{5}$/).test($('#postMail_id').val()) == false) {
             $('#confirm_postMail_id').html('请输入正确的邮政编码').css('color', 'red');
@@ -85,8 +86,8 @@ tip:string='';
             $('#confirm_postMail_id').html('');
             $('#postMail_id').css('border', '1px solid grey');
           }
-        });
-        $('#street_address_id').on('blur', function () {
+
+
           if ($('#street_address_id').val() == '') {
             $('#street_address_id').css('border', '1px solid red');
             $('.address_tip').css('color', 'red');
@@ -95,8 +96,8 @@ tip:string='';
             $('#street_address_id').css('border', '1px solid grey');
             $('.address_tip').css('color', 'grey');
           }
-        });
-        $('#consignee_name_id').on('blur', function () {
+
+
           if ($('#consignee_name_id').val() == '') {
             $('#consignee_name_id').css('border', '1px solid red');
             $('#confirm_name_id').html('请输入姓名').css('color', 'red');
@@ -105,8 +106,8 @@ tip:string='';
             $('#consignee_name_id').css('border', '1px solid grey');
             $('#confirm_name_id').html('');
           }
-        });
-        $('#consignee_tel_id').on('blur', function () {
+
+
           if ($('#consignee_tel_id').val() == '') {
             $('#consignee_tel_id').css('border', '1px solid red');
             $('#confirm_tel_id').html('电话号码不能为空').css('color', 'red');
@@ -116,9 +117,8 @@ tip:string='';
           }
           else {
             $('#consignee_tel_id').css('border', '1px solid grey');
-            $('.inform_tel').html('');
+            $('#confirm_tel_id').html('');
           }
-        });
 
 
       });
