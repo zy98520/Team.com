@@ -12,6 +12,9 @@ declare var $: any;
 export class SharesComponent implements OnInit {
 comments:any;
 backcomment:any;
+pan:string='';
+   index1:any;
+ sum= 0;
   constructor(
     private userSer: UsersService,
     private router: Router,
@@ -33,13 +36,22 @@ backcomment:any;
         $(this).find('.correct').children().addClass('test2');
         $(this).find('.opposite').children().addClass('test');
       });
+      $('.camera1').click(function () {
+        $('.row').addClass('test3');
+        $('.shares_content').addClass('test4').addClass('shares_content1');
+      });
+      $('.submit').click(function () {
+        $('.shares_content').removeClass('test4').removeClass('shares_content1');
+        $('.row').removeClass('test3');
+      });
+
+
     });
     let that = this;
     that.userSer.commentShow(function (result) {
         that.comments= result;
     })
   }
-
   sendshare(comment) {
     const body = {'com': comment .form.value.com, telephone: sessionStorage.getItem('userId')};
     let that = this;
@@ -55,6 +67,8 @@ backcomment:any;
     else {
       alert('你还未登陆，即将跳转至登录页面');
       that.router.navigate(['/login']); }
+
+
   }
 
   refresh () {

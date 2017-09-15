@@ -1,0 +1,248 @@
+.con{
+  width:1200px;
+  height:1230px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:80px;
+  background-color: rgba(218, 218, 218, 0.59);
+}
+.xinghao{
+  color: red;
+}
+.province{
+  float: left;
+}
+.xinghao2{
+  color: red;
+  float: left;
+}
+#confirm_address_id{
+  height:30px;
+  margin-left:30px;
+  padding-top:20px;
+}
+.name_add{
+  width:300px;
+  height:200px;
+  background-color: #ffadc4;
+  margin-left:20px;
+  margin-top:15px;
+}
+#kuang{
+  width:1000px;
+  height:200px;
+}
+ul{
+  list-style: none;
+}
+.information{
+  width:300px;
+  height:200px;
+  background-color:#ffadc4;
+  float: left;
+}
+.name_add ul li{
+  margin-top:1px;
+  padding-top:12px;
+}
+#manage_address_id{
+  width:400px;
+  height:40px;
+  clear: both;
+}
+.manage_address ul li{
+  float: left;
+  margin-left:38px;
+  margin-top:5px;
+
+}
+.manage_address a{
+  text-decoration: none;
+  font-size:14px;
+  color: black;
+}
+
+.center_hidden{
+  width:1000px;
+  height:420px;
+  display: none;
+  margin-top:-30px;
+  /*background-color: #1eabff;*/
+  clear: both;
+}
+.centerHidden{
+  width:1000px;
+  height:350px;
+  /*display:none;*/
+}
+
+.main_address{
+  width:800px;
+  height:40px;
+  margin-top:40px;
+  margin-bottom:20px;
+}
+.main_address li{
+  float: left;
+  margin-left:39px;
+}
+.main_address li select{
+  width:100px;
+  height:30px;
+}
+
+.postMail{
+  height:60px;
+  width:600px;
+}
+.postMail li{
+  float: left;
+  width:100px;
+  height: 50px;
+}
+#confirm_postMail_id,#confirm_name_id,#confirm_tel_id{
+  margin-left:140px;
+  line-height:30px;
+  width:200px;
+  height:30px;
+}
+
+.xinghao{
+  color: #ff1611;
+}
+.com_put{
+  width:200px;
+  height:30px;
+}
+.com_put1{
+  width:400px;
+  height:70px;
+}
+
+.street_address{
+  height:80px;
+  width:600px;
+}
+.street_address li{
+  float: left;
+  width:100px;
+  height:40px;
+}
+.address_tip{
+  color:grey;
+  margin-left:150px;
+  margin-bottom: 20px;
+}
+
+.consignee_name{
+  height:40px;
+  width:600px;
+}
+.consignee_name li{
+  float: left;
+  width:100px;
+  height:40px;
+}
+
+.consignee_tel{
+  height:40px;
+  width:600px;
+}
+.consignee_tel li{
+  float: left;
+  width:100px;
+  height:40px;
+}
+
+.cancel_address{
+  height:40px;
+  width:600px;
+}
+.cancel_address li{
+  float: left;
+  width:100px;
+  height: 50px;
+}
+
+#cancel_address_id{
+  width:150px;
+  height:40px;
+  margin-left:100px;
+  margin-top:15px;
+  border:1px solid grey;
+  background-color: #FDFDFB;
+}
+#cancel_address_id,#cancel_address_id1:hover{
+  background-color:orange;
+  color: #FDFDFB;
+}
+#cancel_address_id1{
+  width:150px;
+  height:40px;
+  margin-left:40px;
+  background-color: #FDFDFB;
+  border:1px solid grey;
+}
+
+.pay_module{
+  width:1000px;
+  height:450px;
+  margin-top:40px;
+  border:1px solid black;
+  background-color: rgba(255, 221, 225, 0.55);
+}
+.pay_price{
+  width:998px;
+  height:60px;
+  font-size:22px;
+  text-align: center;
+  padding-top:18px;
+  padding-left:30px;
+  background-color: #FDFDFB;
+
+}
+.pay_ways{
+  width:954px;
+  height:60px;
+  margin-top:15px;
+  text-align: center;
+  margin-left:23px;
+  padding-top:20px;
+  background-color: rgba(220, 220, 220, 0.38);
+}
+.pay_ways li{
+  width:248px;
+  height:40px;
+  float: left;
+  margin-left:28px;
+  font-size:22px;
+}
+.QR_code li{
+  float: left;
+  margin-left:60px;
+  margin-top:20px;
+}
+.code_picture{
+  width:230px;
+  height:240px;
+}
+
+.confirm_final{
+  position:absolute;
+  width:120px;
+  height:35px;
+  border:none;
+  top:1210px;
+  left:462px;
+  color: rgba(9, 4, 4, 0.66);
+  background-color: rgba(255, 192, 203, 0.74);
+}
+
+
+
+
+
+
+
+
+

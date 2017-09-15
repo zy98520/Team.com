@@ -14,8 +14,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
+import { PayComponent } from './shopping/pay/pay.component';
 
-//导入路由
+
 import {AppRoutingModule} from './app-routing.module';
 import { GirlsComponent } from './looks/girls/girls.component';
 import { BoysComponent } from './looks/boys/boys.component';
@@ -26,6 +27,9 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
+
+
+
 
 
 import {GlobalPropertyService} from './services/global-property.service';
@@ -54,6 +58,7 @@ import { MyflowComponent } from './personal-center/myflow/myflow.component';
     ShappingCarComponent,
     PersonalCenterComponent,
     RegistComponent,
+    PayComponent,
     MyorderComponent,
     MyflowComponent,
   ],

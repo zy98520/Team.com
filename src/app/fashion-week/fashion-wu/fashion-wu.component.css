@@ -1,0 +1,259 @@
+.wu-div-lefInfo{
+  overflow: hidden;
+  border: none;
+  margin-right: 120px;
+  background-color: #C0B9AE
+}
+
+.txt-div{
+  position: absolute;
+  margin: 10px;
+  left: 570px;
+  width: 140px;
+  height: 800px;
+  background-color: #C0B9AE;
+  box-sizing: border-box;
+}
+.n01{
+  width: 133px;
+  height: 143px ;
+  background: #d9c291;
+  text-align: center;
+  line-height: 150px;
+
+  box-sizing: border-box;
+  border-bottom: 5px solid #fff;
+}
+.txt01{
+  text-align: center;
+  width: 133px;
+  height: 400px;
+  margin-top: 10px;
+  background-color: #C0B9AE;
+  color:#FFFFFF;
+}
+.txt01 h1{
+  display: block;
+  font-size: 5vw;
+
+  text-align: center;
+}
+.wu-div-rightInfo{
+  background: #d9c291;
+  border: none;
+  margin-left: 0;
+  margin-top: 60px;
+}
+.good1{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: -150px ;
+  left: 365px;
+}
+.good2{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top:-280px;
+  left:1120px;
+}
+@media screen and (max-width:992px ) {
+  .good1{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -380px ;
+    left: 140px;
+  }
+
+  .txt-div{
+    position: absolute;
+    margin: 10px;
+    left: 280px;
+    top: -10px;
+    width: 140px;
+    height: 800px;
+    background-color: #C0B9AE;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width:768px ){
+  .good1{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -880px ;
+    left: 0;
+  }
+  .good2{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top:-880px;
+    left:160px;
+    margin-left: 10px;
+  }
+  .txt-div{
+    position: absolute;
+    margin: 10px;
+    left: 380px;
+    top: -10px;
+    width: 140px;
+    height: 800px;
+    background-color: #C0B9AE;
+    box-sizing: border-box;
+  }
+  .txt01{
+    text-align: center;
+    font-size: 11px;
+    width: 133px;
+    height: 400px;
+    margin-top: 10px;
+    background-color: #C0B9AE;
+    color:#FFFFFF;
+  }
+}
+.n02{
+  width: 133px;
+  height: 143px ;
+  margin-left: 100px;
+  margin-top: 10px;
+  background: #ABBBCA;
+  line-height: 150px;}
+.tt{
+  height: 200px;
+}
+.txt02{
+  text-align: center;
+  width: 150px;
+  height: 400px;
+  margin-top: 10px;
+
+  color:#FFFFFF;
+}
+.wGood1 ul{
+margin-right: 20px;
+  padding-left: 20px;
+  margin-top: -320px;
+  position: absolute;
+}
+.wGood1 ul li{
+  margin-left: 360px;
+  list-style: none;
+
+}
+.wGood2 ul{
+  margin-right: 20px;
+  padding-left: 20px;
+}
+.wGood2 ul li{
+  float: left;
+  margin-left: 10px;
+  list-style: none;
+}
+.tt{
+  height: 800px;
+  background-color:#D9C2B7 }
+.wuBig{
+  width: 1400px;
+  height:1828px;
+  background-image: url("../../../assets/wu-img/wu5.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.wGood8{
+  margin-left: 750px;
+}
+.wGood3 ul{
+  width: 200px;
+  height: 480px;
+  top: 200px;
+  left: 480px;
+position: absolute;
+
+}
+.wGood3 ul li{
+margin-top: 10px;
+  list-style: none;
+}
+.wGood3 ul li img{
+  width: 110px;height: 120px;
+}
+
+.wGood4 ul{
+  width: 151px;
+  height: 480px;
+  top: 50px;
+  left: -80px;
+  position: absolute;
+
+}
+.wGood4 ul li{
+  margin-top: 10px;
+  list-style: none;
+}
+.wGood4 ul li img{
+  width: 120px;
+  height: 141px;
+}
+
+
+.n03{
+  width: 133px;
+  height: 133px ;
+  left: 830px;
+  margin-top: -100px;
+  background: #2576D1;
+  line-height: 133px;
+  text-align: center;
+  position: absolute;
+
+}
+
+.txt03{
+  border:solid 1px;
+  background-color: #A3B2C9;
+  text-align: center;
+  width: 350px;
+  height: 400px;
+
+  padding:140px 20px  140px  20px;
+  color:#FFFFFF;
+}
+/*.wuBig2{*/
+  /*width: 1400px;*/
+  /*height: 1848px;*/
+  /*position: relative;*/
+  /*min-width: 1200px;*/
+  /*background-image: url("../../../assets/wu-img/wu10.jpg");*/
+  /*background-attachment: fixed;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+/*}*/
+.good-head{
+  position: absolute;
+  top: 700px;
+  left: 380px;
+
+}
+.n04{
+  width: 133px;
+  height: 143px ;
+  margin-left: 100px;
+  margin-top: 10px;
+  background: #ABBBCA;
+  line-height: 150px;}
+
+.txt04{
+  text-align: center;
+  width: 150px;
+  height: 400px;
+  margin-top: 10px;
+  color:#FFFFFF;
+}
+.wu-good-all{
+  position: absolute;
+  top: 480px;
+  left:-250px;
+}

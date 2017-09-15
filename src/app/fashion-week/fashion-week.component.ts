@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-declare var $: any;
+declare let $: any;
 @Component({
   selector: 'app-fashion-week',
   templateUrl: './fashion-week.component.html',
@@ -32,8 +32,7 @@ export class FashionWeekComponent implements OnInit {
   public ying(): void {
     this.router.navigateByUrl('fashion-ying');
   }
-  public wu(): void {
-    this.router.navigateByUrl('fashion-wu');
+  public wu(): void {this.router.navigateByUrl('fashion-wu');
   }
   public ou(): void {
     this.router.navigateByUrl('fashion-ou');
