@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-fashion-wu',
   templateUrl: './fashion-wu.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FashionWuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  ying() {
+    this.router.navigate(['/fashion-ying']);
+  }
+  wu() {
+    this.router.navigate(['/fashion-wu']);
+  }
+  ou() {
+    this.router.navigate(['/fashion-ou']);
+  }
 }
