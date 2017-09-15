@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 declare var $ :any;
 @Component({
   selector: 'app-index',
@@ -6,7 +8,10 @@ declare var $ :any;
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  constructor() {}
+
+  constructor(
+    private router:Router,
+  ) {}
   ngOnInit() {
     $(function(){
       var c = 0
@@ -28,7 +33,7 @@ export class IndexComponent implements OnInit {
         time = setInterval(timer,3000);
       })
       //右单击
-      $('.fl_s .btn_right').click(function(){
+      $('.fl_s .btn_right').hover(function(){
         c++;
         c=(c==4)?0:c;
         //获得的序号
@@ -36,7 +41,7 @@ export class IndexComponent implements OnInit {
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       })
       //左单击
-      $('.fl_s .btn_left').click(function(){
+      $('.fl_s .btn_left').hover(function(){
         c--;
         c=(c==0)?0:c;
         //获得序号
@@ -44,7 +49,7 @@ export class IndexComponent implements OnInit {
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       })
       //点击圆点变换
-      $('.fl_s .dos .dor a').click(function(){
+      $('.fl_s .dos .dor a').hover(function(){
         //获得序号
         var n = $(this).index();
 
@@ -70,7 +75,7 @@ export class IndexComponent implements OnInit {
       })
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
     };
-    $("#lunbobox ul li").click(function() {
+    $("#lunbobox ul li").hover(function() {
       $(this).addClass("lito").siblings().removeClass("lito");
       $(this).css({
         "background": "#bababa",
@@ -155,6 +160,33 @@ export class IndexComponent implements OnInit {
     //     .css("display","block")
     // })
   }
+  public girls():void{
+    this.router.navigateByUrl("girls");
 
+  }
 
+  public boys():void{
+    this.router.navigateByUrl("boys");
+  }
+  public looks():void{
+    this.router.navigateByUrl("looks");
+  }
+  public loves():void{
+    this.router.navigateByUrl("loves");
+  }
+  public fashionweek():void{
+    this.router.navigateByUrl("fashion-week");
+  }
+  public fashionou():void{
+    this.router.navigateByUrl("fashion-ou");
+  }
+  public fashionwu():void{
+    this.router.navigateByUrl("fashion-wu");
+  }
+  public fashionying():void{
+    this.router.navigateByUrl("fashion-ying");
+  }
+  public shares():void{
+    this.router.navigateByUrl("shares");
+  }
 }
