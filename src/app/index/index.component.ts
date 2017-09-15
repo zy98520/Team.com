@@ -9,6 +9,100 @@ export class IndexComponent implements OnInit {
   constructor() {
   }
   ngOnInit() {
+    $(function(){
+      var c = 0
+      function timer(){
+        c++;
+        c=(c==4)?0:c;
+        //获得序号
+        $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+        $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+      }
+      var time = setInterval(timer,3000);
+      $('.fl_s').hover(function(){
+        //清除定时器//显示图片
+        clearInterval(time);
+        $('.ups').css({'display':'block'});
+      },function(){
+        //回调函数//恢复定时器//隐藏图片
+        $('.fl_s .ups').css({'display':'block'});
+        time = setInterval(timer,3000);
+      })
+      //右单击
+      $('.fl_s .btn_right').click(function(){
+        c++;
+        c=(c==4)?0:c;
+        //获得的序号
+        $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+        $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+      })
+      //左单击
+      $('.fl_s .btn_left').click(function(){
+        c--;
+        c=(c==0)?0:c;
+        //获得序号
+        $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+        $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+      })
+      //点击圆点变换
+      $('.fl_s .dos .dor a').click(function(){
+        //获得序号
+        var n = $(this).index();
+
+        $('.fl_s .tu img').eq(n).stop().show().siblings().hide();
+
+        $('.fl_s .dos .dor a').eq(n).stop().addClass('dors').siblings().removeClass('dors');
+      })
+    })
+    var t;
+    var index = 0;
+    t = setInterval(play, 3000)
+    function play() {
+      index++;
+      if (index > 4) {
+        index = 0
+      }
+      $("#lunbobox ul li").eq(index).css({
+        "background": "#999",
+        "border": "1px solid #ffffff"
+      }).siblings().css({
+        "background": "#000000",
+        "border": ""
+      })
+      $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+    };
+    $("#lunbobox ul li").click(function() {
+      $(this).addClass("lito").siblings().removeClass("lito");
+      $(this).css({
+        "background": "#bababa",
+        "border": "1px solid #ffffff"
+      }).siblings().css({
+        "background": "#000000"
+      })
+      var index = $(this).index();
+      $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+    });
+    $("#lunbobox ul li,.lunbo a img").hover(
+      function() {
+        $('#toright,#toleft').show()
+        clearInterval(t);
+      },
+      function() {
+        t = setInterval(play, 2000)
+        function play() {
+          index++;
+          if (index > 4) {
+            index = 0
+          }
+          $("#lunbobox ul li").eq(index).css({
+            "background": "#999",
+            "border": "1px solid #ffffff"
+          }).siblings().css({
+            "background": "#000000"
+          })
+          $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+        }
+      })
     var i = 0;
     var imgWidth = $("#show-area ul li").width();
     var clone = $("#show-area ul li").first().clone();
@@ -30,7 +124,6 @@ export class IndexComponent implements OnInit {
       }
       $("#show-area ul").stop().animate({left: -i * imgWidth}, 1000);
     }
-
     function Toright() {
       //同理，如果当前图片位置是第一张图片我再按一下右按钮那么我们也利用css的快速变换使它的位置来到最后一张图片的位置（size-1），并且让倒数第二张图片滑动进来
       i--;
@@ -58,5 +151,6 @@ export class IndexComponent implements OnInit {
       }
     })
   }
+
 
 }
