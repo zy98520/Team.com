@@ -1,3 +1,96 @@
+.head{
+  margin-top: -20px;
+  background-color: black;
+  overflow: hidden;
+}
+.fl_s{
+  width:1180px;
+  height:540px;
+  /*position:absolute;*/
+  /*float: right;*/
+  margin: 0 auto;
+}
+.tu{
+  width: 1180px;
+  height: 540px;
+}
+.tu img{
+  width:1180px;
+  height:540px;
+  display:none;
+  /*position:absolute;*/
+  /*top:0;*/
+  /*left:0;*/
+}
+.ups{
+  /*display: none;*/
+}
+.btn_left {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.51);
+  position: relative;
+  right: 545px;
+  top:-300px;
+  z-index: 3;
+  /*top: 200px;*/
+  cursor: pointer;
+  color: black;
+  line-height:44px;
+}
+.btn_right {
+  line-height:44px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.52);
+  position: relative;
+  top: -300px;
+  left: 545px;
+  color: black;
+
+
+  cursor: pointer;
+}
+.dos{
+  width: 440px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  left: 370px;
+  /*right: 350px;*/
+  /*bottom: 35px;*/
+}
+.dor{
+  width: 440px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+}
+.dor .doro{
+  height: 12px;
+  width: 12px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-right: 22px;
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+}
+.dor .dors{
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  margin-bottom: -4px;
+  position: relative;
+  top: -2px;
+  /*line-height:30px;*/
+  border: 3px solid #fff;
+  background: 0;
+}
 body{
   overflow: hidden;
 }
@@ -132,11 +225,23 @@ a{
   margin-top: 40px;
 }
 .look2-1{
-  margin-left:-11px;
+  /*margin-left:11px;*/
 }
 .look2-1 a{
-  margin-left:9px;
+  margin-left:-4px;
   display: inline-block;
+}
+.look2-2{
+  margin-left: 43px;
+}
+.look2-2 span{
+  display: inline-block;
+  position: relative;
+  top: -60px;
+  width: 356px;
+  height: 60px;
+  background: linear-gradient(60deg,white 60%, rgba(255, 255, 255, 0.44) 20%);
+
 }
 .look ul{
   margin-top: 40px;
@@ -152,17 +257,15 @@ a{
   margin-left: 103px;
   margin-top: 50px;
 }
-.look2-2{
-}
 .look3 {
   margin-top: 20px;
-  margin-left: 84px;
+  margin-left: 83px;
 }
 .look3 .left1 a{
   display: inline-block;
   width: 374px;
   height: 232px;
-  margin-left:15px;
+  margin-left:16px;
   float: left;
 }
 .look3 .left1 p{
@@ -179,6 +282,7 @@ a{
 .look3 .left1 p:hover{
   color: black;
   cursor: pointer;
+  background-color: white;
 }
 .look3 .w1{
   z-index: 3;
@@ -191,6 +295,45 @@ a{
 .look3 .left1 span{
   margin-top: 20px;
 }
+.middle_right{
+  margin-left: 63px;
+  margin-top: -70px;
+}
+#lunbobox {
+  width:355px;
+  height:554px;
+  position:relative;
+}
+.lunbo {
+  width:355px;
+  height:554px;
+}
+.lunbo img {
+  width:355px;
+  height:554px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+#lunbobox ul {
+  width:195px;
+  position:absolute;
+  bottom:10px;
+  right:0px;
+  z-index:5;
+}
+#lunbobox ul li {
+  cursor:pointer;
+  width:10px;
+  height:4px;
+  border:1px solid #cccccc;
+  float:left;
+  list-style:none;
+  background: #000000;
+  text-align:center;
+  margin:0px 5px 0px 0px;
+}
+
 .loves .head3 ul{
   margin-left:470px;
   list-style: none;
