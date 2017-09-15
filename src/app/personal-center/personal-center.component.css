@@ -1,34 +1,34 @@
-#header{ width:150px;
-  height:150px;
+#header{ width:70px;
+  height:70px;
   position: relative;
+  left:531px;
   background-color: grey;
-  border:1px solid red;
-  border-radius: 100px;
+  border-radius:40px;
 }
 #upload_file{
   z-index:2;
-  border-radius: 100px;
-  width:150px;
-  height:150px;
+  border-radius:40px;
+  width:70px;
+  height:70px;
   display: block;
   position: relative;
   opacity: 0;
   background-color: yellow;
 }
 #preview{
-  width:150px;
-  height:150px;
+  overflow:hidden;
+  width:70px;
+  height:70px;
   position: relative;
-  top:-150px;
+  top:-70px;
   background-color: grey;
-  border-radius: 100px;
-  border:1px solid red;
+  border-radius:40px;
 }
-#preview img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#preview1{
+  width:70px;
+  height:70px;
 }
+.imgclass{width:70px;height:70px;}
 .big{
   width:700px;
   height:250px;

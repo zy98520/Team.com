@@ -1,7 +1,7 @@
 /**
  * Created by lzhan on 2017/9/3.
  */
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { SharesComponent} from './shares/shares.component';
@@ -45,10 +45,6 @@ const routes: Routes = [
   component: LovesComponent
 },
   {
-    path: 'comment',
-    component: SharesComponent
-  },
-  {
     path: 'fashion-week',
     component: FashionWeekComponent
   },
@@ -85,7 +81,7 @@ const routes: Routes = [
     component: PersonalCenterComponent
   },
   {
-    path: 'shopping',
+    path: 'shopping/:id',
     component: ShoppingComponent
   },
   {

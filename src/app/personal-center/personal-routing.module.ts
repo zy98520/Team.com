@@ -4,6 +4,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { PersonalCenterComponent } from './personal-center.component';
+import { ShappingCarComponent } from '../shopping/shapping-car/shapping-car.component';
 const routes: Routes = [
 
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
       {
         path: 'upload',
         component: PersonalCenterComponent,
+      },
+      {
+        path: 'shapping-car',
+        component: ShappingCarComponent,
       },
       {
         path: 'getUserIcon',

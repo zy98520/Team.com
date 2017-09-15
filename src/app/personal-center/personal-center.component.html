@@ -1,18 +1,10 @@
-<div class="container-fluid">
-  <form class="form-horizontal" id="upload_form">
-    <input type="file" id="upload_file"  name="user_icon">
-    <div id="preview" ></div>
-  </form>
-</div>
 
-<div class="container">
+<div class="container" id="con">
   <div class="row">
     <div class="col-md-12 col-lg-12">
       <div class="big">
         <div class="first">
-          <p id="phone">
-            <img src="../../assets/personal_images/1439880982560.jpg" height="75" width="75">
-          </p>
+          <div id="preview1"></div>
           <p id="suki">Wendy Suki<br>Web Designer</p>
         </div>
         <div class="first">
@@ -44,9 +36,15 @@
     <div class="col-md-12 col-lg-12">
     <h2 class="center">About Me</h2>
     <p class="line">_____</p>
-    <p class="picture1">
-      <img src="../../assets/personal_images/picture.jpg" height="60" width="60" class="picture">
-    </p>
+      <div class="container-fluid">
+      </div>
+<div id="header">
+      <form class="form-horizontal" id="upload_form">
+        <input type="file" id="upload_file"  name="user_icon">
+    <div id="preview">
+    </div>
+      </form>
+</div>
   </div>
     <div class="col-md-12 col-lg-12">
       <div class="icon">
@@ -92,9 +90,9 @@
         <h5 class="icon_first_introduce">
           &nbsp;&nbsp;&nbsp;&nbsp;评价
         </h5>
-        <h5 class="icon_first_introduce">
+        <a routerLink="/shapping-car" routerLinkActive="active"><h5 class="icon_first_introduce">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;购物车
-        </h5>
+        </h5></a>
         <h5 class="icon_first_introduce">我的物流
         </h5>
       </div>

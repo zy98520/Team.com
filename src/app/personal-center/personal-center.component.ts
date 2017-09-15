@@ -10,7 +10,7 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
-
+mes: any ;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
@@ -19,11 +19,11 @@ export class PersonalCenterComponent implements OnInit {
     const that = this;
     $(function () {
       $('#upload_file').change(function (e) {
-        that.checkin();
         const file = e.target.files[0];
         preview(file);
         that.upload();
       });
+      that.showicon();
       function preview(file) {
         const img = new Image();
         img.src = URL.createObjectURL(file);
@@ -31,31 +31,30 @@ export class PersonalCenterComponent implements OnInit {
         const $img = $(img);
         img.onload = function () {
           URL.revokeObjectURL(url);
+          $img.addclass('imgclass');
           $('#preview').empty().append($img);
+          $('#preview1').empty().append($img);
         }
       }
     })
   }
-  checkin(){
-    if(sessionStorage.getItem('userId')){
-      const body ={ "telephone": sessionStorage.getItem('userId')};
-      this.personSer.getUserIcon (body, function (result) {
-        sessionStorage.setItem('icon', result[0].icon);
-        $('#preview').append(`<img src='../../public/uploads/${result[0].icon}'>`);
-      })
-    }
-    else { alert('你还未登陆，即将跳转至登录页面');
-      this.router.navigate(['/login']);}
+  showicon(){
+    const body ={ "telephone": sessionStorage.getItem('userId')};
+    this.personSer.getUserIcon (body, function (result) {
+      $('#preview').empty().append(`<img src="../../assets/icon/${result[0].icon}" width="70px" height="70px">`);
+      $('#preview1').empty().append(`<img src="../../assets/icon/${result[0].icon}"width="70px" height="70px">`);
+    })
   }
   upload() {
     const formdata = new FormData($('#upload_form')[0]);
     formdata.append("userId", sessionStorage.getItem('userId'));
     const that = this;
     that.personSer.upload (formdata, function (result) {
-      if (result.stateCode==1){
-        alert('上传成功');
-      }else {
+      if (result.stateCode==0){
         alert('上传失败');
+      }else {
+        alert('上传成功');
+        that.mes= result;
       }
     })
   }

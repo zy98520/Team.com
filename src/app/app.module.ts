@@ -26,8 +26,11 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { UsersService} from './services/users.service';
 
+
+import {GlobalPropertyService} from './services/global-property.service';
+import { MyorderComponent } from './personal-center/myorder/myorder.component';
+import { MyflowComponent } from './personal-center/myflow/myflow.component';
 
 
 @NgModule({
@@ -49,9 +52,10 @@ import { UsersService} from './services/users.service';
     PersonalCenterComponent,
     ShoppingComponent,
     ShappingCarComponent,
-    UsersService,
     PersonalCenterComponent,
     RegistComponent,
+    MyorderComponent,
+    MyflowComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,7 @@ import { UsersService} from './services/users.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GlobalPropertyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

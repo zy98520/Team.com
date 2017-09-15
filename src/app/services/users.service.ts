@@ -63,4 +63,32 @@ function (error) {
       }
     )
   }
+  showdetails (body, callback ) {
+    this.http.post(this.url + '/showdetails', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addshop (body, callback ) {
+    this.http.post(this.url + '/addshop', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addthum (body, callback ) {
+    this.http.post(this.url + '/addthum', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 }
+
