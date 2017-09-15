@@ -156,14 +156,18 @@ background-color: #898243}
   color:#FFFFFF;
 }
 
-.yingBig2{
+.ouBig2{
   background-color:#A1A1A9 ;
   width: 1448px;
   height:800px;
-  background-image: url("../../../assets/ying-img/ying10.jpg");
+  background-image: url("../../../assets/ou-img/top_pic.jpg");
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
+  position: relative;
+  min-width: 1200px;
+  overflow: hidden;
+  background-size: cover;
 
 }
 .small-txt{    position: absolute;
@@ -206,8 +210,32 @@ background-color: #898243}
   list-style: none;
   margin-top: 10px;
 }
-.wu-good-all{
+.ouShow{
   position: absolute;
   top: 490px;
   left:-250px;
 }
+.ouGood{
+  margin-top: 50px;
+}
+.btm-txt{
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 36px;
+  font-weight: 300}
+.btm{
+  max-width: 810px;
+  height: 400px;
+  margin: 0 auto;
+}
+.btm ul{
+  list-style: none;
+}
+.btm ul li{
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+}
+
+a:hover{cursor: pointer}

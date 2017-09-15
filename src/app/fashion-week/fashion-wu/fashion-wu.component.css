@@ -257,3 +257,24 @@ margin-top: 10px;
   top: 480px;
   left:-250px;
 }
+.btm-txt{
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 36px;
+  font-weight: 300}
+.btm{
+  max-width: 810px;
+  height: 400px;
+  margin: 0 auto;
+}
+.btm ul{
+  list-style: none;
+}
+.btm ul li{
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+}
+
+a:hover{cursor: pointer}

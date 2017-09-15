@@ -6,8 +6,7 @@ declare var $ :any;
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  constructor() {
-  }
+  constructor() {}
   ngOnInit() {
     $(function(){
       var c = 0
@@ -150,6 +149,11 @@ export class IndexComponent implements OnInit {
         }
       }
     })
+    // $(".hit1").on("mouseover",function(){
+    //
+    //   $(".share_txt1").css({position:"relative",top:"-200px",height:"0"}).animate({height:"-100px",top:"0px"},2000)
+    //     .css("display","block")
+    // })
   }
 
 
