@@ -1,3 +1,25 @@
 .body{
   overflow-x: hidden;
 }
+.navbar-header a{
+  color: #ababab;
+
+}
+#user_nav a{
+  color: #ababab;
+
+}
+.ng1{
+  color: #e0e0e0;
+  background-color: #000000;
+}
+.ng2{
+  background-color: rgba(226, 226, 226, 0.46);
+}
+.ng3 a{
+  color: #ababab;
+}
+.ng4 a{
+  color: #0b050e;
+  font-weight: 400;
+}
