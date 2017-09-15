@@ -19,7 +19,8 @@ import { RegistComponent } from './regist/regist.component';
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { PayComponent } from './shopping/pay/pay.component';
+import { PayComponent } from './personal-center/pay/pay.component';
+import { PaytoComponent } from './personal-center/payto/payto.component';
 
 
 const routes: Routes = [
@@ -94,6 +95,10 @@ const routes: Routes = [
   {
     path: 'pay',
     component: PayComponent
+  },
+  {
+    path: 'payto',
+    component: PaytoComponent
   },
   {
     path: '',

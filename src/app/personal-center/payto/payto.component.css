@@ -1,0 +1,158 @@
+
+ul{
+  list-style: none;
+}
+.container{
+  width:1350px;
+  height:820px;
+  margin-top:-18px;
+  background-color:#F2F2F2;
+}
+.row{
+  width:1130px;
+  height:820px;
+  background-color: rgb(255, 255, 255);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#comment_head{
+  width:1375px;
+  height:80px;
+  background-color:#F2F2F2;
+  margin-left:-124px;
+  border-bottom:1px solid rgba(176, 176, 176, 0.33);
+}
+#shine_id{
+  margin-left:109px;
+  width:550px;
+  line-height: 80px;
+  font-size: 24px;
+  float: left;
+}
+#slide_id{
+  float:left;
+}
+#comment_head li{
+  float: left;
+
+  color: #FDFDFB;
+}
+.slideCircle{
+  width:30px;
+  height:30px;
+  margin-top:25px;
+  text-align: center;
+  padding-top:5px;
+  border-radius:15px;
+  background-color: rgba(176, 176, 176, 0.5);
+}
+.slideLine{
+  width:140px;
+  height:5px;
+  margin-top:35px;
+  background-color: #ff1611;
+}
+
+
+#head_id{
+  width:1128px;
+  height:70px;
+  border-bottom:3px solid #F2F2F2;
+  margin-left:-14px;
+}
+.clothName{
+  margin-top:20px;
+  margin-bottom:10px;
+  margin-left:60px;
+
+}
+.cloth_time{
+  margin-left:60px;
+  font-weight:400;
+
+}
+#clothName_id{
+  font-size:16px;
+  font-weight: 600;
+}
+#center_id{
+  width:1000px;
+  height:60px;
+  line-height:60px;
+  border:1px solid rgba(218, 218, 218, 0.31);
+  margin-top:40px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.weixin_pay{
+  margin-right:760px;
+  font-size:16px;
+  margin-left:30px;
+}
+
+
+
+
+.pay_module{
+  width:1000px;
+  height:450px;
+  margin-top:40px;
+  position: relative;
+  border:2px solid rgba(176, 176, 176, 0.88);
+  margin-left:auto;
+  margin-right:auto;
+  /*background-color: rgba(255, 221, 225, 0.55);*/
+}
+.pay_price{
+  width:996px;
+  height:60px;
+  font-size:22px;
+  text-align: center;
+  padding-top:18px;
+  padding-left:30px;
+  background-color: #FDFDFB;
+
+}
+.pay_ways{
+  width:954px;
+  height:60px;
+  margin-top:15px;
+  text-align: center;
+  margin-left:23px;
+  padding-top:20px;
+  background-color: rgba(220, 220, 220, 0.38);
+}
+.pay_ways li{
+  width:248px;
+  height:40px;
+  float: left;
+  margin-left:28px;
+  font-size:22px;
+}
+.QR_code li{
+  float: left;
+  margin-left:60px;
+  margin-top:20px;
+}
+.poza{
+  border-right:1px solid rgba(169, 169, 169, 0);
+}
+.code_picture{
+  width:230px;
+  height:240px;
+}
+.confirm_final{
+  position:absolute;
+  width:102px;
+  height:25px;
+  border:none;
+  top:394px;
+  left:449px;
+  color: rgba(9, 4, 4, 0.66);
+  background-color: #F7F7F9;
+}
+.confirm_final:hover{
+  background-color: black;
+  color: #FDFDFB;
+}
