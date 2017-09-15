@@ -1,6 +1,31 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-lg-12">
+      <div id="comment_head">
+        <span id="shine_id">E-shine支付</span>
+        <span id="slide_id">
+          <ul>
+            <li class="slideCircle" id="slideCircle_id" >1
+              <p class="pur">购物车</p></li>
+            <li class="slideLine" id="slideLine_id"></li>
+            <li class="slideLine"></li>
+            <li class="slideCircle">2
+              <p class="pur">确认订单</p>
+            </li>
+            <li class="slideLine"></li>
+            <li class="slideLine"></li>
+            <li class="slideCircle">3
+              <p class="pur">支付</p>
+            </li>
+            <li class="slideLine"></li>
+            <li class="slideLine"></li>
+            <li>
+            <img  class="slideCircle1" src="../../../assets/shopping_images/pay_images/gouzi.png" height="48" width="48"/>
+              <p class="pur">&nbsp;&nbsp;&nbsp;&nbsp;完成</p>
+            </li>
+          </ul>
+        </span>
+      </div>
       <div class="top">
         <ul class="Line1">
           <li>
@@ -45,7 +70,7 @@
           </li>
           <li ><span class="sumPrice">总计￥:<span id="sumPrice_id">0</span></span></li>
           <li>
-            <input type="button"  id="pay_id" value="去付款 &nbsp;>">
+            <input type="button"  id="pay_id" (click)="gopay()" value="去付款 &nbsp;>">
           </li>
 
         </ul>
