@@ -38,8 +38,23 @@ h1{
   float: left;
   margin-left: 5px;
   list-style: none;
-
 }
+.oGood1 ul li p{
+ width: 116px;
+  height: 137px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-137px;
+ text-align: center;
+ padding-top: 50px;
+  color: white;
+  display: none;
+}
+.oGood1 ul li:hover p{
+  display: block;
+  cursor: pointer;
+}
+
 .yGood2{
   margin: 40px 10px 40px 30px;
 }
@@ -88,6 +103,23 @@ h1{
   width: 117px;
   height: 137px;
 }
+.oGood2 ul li p,.yGood3 ul li p,.yGood4 ul li p{
+  width: 117px;
+  height: 137px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-137px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+
+}
+.oGood2 ul li:hover p,.yGood3 ul li:hover p,.yGood4 ul li:hover p{
+  display: block;
+  cursor: pointer;
+}
+
 .ouBig{
   width: 1448px;
   height:840px;
@@ -128,6 +160,7 @@ background-color: #898243}
   width: 117px;
   height: 137px;
 }
+
 .text-div3{
   position: absolute;
   z-index: 3;
@@ -181,12 +214,12 @@ background-color: #898243}
 }
 .yGood4 ul li{
   list-style: none;
-
 }
 .yGood4 ul li img{
   width: 117px;
   height: 137px;
 }
+
 .n04{
   width: 133px;
   height: 143px ;
@@ -210,6 +243,7 @@ background-color: #898243}
   list-style: none;
   margin-top: 10px;
 }
+
 .ouShow{
   position: absolute;
   top: 490px;
