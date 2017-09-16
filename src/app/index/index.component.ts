@@ -17,7 +17,7 @@ export class IndexComponent implements OnInit {
       var c = 0
       function timer(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
@@ -35,7 +35,7 @@ export class IndexComponent implements OnInit {
       //右单击
       $('.fl_s .btn_right').click(function(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得的序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
