@@ -7,7 +7,9 @@ declare var $: any ;
 })
 export class ShoppingComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
   size_click(btn) {
     $('#Szhijiao').css({'display': 'block'});
     $('#Mzhijiao').css({'display': 'none'});

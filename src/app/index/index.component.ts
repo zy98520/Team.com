@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 declare var $ :any;
 @Component({
   selector: 'app-index',
@@ -6,13 +8,16 @@ declare var $ :any;
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  constructor() {}
+
+  constructor(
+    private router:Router,
+  ) {}
   ngOnInit() {
     $(function(){
       var c = 0
       function timer(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
@@ -30,7 +35,7 @@ export class IndexComponent implements OnInit {
       //右单击
       $('.fl_s .btn_right').click(function(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得的序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
@@ -44,7 +49,7 @@ export class IndexComponent implements OnInit {
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       })
       //点击圆点变换
-      $('.fl_s .dos .dor a').click(function(){
+      $('.fl_s .dos .dor a').hover(function(){
         //获得序号
         var n = $(this).index();
 
@@ -70,7 +75,7 @@ export class IndexComponent implements OnInit {
       })
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
     };
-    $("#lunbobox ul li").click(function() {
+    $("#lunbobox ul li").hover(function() {
       $(this).addClass("lito").siblings().removeClass("lito");
       $(this).css({
         "background": "#bababa",
@@ -142,6 +147,11 @@ export class IndexComponent implements OnInit {
       function type(){
         var typePanel = $("#aa");
         typePanel.html(word.substring(0,index++));
+        if(index==word.length-5)
+        {
+          $("#w").text('');
+          index=0;
+        }
         if(index % 3 == 0){
           typePanel.addClass("") ;
         }else if(index % 3 == 1){
@@ -180,6 +190,33 @@ export class IndexComponent implements OnInit {
 
     })
   }
+  public girls():void{
+    this.router.navigateByUrl("girls");
 
+  }
 
+  public boys():void{
+    this.router.navigateByUrl("boys");
+  }
+  public looks():void{
+    this.router.navigateByUrl("looks");
+  }
+  public loves():void{
+    this.router.navigateByUrl("loves");
+  }
+  public fashionweek():void{
+    this.router.navigateByUrl("fashion-week");
+  }
+  public fashionou():void{
+    this.router.navigateByUrl("fashion-ou");
+  }
+  public fashionwu():void{
+    this.router.navigateByUrl("fashion-wu");
+  }
+  public fashionying():void{
+    this.router.navigateByUrl("fashion-ying");
+  }
+  public shares():void{
+    this.router.navigateByUrl("shares");
+  }
 }

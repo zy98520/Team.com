@@ -5,6 +5,8 @@
       <img src="../../assets/index-img/c.jpg" alt="" />
       <img src="../../assets/index-img/a.gif" alt="" />
       <img src="../../assets/index-img/d.jpg" alt="" />
+      <img src="../../assets/index-img/e.jpg" alt="" />
+      <img src="../../assets/index-img/f.jpg" alt="" />
     </div>
     <div class="ups col-md-12">
       <a class="btn_left"><span class="glyphicon glyphicon-menu-left"></span></a>
@@ -12,6 +14,8 @@
     </div>
     <div class="dos">
       <div class="dor">
+        <a class="doro"></a>
+        <a class="doro"></a>
         <a class="doro"></a>
         <a class="doro"></a>
         <a class="doro"></a>
@@ -26,18 +30,17 @@
     <div id="wrapper" class="col-sm-12 col-md-6">
       <div id="show-area">
         <ul>
+          <li><a><img src="../../assets/index-img/focusf.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusa.jpg"></a></li>
-          <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusc.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusd.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focuse.jpg"></a></li>
-          <li><a><img src="../../assets/index-img/focusf.jpg"></a></li>
+          <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
           <!--<li><a><img src="../../assets/index-img/focusg.jpg"></a></li>-->
           <!--<li><a><img src="../../assets/index-img/focush.jpg"></a></li>-->
         </ul>
         <div id="button-left" title="下一张" ><img src="../../assets/index-img/right.png"></div>
         <div id="button-right" title="上一张" ><img src="../../assets/index-img/left.png"></div>
-        <div id="controler"></div><!--控制按钮,为了日后方便后台操作这里的控制按钮在js代码中控制添加-->
       </div>
     </div>
     <div class=" col-sm-12 col-md-6 hot">
@@ -53,9 +56,9 @@
 <div class="col-md-12 head2"><img src="../../assets/index-img/head2.jpg"></div>
 <div class="look col-md-12">
   <ul>
-    <li>女生穿搭</li>
-    <li><h3>穿搭</h3></li>
-    <li>男生穿搭</li>
+    <li (click)="girls()">女生穿搭</li>
+    <li (click)="looks()"><h3>穿搭</h3></li>
+    <li (click)="boys()">男生穿搭</li>
   </ul>
   <div class="look2 col-md-12">
    <div class="col-md-8 look2-1">
@@ -113,13 +116,13 @@
 <div class="loves col-md-12">
   <div class="head3">
   <ul>
-    <li>卫衣</li>
-    <li>毛衣</li>
-    <li>衬衫</li>
-    <li><h3 class="fatxt">情侣时光</h3></li>
-    <li>外套</li>
-    <li>牛仔裤</li>
-    <li>休闲裤</li>
+    <li (click)="loves()">卫衣</li>
+    <li (click)="loves()">毛衣</li>
+    <li (click)="loves()">衬衫</li>
+    <li (click)="loves()"><h3 class="fatxt">情侣时光</h3></li>
+    <li (click)="loves()">外套</li>
+    <li (click)="loves()">牛仔裤</li>
+    <li (click)="loves()">休闲裤</li>
   </ul>
   </div>
   <div class="col-md-12 love-img">
@@ -169,11 +172,11 @@
     <div class="fashion1">
       <div class="model_title">
         <ul>
-          <li>时装秀</li>
-          <li>赵丽颖</li>
-          <li><h2 class="fatxt">时尚圈</h2></li>
-          <li>吴亦凡</li>
-          <li>王鸥</li>
+          <li (click)="fashionweek()">时装秀</li>
+          <li (click)="fashionying()">赵丽颖</li>
+          <li (click)="fashionweek()"><h2 class="fatxt">时尚圈</h2></li>
+          <li (click)="fashionwu()">吴亦凡</li>
+          <li (click)="fashionou()">王鸥</li>
         </ul>
       </div>
       <ul class="fashionInfo1" >

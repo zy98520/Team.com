@@ -1,6 +1,6 @@
 .head{
   margin-top: -20px;
-  background-color: black;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .fl_s{
@@ -39,6 +39,12 @@
   color: black;
   line-height:44px;
 }
+.btn_left:hover{
+  background-color: white;
+}
+.btn_right:hover{
+  background-color: white;
+}
 .btn_right {
   line-height:44px;
   display: inline-block;
@@ -49,8 +55,6 @@
   top: -300px;
   left: 545px;
   color: black;
-
-
   cursor: pointer;
 }
 .dos{
@@ -59,8 +63,8 @@
   line-height: 17px;
   text-align: center;
   position: relative;
-  top: -30px;
-  left: 370px;
+  top: -75px;
+  left: 830px;
   /*right: 350px;*/
   /*bottom: 35px;*/
 }
@@ -71,25 +75,25 @@
   text-align: center;
 }
 .dor .doro{
-  height: 12px;
-  width: 12px;
-  background: #FFFFFF;
-  border-radius: 10px;
-  margin-right: 22px;
+  height: 4px;
+  width:30px;
+  background: rgba(255, 255, 255, 0.67);
+  /*border-radius: 10px;*/
+  margin-right: 5px;
   display: inline-block;
   cursor: pointer;
   list-style: none;
 }
 .dor .dors{
-  width: 14px;
-  height: 14px;
-  border-radius: 10px;
+  width: 30px;
+  height: 4px;
+  /*border-radius: 10px;*/
   margin-bottom: -4px;
   position: relative;
-  top: -2px;
+  top: -4px;
   /*line-height:30px;*/
-  border: 3px solid #fff;
-  background: 0;
+  /*border: 3px solid ;*/
+  background-color: #b99422;
 }
 body{
   overflow: hidden;
@@ -137,27 +141,6 @@ a{
 }
 #button-right:hover{
   cursor: pointer;
-}
-#controler{
-  height: 50px;
-  width:200px;
-  text-align:center;
-  position:absolute;
-  top:400px;
-  left:210px;
-  z-index:1;
-}
-#controler .f1{
-  height:20px;
-  width:20px;
-  background-color: black;
-
-  /*border-radius:100%;*/
-  /*background-color: #fff5ff;*/
-  float:left;
-  margin-right: 10px;
-  margin-left:1%;
-  opacity:0.9;/*透明度50%*/
 }
 #button-right{
   position: absolute;
@@ -224,9 +207,6 @@ a{
 .look2{
   margin-top: 40px;
 }
-.look2-1{
-  /*margin-left:11px;*/
-}
 .look2-1 a{
   margin-left:-4px;
   display: inline-block;
@@ -252,6 +232,10 @@ a{
   margin-left:120px;
   float: left;
   line-height: 30px;
+}
+.look li:hover{
+  cursor: pointer;
+  color: #b99422;
 }
 .look2{
   margin-left: 103px;
@@ -333,7 +317,6 @@ a{
   text-align:center;
   margin:0px 5px 0px 0px;
 }
-
 .loves .head3 ul{
   margin-left:470px;
   list-style: none;
@@ -342,9 +325,14 @@ a{
   /*margin-bottom: 100px;*/
 }
 .loves .head3 li{
+
   margin-left:20px;
   float: left;
   line-height: 30px;
+}
+.loves .head3 li:hover{
+  cursor: pointer;
+  color: #b99422;
 }
 .loves .love-img {
   margin-left: 100px;
@@ -434,6 +422,10 @@ pre{
   float: left;
   margin-left: 20px;
   line-height: 100px;
+}
+.fashion1 .model_title ul li:hover{
+  cursor: pointer;
+  color: #b99422;
 }
 .fashion1 .model_title ul li .fatxt{
   margin-top: 20px;

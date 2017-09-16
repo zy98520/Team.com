@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="body" style="width: 100%">
 <div class="logo2" style="text-align: center"><img src="../assets/looks-loves-img/logo2.png"></div>
-<nav class="navbar navbar-default navbar-inverse" *ngIf="!_hiddenNavs">
+  <a id="title1" class="col-md-12"></a>
+<nav id="fix1" class="navbar ng1" *ngIf="!_hiddenNavs">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -16,13 +17,14 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav " style="margin-left: 200px">
+      <ul class="nav navbar-nav ng3" style="margin-left: 200px">
         <li><a href="#" [routerLink]="['/index','我是默认值']" routerLinkActive="active">首页<span class="sr-only">(current)</span></a></li>
         <li><a href="#" routerLink="/looks" routerLinkActive="active">穿搭</a></li>
         <li><a href="#" routerLink="/loves" routerLinkActive="active">情侣时光 <span class="glyphicon glyphicon-heart"></span> </a></li>
         <li><a href="#" routerLink="/fashion-week" routerLinkActive="active">时尚</a></li>
         <li><a href="#" routerLink="/shares" routerLinkActive="active">分享</a></li>
         <li><a href="#" routerLink="/shopping" routerLinkActive="active">detail</a></li>
+        <li><a href="#" routerLink="/shapping-car" routerLinkActive="active">购物车</a></li>
         <li><a href="#" routerLink="/pay" routerLinkActive="active">付款</a></li>
         <li><a href="#" routerLink="/payto" routerLinkActive="active">付钱</a></li>
 
