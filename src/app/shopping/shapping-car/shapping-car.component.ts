@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 declare var $: any ;
 @Component({
   selector: 'app-shapping-car',
@@ -7,7 +8,9 @@ declare var $: any ;
 })
 export class ShappingCarComponent implements OnInit {
 
-  constructor() { }
+  constructor(  private router:Router,) {
+
+  }
 
   ngOnInit() {
     $(function () {
@@ -86,5 +89,10 @@ export class ShappingCarComponent implements OnInit {
       });
     });
   }
+
+  public gopay():void{
+      this.router.navigateByUrl("pay");
+  }
+
 
 }
