@@ -33,7 +33,7 @@ export class IndexComponent implements OnInit {
         time = setInterval(timer,3000);
       })
       //右单击
-      $('.fl_s .btn_right').hover(function(){
+      $('.fl_s .btn_right').click(function(){
         c++;
         c=(c==4)?0:c;
         //获得的序号
@@ -41,7 +41,7 @@ export class IndexComponent implements OnInit {
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       })
       //左单击
-      $('.fl_s .btn_left').hover(function(){
+      $('.fl_s .btn_left').click(function(){
         c--;
         c=(c==0)?0:c;
         //获得序号
