@@ -31,17 +31,17 @@ export class IndexComponent implements OnInit {
         //回调函数//恢复定时器//隐藏图片
         $('.fl_s .ups').css({'display':'block'});
         time = setInterval(timer,3000);
-      })
+      });
       //右单击
-      $('.fl_s .btn_right').hover(function(){
+      $('.fl_s .btn_right').click(function(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得的序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
-      })
+      });
       //左单击
-      $('.fl_s .btn_left').hover(function(){
+      $('.fl_s .btn_left').click(function(){
         c--;
         c=(c==0)?0:c;
         //获得序号
@@ -63,7 +63,7 @@ export class IndexComponent implements OnInit {
     t = setInterval(play, 3000)
     function play() {
       index++;
-      if (index > 4) {
+      if (index > 6) {
         index = 0
       }
       $("#lunbobox ul li").eq(index).css({
@@ -147,6 +147,9 @@ export class IndexComponent implements OnInit {
       function type(){
         var typePanel = $("#aa");
         typePanel.html(word.substring(0,index++));
+        if(index==word.length-5)
+        { $("#w").text('');
+          index=0;}
         if(index % 3 == 0){
           typePanel.addClass("") ;
         }else if(index % 3 == 1){

@@ -21,7 +21,7 @@ export class ShappingCarComponent implements OnInit {
           $('[type="checkbox"]').map(function () {
 
             this.checked = true;
-            $('#pay_id').css('background', 'red').css('color', 'white');
+            // $('#pay_id').css('background', 'red').css('color', 'white');
             $('#goods_num_id').html($('#shuzi_id').val());
             $('#sumPrice_id').html($('#price').html());
           });
@@ -55,25 +55,22 @@ export class ShappingCarComponent implements OnInit {
         }
       })
       // 加减
-      $('#jian_id').click(function () {
-        var num = $('#shuzi_id').val();
-        num--;
-        if (num >= 1) {
-          $('#shuzi_id').val(num);
+      $('[value="-"]').click(function () {
+        var num = $(this).next().val();
+        var singlePrice = $(this).parent().prev().html();
+        if (num >1) {
+          $(this).next().val(num-1);
         }
-
-        var singlePrice = $('#singlePrice_id').html();
-        var shuzi = $('#shuzi_id').val();
-        $('#price').html(singlePrice * shuzi);
+        else{
+          $(this).next().val(1)
+        }
+        $(this).parent().next().html(singlePrice *($(this).next().val()));
       });
-      $('#jia_id').click(function () {
-        var num = $ ('#shuzi_id').val();
-        num++;
-        $('#shuzi_id').val(num);
-
-        var singlePrice = $('#singlePrice_id').html();
-        var shuzi = $('#shuzi_id').val();
-        $('#price').html(singlePrice * shuzi);
+      $('[value="+"]').click(function () {
+        var num = parseInt($(this).prev().val());
+        var singlePrice = $(this).parent().prev().html();
+        $(this).prev().val(num+1);
+        $(this).parent().next().html(singlePrice *($(this).prev().val()));
 
         if ($('#goods_num_id').html()== 0) {
           $('#sumPrice_id').html(0);
@@ -87,6 +84,11 @@ export class ShappingCarComponent implements OnInit {
       $('#del_id').click(function () {
         $(this).parent().parent().parent().remove();
       });
+      //添加
+      $('#pay_id').click(function () {
+        var k=$('.center').clone(true);
+        $('.bottom').before(k);
+      })
     });
   }
 

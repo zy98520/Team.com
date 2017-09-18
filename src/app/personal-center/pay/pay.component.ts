@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
 declare var $: any ;
 @Component({
   selector: 'app-pay',
@@ -8,7 +8,9 @@ declare var $: any ;
 })
 export class PayComponent implements OnInit {
 tip:string='';
-  constructor() { }
+  constructor(
+    private router:Router,
+  ) { }
 
   ngOnInit() {
     $(function () {
@@ -17,10 +19,15 @@ tip:string='';
       });
       $('#useAddress').on('click',function () {
         $('#center_hidden_id').css({"display":"block"});
+        $('.con').css('height','1200px');
       });
-
+      $('#editor').click(function () {
+        $('#center_hidden_id').css({"display":"block"});
+        $('.con').css('height','1200px');
+      });
       $('#cancel_address_id1').on('click',function () {
         $('#center_hidden_id').css({"display":"none"});
+        $('.con').css('height','800px');
       });
 
       $('#postMail_id').on('blur', function () {
@@ -162,5 +169,8 @@ tip:string='';
 
     });
   }
+  public pay():void{
+    this.router.navigateByUrl("payto");
+}
 
 }
