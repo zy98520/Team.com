@@ -29,10 +29,6 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'showboys',
-    component: BoysComponent
-  },
-  {
     path: 'regist',
     component: RegistComponent
   },
@@ -95,6 +91,10 @@ const routes: Routes = [
   {
     path: 'payto',
     component: PaytoComponent
+  },
+  {
+    path: 'index',
+    component: IndexComponent
   },
   {
     path: '',

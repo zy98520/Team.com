@@ -28,6 +28,7 @@ import { PersonalCenterComponent } from './personal-center/personal-center.compo
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { PayComponent } from './personal-center/pay/pay.component';
 
 
 
@@ -43,6 +44,7 @@ import { MyflowComponent } from './personal-center/myflow/myflow.component';
 
 @NgModule({
   declarations: [
+    PayComponent,
     AppComponent,
     LooksComponent,
     IndexComponent,

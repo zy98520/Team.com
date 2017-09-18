@@ -142,8 +142,11 @@ export class IndexComponent implements OnInit {
       function type(){
         var typePanel = $("#aa");
         typePanel.html(word.substring(0,index++));
+        if(index==word.length-5)
+        { $("#w").text('');
+        index=0;}
         if(index % 3 == 0){
-          typePanel.addClass("") ;
+          typePanel.addClass("");
         }else if(index % 3 == 1){
           typePanel.addClass("saying") ;
         }

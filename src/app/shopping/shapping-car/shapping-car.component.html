@@ -13,6 +13,7 @@
           <li>操作</li>
         </ul>
       </div>
+      <p></p>
       <div class="center" *ngFor="let mes1 of mes;let index=index">
         <ul class="Line2"  id="line_id">
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -45,7 +46,7 @@
           </li>
           <li ><span class="sumPrice">总计￥:<span id="sumPrice_id">{{sum}}</span></span></li>
           <li>
-            <input type="button"  id="pay_id" value="去付款 &nbsp;>">
+            <input type="button"  id="pay_id" (click)="gopay()" value="去付款 &nbsp;>">
           </li>
 
         </ul>

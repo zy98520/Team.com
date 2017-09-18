@@ -54,8 +54,17 @@ function (error) {
       }
     )
   }
-  showboys (body, callback ) {
+  showboys( body, callback ) {
     this.http.post(this.url + '/showboys', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  showgirls( callback ) {
+    this.http.post(this.url + '/showgirls','').subscribe(function (result) {
         callback(result);
       },
       function (error) {

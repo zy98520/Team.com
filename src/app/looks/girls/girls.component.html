@@ -4,7 +4,6 @@
 </div>
   <div >
   <a id="title" class="col-md-12"></a>
-
   <div class="col-md-12 navbar" >
 <ul class="nav " id="fix" >
   <li  class="active" style=""><a>甜美可爱</a></li>
@@ -15,274 +14,66 @@
   <li style=""><a>夏树公主</a></li>
 </ul>
 </div>
-    <div class="container">
-    <div class="sweet" id="sweet">
+    <div class="container" id="bigcon">
       <div class="col-md-12 title1">夏天+小清新+甜美，清纯灵动气息</div>
+    <div class="sweet" id="sweet" *ngFor="let mes of qq[0]">
       <ul>
         <li>
-          <img src="../../../assets/girls-img/sweet1.jpg">
+          <img src="../../../assets/{{mes.goodspic}}">
           <div class="name"> 仿棉麻面料 条纹衬衫...</div>
           <div class="price">￥59.99 </div>
-          <div class="buy1">立即购买</div>
+          <div class="buy1" (click)="godetail(mes.goodsid)">立即购买</div>
 
-        </li>
-
-        <li><img src="../../../assets/girls-img/sweet2.jpg">
-        <div class="name">可爱少女心 刺绣拼色短袖T恤...</div>
-          <div class="price">￥45.99 </div>
-          <div class="buy1">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet3.jpg">
-          <div class="name">瞌睡兔 露肩一字领两穿...</div>
-          <div class="price">￥66.99 </div>
-          <div class="buy1">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet4.jpg">
-          <div class="name">露锁骨V领 小清新短袖衬衫...</div>
-          <div class="price">￥68.99 </div>
-          <div class="buy1">立即购买</div>
-        </li>
-      </ul>
-      <div class="col-md-12 title1">夏天+甜美+可爱打扮，想要做个小仙女</div>
-      <ul>
-        <li>
-          <img src="../../../assets/girls-img/sweet5.jpg">
-          <div class="name"> 简约polo领皇冠刺绣短袖T恤...</div>
-          <div class="price">￥45.00 </div>
-          <div class="buy1">立即购买</div>
-
-        </li>
-
-        <li><img src="../../../assets/girls-img/sweet6.jpg">
-          <div class="name">呆萌猫咪印花宽松萝莉T恤...</div>
-          <div class="price">￥70.00 </div>
-          <div class="buy1">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet7.jpg">
-          <div class="name">瞌睡兔 露肩一字领两穿...</div>
-          <div class="price">￥66.99 </div>
-          <div class="buy1">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet8.jpg">
-          <div class="name">森女部落可爱短袖T恤软妹...</div>
-          <div class="price">￥54.00 </div>
-          <div class="buy1">立即购买</div>
         </li>
       </ul>
     </div>
-    <div class="thin" id="thin">
-      <div class="col-md-12 title2">夏天+显瘦+显腿，夏季扮靓妥妥的</div>
+      <div class="col-md-12 title2" id="sim">夏天+显瘦+显腿，夏季扮靓妥妥的</div>
+    <div class="thin" id="thin" *ngFor="let mes of qq[1]">
+
       <ul>
         <li>
-          <img src="../../../assets/girls-img/sweet9.jpg">
+          <img src="../../../assets/{{mes.goodspic}}">
           <div class="name">文艺小清新宽松短袖学生...</div>
           <div class="price">￥66.00 </div>
-          <div class="buy2">立即购买</div>
+          <div class="buy2" (click)="godetail(mes.goodsid)">立即购买</div>
 
         </li>
 
-        <li><img src="../../../assets/girls-img/sweet10.jpg">
-          <div class="name">休闲七分袖木耳边条纹连衣裙...</div>
-          <div class="price">￥70.00 </div>
-          <div class="buy2">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet11.jpg">
-          <div class="name"> 韩版修身文艺小清新圆领...</div>
-          <div class="price">￥49.00 </div>
-          <div class="buy2">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet12.jpg">
-          <div class="name">七分袖绣花条纹露肩连衣裙...</div>
-          <div class="price">￥179.00 </div>
-          <div class="buy2">立即购买</div>
-        </li>
-      </ul>
-      <div class="col-md-12 title2">旅游+显瘦遮肉,藏不住的美丽</div>
-      <ul>
-        <li>
-          <img src="../../../assets/girls-img/sweet13.jpg">
-          <div class="name"> 叙旧荷叶边短袖衬衫女...</div>
-          <div class="price">￥115.00 </div>
-          <div class="buy2">立即购买</div>
-
-        </li>
-
-        <li><img src="../../../assets/girls-img/sweet14.jpg">
-          <div class="name">叙旧纯色休闲裤女长裤 显瘦...</div>
-          <div class="price">￥70.00 </div>
-          <div class="buy2">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet15.jpg">
-          <div class="name">宽松短款条纹T恤女...</div>
-          <div class="price">￥66.99 </div>
-          <div class="buy2">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet16.jpg">
-          <div class="name">蝴蝶结半身裙女短裙...</div>
-          <div class="price">￥54.00 </div>
-          <div class="buy2">立即购买</div>
-        </li>
       </ul>
 </div>
-    <div class="soft" id="soft">
       <div class="col-md-12 title3">连衣裙+气质，都是属于你的夏日之美</div>
+    <div class="soft" id="soft" *ngFor="let mes of qq[2]">
       <ul>
         <li>
-          <img src="../../../assets/girls-img/sweet17.jpg">
+          <img src="../../../assets/{{mes.goodspic}}">
           <div class="name">文艺清新系带收腰碎花雪纺连...</div>
           <div class="price">￥149.00 </div>
-          <div class="buy3">立即购买</div>
+          <div class="buy3" (click)="godetail(mes.goodsid)">立即购买</div>
 
-        </li>
-
-        <li><img src="../../../assets/girls-img/sweet18.jpg">
-          <div class="name">清新荷叶边碎花雪纺吊带...</div>
-          <div class="price">￥109.00 </div>
-          <div class="buy3">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet19.jpg">
-          <div class="name"> 不对称荷叶边雪纺衫女短袖...</div>
-          <div class="price">￥59.00 </div>
-          <div class="buy3">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet20.jpg">
-          <div class="name">柔美雪纺衫显瘦V领雪纺上...</div>
-          <div class="price">￥49.00 </div>
-          <div class="buy3">立即购买</div>
-        </li>
-      </ul>
-      <div class="col-md-12 title3">女神+气质搭 飘成初恋的形状</div>
-      <ul>
-        <li>
-          <img src="../../../assets/girls-img/sweet21.jpg">
-          <div class="name">小清新仙气裙子女收腰...</div>
-          <div class="price">￥143.00 </div>
-          <div class="buy3">立即购买</div>
-
-        </li>
-
-        <li><img src="../../../assets/girls-img/sweet22.jpg">
-          <div class="name">露肩雪纺连衣裙女夏...</div>
-          <div class="price">￥158.00 </div>
-          <div class="buy3">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet23.jpg">
-          <div class="name">夏装新款衬衣宽松百搭小碎花...</div>
-          <div class="price">￥67.00 </div>
-          <div class="buy3">立即购买</div>
-        </li>
-        <li><img src="../../../assets/girls-img/sweet24.jpg">
-          <div class="name">白色漏肩T恤女短袖韩范个性...</div>
-          <div class="price">￥168.00 </div>
-          <div class="buy3">立即购买</div>
         </li>
       </ul>
     </div>
-      <div class="longleg" id="longleg">
-        <div class="col-md-12 title4">让你美美过夏天！夏天+t恤+短裤 显腿长</div>
+      <div class="col-md-12 title4">让你美美过夏天！夏天+t恤+短裤 显腿长</div>
+      <div class="longleg" id="longleg" *ngFor="let mes of qq[3]">
         <ul>
           <li>
-            <img src="../../../assets/girls-img/sweet25.jpg">
+            <img src="../../../assets/{{mes.goodspic}}">
             <div class="name">圆领t恤女短袖宽松韩范...</div>
             <div class="price">￥99.00 </div>
-            <div class="buy4">立即购买</div>
+            <div class="buy4" (click)="godetail(mes.goodsid)">立即购买</div>
 
-          </li>
-
-          <li><img src="../../../assets/girls-img/sweet26.jpg">
-            <div class="name">新款花朵刺绣圆领t恤...</div>
-            <div class="price">￥59.00 </div>
-            <div class="buy4">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet27.jpg">
-            <div class="name"> 韩范字母印花圆领t恤女短...</div>
-            <div class="price">￥59.00 </div>
-            <div class="buy4">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet28.jpg">
-            <div class="name">破洞割烂圆领t恤女短袖宽...</div>
-            <div class="price">￥59.00 </div>
-            <div class="buy4">立即购买</div>
-          </li>
-        </ul>
-        <div class="col-md-12 title4">矮个子+显高+半身裙 小个子搭配</div>
-        <ul>
-          <li>
-            <img src="../../../assets/girls-img/sweet29.jpg">
-            <div class="name">新款韩版高腰包臀裙修身...</div>
-            <div class="price">￥39.00 </div>
-            <div class="buy4">立即购买</div>
-
-          </li>
-
-          <li><img src="../../../assets/girls-img/sweet30.jpg">
-            <div class="name">高腰牛仔裙半身裙女...</div>
-            <div class="price">￥217.00 </div>
-            <div class="buy4">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet31.jpg">
-            <div class="name">宽松白色T恤女短袖2017夏...</div>
-            <div class="price">￥99.00 </div>
-            <div class="buy4">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet32.jpg">
-            <div class="name">碎花雪纺衫短袖女...</div>
-            <div class="price">￥208.00 </div>
-            <div class="buy4">立即购买</div>
           </li>
         </ul>
       </div>
-      <div class="cutage" id="cutage">
-        <div class="col-md-12 title5">夏季+连衣裙，减龄文艺还小清新 </div>
+      <div class="col-md-12 title5">夏季+连衣裙，减龄文艺还小清新 </div>
+      <div class="cutage" id="cutage" *ngFor="let mes of qq[4]">
         <ul>
           <li>
-            <img src="../../../assets/girls-img/sweet33.jpg">
+            <img src="../../../assets/{{mes.goodspic}}">
             <div class="name">自制清新系带收腰无袖夏季...</div>
             <div class="price">￥109.00 </div>
-            <div class="buy5">立即购买</div>
+            <div class="buy5" (click)="godetail(mes.goodsid)">立即购买</div>
 
-          </li>
-
-          <li><img src="../../../assets/girls-img/sweet34.jpg">
-            <div class="name">新款仿真丝简约纯色背心裙系...</div>
-            <div class="price">￥109.00 </div>
-            <div class="buy5">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet35.jpg">
-            <div class="name"> 格子两件套彼得潘撞色翻领...</div>
-            <div class="price">￥109.00 </div>
-            <div class="buy5">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet36.jpg">
-            <div class="name">自制蝴蝶结中长款短袖碎花...</div>
-            <div class="price">￥99.00 </div>
-            <div class="buy5">立即购买</div>
-          </li>
-        </ul>
-        <div class="col-md-12 title5">春天+乖巧减龄+年年都是十八岁</div>
-        <ul>
-          <li>
-            <img src="../../../assets/girls-img/sweet37.jpg">
-            <div class="name">文艺粗针麻花长袖针织开衫...</div>
-            <div class="price">￥139.00 </div>
-            <div class="buy5">立即购买</div>
-
-          </li>
-
-          <li><img src="../../../assets/girls-img/sweet38.jpg">
-            <div class="name">小步格调春季款前后v领显瘦...</div>
-            <div class="price">￥69.00 </div>
-            <div class="buy5">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet39.jpg">
-            <div class="name">夏装新款衬衣宽松百搭小碎花...</div>
-            <div class="price">￥67.00 </div>
-            <div class="buy5">立即购买</div>
-          </li>
-          <li><img src="../../../assets/girls-img/sweet40.jpg">
-            <div class="name">圆领兔绒毛衣女宽松套头...</div>
-            <div class="price">￥89.00 </div>
-            <div class="buy5">立即购买</div>
           </li>
         </ul>
       </div>

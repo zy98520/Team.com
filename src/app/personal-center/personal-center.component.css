@@ -28,7 +28,12 @@
   width:70px;
   height:70px;
 }
-.imgclass{width:70px;height:70px;}
+#preview1 img{
+  width:100%;
+  height:100%;object-fit:cover;
+}
+#preview img{width:100%;
+height:100%;object-fit:cover;}
 .big{
   width:700px;
   height:250px;

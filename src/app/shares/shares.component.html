@@ -162,6 +162,7 @@
     </div>
   </div>
 </div>
+<div id="big">
 <form #comForm="ngForm" class="form-horizontal">
   <textarea name="com" id="comment" #com="ngModel" [(ngModel)]="_comment" class="col-xs-12 col-sm-6 col-sm-offset-3"
             cols="30" rows="10"></textarea>
@@ -182,7 +183,7 @@
         <!--<div><span>{{back.backtext}}</span></div>-->
       </div>
       <div *ngIf="comment.state" class="col-xs-12 col-sm-8">
-        <textarea name="backcom" id="backcom" #backcom="ngModel" [(ngModel)]="_backcomment"
+        <textarea name="backcom" id="backcom"
                   class="col-xs-12 col-sm-6 col-sm-offset-3" cols="80" rows="5"></textarea>
         <input type="button" name="backcom" value="发送" (click)="backsend(index,comForm)" class="btn">
         <input type="button" value="取消" (click)="cancel(index)" class="btn">
@@ -193,4 +194,4 @@
   </div>
 
 </form>
-
+</div>

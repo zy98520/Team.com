@@ -16,8 +16,8 @@ mes: any ;
   }
 
   ngOnInit() {
-    const that = this;
     $(function () {
+      const that = this;
       $('#upload_file').change(function (e) {
         const file = e.target.files[0];
         preview(file);
@@ -28,10 +28,9 @@ mes: any ;
         const img = new Image();
         img.src = URL.createObjectURL(file);
         const url = img.src;
-        const $img = $(img);
+        const $img =$(img);
         img.onload = function () {
           URL.revokeObjectURL(url);
-          $img.addclass('imgclass');
           $('#preview').empty().append($img);
           $('#preview1').empty().append($img);
         }
@@ -41,8 +40,8 @@ mes: any ;
   showicon(){
     const body ={ "telephone": sessionStorage.getItem('userId')};
     this.personSer.getUserIcon (body, function (result) {
-      $('#preview').empty().append(`<img src="../../assets/icon/${result[0].icon}" width="70px" height="70px">`);
-      $('#preview1').empty().append(`<img src="../../assets/icon/${result[0].icon}"width="70px" height="70px">`);
+      $('#preview').empty().append(`<img src='http://localhost:3000/uploads/${result[0].icon}>`);
+      $('#preview1').empty().append(`<img src='http://localhost:3000/uploads/${result[0].icon}>`);
     })
   }
   upload() {

@@ -309,3 +309,7 @@ body {
 #smallback{height:50px;
 background-color: red;
 }
+#big{
+  margin-left:auto;
+  margin-right: auto;
+}

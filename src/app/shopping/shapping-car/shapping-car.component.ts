@@ -13,6 +13,7 @@ declare var $: any ;
 export class ShappingCarComponent implements OnInit {
  mes:any;
 sum=0;
+none:any;
   constructor(
     private perSer: PersonalService,
     private router: Router,
@@ -59,7 +60,7 @@ sum=0;
     let that = this;
     const body={'tel':sessionStorage.getItem('userId')}
     that.perSer.myshop(body, function (result) {
-      if ( result.StateCode==0){alert('erro')} else {
+      if ( result.StateCode==0){that.none='空空如也~~~~';} else {
         that.mes= result;
         for(let i=0;i<that.mes.length;i++)
         that.mes[i].total= (that.mes[i].goodsprice) * (that.mes[i].shopsum);
@@ -144,4 +145,7 @@ sum=0;
 back(){
   this.router.navigate(['/personal-center']);
 }
+  gopay(){
+    this.router.navigate(['/payto']);
+  }
 }
