@@ -80,13 +80,14 @@ body{margin: 0;
   border-top: solid 2px;
 }
 .show_review{
-  width: 600px;
+
   text-align: center;
   color: #000000;
   font-size: 30px;
   font-weight: 500;
   height: 100px;
   margin-top: 40px;
+  margin-left: 10px;
 
 }
 .review{

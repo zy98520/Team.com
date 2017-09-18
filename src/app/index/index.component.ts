@@ -17,7 +17,7 @@ export class IndexComponent implements OnInit {
       var c = 0
       function timer(){
         c++;
-        c=(c==4)?0:c;
+        c=(c==6)?0:c;
         //获得序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
@@ -150,6 +150,7 @@ export class IndexComponent implements OnInit {
         if(index==word.length-5)
         { $("#w").text('');
           index=0;}
+
         if(index % 3 == 0){
           typePanel.addClass("") ;
         }else if(index % 3 == 1){
@@ -157,11 +158,36 @@ export class IndexComponent implements OnInit {
         }
       }
     })
-    // $(".hit1").on("mouseover",function(){
-    //
-    //   $(".share_txt1").css({position:"relative",top:"-200px",height:"0"}).animate({height:"-100px",top:"0px"},2000)
-    //     .css("display","block")
-    // })
+    $(".hit1").on("mouseenter",function() {
+
+      $("#share_txt1-1").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
+        .css("display","block")
+    })
+    $(".hit1").on("mouseleave",function() {
+
+      $("#share_txt1-1").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
+
+    })
+    $(".hit2").on("mouseenter",function() {
+
+      $("#share_txt1-2").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
+        .css("display","block")
+    })
+    $(".hit2").on("mouseleave",function() {
+
+      $("#share_txt1-2").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
+
+    })
+    $(".hit3").on("mouseenter",function() {
+
+      $("#share_txt1-3").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
+        .css("display","block")
+    })
+    $(".hit3").on("mouseleave",function() {
+
+      $("#share_txt1-3").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
+
+    })
   }
   public girls():void{
     this.router.navigateByUrl("girls");
