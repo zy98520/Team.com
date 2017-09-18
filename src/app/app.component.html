@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="body" style="width: 100%">
-<div class="logo2" style="text-align: center"><img src="../assets/looks-loves-img/logo2.png"></div>
+<div class="logo2" style="text-align: center"><a href=""><img src="../assets/looks-loves-img/logo2.png"></a></div>
   <a id="title1" class="col-md-12"></a>
 <nav id="fix1" class="navbar ng1" *ngIf="!_hiddenNavs">
   <div class="container-fluid">
@@ -49,6 +49,8 @@
     <router-outlet #outlet>
     </router-outlet>
   </div>
+  <div *ngIf="!_hiddenNavs">
   <div class="foot"><img src="../assets/looks-loves-img/foot.png"></div>
   <div class="foot1"><img src="../assets/looks-loves-img/foot1.png"></div>
+  </div>
 </div>

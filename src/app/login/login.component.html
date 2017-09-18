@@ -1,26 +1,28 @@
-<div class="col-md-3 col-lg-3"></div>
-<div class="col-md-6 col-lg-6">
+<div  class="col-md-12 login-bg">
+  <div class="login1">
+    <div class="text">普通登录</div>
+    <div class="col-md-3 col-lg-3">
   <form #loginForm="ngForm">
     <div class="form-group">
-      <label for="telephone">Telephone</label>
-      <input type="text" class="form-control" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="telephone" name="userId" placeholder="Telephone" required>
+      <!--<label for="telephone">用户名</label>-->
+      <input type="text" class="form-control tel" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="telephone" name="userId" placeholder="手机号" required>
     </div>
     <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
-         class="alert alert-danger">
+         class="tel1">
       <div *ngIf="tel.errors.required">
-        号码不能为空
+        请输入手机号
       </div>
       <div *ngIf="tel.errors.pattern">
         号码格式不正确
       </div>
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" #pass="ngModel" minlength="6"  [(ngModel)]="_password" id="password" name="userPassword" placeholder="Password" required>
+      <!--<label for="password">密码</label>-->
+      <input type="password" class="form-control tel" #pass="ngModel" minlength="6"  [(ngModel)]="_password" id="password" name="userPassword" placeholder="密码" required>
     </div>
 
     <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
-         class="alert alert-danger">
+         class="tel1">
       <div *ngIf="pass.errors.required">
         密码不能为空
       </div>
@@ -28,9 +30,12 @@
         密码大于六位
       </div>
     </div>
-    <button type="button" (click)="toLogin(loginForm)" [disabled]="loginForm.form.invalid" class="btn btn-default">Login..</button>
+    <button type="button" (click)="toLogin(loginForm)" [disabled]="loginForm.form.invalid" class="login">登录</button>
   </form>
 </div>
 <div class="col-md-3 col-lg-3">
   {{ login_res}}
+</div>
+<!--<input type="text" [(ngModel)]="_val">-->
+</div>
 </div>

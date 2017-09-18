@@ -1,15 +1,17 @@
-<div class="container-fluid">
-  <div class="row col-md-5  col-md-offset-4">
+
+<div  class="col-md-12 login-bg">
+  <div class="login1">
+  <div class="row col-md-5 ">
     <form class="form-horizontal" #myForm="ngForm" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded">
       <div class="form-group  col-lg-12 col-md-12" >
         <label for="userId01" class="control-label col-lg-2">telephone</label>
         <div class="col-lg-12 col-md-12">
-          <input type="text" class="form-control" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="userId01" name="userId" placeholder="手机号码" required>
+          <input type="text" class="form-control tel" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="userId01" name="userId" placeholder="手机号码" required>
         </div>
       </div>
       <div class="control-group col-md-12 col-lg-12">
         <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
-             class="alert alert-danger">
+             class="tel1">
           <div *ngIf="tel.errors.required">
             号码不能为空
           </div>
@@ -21,12 +23,12 @@
       <div class="form-group col-lg-12 col-md-12">
         <label class=" control-label  col-lg-2" for="usePassword">Password</label>
         <div class="col-lg-12 col-md-12">
-          <input type="password" minlength="6" id="usePassword" #pass="ngModel" class="form-control" [(ngModel)]="_password" name="userPassword" placeholder="密码">
+          <input type="password" minlength="6" id="usePassword" #pass="ngModel" class="form-control tel" [(ngModel)]="_password" name="userPassword" placeholder="密码">
         </div>
       </div>
       <div class="control-group col-md-12 col-lg-12">
         <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
-             class="alert alert-danger">
+             class="tel">
           <div *ngIf="pass.errors.required">
             密码不能为空
           </div>
@@ -38,12 +40,12 @@
       <div class="form-group col-md-12 col-lg-12">
         <label class="control-label  col-lg-2" for="userPassword2">Password2</label>
         <div class="col-lg-12 col-md-12">
-          <input type="password" id="userPassword2" #pass2="ngModel" [(ngModel)]="_password2" class="form-control"  placeholder="请输入第二次密码">
+          <input type="password" id="userPassword2" #pass2="ngModel" [(ngModel)]="_password2" class="form-control tel"  placeholder="请输入第二次密码">
         </div>
       </div>
       <div class="control-group col-md-12 col-lg-12">
         <div *ngIf="pass2.invalid && (pass2.dirty || pass2.touched)"
-             class="alert alert-danger">
+             class="tel1">
           <div *ngIf="pass2==pass">
             两次密码不一致！
           </div>
@@ -52,7 +54,7 @@
       <div class="form-group col-md-12 col-lg-12">
         <label class="control-label col-lg-2" for="username">username</label>
         <div class="col-lg-12 col-md-12">
-          <input type="text" #username="ngModel" id="username" [(ngModel)]="_username" name="username"  class="form-control"  placeholder="用户名">
+          <input type="text" #username="ngModel" id="username" [(ngModel)]="_username" name="username"  class="form-control tel"  placeholder="用户名">
         </div>
       </div>
       <!--<div *ngIf="pass2.invalid && (pass2.dirty || pass2.touched)"-->
@@ -64,19 +66,20 @@
       <div class="form-group col-md-12 col-lg-12">
         <label class="control-label  col-lg-1" for="age">Age</label>
         <div class="col-lg-12 col-md-12">
-          <input type="text" id="age" pattern="^[0-9]*$" #age="ngModel" [(ngModel)]="_age"  class="form-control" name="userage" placeholder="年龄">
+          <input type="text" id="age" pattern="^[0-9]*$" #age="ngModel" [(ngModel)]="_age"  class="form-control tel" name="userage" placeholder="年龄">
         </div>
       </div>
       <div class="control-group col-md-12 col-lg-12">
         <div *ngIf="age.invalid && (age.dirty || age.touched)"
-             class="alert alert-danger">
+             class="tel1">
           <div *ngIf="age.errors.pattern">
        年龄输入有误！
           </div>
         </div>
       </div>
-      <button type="button" id="btnregist" (click)="toregist(myForm)" class="btn" style="margin-left:85%">注册</button>
+      <button type="button" id="btnregist" (click)="toregist(myForm)" class="login" style="margin-left:85%">注册</button>
     </form>
   </div>
 </div>
 <div><p>{{regist_res}}</p></div>
+  </div>

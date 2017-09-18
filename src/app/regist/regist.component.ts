@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from './../services/users.service';
+import {GlobalPropertyService} from './../services/global-property.service'
 
 import {Router} from '@angular/router';
 declare var $: any;
@@ -14,9 +15,13 @@ export class RegistComponent implements OnInit {
   constructor(
     private userSer: UsersService,
     private router: Router,
+    private  glo:GlobalPropertyService
+
   ) { }
 
   ngOnInit() {
+    this.glo.hiddenNavs=true;//初始化
+
   }
   toregist (reg) {
     let that = this;
@@ -33,5 +38,9 @@ export class RegistComponent implements OnInit {
       }
 
     })
+  }
+  ngOnDestroy(){
+    console.log('personal -ngDestroy');
+    this.glo.hiddenNavs=false;
   }
 }

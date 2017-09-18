@@ -1,8 +1,8 @@
 <div class="body">
 <div class="col-md-12 " style="margin-left:-280px;border-top:1px solid gray;margin-top: -20px"><img class="" src="../../assets/looks-loves-img/woman1.jpg"></div>
 <div class="col-md-12 " style="background-color: #fcd45a;height:150px">
-<div class=" man fl"><a (click)="boys()">男生爱搭</a></div>
-<div class="woman fr"><a (click)="girls()">女生爱搭 </a> </div>
+<div class=" man fl" (click)="boys()"><a>男生爱搭</a></div>
+<div class="woman fr" (click)="girls()"><a>女生爱搭 </a> </div>
 </div>
 <div class="container">
   <div class="col-md-12" style="margin-bottom:30px">
@@ -16,28 +16,28 @@
   </div>
 
   <div class=" col-xs-12 col-sm-12 col-md-6">
-    <div class="">
-      <div style="margin-top: 10px"><a href="#"><img class="img-responsive" src="../../assets/looks-loves-img/looks-1.jpg"></a></div>
-    </div>
+      <div class="looks-1">
+        <a (click)="girls()"><img class="img-responsive" src="../../assets/looks-loves-img/looks-1.jpg"></a>
+      </div>
 
   </div>
   <div class="col-xs-12 col-sm-12 col-md-6">
     <div><img class="img-responsive " src="../../assets/looks-loves-img/looks-man1.png"></div>
     <div class="looks-man " style="margin-left:0px;margin-top:25px;width:490px;height:260px">
-      <div class=" animated-2x infinite rollIn" style="color: #46587a"><h4>撩妹小能手</h4></div>
-      <span id="man1" style="background: url(../../assets/looks-loves-img/looks-man2.jpg);width: 100px;height: 150px;display:inline-block">
-                    <div id="word11" class="word" style="position: absolute" hidden>春季型男</div>
+      <div class="animated swing infinite  look1"><h4 (click)="boys()">撩妹小能手</h4></div>
+      <span class="man1" style="background: url(../../assets/looks-loves-img/looks-man2.jpg);width: 100px;height: 150px;display:inline-block">
+                    <span class="word1" style="position: absolute" hidden>春季型男</span>
                 </span>
-      <span id="man2" style="background: url(../../assets/looks-loves-img/looks-man4.jpg);width: 100px;height: 150px;display:inline-block">
-                                        <div id="word2" class="word" style="position: absolute">小清新</div>
+      <span class="man1" style="background: url(../../assets/looks-loves-img/looks-man4.jpg);width: 100px;height: 150px;display:inline-block">
+                                        <span  class="word1" style="position: absolute">小清新</span>
 
                 </span>
-      <span id="man3" style="background: url(../../assets/looks-loves-img/looks-man5.jpg);width: 150px;height: 254px;display:inline-block">
-                                        <div id="word3" class="word" style="position: absolute">帅气校草</div>
+      <span class="man2" style="background: url(../../assets/looks-loves-img/looks-man5.jpg);width: 150px;height: 254px;display:inline-block">
+                                        <span class="word2" style="position: absolute">帅气校草</span>
 
                 </span>
-      <span id="man4" style="background: url(../../assets/looks-loves-img/looks-man6.jpg);width: 100px;height: 150px;display:inline-block">
-                                        <div id="word4" class="word" style="position: absolute">阳光男孩</div>
+      <span class="man1" style="background: url(../../assets/looks-loves-img/looks-man6.jpg);width: 100px;height: 150px;display:inline-block">
+                                        <span class="word1" style="position: absolute">阳光男孩</span>
                 </span>
     </div>
 
