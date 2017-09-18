@@ -156,11 +156,15 @@ margin-right: 20px;
   height: 800px;
   background-color:#D9C2B7 }
 .wuBig{
+  position: relative;
+  min-width: 1200px;
+  overflow: hidden;
+  background-size: cover;
   width: 1400px;
   height:1828px;
   background-image: url("../../../assets/wu-img/wu5.jpg");
   background-attachment: fixed;
-  background-repeat: no-repeat;
+
 }
 .wGood8{
   margin-left: 750px;

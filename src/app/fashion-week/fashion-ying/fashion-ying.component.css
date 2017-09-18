@@ -22,16 +22,26 @@
   text-align: center;
 }
 
-
+.yGood1 .img-y{
+  margin-top: 20px;
+  margin-left: 20px;
+}
 .yGood1 ul{
-  padding-left: 5px;
+  padding-left: 15px;
   position: absolute;
-  top: 560px;
+  top: 640px;
+left: 30px;
 }
 .yGood1 ul li{
   float: left;
   margin-left: 3px;
   list-style: none;
+}
+.img-w{
+  margin-left: 40px;
+}
+.img-g{
+  margin-left: 300px;
 }
 .yGood2 ul{
   left: 400px;
