@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 
 
 import {Router} from '@angular/router';
 import {PersonalService} from '../../services/personal.service';
+=======
+import {Router} from '@angular/router';
+>>>>>>> a796b260685af9194e781ce145a9ed6f8722c7ee
 declare var $: any ;
 @Component({
   selector: 'app-shapping-car',
@@ -11,6 +15,7 @@ declare var $: any ;
   providers: [PersonalService],
 })
 export class ShappingCarComponent implements OnInit {
+<<<<<<< HEAD
  mes:any;
 sum=0;
 none:any;
@@ -56,6 +61,13 @@ none:any;
 // alert('没有'); $('#'+mes [index].id).prop("checked",true);
 //   this.sum=this.sum+mes[index].total;}
 // }
+=======
+
+  constructor(  private router:Router,) {
+
+  }
+
+>>>>>>> a796b260685af9194e781ce145a9ed6f8722c7ee
   ngOnInit() {
     let that = this;
     const body={'tel':sessionStorage.getItem('userId')}
@@ -148,4 +160,13 @@ back(){
   gopay(){
     this.router.navigate(['/payto']);
   }
+<<<<<<< HEAD
+=======
+
+  public gopay():void{
+      this.router.navigateByUrl("pay");
+  }
+
+
+>>>>>>> a796b260685af9194e781ce145a9ed6f8722c7ee
 }

@@ -1,10 +1,12 @@
 <div class="head col-md-12" style="text-align: center">
   <div class="fl_s">
     <div class="tu">
-      <img src="../../assets/index-img/b.jpg" alt="" style="display:block;" />
-      <img src="../../assets/index-img/c.jpg" alt="" />
-      <img src="../../assets/index-img/a.gif" alt="" />
+      <img src="../../assets/index-img/a.gif" alt="" style="display:block;" />
       <img src="../../assets/index-img/d.jpg" alt="" />
+      <img src="../../assets/index-img/c.jpg" alt="" />
+      <img src="../../assets/index-img/b.jpg" alt="" />
+      <img src="../../assets/index-img/e.jpg" alt="" />
+      <img src="../../assets/index-img/f.jpg" alt="" />
     </div>
     <div class="ups col-md-12">
       <a class="btn_left"><span class="glyphicon glyphicon-menu-left"></span></a>
@@ -12,6 +14,8 @@
     </div>
     <div class="dos">
       <div class="dor">
+        <a class="doro"></a>
+        <a class="doro"></a>
         <a class="doro"></a>
         <a class="doro"></a>
         <a class="doro"></a>
@@ -26,18 +30,17 @@
     <div id="wrapper" class="col-sm-12 col-md-6">
       <div id="show-area">
         <ul>
-          <li><a><img src="../../assets/index-img/focusa.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
-          <li><a><img src="../../assets/index-img/focusc.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusd.jpg"></a></li>
-          <li><a><img src="../../assets/index-img/focuse.jpg"></a></li>
+          <li><a><img src="../../assets/index-img/focusc.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusf.jpg"></a></li>
+          <li><a><img src="../../assets/index-img/focuse.png"></a></li>
+          <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
           <!--<li><a><img src="../../assets/index-img/focusg.jpg"></a></li>-->
           <!--<li><a><img src="../../assets/index-img/focush.jpg"></a></li>-->
         </ul>
         <div id="button-left" title="下一张" ><img src="../../assets/index-img/right.png"></div>
         <div id="button-right" title="上一张" ><img src="../../assets/index-img/left.png"></div>
-        <div id="controler"></div><!--控制按钮,为了日后方便后台操作这里的控制按钮在js代码中控制添加-->
       </div>
     </div>
     <div class=" col-sm-12 col-md-6 hot">
@@ -53,9 +56,9 @@
 <div class="col-md-12 head2"><img src="../../assets/index-img/head2.jpg"></div>
 <div class="look col-md-12">
   <ul>
-    <li>女生穿搭</li>
-    <li><h3>穿搭</h3></li>
-    <li>男生穿搭</li>
+    <li (click)="girls()">女生穿搭</li>
+    <li (click)="looks()"><h3>穿搭</h3></li>
+    <li (click)="boys()">男生穿搭</li>
   </ul>
   <div class="look2 col-md-12">
    <div class="col-md-8 look2-1">
@@ -113,13 +116,13 @@
 <div class="loves col-md-12">
   <div class="head3">
   <ul>
-    <li>卫衣</li>
-    <li>毛衣</li>
-    <li>衬衫</li>
-    <li><h3 class="fatxt">情侣时光</h3></li>
-    <li>外套</li>
-    <li>牛仔裤</li>
-    <li>休闲裤</li>
+    <li (click)="loves()">卫衣</li>
+    <li (click)="loves()">毛衣</li>
+    <li (click)="loves()">衬衫</li>
+    <li (click)="loves()"><h3 class="fatxt">情侣时光</h3></li>
+    <li (click)="loves()">外套</li>
+    <li (click)="loves()">牛仔裤</li>
+    <li (click)="loves()">休闲裤</li>
   </ul>
   </div>
   <div class="col-md-12 love-img">
@@ -159,6 +162,13 @@
     <div class="col-md-3"><img src="../../assets/index-img/love5.jpg"></div>
     <div class="col-md-3"><img src="../../assets/index-img/love6.jpg"></div>
     <div class="col-md-3"><img src="../../assets/index-img/love7.jpg"></div>
+    <div class="col-md-3">
+      <img src="../../assets/index-img/love8.jpg">
+      <br>
+      <br>
+      <br>
+      <img src="../../assets/index-img/love9.gif">
+    </div>
 
     </div>
   </div>
@@ -169,19 +179,19 @@
     <div class="fashion1">
       <div class="model_title">
         <ul>
-          <li>时装秀</li>
-          <li>赵丽颖</li>
-          <li><h2 class="fatxt">时尚圈</h2></li>
-          <li>吴亦凡</li>
-          <li>王鸥</li>
+          <li (click)="fashionweek()">时装秀</li>
+          <li (click)="fashionying()">赵丽颖</li>
+          <li (click)="fashionweek()"><h2 class="fatxt">时尚圈</h2></li>
+          <li (click)="fashionwu()">吴亦凡</li>
+          <li (click)="fashionou()">王鸥</li>
         </ul>
       </div>
       <ul class="fashionInfo1" >
-        <li class="img1"><img src="../../assets/index-img/fashion-stars1.jpg" height="520" width="360"/></li>
-        <li class="img2"><img src="../../assets/index-img/fashion-stars2.jpg" height="260" width="220"/></li>
-        <li class="img2"><img src="../../assets/index-img/fashion-stars3.jpg" height="260" width="220"/></li>
-        <li class="img3"><img src="../../assets/index-img/fashion-stars4.jpg" height="240" width="460"/></li>
-        <li class="img4"><img src="../../assets/index-img/fashion-stars5.jpg" height="520" width="320"/></li>
+        <li class="img1"><img src="../../assets/index-img/part1.jpg"/><p><span>韩孝珠在《W-两个世界》里面的表现可圈可点，空气感刘海+经典的韩式妆容，让人大呼美丽。出道以来她出演的多部电影电视剧都获得不错的奖项，不会因为名利而改变自己MORE </span></p></li>
+        <li class="img2"><img src="../../assets/index-img/fashion-stars2.jpg" height="260" width="220"/><p><span>张天爱封面大片展完美LOOK 演绎婀娜攻气两种苏</span></p></li>
+        <li class="img2"><img src="../../assets/index-img/fashion-stars3.jpg" height="260" width="220"/><p><span>吴亦凡的国际影响力一直不容小觑吴亦凡EP《6》创7项纪录 史上最快突破百万专辑</span></p></li>
+        <li class="img3"><img src="../../assets/index-img/fashion-stars4.jpg" height="240" width="460"/><p><span>不惧盛夏高温，付辛博高温演绎雅痞风，在演员、演唱道路上稳扎稳打，不仅有颜，还颇有实力，自然也成为时尚界的宠儿。</span></p></li>
+        <li class="img4"><img src="../../assets/index-img/fashion-stars5.jpg" height="520" width="320"/><p><span>江铠同演绎时尚摩登的都市女郎特质，时而头发微乱，徜徉花海，尽显小女人的慵懒可爱。江铠同在《爱闪亮》的拍摄过程中，戏份重又太过投入，每天都累得精疲力尽，常常收工回去已经“目光呆滞”，朋友甚至戏谑江铠同“感觉不会再爱了”。</span></p></li>
       </ul>
     </div>
     <!--秀场-->
@@ -262,16 +272,29 @@
         </div>
       </div>
     </div>
-  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg"></div>
+  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg"><h2 style="margin-left:150px;text-align: center">分享</h2></div>
     <div class="col-md-12 share">
       <ul>
-        <li class="hit1"><img src="../../assets/index-img/index-cp.jpg"/><div class="share_txt1">城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演绎那个勾起你我回忆的浪漫故事。
-          当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div></li>
-        <li><img src="../../assets/index-img/share2.jpg"/></li>
-        <li><img src="../../assets/index-img/share3.jpg"/></li>
+        <li class="hit1"><img src="../../assets/index-img/index-cp.jpg"/>
+          <div class="cen1">
+            <div id="share_txt1-1" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
+            绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
+          </div>
+
+        </li>
+        <li class="hit2"><img src="../../assets/index-img/share2.jpg"/> <div class="cen1">
+          <div id="share_txt1-2" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
+            绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
+        </div></li>
+        <li class="hit3"><img src="../../assets/index-img/share3.jpg"/><div class="cen1">
+          <div id="share_txt1-3" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
+            绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
+        </div></li>
       </ul>
-      <div  class="content share_bg">
-        <div class="share1"><img src="../../assets/index-img/pic2-1x.jpg"/></div>
+      <div  class=" share_bg">
+        <div class="share_title">时尚达人博主的分享圈</div>
+        <div class="share1"><img src="../../assets/index-img/pic2-3.jpg"/></div>
+        <div class="share2"><img src="../../assets/index-img/pic2-1x.jpg"/></div>
       </div>
 
 

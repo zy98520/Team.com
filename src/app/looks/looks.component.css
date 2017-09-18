@@ -35,23 +35,34 @@
   margin-left: 400px;
   margin-top:50px;
 }
+.woman:hover{
+  cursor: pointer;
+  background-color: white;
+}
+.man:hover{
+  background-color: white;
+  cursor: pointer;
+}
 .woman a{
   text-decoration: none;
-  cursor: pointer;
+  /*cursor: pointer;*/
   color: #ff4ba7;
 }
 .man a{
   color: #010101;
-  cursor: pointer;
+  /*cursor: pointer;*/
   text-decoration: none;
 
 }
-.row a{
+.looks-1{
   cursor: pointer;
 }
-.row{
-  margin-top: 20px;
-}
+/*.row a{*/
+  /*cursor: pointer;*/
+/*}*/
+/*.row{*/
+  /*margin-top: 20px;*/
+/*}*/
 .fl{
   float: left;
 }
@@ -59,20 +70,53 @@
   float: right;
 }
 .looks-man span:hover{
-
   cursor: pointer;
+}
+h4{
+  padding-top: 5px;
+  color:black;
+  font-weight: 600;
+
+}
+.look1{
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+  width: 120px;
+  height: 60px;
+  border: double 6px #ff4ba7;
 }
 .woman1{
 
 }
-#word11{
-  background-color: rgba(153, 153, 153, 0.44);
+.word1{
+  font-weight:600;
+  background-color: rgba(255, 255, 255, 0.78);
   width: 100px;
   height: 150px;
-  color: white;
+  color: #000000;
   font-size: 20px;
   text-align: center;
-  line-height: 50px;
+  line-height: 150px;
+  display: none;
+
+}
+.man1:hover .word1{
+  display: block;
+}
+.word2{
+  font-weight:600;
+  background-color: rgba(255, 255, 255, 0.78);
+  width: 150px;
+  height: 254px;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  line-height: 254px;
+  display: none;
+}
+.man2:hover .word2{
+  display: block;
 }
 .foot{
   width: 100%;
@@ -85,11 +129,6 @@
   height: 75px;
   background-color: black;
   text-align: center;
-}
-.animated-2x {
-  animation-duration:.2s;
-  animation-fill-mode: both;
-
 }
 /*.animated .infinite {*/
 /*animation-iteration-count: infinite;*/

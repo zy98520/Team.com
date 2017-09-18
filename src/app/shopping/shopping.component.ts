@@ -10,6 +10,7 @@ declare var $: any ;
   providers: [UsersService]
 })
 export class ShoppingComponent implements OnInit {
+<<<<<<< HEAD
 detail:any;
 size1: any;
 n:any;
@@ -19,6 +20,23 @@ n:any;
     private route: ActivatedRoute,
   ) {}
   size_click(name, state, size ) {
+=======
+
+  constructor() {
+
+  }
+  size_click(btn) {
+    $('#Szhijiao').css({'display': 'block'});
+    $('#Mzhijiao').css({'display': 'none'});
+    $('#Mzhijiao').css({'display': 'none'});
+  }
+  size1_click(btn1) {
+    $('#Szhijiao').css({'display': 'none'});
+    $('#Mzhijiao').css({'display': 'block'});
+    $('#Lzhijiao').css({'display': 'none'});
+  }
+  size2_click(btn) {
+>>>>>>> a796b260685af9194e781ce145a9ed6f8722c7ee
     $('#Szhijiao').css({'display': 'none'});
     $('#Mzhijiao').css({'display': 'none'});
     $('#Lzhijiao').css({'display': 'none'});
