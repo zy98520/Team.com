@@ -103,7 +103,7 @@ h1{
   width: 117px;
   height: 137px;
 }
-.oGood2 ul li p,.yGood3 ul li p,.yGood4 ul li p{
+.oGood2 ul li p,.oGood3 ul li p,.oGood4 ul li p{
   width: 117px;
   height: 137px;
   background: rgba(0, 0, 0, 0.68);
@@ -115,7 +115,7 @@ h1{
   display: none;
 
 }
-.oGood2 ul li:hover p,.yGood3 ul li:hover p,.yGood4 ul li:hover p{
+.oGood2 ul li:hover p,.oGood3 ul li:hover p,.oGood4 ul li:hover p{
   display: block;
   cursor: pointer;
 }
@@ -139,24 +139,24 @@ h1{
   margin-left:500px;
 background-color: #898243}
 
-.yGood3 .img5-right{
+.oGood3 .img5-right{
   float: right;
  left: 140px;
   top: 80px;
 }
-.yGood3 ul{
+.oGood3 ul{
   top: 650px;
   left: 500px;
   padding-left: 0;
   position: absolute;
 }
-.yGood3 ul li{
+.oGood3 ul li{
   margin-top: 10px;
   list-style: none;
    float: left;
   margin-left: 10px;
 }
-.yGood3 ul li img{
+.oGood3 ul li img{
   width: 117px;
   height: 137px;
 }
@@ -208,17 +208,6 @@ background-color: #898243}
   color: #fff;
   font-size: .6vw;
   text-align: center;}
-.yGood4 ul{
- margin-left: 150px;
-  top: 700px;
-}
-.yGood4 ul li{
-  list-style: none;
-}
-.yGood4 ul li img{
-  width: 117px;
-  height: 137px;
-}
 
 .n04{
   width: 133px;
@@ -234,16 +223,20 @@ background-color: #898243}
   margin-top: 10px;
   color:#FFFFFF;
 }
-.yGood4 ul {
-  left: 390px;
+.oGood4 ul {
+  margin-left: 150px;
+  left: 410px;
   position: absolute;
   top:340px;
 }
-.yGood4 ul li{
+.oGood4 ul li{
   list-style: none;
   margin-top: 10px;
 }
-
+.oGood4 ul li img{
+  width: 117px;
+  height: 137px;
+}
 .ouShow{
   position: absolute;
   top: 490px;
