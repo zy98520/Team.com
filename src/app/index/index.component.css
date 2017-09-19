@@ -653,6 +653,14 @@ padding-top: 80px;
   margin-left: 100px;
   background-image: url("../../assets/index-img/bg3.jpg");
 }
+.share_bg .head-share{
+  position: absolute;
+  left: 60px;
+ margin-top: -80px;
+width: 140px;
+  height: 140px;
+  background-image: url("../../assets/index-img/head-share.jpg");
+}
 
 .share_title{
   width: 280px;
@@ -662,12 +670,57 @@ padding-top: 80px;
   text-align: center;
   margin-top: 30px;
  }
-.share1 img{
-  margin-left: -860px;
-  margin-top: 150px;
+.share1 {
+  width: 463px;
+  height:323px;
+  margin-left: -170px;
+  margin-top: 100px;
+
 }
 .share2{
-  margin-left: 86px;
-  margin-top: -535px;
+  width: 342px;
+  height:575px;
+  margin-left: 354px;
+  margin-top: -480px;
+  position: relative;
+
+}
+.share2 img{
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+.share-2 {
+  -webkit-animation:mymove  ease-in-out  6s infinite;
+}
+.share_bg .share2 .share-left{
+  width: 29px;
+  height: 70px;
+  margin-left: -40px;
+  margin-top: 0px;
+  background-image: url("../../assets/index-img/left-share.png");
+}
+.share_bg .share2 .share-right{
+  width: 29px;
+  height: 70px;
+  margin-left: 350px;
+  margin-top: -70px;
+  background-image: url("../../assets/index-img/right-share.png");
 }
 
+@-webkit-keyframes mymove
+{ 0% {
+  opacity:1;
+}
+  25% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity:1;
+  }
+
+}

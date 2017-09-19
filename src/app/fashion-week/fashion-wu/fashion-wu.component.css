@@ -1,26 +1,9 @@
-.wu-div-lefInfo{
-  overflow: hidden;
-  border: none;
-  margin-right: 120px;
-  background-color: #C0B9AE
-}
-
-.txt-div{
-  position: absolute;
-  margin: 10px;
-  left: 570px;
-  width: 140px;
-  height: 800px;
-  background-color: #C0B9AE;
-  box-sizing: border-box;
-}
 .n01{
   width: 133px;
   height: 143px ;
   background: #d9c291;
   text-align: center;
   line-height: 150px;
-
   box-sizing: border-box;
   border-bottom: 5px solid #fff;
 }
@@ -29,90 +12,75 @@
   width: 133px;
   height: 400px;
   margin-top: 10px;
-  background-color: #C0B9AE;
+  background-color: #C0B9AE ;
   color:#FFFFFF;
 }
-.txt01 h1{
+h1{
   display: block;
   font-size: 5vw;
-
   text-align: center;
 }
-.wu-div-rightInfo{
-  background: #d9c291;
-  border: none;
-  margin-left: 0;
-  margin-top: 60px;
-}
-.good1{
-  width: 200px;
-  height: 200px;
-  position: relative;
-  top: -150px ;
-  left: 365px;
-}
-.good2{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  top:-280px;
-  left:1120px;
-}
-@media screen and (max-width:992px ) {
-  .good1{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    top: -380px ;
-    left: 140px;
-  }
 
-  .txt-div{
-    position: absolute;
-    margin: 10px;
-    left: 280px;
-    top: -10px;
-    width: 140px;
-    height: 800px;
-    background-color: #C0B9AE;
-    box-sizing: border-box;
-  }
+.Good1 .img-y{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.Good1 ul{
+  padding-left: 15px;
+  position: absolute;
+  top: 660px;
+  left: 50px;
+}
+.Good1 ul li{
+  float: left;
+  margin-left: 6px;
+  list-style: none;
+}
+.Good1 ul li img{
+  width: 130px;
+  height: 130px;
+}
+.Good1 ul li p{
+  width: 130px;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-130px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+.w-img{
+ margin-top: 60px;
+  margin-left: 40px;
+}
+.Good2 ul{
+margin-left: 0;
+}
+.Good2 ul li{
+  float: left;
+  margin-left: 5px;
+  list-style: none;
+}
+.Good2 ul li p{
+  width:140px;
+  height:140px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-140px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width:992px ) {
+
+
 }
 @media screen and (max-width:768px ){
-  .good1{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    top: -880px ;
-    left: 0;
-  }
-  .good2{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    top:-880px;
-    left:160px;
-    margin-left: 10px;
-  }
-  .txt-div{
-    position: absolute;
-    margin: 10px;
-    left: 380px;
-    top: -10px;
-    width: 140px;
-    height: 800px;
-    background-color: #C0B9AE;
-    box-sizing: border-box;
-  }
-  .txt01{
-    text-align: center;
-    font-size: 11px;
-    width: 133px;
-    height: 400px;
-    margin-top: 10px;
-    background-color: #C0B9AE;
-    color:#FFFFFF;
-  }
+
 }
 .n02{
   width: 133px;
@@ -134,15 +102,35 @@
 }
 .wGood1 ul{
 margin-right: 20px;
-  padding-left: 20px;
+  padding-left: 60px;
   margin-top: -320px;
   position: absolute;
 }
 .wGood1 ul li{
   margin-left: 360px;
   list-style: none;
-
 }
+.wGood1 ul li img{
+  width: 140px;
+  height: 140px;
+}
+.wGood1 ul li p{
+  width: 140px;
+  height: 140px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-140px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+.Good1 ul li:hover p,.Good2 ul li:hover p,.wGood1 ul li:hover p,.wGood2 ul li:hover p,
+.wGood3 ul li:hover p,.wGood4 ul li:hover p,.good-head:hover p,.wu-good-all:hover p{
+  display: block;
+  cursor: pointer;
+}
+
 .wGood2 ul{
   margin-right: 20px;
   padding-left: 20px;
@@ -152,7 +140,23 @@ margin-right: 20px;
   margin-left: 10px;
   list-style: none;
 }
-.tt{
+.wGood2 ul li p{
+  width:150px;
+  height:151px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-151px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+
+#yi_good p {
+  width: 126px;
+  height: 151px;
+}
+ .tt{
   height: 800px;
   background-color:#D9C2B7 }
 .wuBig{
@@ -162,7 +166,7 @@ margin-right: 20px;
   background-size: cover;
   width: 1400px;
   height:1828px;
-  background-image: url("../../../assets/wu-img/wu5.jpg");
+  background-image: url("../../../assets/wu-img/wubg.jpg");
   background-attachment: fixed;
 
 }
@@ -182,7 +186,19 @@ margin-top: 10px;
   list-style: none;
 }
 .wGood3 ul li img{
-  width: 110px;height: 120px;
+  width: 130px;height: 140px;
+}
+
+.wGood3 ul li p{
+  width:130px;
+  height:140px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-140px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
 }
 
 .wGood4 ul{
@@ -200,6 +216,17 @@ margin-top: 10px;
 .wGood4 ul li img{
   width: 120px;
   height: 141px;
+}
+.wGood4 ul li p{
+  width:120px;
+  height:141px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-141px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
 }
 
 
@@ -225,21 +252,23 @@ margin-top: 10px;
   padding:140px 20px  140px  20px;
   color:#FFFFFF;
 }
-/*.wuBig2{*/
-  /*width: 1400px;*/
-  /*height: 1848px;*/
-  /*position: relative;*/
-  /*min-width: 1200px;*/
-  /*background-image: url("../../../assets/wu-img/wu10.jpg");*/
-  /*background-attachment: fixed;*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center;*/
-/*}*/
+
 .good-head{
   position: absolute;
-  top: 700px;
+  top:650px;
   left: 380px;
+}
 
+.good-head p{
+  width: 200px;
+  height: 152px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-152px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
 }
 .n04{
   width: 133px;
@@ -253,13 +282,25 @@ margin-top: 10px;
   text-align: center;
   width: 150px;
   height: 400px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 80px;
   color:#FFFFFF;
 }
 .wu-good-all{
   position: absolute;
   top: 480px;
   left:-250px;
+}
+.wu-good-all p{
+  width:314px;
+  height:286px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-286px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
 }
 .btm-txt{
   height: 120px;
