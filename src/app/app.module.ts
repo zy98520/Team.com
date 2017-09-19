@@ -40,6 +40,7 @@ import { PayComponent } from './personal-center/pay/pay.component';
 import {GlobalPropertyService} from './services/global-property.service';
 import { MyorderComponent } from './personal-center/myorder/myorder.component';
 import { MyflowComponent } from './personal-center/myflow/myflow.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { MyflowComponent } from './personal-center/myflow/myflow.component';
     MyorderComponent,
     MyflowComponent,
     PaytoComponent,
+    SharesAreaComponent,
   ],
   imports: [
     BrowserModule,

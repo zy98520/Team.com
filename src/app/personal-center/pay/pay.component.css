@@ -89,19 +89,20 @@ body{
   padding-bottom:20px;
 }
 .name_add{
+  position:relative;
   box-shadow:0px 0px 3px 2px rgba(9, 4, 4, 0.64);
   width:280px;
   height:200px;
   margin-left:40px;
   margin-top:15px;
-
+  float:left;
 }
 .name{
   margin-top:8px;
 
 }
-#kuang{
-  width:1000px;
+.kuang{
+  min-width:280px;
   height:200px;
 }
 ul{
@@ -117,12 +118,17 @@ ul{
 .name_add ul li{
   padding-top:3px;
   margin-left:-20px;
+  height:27px;
+
 }
 #editor{
   margin-left:160px;
 }
 #dagou{
   margin-left:225px;
+  position: absolute;
+  bottom:0;
+  right:0
 }
 
 #manage_address_id{
@@ -145,14 +151,14 @@ ul{
 .center_hidden{
   width:1000px;
   height:420px;
-  display: none;
   margin-top:-30px;
-  /*background-color: #1eabff;*/
+
   clear: both;
 }
 .centerHidden{
   width:1000px;
   height:350px;
+  margin-left: 0px;
 }
 
 .main_address{
@@ -243,7 +249,7 @@ ul{
   height: 50px;
 }
 
-#cancel_address_id{
+.cancel_address_id{
   width:150px;
   height:40px;
   margin-left:100px;
@@ -251,7 +257,7 @@ ul{
   border:1px solid grey;
   background-color: #FDFDFB;
 }
-#cancel_address_id,#cancel_address_id1:hover{
+.cancel_address_id,#cancel_address_id1:hover{
   background-color:orange;
   color: #FDFDFB;
 }
@@ -262,7 +268,11 @@ ul{
   background-color: #FDFDFB;
   border:1px solid grey;
 }
-
+.miss{width:150px;
+  color: rgba(255, 0, 0, 0.58);
+  margin-left: 150px;
+}
+a{cursor: pointer;}
 
 
 

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   toLogin(login_form) {
     let that = this;
     that.userSer.login(login_form.form.value, function (result) {
-      if ( result.StateCode==0){
+      if ( result.StateCode == 0){
         that.login_res = '用户名或密码错误！';
       }else {
         location.reload();

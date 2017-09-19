@@ -21,6 +21,7 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'shares',
     component: SharesComponent
+  },
+  {
+    path: 'shares-area',
+    component: SharesAreaComponent
   },
   {
     path: 'girls',
@@ -111,4 +116,6 @@ const routes: Routes = [
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+
+}
