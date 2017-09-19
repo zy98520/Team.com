@@ -29,36 +29,27 @@ body{
 }
 
 .yi ul{
-  margin-left: 0px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 25px 25px 0;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
   float: left;
-  margin-right: 22px;
-  width: 163px;
+  width: 222px;
+  height: 394px;
   list-style: none;
 }
+.yi ul:hover{
+  cursor: pointer;
+  border: 1px solid red;
+}
 .yi li{
-  float: left;
-  width: 163px;
-
+  width: 220px;
 }
 .yi .fenge img{
   margin-top: 20px;
 }
 .fenge {
-  /*text-align: center;*/
+
   /*margin-left: 220px;*/
-}
-.yi-word .yi-word1:hover{
-  cursor: pointer;
-  color: red;
-}
-.yi-word .yi-word2:hover{
-  cursor: pointer;
-  color: red;
-}
-.yi-word .yi-word3:hover{
-  cursor: pointer;
-  color: red;
-}
-.yi .fa-heart-o:hover{
-  cursor: pointer;
 }

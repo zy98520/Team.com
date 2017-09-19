@@ -1,42 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .boy{
   width: 100%;
   height: 5000px;
   background-color: black;
 }
 .boys-big{
-  height: 426px;
   background-color: black;
-  text-align: center;
   margin-top: -20px;
-}
-.newNav{
-
+  margin-left: 180px;
 }
 .newNav ul{
-  width: 1200px;
+  width: 768px;
   list-style: none;
   background-color: #000000;
-  margin-left:149px;
 
 }
 .newNav li{
-  width: 253px;
+  width: 80px;
   float: left;
-  font-size:22px;
+  font-size:14px;
   border-right: dashed;
   text-align: center;
   background-color: #010101;
+  margin-left:50px;
 
 }
 .newNav a{
   color: white;
 }
-
 .newNav a:hover{
   color: black;
   cursor: pointer;
 }
-
 .newNav .active a{
   color: black;
   background-color: white;
@@ -72,22 +70,21 @@
   font-size:16px;
   margin-top: 10px;
 }
-
 .title1{
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight:600;
   color: #f6ff27;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 60px;
 }
 .title2{
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #fff5ff;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: -100px; ;
 }
 .buy1{
   margin-left:40px;
@@ -103,4 +100,55 @@
   line-height: 40px;
   margin-top:30px;
 
+}
+@media(min-width: 768px) {
+  .newNav ul{
+    width: 768px;
+    margin-left:100px;
+
+  }
+  .newNav li{
+    width:120px;
+    font-size:16px;
+  }
+  .title1{
+    font-size: 14px;
+  }
+  .title2{
+    font-size: 12px;
+  }
+}
+@media(min-width: 992px) {
+  .newNav ul{
+    width: 992px;
+    margin-left:100px;
+  }
+  .newNav li{
+    width: 153px;
+    font-size:18px;
+  }
+  .title2{
+    font-size: 14px;
+  }
+  .title1{
+    font-size: 16px;
+  }
+}
+@media(min-width: 1280px) {
+  .newNav ul{
+    width: 1200px;
+    margin-left:140px;
+  }
+  .newNav li{
+    width: 200px;
+    font-size:22px;
+    padding-right: 40px;
+
+  }
+  .title1{
+    font-size: 18px;
+  }
+  .title2{
+    font-size: 16px;
+  }
 }
