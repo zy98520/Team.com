@@ -1,12 +1,13 @@
+
 <div class="head col-md-12 carousel slide" style="text-align: center">
   <div class="fl_s">
     <div class="tu">
       <img src="../../assets/index-img/a.gif" class="img-responsive" style="display:block;">
-      <img src="../../assets/index-img/d.jpg" class="img-responsive" >
-      <img src="../../assets/index-img/c.jpg" class="img-responsive" >
-      <img src="../../assets/index-img/b.jpg" class="img-responsive" >
-      <img src="../../assets/index-img/f.jpg" class="img-responsive" >
-      <img src="../../assets/index-img/e.jpg" class="img-responsive" >
+      <img routerLink="/looks" src="../../assets/index-img/d.jpg" class="img-responsive" >
+      <img routerLink="/loves" src="../../assets/index-img/b.jpg" class="img-responsive" >
+      <img routerLink="/fashionweek" src="../../assets/index-img/c.jpg" class="img-responsive" >
+      <img routerLink="/fashionweek" src="../../assets/index-img/f.jpg" class="img-responsive" >
+      <img routerLink="/shares" src="../../assets/index-img/e.jpg" class="img-responsive" >
     </div>
     <div class="ups col-md-12">
       <a class="btn_left"><span class="glyphicon glyphicon-menu-left"></span></a>
@@ -30,10 +31,10 @@
     <div id="wrapper" class="col-sm-12 col-md-6">
       <div id="show-area">
         <ul>
-          <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
+          <li><a><img src="../../assets/index-img/focusa.jpg"></a></li>
+          <li><a><img src="../../assets/index-img/focusf.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusd.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focusc.jpg"></a></li>
-          <li><a><img src="../../assets/index-img/focusf.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focuse.png"></a></li>
           <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
           <!--<li><a><img src="../../assets/index-img/focusg.jpg"></a></li>-->
@@ -56,9 +57,9 @@
 <div class="col-md-12 head2"><img src="../../assets/index-img/head2.jpg"></div>
 <div class="look col-md-12">
   <ul>
-    <li (click)="girls()">女生穿搭</li>
-    <li (click)="looks()"><h3>穿搭</h3></li>
-    <li (click)="boys()">男生穿搭</li>
+    <li routerLink="/girls">女生穿搭</li>
+    <li routerLink="/looks"><h3>穿搭</h3></li>
+    <li routerLink="/boys">男生穿搭</li>
   </ul>
   <div class="look2 col-md-12">
    <div class="col-md-8 look2-1">
@@ -116,13 +117,13 @@
 <div class="loves col-md-12">
   <div class="head3">
   <ul>
-    <li (click)="loves()">卫衣</li>
-    <li (click)="loves()">毛衣</li>
-    <li (click)="loves()">衬衫</li>
-    <li (click)="loves()"><h3 class="fatxt">情侣时光</h3></li>
-    <li (click)="loves()">外套</li>
-    <li (click)="loves()">牛仔裤</li>
-    <li (click)="loves()">休闲裤</li>
+    <li routerLink="/loves">卫衣</li>
+    <li routerLink="/loves">毛衣</li>
+    <li routerLink="/loves">衬衫</li>
+    <li routerLink="/loves"><h3 class="fatxt">情侣时光</h3></li>
+    <li routerLink="/loves">外套</li>
+    <li routerLink="/loves">牛仔裤</li>
+    <li routerLink="/loves">休闲裤</li>
   </ul>
   </div>
   <div class="col-md-12 love-img">
@@ -179,11 +180,11 @@
     <div class="fashion1">
       <div class="model_title">
         <ul>
-          <li (click)="fashionweek()">时装秀</li>
-          <li (click)="fashionying()">赵丽颖</li>
-          <li (click)="fashionweek()"><h2 class="fatxt">时尚圈</h2></li>
-          <li (click)="fashionwu()">吴亦凡</li>
-          <li (click)="fashionou()">王鸥</li>
+          <li routerLink="/fashionweek">时装秀</li>
+          <li routerLink="/fashionying">赵丽颖</li>
+          <li routerLink="/fashionweek"><h2 class="fatxt">时尚圈</h2></li>
+          <li routerLink="/fashionfan">吴亦凡</li>
+          <li routerLink="/fashionou">王鸥</li>
         </ul>
       </div>
       <ul class="fashionInfo1" >
@@ -271,7 +272,8 @@
         </div>
       </div>
     </div>
-  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg"><h2 style="margin-left:150px;text-align: center">分享</h2></div>
+  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg">
+    <h2 routerLink="/shares" style="margin-left:150px;text-align: center">分享</h2></div>
     <div class="col-md-12 share">
       <ul>
         <li class="hit1"><img src="../../assets/index-img/index-cp.jpg"/>
