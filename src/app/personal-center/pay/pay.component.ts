@@ -135,4 +135,8 @@ export class PayComponent implements OnInit {
   cancel(){
     this.state1=false;
   }
+  public pay():void{
+    this.router.navigateByUrl("payto");
+}
+
 }

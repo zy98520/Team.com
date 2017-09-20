@@ -19,14 +19,27 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav " style="margin-left: 200px">
         <li><a href="#" [routerLink]="['/index','我是默认值']" routerLinkActive="active">首页<span class="sr-only">(current)</span></a></li>
-        <li><a href="#" routerLink="/looks" routerLinkActive="active">穿搭</a></li>
+        <li><a href="#" routerLink="/looks" routerLinkActive="active">穿搭</a>
+          <ul class="dropdown">
+            <li routerLink="/boys">男生搭</li>
+            <li routerLink="/girls">女生搭</li>
+          </ul>
+        </li>
         <li><a href="#" routerLink="/loves" routerLinkActive="active">情侣时光 <span class="glyphicon glyphicon-heart"></span> </a></li>
-        <li><a href="#" routerLink="/fashion-week" routerLinkActive="active">时尚</a></li>
+        <li><a href="#" routerLink="/fashion-week" routerLinkActive="active">时尚圈</a>
+          <ul class="dropdown d1">
+            <li routerLink="/fashion-week">秀场</li>
+            <li routerLink="/fashion-wu">吴亦凡</li>
+            <li routerLink="/fashion-ying">赵丽颖</li>
+            <li routerLink="/fashion-ou">王鸥</li>
+          </ul>
+        </li>
         <li><a href="#" routerLink="/shares" routerLinkActive="active">分享</a></li>
-        <li><a href="#" routerLink="/shopping" routerLinkActive="active">detail</a></li>
         <li><a href="#" routerLink="/pay" routerLinkActive="active">付款</a></li>
         <li><a href="#" routerLink="/payto" routerLinkActive="active">付钱</a></li>
         <li><a href="#" routerLink="/shares-area" routerLinkActive="active">分享区</a></li>
+        <li><a href="#" routerLink="/shapping-car" routerLinkActive="active">个人</a></li>
+
 
       </ul>
       <form class="navbar-form navbar-left">

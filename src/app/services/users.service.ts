@@ -109,5 +109,14 @@ function (error) {
       }
     )
   }
+  addloves (body, callback ) {
+    this.http.post(this.url + '/addloves', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 }
 

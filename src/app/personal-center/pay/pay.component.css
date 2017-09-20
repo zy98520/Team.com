@@ -69,7 +69,7 @@ body{
 
 .con{
   width:1130px;
-  height:1230px;
+  min-height:813px;
   margin-left: auto;
   margin-right: auto;
   margin-top:0px;
@@ -89,20 +89,19 @@ body{
   padding-bottom:20px;
 }
 .name_add{
-  position:relative;
   box-shadow:0px 0px 3px 2px rgba(9, 4, 4, 0.64);
   width:280px;
   height:200px;
   margin-left:40px;
   margin-top:15px;
-  float:left;
+  position: relative;
 }
 .name{
   margin-top:8px;
 
 }
-.kuang{
-  min-width:280px;
+#kuang{
+  width:1000px;
   height:200px;
 }
 ul{
@@ -114,6 +113,7 @@ ul{
   background-color: #ffffff;
   float: left;
   padding-left:-20px;
+
 }
 .name_add ul li{
   padding-top:3px;
@@ -124,7 +124,7 @@ ul{
 #editor{
   margin-left:160px;
 }
-#dagou{
+#dagou,#dagou1{
   margin-left:225px;
   position: absolute;
   bottom:0;
@@ -152,7 +152,6 @@ ul{
   width:1000px;
   height:420px;
   margin-top:-30px;
-
   clear: both;
 }
 .centerHidden{
@@ -259,6 +258,12 @@ ul{
 }
 .cancel_address_id,#cancel_address_id1:hover{
   background-color:orange;
+}
+#cancel_address_id:hover{
+  color: #FDFDFB;
+}
+#cancel_address_id1:hover{
+  background-color: #ffc0cb;
   color: #FDFDFB;
 }
 #cancel_address_id1{
@@ -274,6 +279,123 @@ ul{
 }
 a{cursor: pointer;}
 
+.bottom{
+  width:1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title_goods{
+  width:1060px;
+  height:40px;
+  line-height:40px;
+  border-top:1px solid gainsboro;
+  border-bottom:1px solid gainsboro;
+  margin-bottom:40px;
+}
+.title_goods li{
+  float:left;
+  margin-left:130px;
+}
+.first_goods{
+ width:160px;
+  height:40px;
+}
+.center_goods{
+  width:1060px;
+  height:100px;
+  line-height:100px;
+  border-top:1px solid gainsboro;
+  border-bottom:1px solid gainsboro;
+  background-color:#F2F2F2;
+}
+.goods_picture{
+  float:left;
+  width:305px;
+  height:60px;
+}
+.name_good{
+  margin-left:45px;
+}
+.size_goods{
+  width:50px;
+  height:40px;
+}
+.number_goods{
+  width:50px;
+  height:40px;
+}
+.center_goods li{
+  float:left;
+  margin-left:129px;
+}
+.center1_goods{
+  width:1060px;
+  height:40px;
+  line-height:40px;
+  margin-top:-10px;
+  border-bottom:1px solid gainsboro;
+  background-color:#F2F2F2;
+}
+.center1_goods li{
+  float:left;
+}
+.beizhu{
+  width:700px;
+}
+#beizhu_id{
+  float: left;
+  width:50px;
+  height:40px;
+
+}
+.money_goods{
+  float:left;
+}
+.total_goods{
+  width:1060px;
+  height:60px;
+  line-height:60px;
+  margin-top:-10px;
+  background-color:#F2F2F2;
+}
+.beizhu_put{
+  float:left;
+  margin-top:6px;
+  width:350px;
+  height:25px;
+}
+.bottom_goods{
+  width:1060px;
+  height:60px;
+  border-top:1px solid gainsboro;
+  border-bottom:1px solid gainsboro;
+  margin-top:40px;
+}
+.summary{
+  float:left;
+  margin-left:15px;
+  margin-top:17px;
+
+}
+.bottom_goods a{
+  float:left;
+  margin-left:10px;
+  width:700px;
+  margin-top:17px;
+}
+.bottom_goods li{
+  float:left;
+  margin-left:10px;
+  margin-top:17px;
+}
+.btn_goods{
+  border:none;
+  width:90px;
+  height:30px;
+  margin-top:13px;
+  background-color:yellow;
+  margin-left:20px;
+}
 
 
 

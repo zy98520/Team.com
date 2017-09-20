@@ -47,7 +47,7 @@ export class GirlsComponent implements OnInit {
     };
     $(window).scroll(Add_Data);
     function scroll(s) {
-      var timer = null;
+      let timer = null;
       // var h = document.body.scrollTop;
       timer = setInterval(function () {
         if ($(document).scrollTop()==s){
@@ -58,35 +58,48 @@ export class GirlsComponent implements OnInit {
         }
         else if ($(document).scrollTop()<s){
           $(document).scrollTop($(document).scrollTop()+10) ;
-  }
+        }
+
       }, 1);
     }
-    // function clear() {
-    //   $('.tian').css('');
-    //   $('.thin').css('');
-    //   $('.wen').css('');
-    //   $('.chang').css('');
-    //   $('.qing').css('');
-    // }
+    function clear() {
+      $('.tian').css('');
+      $('.thin').css('');
+      $('.wen').css('');
+      $('.chang').css('');
+      $('.qing').css('');
+      $('.xia').css('');
+    }
     $('.tian').click (function () {
+      clear();
       scroll(520);
     });
     $('.thin').click(function () {
+      clear();
       scroll(1650);
 
     });
     $('.wen').click(function () {
+      clear();
       scroll(2750);
     });
     $('.chang').click(function () {
       scroll(3780);
+      clear();
+      scroll(3800);
     });
     $('.qing').click(function () {
       scroll(4800);
+      clear();
+      scroll(4820);
+    });
+    $('.xia').click(function () {
+      clear();
+      scroll(520);
     });
   }
-  godetail(id){
-    let that=this;
-    that.router.navigate(['/shopping',id] );
-  }
+godetail(id){
+  let that=this;
+  that.router.navigate(['/shopping',id] );
+}
 }

@@ -30,6 +30,20 @@
 
   <div id="confirm_address_id">选择收货地址</div>
         <div class="kuang">
+          <div class="name_add">
+            <ul class="information">
+              <li>张晓峰</li>
+              <li>----------------------------------</li>
+              <li>
+                江苏苏州工业园区
+              </li>
+              <li>高博职业技术学院 东校区</li>
+              <li >13666666666</li>
+              <a >删除</a>
+              <a >编辑</a>
+              <img  id="dagou1"src="../../../assets/shopping_images/pay_images/dagou.png" height="35" width="35"/>
+            </ul>
+          </div>
     <div class="name_add" *ngFor="let item of address;let index=index" (click)="choose(index)">
       <ul class="information">
         <li>{{item.shopname}}</li>
@@ -48,8 +62,7 @@
   <div class="manage_address">
     <ul id="manage_address_id" >
       <li><a href="../personal-center.component.html">管理收货地址</a></li>
-      <li><a (click)="usenew()">使用新地址</a>
-      </li>
+      <li><a (click)="usenew()">使用新地址</a></li>
     </ul>
   </div>
 
@@ -155,10 +168,45 @@
     </form>
       </div>
 
-  <div class="bottom"></div>
+  <div class="bottom">
+    <p>确认商品信息</p>
+    <ul class="title_goods">
+      <li class="first_goods">商品</li>
+      <li>商品信息</li>
+      <li>单价(元)</li>
+      <li>数量</li>
+      <li>小计(元)</li>
+    </ul>
+    <ul class="center_goods">
+      <span class="goods_picture">
+      <img src="../../../assets/personal_images/1439880982560.jpg" height="80" width="80"/>
+        <a class="name_good">潮流时尚小清新非主流</a>
+      </span>
+      <li class="size_goods">尺码</li>
+      <li>34.00</li>
+      <li class="number_goods">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</li>
+      <li>2948</li>
+    </ul>
+    <ul class="center1_goods">
+      <li class="beizhu">
+        <p id="beizhu_id">备注：</p>
+          <input class="beizhu_put" type="text" placeholder="补充填写其它信息，如有快递不到也请备注">
+      </li>
+      <li>快递公司:全国包邮</li>
+      <li class="money_goods">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;快递运费:<span>345.00</span></li>
+    </ul>
+    <p class="total_goods">合计:<span>357</span></p>
+    <ul class="bottom_goods">
+      <a>返回购物车</a>
+      <li>共有一件商品</li>
+      <span class="summary">总计：<span>345.00</span></span>
+      <input type="button" value="确认并付款" (click)="pay()" class="btn_goods">
+    </ul>
+  </div>
 
 
     </div>
+
 
 
 

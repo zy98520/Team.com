@@ -53,3 +53,21 @@ body{
 
   /*margin-left: 220px;*/
 }
+.xin{
+  width:23px;
+  height:23px;
+  display: inline-block;
+  float:left;
+  background-position: -27px -50px;
+  background-image: url("../../assets/xin.jpg");
+}
+.pra{float:right;
+width:50px;
+  height:23px;
+
+}
+.pra1{float:right;
+  margin-right:8px;
+font-size: 1.2em;
+
+}

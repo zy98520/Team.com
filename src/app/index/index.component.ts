@@ -31,7 +31,7 @@ export class IndexComponent implements OnInit {
         //回调函数//恢复定时器//隐藏图片
         $('.fl_s .ups').css({'display':'block'});
         time = setInterval(timer,3000);
-      })
+      });
       //右单击
       $('.fl_s .btn_right').click(function(){
         c++;
@@ -39,7 +39,7 @@ export class IndexComponent implements OnInit {
         //获得的序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
-      })
+      });
       //左单击
       $('.fl_s .btn_left').click(function(){
         c--;
@@ -63,7 +63,7 @@ export class IndexComponent implements OnInit {
     t = setInterval(play, 3000)
     function play() {
       index++;
-      if (index > 4) {
+      if (index > 6) {
         index = 0
       }
       $("#lunbobox ul li").eq(index).css({
@@ -85,7 +85,7 @@ export class IndexComponent implements OnInit {
       })
       var index = $(this).index();
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-    });
+    })
     $("#lunbobox ul li,.lunbo a img").hover(
       function() {
         $('#toright,#toleft').show()
@@ -148,10 +148,9 @@ export class IndexComponent implements OnInit {
         var typePanel = $("#aa");
         typePanel.html(word.substring(0,index++));
         if(index==word.length-5)
-        {
-          $("#w").text('');
-          index=0;
-        }
+        { $("#w").text('');
+          index=0;}
+
         if(index % 3 == 0){
           typePanel.addClass("") ;
         }else if(index % 3 == 1){
@@ -189,34 +188,5 @@ export class IndexComponent implements OnInit {
       $("#share_txt1-3").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
 
     })
-  }
-  public girls():void{
-    this.router.navigateByUrl("girls");
-
-  }
-
-  public boys():void{
-    this.router.navigateByUrl("boys");
-  }
-  public looks():void{
-    this.router.navigateByUrl("looks");
-  }
-  public loves():void{
-    this.router.navigateByUrl("loves");
-  }
-  public fashionweek():void{
-    this.router.navigateByUrl("fashion-week");
-  }
-  public fashionou():void{
-    this.router.navigateByUrl("fashion-ou");
-  }
-  public fashionwu():void{
-    this.router.navigateByUrl("fashion-wu");
-  }
-  public fashionying():void{
-    this.router.navigateByUrl("fashion-ying");
-  }
-  public shares():void{
-    this.router.navigateByUrl("shares");
   }
 }

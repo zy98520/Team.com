@@ -1,6 +1,6 @@
 <div  class="col-md-12 login-bg">
   <div class="login1">
-    <div class="text">普通登录</div>
+    <div class="text">欢迎回来！请登录</div>
     <div class="col-md-3 col-lg-3">
   <form #loginForm="ngForm">
     <div class="form-group">
@@ -32,7 +32,9 @@
     </div>
     <button type="button" (click)="toLogin(loginForm)" [disabled]="loginForm.form.invalid" class="login">登录</button>
   </form>
-</div>
+      <div routerLink="/regist" class="zhuce">还没账号？ 去注册>></div>
+
+    </div>
 <div class="col-md-3 col-lg-3">
   {{ login_res}}
 </div>

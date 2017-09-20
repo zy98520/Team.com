@@ -21,11 +21,11 @@ constructor(
   ngOnInit() {
     this._hiddenNavs=this.glo.hiddenNavs;
     function Add_Data() {
-      var top = $("#fix1").offset().top;
-      var title = $("#title1").offset().top;
+      let top = $("#fix1").offset().top;
+      let title = $("#title1").offset().top;
 
-      var scrolla = $(window).scrollTop();
-      var cha = parseInt(top) - parseInt(scrolla);
+      let scrolla = $(window).scrollTop();
+      let cha= parseInt(top) - parseInt(scrolla);
       if (cha<=0) {
         $("#fix1").addClass("navbar-fixed-top");
         $("#fix1").addClass("ng2");
@@ -42,6 +42,7 @@ constructor(
 
     this.tel= sessionStorage .getItem('userId');
     this.name = sessionStorage .getItem('username');
+
   }
   ngAfterContentChecked(){
     this._hiddenNavs=this.glo.hiddenNavs;

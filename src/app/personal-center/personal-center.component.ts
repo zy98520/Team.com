@@ -14,10 +14,34 @@ mes: any ;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
+  shuzu=[['fj2','fj4','fj7','fj8'],['xq1','xq5','xq7','xq8']];
+   def:string;
+   def1:string;
 
+   top(a){
+     this.def=a[0];
+
+   }
+   bottom(b){
+     this.def=b[1];
+   }
+   dianji(index){
+   this.def1=this.def[index];
+   }
   ngOnInit() {
+    this.def1=this.shuzu[0][1];
+    this.top(this.shuzu);
+    const that = this;
     $(function () {
       const that = this;
+      $('.change').click(function () {
+        $('.wallpaper').animate({
+          opacity:'1',
+          height:'toggle',
+
+        },2000,'linear');
+      });
+
       $('#upload_file').change(function (e) {
         const file = e.target.files[0];
         preview(file);
@@ -40,8 +64,8 @@ mes: any ;
   showicon(){
     const body ={ "telephone": sessionStorage.getItem('userId')};
     this.personSer.getUserIcon (body, function (result) {
-      $('#preview').empty().append(`<img src='http://localhost:3000/uploads/${result[0].icon}>`);
-      $('#preview1').empty().append(`<img src='http://localhost:3000/uploads/${result[0].icon}>`);
+      $('#preview').empty().append(`<img src='../../assets/${result[0].icon}' width="70px" height="70px" >`);
+      $('#preview1').empty().append(`<img src='../../assets/${result[0].icon}'width="70px" height="70px" >`);
     })
   }
   upload() {

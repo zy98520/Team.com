@@ -56,9 +56,9 @@
 <div class="col-md-12 head2"><img src="../../assets/index-img/head2.jpg"></div>
 <div class="look col-md-12">
   <ul>
-    <li (click)="girls()">女生穿搭</li>
-    <li (click)="looks()"><h3>穿搭</h3></li>
-    <li (click)="boys()">男生穿搭</li>
+    <li routerLink="/girls">女生穿搭</li>
+    <li routerLink="/looks"><h3>穿搭</h3></li>
+    <li routerLink="/boys">男生穿搭</li>
   </ul>
   <div class="look2 col-md-12">
    <div class="col-md-8 look2-1">
@@ -116,13 +116,13 @@
 <div class="loves col-md-12">
   <div class="head3">
   <ul>
-    <li (click)="loves()">卫衣</li>
-    <li (click)="loves()">毛衣</li>
-    <li (click)="loves()">衬衫</li>
-    <li (click)="loves()"><h3 class="fatxt">情侣时光</h3></li>
-    <li (click)="loves()">外套</li>
-    <li (click)="loves()">牛仔裤</li>
-    <li (click)="loves()">休闲裤</li>
+    <li routerLink="/loves">卫衣</li>
+    <li routerLink="/loves">毛衣</li>
+    <li routerLink="/loves">衬衫</li>
+    <li routerLink="/loves"><h3 class="fatxt">情侣时光</h3></li>
+    <li routerLink="/loves">外套</li>
+    <li routerLink="/loves">牛仔裤</li>
+    <li routerLink="/loves">休闲裤</li>
   </ul>
   </div>
   <div class="col-md-12 love-img">
@@ -179,11 +179,11 @@
     <div class="fashion1">
       <div class="model_title">
         <ul>
-          <li (click)="fashionweek()">时装秀</li>
-          <li (click)="fashionying()">赵丽颖</li>
-          <li (click)="fashionweek()"><h2 class="fatxt">时尚圈</h2></li>
-          <li (click)="fashionwu()">吴亦凡</li>
-          <li (click)="fashionou()">王鸥</li>
+          <li routerLink="/fashionweek">时装秀</li>
+          <li routerLink="/fashionying">赵丽颖</li>
+          <li routerLink="/fashionweek"><h2 class="fatxt">时尚圈</h2></li>
+          <li routerLink="/fashionfan">吴亦凡</li>
+          <li routerLink="/fashionou">王鸥</li>
         </ul>
       </div>
       <ul class="fashionInfo1" >
@@ -208,7 +208,6 @@
                 <a class="c5"><img src="../../assets/index-img/m5.jpg" height="540" width="360"/></a>
                 <a class="c3-logo"><img src="../../assets/index-img/paris_logo.jpg" ></a>
                 <a class="c6"><img src="../../assets/index-img/m6.jpg" height="540" width="360"/></a>
-
               </div>
               <div class="carousel-caption">
               </div>
@@ -272,7 +271,8 @@
         </div>
       </div>
     </div>
-  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg"><h2 style="margin-left:150px;text-align: center">分享</h2></div>
+  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg">
+    <h2 routerLink="/shares" style="margin-left:150px;text-align: center">分享</h2></div>
     <div class="col-md-12 share">
       <ul>
         <li class="hit1"><img src="../../assets/index-img/index-cp.jpg"/>
@@ -292,9 +292,21 @@
         </div></li>
       </ul>
       <div  class=" share_bg">
+        <div class="head-share"></div>
         <div class="share_title">时尚达人博主的分享圈</div>
-        <div class="share1"><img src="../../assets/index-img/pic2-3.jpg"/></div>
-        <div class="share2"><img src="../../assets/index-img/pic2-1x.jpg"/></div>
+        <div class="share1">
+            <img  src="../../assets/index-img/pic2-3.jpg"/>
+
+        </div>
+        <div class="share2">
+          <div class="share-left"></div>
+          <div class="share-right"></div>
+          <img class="share-1" src="../../assets/index-img/pic2-1x.jpg"/>
+
+          <img class="share-2" src="../../assets/index-img/pic2-1.jpg"/>
+
+        </div>
+
       </div>
 
 

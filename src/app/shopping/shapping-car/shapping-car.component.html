@@ -42,7 +42,7 @@
       <div class="center" *ngFor="let mes1 of mes;let index=index">
         <ul class="Line2"  id="line_id">
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input id={{mes1.d}} name="dang" type="checkbox" (click)="dan(index)">
+            <input id="{{index}}" name="dang" type="checkbox" (click)="dan(index)">
             <img  src="../../../assets/{{mes1.goodspic}}" height="70" width="41">
           </li>
           <li><a href="#">{{mes1.goodsname}}</a></li>
@@ -62,7 +62,7 @@
       <div class="bottom">
         <ul class="Line_bottom">
           <li>
-            <input class="quan" id="quan_id_bottom"  name="quan" type="checkbox">
+            <input class="quan" id="quan_id_bottom"  name="quan" type="checkbox" (change)="quan(mes)">
             全选
           </li>
           <li><input type="button" id="total_del_id" value="删除"></li>

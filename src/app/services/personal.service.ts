@@ -86,4 +86,13 @@ myshop(body, callback ) {
       }
     )
   }
+  // ordershow(callback ) {
+  //   this.http.post(this.url + '/ordershow').subscribe(function (result) {
+  //       callback(result);
+  //     },
+  //     function (error) {
+  //       console.log(error.message);
+  //     }
+  //   )
+  // }
 }
