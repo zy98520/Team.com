@@ -75,71 +75,105 @@ export class ShoppingComponent implements OnInit {
   }
   ngOnInit() {
     $(function () {
-      //获取大图相对于盒子的初始距离
-      var bigImgOldPosX = $('.big_img').position().left;
-      var bigImgOldPosY = $('.big_img').position().top;
+      $('#d1').mousemove(function (e) {
+        $('#d4').css('display', 'block');
+        // alert(document.body.scrollTop);
+        if(document.body.scrollTop<100) {
 
-      $(document).mousemove(function (e) {
-        //鼠标在 small中的坐标 = 鼠标当前的偏移 - samll 相对文档的偏移
-        var smallX = e.pageX -$('.small').offset().left;
-        var smallY = e.pageY -$('.small').offset().top;
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 300);
+          if (e.clientX > 605 || e.clientX <250) {
+            // alert(e.clientX)
+            $('#d3').css('opacity', '0');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('opacity', '0.5');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
 
-        //放大镜在small中的偏移
-        var zoomboxX = smallX - $('.zoombox').width()/2;
-        var zoomboxY = smallY - $('.zoombox').height()/2;
+            if (e.clientY <= 275) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            else {
 
-        //small 中的圆心坐标
-        var center_smallX = $('.small').offset().left + ($('.small').width()/2);
-        var center_smallY = $('.small').offset().top + ($('.small').height()/2);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 612);
 
-        //鼠标相对于small中心的距离
-        var mouseToSmallCenterX = e.pageX -center_smallX;
-        var mouseToSmallCenterY = e.pageY -center_smallX;
+            }
 
-        if(mouseToSmallCenterX < -135){
-          mouseToSmallCenterX = -135;
+          }
         }
-        if(mouseToSmallCenterX > 135){
-          mouseToSmallCenterX = 135;
-        }
-        if(mouseToSmallCenterY >125){
-          mouseToSmallCenterY = 125;
-        }
-        if(mouseToSmallCenterY < -125){
-          mouseToSmallCenterY = -125;
+        else if(document.body.scrollTop<190){
+
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 200);
+          if (e.clientX > 605 || e.clientX <250) {
+            // alert(e.clientX)
+            $('#d3').css('opacity', '0');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('opacity', '0.5');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
+
+            if (e.clientY <= 205) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            else {
+
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 410);
+
+            }
+
+          }
         }
 
-        //大图的移动距离
-        var bigImgMoveX = -mouseToSmallCenterX * 2;
-        var bigImgMoveY = -mouseToSmallCenterY * 2;
+        else {
+        // alert(document.body.scrollTop);
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY-30);
+          if (e.clientX > 605 || e.clientX < 250) {
+            $('#d3').css('display', 'none');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('display', 'block');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
 
-        //大图的最新移动距离
-        var bigImgPosX = bigImgOldPosX + bigImgMoveX;
-        var bigImgPosY = bigImgOldPosY + bigImgMoveY;
+            if (e.clientY <=20) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            if(e.clientY >=535) {
+              $('#d3').css('display', 'none');
+              $('#d4').css('display', 'none');
+            }
+            else{
+              $('#d3').css('display', 'block');
+              $('#d4').css('display', 'block');
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 100);
 
-        //吸附效果
-        if(zoomboxX <120){
-          zoomboxX = 0;
-        }
-        if(zoomboxX >280){
-          zoomboxX = 300;
-        }
-        if(zoomboxY <120){
-          zoomboxY = 0;
-        }
-        if(zoomboxY >280){
-          zoomboxY = 300;
+            }
+
+          }
         }
 
-        //移动实现
-        $('.zoombox').css({
-          left:zoomboxX,
-          top:zoomboxY
-        });
-        $('.big_img').css({
-          left:bigImgPosX,
-          top:bigImgPosY
-        });
       })
     })
   }
