@@ -7,10 +7,13 @@
   height: 5000px;
   background-color: black;
 }
+.boys-big img{
+  margin:  0 auto;
+}
 .boys-big{
+  width: 100%;
   background-color: black;
   margin-top: -20px;
-  margin-left: 180px;
 }
 .newNav ul{
   width: 768px;

@@ -14,23 +14,23 @@
 .login1{
   padding-left: 30px;
   margin-left: 850px;
-  margin-top: 120px;
+  margin-top: 80px;
   width: 400px;
   height: 390px;
   /*text-align: center;*/
-  padding-top: 100px;
+  padding-top: 80px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 .text{
   position: relative;
-  left: 15px;
-  bottom: 50px;
+  left: 30px;
+  bottom: 30px;
   height: 40px;
-  width: 60px;
+  width: 280px;
   text-align: center;
-  line-height: 40px;
-  font-size: 14px;
-  font-weight: 600;
+  line-height: 10px;
+  font-size: 16px;
+  /*font-weight: 600;*/
   color: hotpink;
   border-bottom: 2px solid hotpink;
 }
@@ -56,4 +56,14 @@
   color: white;
   text-align: center;
   border: none;
+}
+.zhuce{
+  width: 200px;
+  color: #e560a2;
+  margin-top: 40px;
+  margin-left: 160px;
+}
+.zhuce:hover{
+  text-decoration:underline;
+  cursor: pointer;
 }

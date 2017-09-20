@@ -3,9 +3,12 @@
   height: 6000px;
   background-color:#86e6e5 ;
 }
+.big-girl img{
+  margin: 0 auto;
+}
 .big-girl{
+  width: 100%;
   margin-top: -20px;
-  text-align: center;
   background-color: #86e6e5;
 }
 .nav .active a{

@@ -21,10 +21,5 @@ export class LooksComponent implements OnInit {
       $(".text").removeClass('animated'+ 'animated pulse')
     })
   }
-public girls():void{
-    this.router.navigateByUrl("girls");
-}
-  public boys():void{
-    this.router.navigateByUrl("boys");
-  }
+
 }

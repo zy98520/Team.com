@@ -190,33 +190,4 @@ export class IndexComponent implements OnInit {
 
     })
   }
-  public girls():void{
-    this.router.navigateByUrl("girls");
-
-  }
-
-  public boys():void{
-    this.router.navigateByUrl("boys");
-  }
-  public looks():void{
-    this.router.navigateByUrl("looks");
-  }
-  public loves():void{
-    this.router.navigateByUrl("loves");
-  }
-  public fashionweek():void{
-    this.router.navigateByUrl("fashion-week");
-  }
-  public fashionou():void{
-    this.router.navigateByUrl("fashion-ou");
-  }
-  public fashionwu():void{
-    this.router.navigateByUrl("fashion-wu");
-  }
-  public fashionying():void{
-    this.router.navigateByUrl("fashion-ying");
-  }
-  public shares():void{
-    this.router.navigateByUrl("shares");
-  }
 }

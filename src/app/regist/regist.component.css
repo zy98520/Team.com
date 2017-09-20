@@ -8,6 +8,7 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 .login-bg{
+  overflow: hidden;
   background: no-repeat;
   height: 646px;
   background: url(../../assets/index-img/login-bg1.jpg);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var $ :any;
+declare let $ :any;
 @Component({
   selector: 'app-girls',
   templateUrl: './girls.component.html',
@@ -34,7 +34,7 @@ export class GirlsComponent implements OnInit {
     };
     $(window).scroll(Add_Data);
     function scroll(s) {
-      var timer = null;
+      let timer = null;
       // var h = document.body.scrollTop;
       timer = setInterval(function () {
         if ($(document).scrollTop()==s){
@@ -42,11 +42,11 @@ export class GirlsComponent implements OnInit {
         }
         else if ($(document).scrollTop() > s) {
 
-          $(document).scrollTop($(document).scrollTop()-5) ;
+          $(document).scrollTop($(document).scrollTop()-10) ;
         }
         else if ($(document).scrollTop()<s){
 
-          $(document).scrollTop($(document).scrollTop()+5) ;
+          $(document).scrollTop($(document).scrollTop()+10) ;
         }
 
       }, 1);
@@ -57,6 +57,7 @@ export class GirlsComponent implements OnInit {
       $('.wen').css('');
       $('.chang').css('');
       $('.qing').css('');
+      $('.xia').css('');
     }
     $('.tian').click (function () {
       clear();
@@ -73,11 +74,15 @@ export class GirlsComponent implements OnInit {
     });
     $('.chang').click(function () {
       clear();
-      scroll(3780);
+      scroll(3800);
     });
     $('.qing').click(function () {
       clear();
-      scroll(4800);
+      scroll(4820);
+    });
+    $('.xia').click(function () {
+      clear();
+      scroll(520);
     });
   }
 }
