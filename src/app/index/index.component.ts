@@ -85,7 +85,7 @@ export class IndexComponent implements OnInit {
       })
       var index = $(this).index();
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-    });
+    })
     $("#lunbobox ul li,.lunbo a img").hover(
       function() {
         $('#toright,#toleft').show()

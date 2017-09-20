@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from './../services/users.service';
+import {GlobalPropertyService} from './../services/global-property.service'
 
 import {Router} from '@angular/router';
 declare var $: any;
@@ -13,10 +14,16 @@ export class LoginComponent implements OnInit {
   login_res: string;
   tel: string = '';
   name:string = '';
+  // _val:string='';
+
   constructor( private userSer: UsersService,
                private router: Router,
+               private  glo:GlobalPropertyService
+
   ) {}
   ngOnInit() {
+    this.glo.hiddenNavs=true;//初始化
+
   }
   toLogin(login_form) {
     let that = this;
@@ -33,5 +40,13 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+  // toIndex(){
+  //   this.router.navigate(['/index',this._val]);
+  //   this.glo.serverUrl='http://127.0.0.1:8000'
+  // }
+  ngOnDestroy(){
+  console.log('personal -ngDestroy');
+  this.glo.hiddenNavs=false;
+}
 }
 

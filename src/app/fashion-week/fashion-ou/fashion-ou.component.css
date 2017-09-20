@@ -1,10 +1,29 @@
+@media screen and (max-width:992px ) {
+
+
+
+}
+@media screen and (max-width:768px ){
+  .tt1{
+    display: none;
+  }
+  .tt2{
+    display: none;
+  }
+  .tt4{
+    display: none;
+  }
+}
+
+
+
 
 .n01{
   width: 133px;
   height: 143px ;
   background: #DADBA2;
   text-align: center;
-  line-height: 150px;
+  line-height: 143px;
   box-sizing: border-box;
   border-bottom: 5px solid #fff;
   margin-top: 10px;
@@ -26,6 +45,7 @@ h1{
 .yGood1{
   margin: 40px 10px 40px 30px;
 }
+
 .oGood1 ul img{
   width: 116px;height: 137px;
 }
@@ -40,7 +60,7 @@ h1{
   list-style: none;
 }
 .oGood1 ul li p{
- width: 116px;
+  width: 116px;
   height: 137px;
   background: rgba(0, 0, 0, 0.68);
   position: absolute;
@@ -62,10 +82,11 @@ h1{
 .n02{
   width: 133px;
   height: 143px ;
-  margin-left: 100px;
+  margin-right: 0;
   margin-top: 10px;
   background: #ABBBCA;
   line-height: 150px;
+  text-align: center;
 }
 
 .txt02{
@@ -103,7 +124,7 @@ h1{
   width: 117px;
   height: 137px;
 }
-.oGood2 ul li p,.yGood3 ul li p,.yGood4 ul li p{
+.oGood2 ul li p,.oGood3 ul li p,.oGood4 ul li p{
   width: 117px;
   height: 137px;
   background: rgba(0, 0, 0, 0.68);
@@ -115,7 +136,7 @@ h1{
   display: none;
 
 }
-.oGood2 ul li:hover p,.yGood3 ul li:hover p,.yGood4 ul li:hover p{
+.oGood2 ul li:hover p,.oGood3 ul li:hover p,.oGood4 ul li:hover p,.ouGood:hover p{
   display: block;
   cursor: pointer;
 }
@@ -139,24 +160,24 @@ h1{
   margin-left:500px;
 background-color: #898243}
 
-.yGood3 .img5-right{
+.oGood3 .img5-right{
   float: right;
- left: 140px;
+  left: 140px;
   top: 80px;
 }
-.yGood3 ul{
+.oGood3 ul{
   top: 650px;
   left: 500px;
   padding-left: 0;
   position: absolute;
 }
-.yGood3 ul li{
+.oGood3 ul li{
   margin-top: 10px;
   list-style: none;
    float: left;
   margin-left: 10px;
 }
-.yGood3 ul li img{
+.oGood3 ul li img{
   width: 117px;
   height: 137px;
 }
@@ -208,17 +229,6 @@ background-color: #898243}
   color: #fff;
   font-size: .6vw;
   text-align: center;}
-.yGood4 ul{
- margin-left: 150px;
-  top: 700px;
-}
-.yGood4 ul li{
-  list-style: none;
-}
-.yGood4 ul li img{
-  width: 117px;
-  height: 137px;
-}
 
 .n04{
   width: 133px;
@@ -234,24 +244,44 @@ background-color: #898243}
   margin-top: 10px;
   color:#FFFFFF;
 }
-.yGood4 ul {
-  left: 390px;
+.oGood4 ul {
+  margin-left: 150px;
+  left: 410px;
   position: absolute;
   top:340px;
 }
-.yGood4 ul li{
+.oGood4 ul li{
   list-style: none;
   margin-top: 10px;
 }
-
+.oGood4 ul li img{
+  width: 117px;
+  height: 137px;
+}
 .ouShow{
   position: absolute;
   top: 490px;
-  left:-250px;
+  left:-150px;
 }
 .ouGood{
   margin-top: 50px;
+  margin-left: 135px;
+  width: 200px;
+  height: 200px;
 }
+.ouGood p{
+  width: 200px;
+ height: 200px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-200px;
+  text-align: center;
+  padding-top: 50px;
+  margin-left: 135px;
+  color: white;
+  display: none;
+}
+
 .btm-txt{
   height: 120px;
   text-align: center;

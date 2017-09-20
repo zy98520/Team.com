@@ -20,11 +20,11 @@ export class GirlsComponent implements OnInit {
 
     });
     function Add_Data() {
-      var top = $("#fix").offset().top;
-      var title = $("#title").offset().top;
+      let top = $("#fix").offset().top;
+      let title = $("#title").offset().top;
 
-      var scrolla = $(window).scrollTop();
-      var cha = parseInt(top) - parseInt(scrolla);
+      let scrolla = $(window).scrollTop();
+      let cha = parseInt(top) - parseInt(scrolla);
       if (cha<=0) {
         $("#fix").addClass("navbar-fixed-top");
       }
@@ -33,7 +33,51 @@ export class GirlsComponent implements OnInit {
       }
     };
     $(window).scroll(Add_Data);
+    function scroll(s) {
+      var timer = null;
+      // var h = document.body.scrollTop;
+      timer = setInterval(function () {
+        if ($(document).scrollTop()==s){
+          clearInterval(timer);
+        }
+        else if ($(document).scrollTop() > s) {
 
+          $(document).scrollTop($(document).scrollTop()-5) ;
+        }
+        else if ($(document).scrollTop()<s){
 
+          $(document).scrollTop($(document).scrollTop()+5) ;
+        }
+
+      }, 1);
+    }
+    function clear() {
+      $('.tian').css('');
+      $('.thin').css('');
+      $('.wen').css('');
+      $('.chang').css('');
+      $('.qing').css('');
+    }
+    $('.tian').click (function () {
+      clear();
+      scroll(520);
+    });
+    $('.thin').click(function () {
+      clear();
+      scroll(1650);
+
+    });
+    $('.wen').click(function () {
+      clear();
+      scroll(2750);
+    });
+    $('.chang').click(function () {
+      clear();
+      scroll(3780);
+    });
+    $('.qing').click(function () {
+      clear();
+      scroll(4800);
+    });
   }
 }
