@@ -74,6 +74,108 @@ export class ShoppingComponent implements OnInit {
     $('#cpm_id').css({'display': 'block'});
   }
   ngOnInit() {
+    $(function () {
+      $('#d1').mousemove(function (e) {
+        $('#d4').css('display', 'block');
+        // alert(document.body.scrollTop);
+        if(document.body.scrollTop<100) {
+
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 300);
+          if (e.clientX > 605 || e.clientX <250) {
+            // alert(e.clientX)
+            $('#d3').css('opacity', '0');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('opacity', '0.5');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
+
+            if (e.clientY <= 275) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            else {
+
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 612);
+
+            }
+
+          }
+        }
+        else if(document.body.scrollTop<190){
+
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 200);
+          if (e.clientX > 605 || e.clientX <250) {
+            // alert(e.clientX)
+            $('#d3').css('opacity', '0');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('opacity', '0.5');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
+
+            if (e.clientY <= 205) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            else {
+
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 410);
+
+            }
+
+          }
+        }
+
+        else {
+        // alert(document.body.scrollTop);
+          $('#d3').css('left', e.clientX - 265).css('top', e.clientY-30);
+          if (e.clientX > 605 || e.clientX < 250) {
+            $('#d3').css('display', 'none');
+            $('#d4').css('display', 'none');
+          }
+          else {
+            $('#d3').css('display', 'block');
+            $('#d4').css('display', 'block');
+            if (e.clientX > 575) {
+              $('#d3').css('left', 300);
+            }
+            if (e.clientX < 275) {
+              $('#d3').css('left', 0);
+            }
+
+            if (e.clientY <=20) {
+              $('#d3').css('top', 0);
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+            }
+            if(e.clientY >=535) {
+              $('#d3').css('display', 'none');
+              $('#d4').css('display', 'none');
+            }
+            else{
+              $('#d3').css('display', 'block');
+              $('#d4').css('display', 'block');
+              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 100);
+
+            }
+
+          }
+        }
+
+      })
+    })
   }
 
 }

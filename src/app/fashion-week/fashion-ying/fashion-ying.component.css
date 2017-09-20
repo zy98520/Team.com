@@ -30,19 +30,74 @@
   padding-left: 15px;
   position: absolute;
   top: 640px;
-left: 30px;
+left: 70px;
 }
 .yGood1 ul li{
   float: left;
-  margin-left: 3px;
+  margin-left: 5px;
   list-style: none;
 }
+.yGood1 ul li img{
+  width: 130px;
+  height: 130px;
+}
+.yGood1 ul li p{
+  width: 130px;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-130px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+.yGood1 ul li:hover p,.Good2 ul li:hover p,.yGood2 ul li:hover p,.wGood2 ul li:hover p,
+.yGood3-1 ul li:hover p,.yGood3 ul li:hover p,.yGood4 ul li:hover p,.wu-good-all:hover p{
+  display: block;
+  cursor: pointer;
+}
+
+.Good2{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.Good2 ul{
+  margin-left: 0;
+  position: absolute;
+  top: 640px;
+}
+.Good2 ul li{
+  float: left;
+  margin-left: 5px;
+  list-style: none;
+}
+#qun-good img{
+  width: 130px;
+  height: 218px;
+}
+#qun-good  p{
+  width: 130px;
+  height: 218px;
+  margin-top:-218px;
+}
+.Good2 ul li p{
+  width:140px;
+  height:140px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-140px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+
 .img-w{
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
-.img-g{
-  margin-left: 300px;
-}
+
 .yGood2 ul{
   left: 400px;
   position: absolute;
@@ -52,6 +107,18 @@ left: 30px;
   list-style: none;
   margin-top: 10px;
 }
+.yGood2 ul li p{
+  width: 130px;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-130px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+
 .n02{
   width: 133px;
   height: 143px ;
@@ -67,17 +134,7 @@ left: 30px;
   margin-top: 10px;
   color:#FFFFFF;
 }
-.wGood1 ul{
-  margin-right: 20px;
-  padding-left: 20px;
-  margin-top: -320px;
-  position: absolute;
-}
-.wGood1 ul li{
-  margin-left: 360px;
-  list-style: none;
 
-}
 
 .tt{
   height: 800px;
@@ -91,24 +148,58 @@ left: 30px;
   margin-left: 10px;
   list-style: none;
 }
+.wGood2 ul li p{
+  width:150px;
+  height:151px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-151px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+#yi_good p {
+  width: 126px;
+  height: 151px;
+}
 .yingBig{
   width: 1448px;
-  height:1300px;
+  height:1380px;
   background-image: url("../../../assets/ying-img/ying20.jpg");
   background-attachment: fixed;
   /*background-repeat: no-repeat;*/
 }
-.yGood3 ul{
-  top: 320px;
-  left: 0;
-  padding-left: 0;
+.yGood3-1 ul{
+  left: 15px;
   position: absolute;
+  top: 318px;
+  padding-left: 0;
 }
-.yGood3 ul li{
-  margin-top: 10px;
+.yGood3-1 ul li{
   list-style: none;
-
+  margin-top: 7px;
 }
+.yGood3-1 ul li p{
+  width:141px;
+  height:141px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-141px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+#qun-good2 p{
+  height:149px;
+  margin-top:-149px;
+}
+#ear-good p{
+  height:97px;
+  margin-top:-97px;
+}
+
 .text-div3{
   position: absolute;
   z-index: 3;
@@ -147,7 +238,7 @@ position: absolute;
 }
 
 .yGood3 ul{
-  left: 560px;
+  left: 530px;
   position: absolute;
   top: 500px;
 }
@@ -155,7 +246,22 @@ position: absolute;
   list-style: none;
   margin-top: 10px;
 }
-
+.yGood3 ul li p{
+  width:151px;
+  height:151px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-151px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
+.yGood3 #yi_good2 p{
+  width:151px;
+  height:182px;
+  margin-top: -182px;
+}
 .n04{
   width: 133px;
   height: 143px ;
@@ -179,10 +285,32 @@ position: absolute;
   list-style: none;
   margin-top: 10px;
 }
+.yGood4 ul li p{
+  width:141px;
+  height:141px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-141px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
+}
 .wu-good-all{
   position: absolute;
   top: 480px;
   left:-250px;
+}
+.wu-good-all p{
+  width:314px;
+  height:286px;
+  background: rgba(0, 0, 0, 0.68);
+  position: absolute;
+  margin-top:-286px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  display: none;
 }
 .btm-txt{
   height: 120px;

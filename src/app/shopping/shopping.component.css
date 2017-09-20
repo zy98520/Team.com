@@ -5,16 +5,36 @@
   margin-right: auto;
   position: relative;
 }
-.left{
+
+#d1{
   width:400px;
   height:600px;
   float: left;
-  background-color: #00B38A;
   margin-left:50px;
-
   margin-top:70px;
-  background-image: url("../../assets/shopping_images/big.png");
+  position: relative;
 }
+#d3{
+  width:100px;
+  height:100px;
+  background-color: #1eabff;
+  position: absolute;
+  top:0px;
+  left:0px;
+  opacity:0.5;
+}
+#d4{
+  position: absolute;
+  left: 475px;
+  top: 70px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../assets/shopping_images/big1.png");
+  border: 1px solid #C4C3C3;
+  overflow:hidden;
+  display: none;
+}
+
 .right{
   width:500px;
   height:600px;

@@ -1,12 +1,7 @@
-<div class="container-fluid">
-  <form class="form-horizontal" id="upload_form">
-    <input type="file" id="upload_file"  name="user_icon">
-    <div id="preview" ></div>
-  </form>
-</div>
 
-<div class="container">
+<div class="container" >
   <div class="row">
+    <div id="big">
     <div class="col-md-12 col-lg-12">
       <div class="big">
         <div class="first">
@@ -51,13 +46,13 @@
     <div class="col-md-12 col-lg-12">
       <div class="icon">
       <p class="icon_first">
-        <img src="../../assets/personal_images/dingdan.png" height="40" width="40">
+        <img src="../../assets/personal_images/dingdan1.png" height="40" width="40">
       </p>
       <p class="icon_first">
-        <img src="../../assets/personal_images/information.png" height="45" width="45">
+        <img src="../../assets/personal_images/information1.png" height="45" width="45">
       </p>
       <p class="icon_first">
-        <img src="../../assets/personal_images/address.png" height="45" width="45">
+        <img src="../../assets/personal_images/address1.png" height="45" width="45">
       </p>
       </div>
     </div>
@@ -77,13 +72,13 @@
       <div class="col-md-12 col-lg-12">
         <div class="icon">
       <p class="icon_second">
-        <img src="../../assets/personal_images/pingjia.png" height="50" width="50"/>
+        <img src="../../assets/personal_images/pingjia1.png" height="50" width="50"/>
       </p>
       <p class="icon_second">
-        <img src="../../assets/personal_images/shopping.png" height="40" width="40"/>
+        <img src="../../assets/personal_images/shopping1.png" height="40" width="40"/>
       </p>
       <p class="icon_second">
-        <img src="../../assets/personal_images/wuliu.png" height="40" width="40"/>
+        <img src="../../assets/personal_images/wuliu1.png" height="40" width="40"/>
       </p>
         </div>
     </div>
@@ -99,8 +94,35 @@
         </h5>
       </div>
     </div>
-
     </div>
-</div>
+
+    <div class="col-md-12 col-lg-12">
+      <div class="left_bizhi">
+        <div class="change">
+          <img src="../../assets/personal_images/dingdang2.jpg" height="80" width="80"/>
+        </div>
+        <div class="wallpaper">
+          <ul id="wallpaper_id">
+            <p class="top_arrow" (click)="top(shuzu)">
+              <img src="../../assets/personal_images/top_arrow.png" height="30" width="30">
+            </p>
+            <li *ngFor="let item of def;let index=index" (click)="dianji(index)">
+              <img src="../../assets/personal_images/{{item}}.jpg" height="80" width="80">
+            </li>
+            <p class="bottom_arrow" (click)="bottom(shuzu)">
+              <img src="../../assets/personal_images/left_arrow.png" height="30" width="30">
+            </p>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+  <img id="wallpaper" src="../../assets/personal_images/{{def1}}.jpg">
+    </div>
+
+
+
 
 
