@@ -81,6 +81,16 @@ function (error) {
       }
     )
   }
+  showloves(callback ) {
+    alert('11');
+    this.http.post(this.url + '/showloves','').subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
   addshop (body, callback ) {
     this.http.post(this.url + '/addshop', body ).subscribe(function (result) {
         callback(result);

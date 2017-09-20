@@ -1,3 +1,9 @@
+.navbar-header button{
+  background-color: white;
+}
+.navbar-header .collapsed span{
+  background-color: black;
+}
 .body{
   overflow-x: hidden;
 }

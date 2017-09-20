@@ -74,11 +74,11 @@ export class BoysComponent implements OnInit {
 
     });
     function Add_Data() {
-      const top = $("#fix").offset().top;
-      const title = $("#title").offset().top;
+      let top = $("#fix").offset().top;
+     let title = $("#title").offset().top;
 
-      const scrolla = $(window).scrollTop();
-      const cha = parseInt(top) - parseInt(scrolla);
+      let scrolla = $(window).scrollTop();
+      let cha = parseInt(top) - parseInt(scrolla);
       if (cha <= 0) {
         $("#fix").addClass("navbar-fixed-top");
       }

@@ -17,6 +17,13 @@ export class GirlsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let that=this;
+    this.userSer.showgirls(function (result) {
+      if ( result.StateCode==0){
+      }else {
+        that.qq= result;
+      }
+    })
     $(document).ready(function () {
       $('ul.nav > li').click(function (e) {
         e.preventDefault();
@@ -26,32 +33,60 @@ export class GirlsComponent implements OnInit {
 
     });
     function Add_Data() {
-      var top = $("#fix").offset().top;
-      var title = $("#title").offset().top;
+      let top = $("#fix").offset().top;
+      let title = $("#title").offset().top;
 
-      var scrolla = $(window).scrollTop();
-      var cha = parseInt(top) - parseInt(scrolla);
+      let scrolla = $(window).scrollTop();
+      let cha = parseInt(top) - parseInt(scrolla);
       if (cha<=0) {
         $("#fix").addClass("navbar-fixed-top");
       }
       if (parseInt(scrolla)<parseInt(title)) {
         $("#fix").removeClass("navbar-fixed-top");
       }
-    }
+    };
     $(window).scroll(Add_Data);
-    let that=this;
-    this.userSer.showgirls(function (result) {
-      // let that= this;
-      if ( result.StateCode==0){
-      }else {
-      that.qq= result;
-      }
-    })
+    function scroll(s) {
+      var timer = null;
+      // var h = document.body.scrollTop;
+      timer = setInterval(function () {
+        if ($(document).scrollTop()==s){
+          clearInterval(timer);
+        }
+        else if ($(document).scrollTop() > s) {
+          $(document).scrollTop($(document).scrollTop()-10) ;
+        }
+        else if ($(document).scrollTop()<s){
+          $(document).scrollTop($(document).scrollTop()+10) ;
+  }
+      }, 1);
+    }
+    // function clear() {
+    //   $('.tian').css('');
+    //   $('.thin').css('');
+    //   $('.wen').css('');
+    //   $('.chang').css('');
+    //   $('.qing').css('');
+    // }
+    $('.tian').click (function () {
+      scroll(520);
+    });
+    $('.thin').click(function () {
+      scroll(1650);
 
+    });
+    $('.wen').click(function () {
+      scroll(2750);
+    });
+    $('.chang').click(function () {
+      scroll(3780);
+    });
+    $('.qing').click(function () {
+      scroll(4800);
+    });
   }
   godetail(id){
     let that=this;
     that.router.navigate(['/shopping',id] );
-
   }
 }

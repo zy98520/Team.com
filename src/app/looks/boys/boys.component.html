@@ -1,10 +1,9 @@
 <div class="boy">
-<div class="col-md-12 boys-big">
-  <img src="../../../assets/boys-img/boys-big1.jpg">
+<div class="boys-big">
+  <img class="img-responsive" src="../../../assets/boys-img/boys-big1.jpg">
 </div>
   <a id="title" class="col-md-12"></a>
-
-  <div class="col-md-12  navbar  newNav" >
+  <div class=" navbar  newNav" >
     <ul class=" nav navbar-nav" id="fix">
       <li class="active" (click)="show(sunny,0,8)"><a >阳光搭</a></li>
       <li  (click)="show(youngs,9,8)"><a>文艺搭</a></li>
@@ -12,7 +11,6 @@
       <li style="border: none;" (click)="show(chao,24,8)"><a >帅气搭</a></li>
     </ul>
   </div>
-
   <div class="container">
     <div class="sunny" >
       <div  *ngFor="let item of url2" class="col-md-12 title1">{{item}}</div>
