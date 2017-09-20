@@ -29,10 +29,16 @@
   top: 70px;
   width: 200px;
   height: 200px;
-  background-image: url("../../assets/shopping_images/big1.png");
+  /*background-image: url("../../assets/shopping_images/big1.png");*/
   border: 1px solid #C4C3C3;
   overflow:hidden;
   display: none;
+}
+.h{
+  width: 800px;
+  height: 1200px;
+  position:absolute;
+  background-color: #ff1611;
 }
 
 .right{

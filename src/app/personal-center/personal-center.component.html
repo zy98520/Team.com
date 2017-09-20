@@ -1,6 +1,7 @@
-
+<div class="big_con">
 <div class="container" >
   <div class="row">
+
     <div id="big">
     <div class="col-md-12 col-lg-12">
       <div class="big">
@@ -99,21 +100,25 @@
     <div class="col-md-12 col-lg-12">
       <div class="left_bizhi">
         <div class="change">
-          <img src="../../assets/personal_images/dingdang2.jpg" height="80" width="80"/>
+          <div class="dian">个性主题</div>
+          <img  class="tu" src="../../assets/personal_images/dingdang2.jpg" height="80" width="80"/>
         </div>
         <div class="wallpaper">
           <ul id="wallpaper_id">
-            <p class="top_arrow" (click)="top(shuzu)">
-              <img src="../../assets/personal_images/top_arrow.png" height="30" width="30">
+            <p class="top_arrow" (click)="top()">
+              <img src="../../assets/personal_images/top_arrow.png" height="25" width="25">
             </p>
             <li *ngFor="let item of def;let index=index" (click)="dianji(index)">
               <img src="../../assets/personal_images/{{item}}.jpg" height="80" width="80">
             </li>
-            <p class="bottom_arrow" (click)="bottom(shuzu)">
-              <img src="../../assets/personal_images/left_arrow.png" height="30" width="30">
+            <input class="confirm_pic" type="button" value="确认" *ngIf=fsq>
+            <p class="bottom_arrow" (click)="bottom()">
+              <img  id="bottom_id" src="../../assets/personal_images/left_arrow.png" height="25" width="25">
             </p>
+
           </ul>
         </div>
+
       </div>
     </div>
 
@@ -121,7 +126,7 @@
       </div>
   <img id="wallpaper" src="../../assets/personal_images/{{def1}}.jpg">
     </div>
-
+</div>
 
 
 

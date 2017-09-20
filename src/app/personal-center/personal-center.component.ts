@@ -10,36 +10,59 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
-
+n:any;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
-  shuzu=[['fj2','fj4','fj7','fj8'],['xq1','xq5','xq7','xq8']];
-   def:string;
+  shuzu=[['kt1','kt2','kt3','kt4','kt5'],['fj1','fj2','fj3','fj4','fj5'],
+    ['xq1','xq2','xq3','xq4','xq5'],['mx2','mx1','mx5','mx3','mx4']];
+   def:any;
    def1:string;
+   fsq:any;
 
-   top(a){
-     this.def=a[0];
+   top(){
+
+     this.def=this.shuzu[0];
 
    }
-   bottom(b){
-     this.def=b[1];
+   bottom(){
+     if(this.def==this.shuzu[0]){
+     this.def=this.shuzu[1]
+     }
+     else if(this.def==this.shuzu[1]){
+       this.def=this.shuzu[2]
+     }
+     else{
+       this.def=this.shuzu[3];
+     }
    }
    dianji(index){
    this.def1=this.def[index];
+     this.fsq=true;
    }
+
+
+
   ngOnInit() {
-    this.def1=this.shuzu[0][1];
-    this.top(this.shuzu);
+     this.n=1;
+    this.def1=this.shuzu[1][4];
+    this.def=this.shuzu[0];
     const that = this;
     $(function () {
       $('.change').click(function () {
         $('.wallpaper').animate({
           opacity:'1',
-          height:'toggle',
+          height:'hide',
+        },1000,'linear');
 
+        $('.wallpaper').animate({
+          height:'toggle',
         },2000,'linear');
+
+
+
       });
+
 
       $('#upload_file').change(function (e) {
         that.checkin();
