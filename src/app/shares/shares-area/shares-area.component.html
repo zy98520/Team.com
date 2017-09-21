@@ -1,8 +1,17 @@
 <div id="big">
+  <div class="title_shares">
+    <p>分享区</p>
+    <span class="line">_____________<span>_________________________________________________________________________________________________</span>
+    </span>
+  </div>
   <form #comForm="ngForm" class="form-horizontal">
-  <textarea name="com" id="comment" #com="ngModel" [(ngModel)]="_comment" class="col-xs-12 col-sm-6 col-sm-offset-3"
-            cols="30" rows="10"></textarea>
-    <input class="btn" id="btn1" (click)="sendshare(comForm)" type="button" value="发送">
+  <textarea name="com" id="comment" #com="ngModel" [(ngModel)]="_comment" class="col-xs-12 col-sm-6 col-sm-offset-3" cols="10" rows="5">
+    <div class="col-sm-6">
+      <input class="btn" id="btn1" (click)="sendshare(comForm)" type="button" value="发送">
+    </div>
+  </textarea>
+    <div>tupian</div>
+
     <div class="col-xs-12" style="height:50px;background-color: rgba(128,128,128,0.12);line-height: 50px;">
       <span>评论显示区</span>
       <p style="text-align: right"><a (click)="refresh()" style="cursor: pointer">刷新</a></p></div>
@@ -20,8 +29,8 @@
         </div>
         <div *ngIf="comment.state" class="col-xs-12 col-sm-8">
         <textarea name="backcom" id="backcom" class="col-xs-12 col-sm-6 col-sm-offset-3"
-        #comback="ngModel" [(ngModel)]="_commentback"></textarea>
-        <input type="button" name="backcom" value="发送" (click)="backsend(index,comForm)" class="btn">
+                  #comback="ngModel" [(ngModel)]="_commentback"></textarea>
+          <input type="button" name="backcom" value="发送" (click)="backsend(index,comForm)" class="btn">
           <input type="button" value="取消" (click)="cancel(index)" class="btn">
         </div>
 
@@ -31,4 +40,3 @@
 
   </form>
 </div>
-

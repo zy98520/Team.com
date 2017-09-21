@@ -12,61 +12,49 @@ declare var $: any ;
 export class PayComponent implements OnInit {
   address:any;
   state1:any;
+  pro:any;
+  a:any;
+  b:any;
   x1=true;
   x2=false;
   homeid:any;
   every:any;
+ com = {
+  '江苏':{
+    '苏州': ['吴中区', '姑苏区', '吴江区'],
+    '南京': ['玄武区', '秦淮区'],
+  },
+  '江西':{
+    '萍乡': ['莲花县','上栗县','泸溪县'],
+    '高安': ['筠阳', '瑞州'],
+  },
+};
+
+
   constructor(
     private perSer: PersonalService,
     private router: Router,
   ) { }
 
   ngOnInit() {
+
+    this.a=Object.keys(this.com);
+    this.pro=Object.keys(this.com.江苏);
+    this.b=this.com.江苏.苏州;
+
+    $(function () {
+      function objInt(obj){
+        return $(obj).html('<option>请选择</option>');
+      }
+    });
     let that=this;
     that.perSer.showhome({'tel':sessionStorage.getItem('userId')},function (result) {
       if ( result.StateCode==0) {
       }else {
         that.address=result;
       }
-    })
-    $(function () {
-      function objInt(obj) {
-        return $(obj).html('<option>请选择</option>');
-      }
-      var arrData={
-        江苏:{苏州:'姑苏区,常熟市',
-          上海:'1号,型号1-2-2'},
-        江西:{萍乡:'莲花县,上栗县',
-          宜春:'袁州区,高安市'},
-        山东:{济南:'长清区,天桥区',
-          青岛:'市北区,市南区'}
-      };
-      $.each(arrData,function(pro){
-        $('#province_id').append('<option>'+pro+'</option>');
-      });
-      $('#province_id').change(function(){
-        objInt('#city_id');
-        objInt('#area_id');
-        $.each(arrData,function(pro,pS){
-          if($('#province_id option:selected').text()==pro){
-            $.each(pS,function(city,are){
-              $('#city_id').append('<option>'+city+'</option>');
-            });
-            $('#city_id').change(function(){
-              objInt('#area_id');
-              $.each(pS,function(city,are){
-                if($('#city_id option:selected').text()==city){
-                  $.each(are.split(","),function(){
-                    $('#area_id').append('<option>'+this+'</option>');
-                  })
-                }
-              })
-            });
-          }
-        })
-      });
-
     });
+
   }
   addhome(addForm){
     alert(addForm.form.value.name);
@@ -135,6 +123,12 @@ export class PayComponent implements OnInit {
   cancel(){
     this.state1=false;
   }
+  // ch(index){
+  //   alert('ok');
+  //   this.pro=Object.keys(this.a[index]);
+  //
+  // }
+
   public pay():void{
     this.router.navigateByUrl("payto");
 }

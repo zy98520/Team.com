@@ -74,13 +74,16 @@ n:any;
   ngOnInit() {
       let  that=this;
       let id = that. route.snapshot.paramMap.get('id');
-      const body = {'id1': 73};
+      const body = {'id1':id};
       that. userSer .showdetails(body, function (result) {
         if( result.StateCode==0){alert('erro');}
         else {
           that.detail= result;
+
         }
       })
+
+
     $(function () {
       $('#d1').mousemove(function (e) {
         $('#d4').css('display', 'block');

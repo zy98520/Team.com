@@ -1,3 +1,17 @@
+.title_shares{
+  width:750px;
+  height:20px;
+  background-color: pink;
+  margin-top:-15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:30px;
+}
+.line{
+  margin-top:-65px;
+}
+
+
 #smallback{height:50px;
   background-color: red;
 }

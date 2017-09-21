@@ -65,108 +65,112 @@
       <li><a (click)="usenew()">使用新地址</a></li>
     </ul>
   </div>
+        <ng-container *ngIf="state1">
+          <div  class="center_hidden">
+            <form  #addForm="ngForm" class="form-horizontal" id="myform">
+              <!--<input type="text" name="homeid" #id="ngModel" [(ngModel)]="_id" style="display: none">-->
+              <div class="main_address">
+                <ul>
+                  <li>
+                    <p  class="province">省:
+                      <span class="xinghao">*</span>
+                    </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select type="text" id="province_id" name="shen" #shen="ngModel"  [(ngModel)]="_shen">
+                      <option *ngFor="let item of a">{{item}}</option>
+                    </select>
+                  </li>
+                  <li>
+                    市：&nbsp;&nbsp;
+                    <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city">
+                      <option *ngFor="let item of pro">{{item}}</option>
+                    </select>
+                  </li>
+                  <li>
+                    区：&nbsp;&nbsp;
+                    <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu">
+                      <option *ngFor="let item1 of b">{{item1}}</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
 
-
-  <div  *ngIf=state1 class="center_hidden">
-    <form  #addForm="ngForm" class="form-horizontal" id="myform">
-      <input type="text" name="homeid" #id="ngModel" [(ngModel)]="_id" style="display: none">
-      <div class="main_address">
-        <ul>
-          <li>
-            <p  class="province">省:
-              <span class="xinghao">*</span>
-            </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select type="text" id="province_id" name="shen" #shen="ngModel"  [(ngModel)]="_shen">
-              <option>请选择</option>
-            </select>
-          </li>
-          <li>
-            市：&nbsp;&nbsp;
-            <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city"><option>请选择</option></select>
-          </li>
-          <li>
-            区：&nbsp;&nbsp;
-            <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu"><option>请选择</option></select>
-          </li>
-        </ul>
-      </div>
-
-      <div class="form-group col-lg-12 col-md-12">
-        <label class="control-label  col-lg-2" for="you">邮政编码<span class="xinghao">*</span></label>
-        <div class="col-lg-3 col-md-3">
-          <input type="text" pattern="^[1-9][0-9]{5}$" id="you"  #you="ngModel" class="form-control " [(ngModel)]="value" name="you" required>
-        </div>
-      </div>
-      <div class="control-group col-md-6 col-lg-6">
-        <div *ngIf="you.invalid && (you.dirty || you.touched)"
-             class="miss">
-          <div *ngIf="you.errors.required">
-            邮政编码不能为空!
-          </div>
-          <div *ngIf="you.errors.minlength">
-            编码格式不正确！
-          </div>
-        </div>
-      </div>
-      <div class="form-group col-lg-12 col-md-12">
-        <label class="control-label  col-lg-2" for="detail">街道地址<span class="xinghao">*</span></label>
-        <div class="col-lg-6 col-md-6">
+              <div class="form-group col-lg-12 col-md-12">
+                <label class="control-label  col-lg-2" for="you">邮政编码<span class="xinghao">*</span></label>
+                <div class="col-lg-3 col-md-3">
+                  <input type="text" pattern="^[1-9][0-9]{5}$" id="you"  #you="ngModel" class="form-control " [(ngModel)]="value" name="you" required>
+                </div>
+              </div>
+              <div class="control-group col-md-6 col-lg-6">
+                <div *ngIf="you.invalid && (you.dirty || you.touched)"
+                     class="miss">
+                  <div *ngIf="you.errors.required">
+                    邮政编码不能为空!
+                  </div>
+                  <div *ngIf="you.errors.minlength">
+                    编码格式不正确！
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-12 col-md-12">
+                <label class="control-label  col-lg-2" for="detail">街道地址<span class="xinghao">*</span></label>
+                <div class="col-lg-6 col-md-6">
           <textarea minlength="10" id="detail"rows="5" placeholder="地址不能为空" #detail="ngModel" class="form-control " [(ngModel)]="_detail" name="detail" required>
           </textarea>
-        </div>
-      </div>
-      <div class="control-group col-md-6 col-lg-6">
-        <div *ngIf="detail.invalid && (detail.dirty || detail.touched)"
-             class="miss">
-          <div *ngIf="detail.errors.required">
-            地址不能为空
-          </div>
-          <div *ngIf="detail.errors.minlength">
-            街道地址无效！
-          </div>
-        </div>
-      </div>
+                </div>
+              </div>
+              <div class="control-group col-md-6 col-lg-6">
+                <div *ngIf="detail.invalid && (detail.dirty || detail.touched)"
+                     class="miss">
+                  <div *ngIf="detail.errors.required">
+                    地址不能为空
+                  </div>
+                  <div *ngIf="detail.errors.minlength">
+                    街道地址无效！
+                  </div>
+                </div>
+              </div>
 
-      <div class="form-group col-lg-12 col-md-12">
-        <label class="control-label  col-lg-2" for="name">收货姓名<span class="xinghao">*</span></label>
-        <div class="col-lg-3 col-md-3">
-          <input type="text" id="name" value="chifan" #name="ngModel" class="form-control " [(ngModel)]="_name" name="name" required>
-        </div>
-      </div>
-      <div class="control-group col-md-6 col-lg-6">
-        <div *ngIf="name.invalid && (name.dirty ||name.touched)"
-             class="miss">
-          <div *ngIf="name.errors.required">
-            姓名不能为空
-          </div>
-        </div>
-      </div>
+              <div class="form-group col-lg-12 col-md-12">
+                <label class="control-label  col-lg-2" for="name">收货姓名<span class="xinghao">*</span></label>
+                <div class="col-lg-3 col-md-3">
+                  <input type="text" id="name" value="chifan" #name="ngModel" class="form-control " [(ngModel)]="_name" name="name" required>
+                </div>
+              </div>
+              <div class="control-group col-md-6 col-lg-6">
+                <div *ngIf="name.invalid && (name.dirty ||name.touched)"
+                     class="miss">
+                  <div *ngIf="name.errors.required">
+                    姓名不能为空
+                  </div>
+                </div>
+              </div>
 
-      <div class="form-group col-lg-12 col-md-12">
-        <label class="control-label  col-lg-2" for="tel">收货号码<span class="xinghao">*</span></label>
-        <div class="col-lg-4 col-md-4">
-          <input type="text" id="tel"pattern="^1[34578]\d{9}$" #tel="ngModel" class="form-control " [(ngModel)]="_tel" name="tel" required>
-        </div>
-      </div>
-      <div class="control-group col-md-6 col-lg-6">
-        <div *ngIf="tel.invalid && (tel.dirty ||tel.touched)"
-             class="miss">
-          <div *ngIf="tel.errors.required">
-            收货号码不能为空
-          </div>
-          <div *ngIf="tel.errors.pattern">
-            号码格式有误！
-          </div>
-        </div>
-      </div>
+              <div class="form-group col-lg-12 col-md-12">
+                <label class="control-label  col-lg-2" for="tel">收货号码<span class="xinghao">*</span></label>
+                <div class="col-lg-4 col-md-4">
+                  <input type="text" id="tel"pattern="^1[34578]\d{9}$" #tel="ngModel" class="form-control " [(ngModel)]="_tel" name="tel" required>
+                </div>
+              </div>
+              <div class="control-group col-md-6 col-lg-6">
+                <div *ngIf="tel.invalid && (tel.dirty ||tel.touched)"
+                     class="miss">
+                  <div *ngIf="tel.errors.required">
+                    收货号码不能为空
+                  </div>
+                  <div *ngIf="tel.errors.pattern">
+                    号码格式有误！
+                  </div>
+                </div>
+              </div>
 
-    <ul class="cancel_address">
-      <input class="cancel_address_id" *ngIf=x1 [disabled]="!addForm.valid" type="button" value="确认地址" (click)="addhome(addForm)">
-      <input class="cancel_address_id" type="button" *ngIf=x2 value="确认修改" (click)="update(addForm)">
-      <input (click)="cancel()" id="cancel_address_id1"type="button" value="取消">
-    </ul>
-    </form>
-      </div>
+              <ul class="cancel_address">
+                <input class="cancel_address_id" *ngIf=x1 [disabled]="!addForm.valid" type="button" value="确认地址" (click)="addhome(addForm)">
+                <input class="cancel_address_id" type="button" *ngIf=x2 value="确认修改" (click)="update(addForm)">
+                <input (click)="cancel()" id="cancel_address_id1"type="button" value="取消">
+              </ul>
+            </form>
+          </div>
+        </ng-container>
 
   <div class="bottom">
     <p>确认商品信息</p>
