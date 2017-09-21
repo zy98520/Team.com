@@ -60,8 +60,15 @@
   opacity: 0.5;
   text-decoration: none;
 }
+
 .buy1 a{
   color: white;
+}
+.con2{
+  width: 100%;
+}
+.cloth{
+  margin-left: 140px;
 }
 .price{
   font-size: 20px;
