@@ -1,29 +1,81 @@
 #smallback{height:50px;
   background-color: red;
 }
-#big{
-  margin-left:auto;
-  margin-right: auto;
+.send_area{
+  margin-top: 20px;
+}
+/*#big{*/
+  /*margin-left:auto;*/
+  /*margin-right: auto;*/
+/*}*/
+.bigc{
+  margin-top: -20px;
+background-image:  url("../../../assets/personal_images/xq4.jpg");
+}
+.wen input{
+  width: 49px;
+  height: 39px;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+}
+
+.send input{
+background-color: #ffad8d;
+  border: none;
+  color: white;
+  margin-left: -55px;
+}
+
+.pic{
+  position: absolute;
+  left:40px;
+  z-index: 2;
+}
+.pics{
+  min-width: 590px;
+ max-width: 620px;
+  margin: 0 auto;
+  min-height: 60px;
+}
+.review_btn button{
+  background-color: #888888;
+  color: white;
+  margin-left: 5px;
+  width: 48px;
+  font-size: 12px;
+  height: 28px;
+text-align: center;
+  margin-top: 10px;
+
 }
 #backshow{
   width:400px;
   margin-bottom: 50px;
+
 }
+.review_area textarea{
+  margin-bottom: 10px}
 #container{
   height:auto;
   min-height:500px;
-  border:1px solid rgba(255, 0, 0, 0.42);
+  border:1px solid rgba(255, 0, 0, 0.35);
   padding:20px;
+  text-align: center;
+}
+.panel-body img{
+  width:160px ;
+  height: 200px;
 }
 #show{
-  border:1px solid rgba(255, 255, 0, 0.38);
+  border:1px solid #F2F2F5;
   height:auto;
   min-height:50px;
   margin-top: 20px;
 }
 #ever{
   margin-bottom:30px;
-  background-color: rgba(255, 255, 0, 0.3);
+  background-color: rgba(242, 242, 245, 0.73);
   min-height:100px;
 }
 #num1{
@@ -31,4 +83,8 @@
   border: none;
   text-align: center;
   background-color: transparent;
+}
+.pics a img{
+  width: 200px;
+  height: 280px;
 }
