@@ -51,6 +51,8 @@ export class FashionWeekComponent implements OnInit {
     $('#review6').mouseleave(function () {
       $('#f').fadeOut(600);
     });
+    $(document).scrollTop(0);
+
   }
   public ying(): void {
     this.router.navigateByUrl('fashion-ying');

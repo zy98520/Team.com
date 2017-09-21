@@ -86,6 +86,8 @@ export class BoysComponent implements OnInit {
       }
     }
     $(window).scroll(Add_Data);
+    $(document).scrollTop(0);
+
   }
   godetail(id){
     this.router.navigate(['/shopping', id]);

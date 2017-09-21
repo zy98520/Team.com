@@ -21,12 +21,17 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { StartComponent } from './start/start.component';
 
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'start',
+    component: StartComponent
   },
   {
     path: 'showboys',
@@ -37,7 +42,7 @@ const routes: Routes = [
     component: RegistComponent
   },
   {
-    path: 'index/:val',
+    path: 'index',
     component: IndexComponent
   },
   {
@@ -102,7 +107,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/index/1',
+    redirectTo: '/start',
     pathMatch: 'full'
   },
   {

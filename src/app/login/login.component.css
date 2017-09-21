@@ -1,12 +1,11 @@
-/*.ng-valid[required], .ng-valid.required{*/
-  /*border-left: 5px solid #42A948; !* green *!*/
-/*}*/
-
-/*.ng-invalid:not(form)  {*/
-  /*border-left: 5px solid #a94442; !* red *!*/
-/*}*/
-
+.logo4:hover{
+  cursor: pointer;
+}
 .login-bg{
+  z-index: 101;
+  margin-left: 15px;
+  position: fixed;
+  top:0;
   background: no-repeat;
   height: 600px;
   background: url(../../assets/index-img/login-bg2.jpg);

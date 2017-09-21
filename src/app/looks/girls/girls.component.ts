@@ -84,5 +84,7 @@ export class GirlsComponent implements OnInit {
       clear();
       scroll(520);
     });
+    $(document).scrollTop(0);
+
   }
 }

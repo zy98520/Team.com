@@ -29,6 +29,7 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { GlobalPropertyService } from './services/global-property.service';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { StartComponent } from './start/start.component';
 
 
 
@@ -57,6 +58,7 @@ import { PaytoComponent } from './personal-center/payto/payto.component';
     RegistComponent,
     PayComponent,
     PaytoComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,

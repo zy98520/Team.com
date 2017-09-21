@@ -1,5 +1,5 @@
-
 <div  class="col-md-12 login-bg">
+  <div routerLink="/index" class="logo3"><img src="../../assets/looks-loves-img/logo3.png"></div>
   <div class="login1">
   <div class="row col-md-5 ">
     <form class="form-horizontal" #myForm="ngForm" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded">
@@ -77,8 +77,9 @@
           </div>
         </div>
       </div>
-      <button type="button" id="btnregist" (click)="toregist(myForm)" class="login" style="margin-left:85%">注册</button>
+      <button type="button" id="btnregist" (click)="toregist(myForm)" class="login" style="margin-left:185px">注册</button>
     </form>
+    <div routerLink="/login" class="zhuce">已有账号，去登录>></div>
   </div>
 </div>
 <div><p>{{regist_res}}</p></div>

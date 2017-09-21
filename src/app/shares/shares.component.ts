@@ -52,6 +52,8 @@ pan:string='';
     that.userSer.commentShow(function (result) {
         that.comments= result;
     })
+    $(document).scrollTop(0);
+
   }
   sendshare(comment) {
     const body = {'com': comment .form.value.com, telephone: sessionStorage.getItem('userId')};
