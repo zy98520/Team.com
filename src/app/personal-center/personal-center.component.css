@@ -1,7 +1,7 @@
 #header{ width:70px;
   height:70px;
   position: relative;
-  left:531px;
+  left:450px;
   background-color: grey;
   border-radius:40px;}
 
@@ -9,6 +9,25 @@
   width:180px;
   height:180px;
   margin-left:50px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+.tu{
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-1;
+}
+.dian{
+  margin-top:35px;
+  margin-left:15px;
+  font-weight:600;
+  height:20px;
+  width:60px;
+  font-size:8px;
+
+  /*background-color: pink;*/
 }
 .wallpaper{
   width:110px;
@@ -17,6 +36,7 @@
   position: absolute;
   top:56px;
   left:20px;}
+
 #upload_file{
   z-index:2;
   border-radius:40px;
@@ -29,8 +49,12 @@
 }
 #preview{
   overflow:hidden;
+  border-radius:35px;
   width:70px;
-  height:70px;}
+  height:70px;
+  position:relative;
+  top:-70px;
+ }
 .wallpaper ul{
   list-style: none;
   position: absolute;
@@ -43,14 +67,13 @@
   width:170px;
   height:280px;
   position: relative;
-  background-color: grey;
-  border-radius:40px;
   top:-720px;
   left:-215px;
 }
 #preview1{
   width:70px;
   height:70px;
+  border-radius:40px;
 }
 #preview1 img {
   width: 100%;
@@ -60,6 +83,20 @@
 .wallpaper p{
 margin-left:-12px;
 
+}
+.wallpaper input{
+  width:78px;
+  height:30px;
+  margin-left:-14px;
+  margin-top:5px;
+  border:1px solid grey;
+  background-color: #FDFDFB;
+}
+.wallpaper input:hover{
+  background-color: pink;
+}
+#bottom_id{
+  margin-top:-25px;
 }
 .row{
   width:1000px;
@@ -71,6 +108,7 @@ margin-left:-12px;
 }
 #big{
   z-index:2;
+  position: relative;
 }
 #wallpaper {
   object-fit: cover;
@@ -168,6 +206,7 @@ h3{
   margin-right: auto;
   height: 80px;
   margin-top:20px;
+
   /*background-color: #1eabff;*/
 
 }
@@ -201,6 +240,13 @@ h3{
   float: left;
   padding-left:187px;
   margin-left:5px;
+
 }
+.big_con{
+  width:1400px;
+  height:990px;
+  overflow: hidden;
+}
+.confirm_pic{
 
-
+}

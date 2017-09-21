@@ -72,11 +72,9 @@ n:any;
     this.n = n;
   }
   ngOnInit() {
-    // var url=this.detail[0].goodspicb;
-    // $('#d4').css('background','url("../../assets/this.url")')
       let  that=this;
       let id = that. route.snapshot.paramMap.get('id');
-      const body = {'id1': id};
+      const body = {'id1': 73};
       that. userSer .showdetails(body, function (result) {
         if( result.StateCode==0){alert('erro');}
         else {
@@ -107,12 +105,10 @@ n:any;
 
             if (e.clientY <= 275) {
               $('#d3').css('top', 0);
-              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y', 0);
+              $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y',0);
             }
             else {
-
-              $('#d4').css('background-position-x', 1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y', 1200 - (e.clientY) / 590 * 1200 + 612);
-
+              $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y',1200 - (e.clientY) / 590 * 1200 + 612);
             }
 
           }
@@ -198,7 +194,9 @@ load(){
         else {alert("加入成功！")}
       })
     }//加入购物车
-    else{}//加入订单
+    else{
+
+    }//加入订单
   }
 else {alert('你还未登录，即将前往登录页面');
     that.router.navigate(['/login']);

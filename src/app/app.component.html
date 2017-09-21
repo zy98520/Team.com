@@ -49,15 +49,47 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right" id="user_nav">
-          <li *ngIf="!tel" style="float:right;"><span><a href="" routerLink="/login" routerLinkActive="active"> 登陆</a></span>
+          <li *ngIf=!name style="float:right;"><span><a href="" routerLink="/login" routerLinkActive="active"> 登陆</a></span>
             &nbsp;&nbsp;
             <span> <a href="" routerLink="/regist" routerLinkActive="active"> 注册</a></span></li>
-          <li *ngIf="tel" style="float:right"><span><a href="" routerLink="/personal-center" routerLinkActive="active">欢迎:{{tel}}
+          <li *ngIf=name style="float:right"><span><a href="" routerLink="/personal-center" routerLinkActive="active">欢迎:{{name}}
          </a> </span>&nbsp;<span><a href="#" (click)="end()" routerLink="/" routerLinkActive="active" >注销</a> </span></li>
       </ul>
     </div>
   </div>
 </nav>
+  <ul id="dock">
+    <li id="links"><span class="fa fa-user"></span>
+      <ul class="free">
+        <li class="header"><a class="dock-keleyi-com">固定</a><a class="undock">隐藏</a></li>
+        <div *ngIf=!name>你还没有登陆呢~~~</div>
+        <div *ngIf=name><li><img class="img-circle" src="../assets/icon/{{icon}}" width="100px"height="110px"></li>
+        <li>用户名：<span>{{name}}</span></li></div>
+        <li><button>我的订单</button></li>
+      </ul>
+    </li>
+    <li id="files"><span class="fa fa-shopping-cart"></span>购物车
+      <ul class="free" style="overflow-y: scroll">
+        <li class="header"><a class="dock-keleyi-com">固定</a><a class="undock">隐藏</a></li>
+        <li>我的购物车</li>
+        <li *ngFor="let item of mes">
+          <span><img width="80" height="120" src="../assets/{{item.goodspic}}"></span>
+          <span style="width: 80px;height: 50px;display: inline-block">{{item.goodsname}}</span>
+        </li>
+      </ul>
+    </li>
+    <li id="tools"><span class="fa fa-paw"></span>我的足迹
+      <ul class="free">
+        <li class="header"><a class="dock-keleyi-com">固定</a><a class="undock">隐藏</a>我的足迹</li>
+        <li>
+          <span><img width="80" height="120" src="../assets/girls-img/sweet1.jpg"></span>
+          <span style="width: 80px;height: 50px;display: inline-block">仿棉麻面料 条纹衬衫...</span>
+        </li>
+      </ul>
+    </li>
+    <li id="top"><span class="fa fa-chevron-up"></span>顶部
+    </li>
+  </ul>
   <div class="row">
     <router-outlet #outlet>
     </router-outlet>

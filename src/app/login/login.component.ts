@@ -30,20 +30,15 @@ export class LoginComponent implements OnInit {
     that.userSer.login(login_form.form.value, function (result) {
       if ( result.StateCode == 0){
         that.login_res = '用户名或密码错误！';
-      }else {
-        location.reload();
+      }else {location.reload();
         that.tel = login_form.form.value.userId;
-        that.name = login_form.form.value.username;
+        that.name=result[0].username;
         sessionStorage.setItem('userId', that.tel);
-        sessionStorage.setItem('username', that.name);
-        that.router.navigate(['/index']);
+        sessionStorage.setItem('username',that.name);
+        that.router.navigate(['/index'],that.name);
       }
     })
   }
-  // toIndex(){
-  //   this.router.navigate(['/index',this._val]);
-  //   this.glo.serverUrl='http://127.0.0.1:8000'
-  // }
   ngOnDestroy(){
   console.log('personal -ngDestroy');
   this.glo.hiddenNavs=false;

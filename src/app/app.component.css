@@ -13,7 +13,6 @@
 }
 #user_nav a{
   color: #ababab;
-
 }
 .ng1{
   color: #e0e0e0;
@@ -72,4 +71,95 @@ left:-4px;
   vertical-align: middle;
   margin-top:15px;
   color:white;
+}
+/*body{*/
+  /*margin:0px;*/
+  /*font-family:Arial,*/
+  /*Sans-Serif; font-size:13px;*/
+/*}*/
+a{color: #ffffff;text-decoration:none}
+img{border:0px;}
+/* dock */
+#dock{margin:0px;
+  padding:0px;
+  list-style:none;
+  position:fixed;
+  top:175px;
+  height:100%;
+  z-index:100;
+  background-color: rgba(255, 255, 255, 0.16); right:0px;}
+#dock > li {width:20px;
+  height:120px;
+  text-align: center;
+  margin: 0 0 1px 0;
+  background-color: rgba(255, 255, 255, 0.16) ;
+  background-repeat:no-repeat;
+  background-position:left center;
+}
+
+#dock #links {
+  background-color: rgba(255, 255, 255, 0.16);
+  padding-top: 50px;
+}
+#dock #links:hover{
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+}
+#dock #files:hover{
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+
+}
+#dock #tools:hover{
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+
+}
+#links li{
+  text-align: center
+}
+#links li button{
+  margin-top: 20px;
+  background-color: #ff729e;
+  color: white;
+  border: none;
+}
+.header{
+  height: 30px;
+  background-color: #000000;
+}
+#dock #files {background-color: rgba(255, 255, 255, 0.16)}
+#dock #tools {
+  background-color: rgba(255, 255, 255, 0.16)
+
+}
+
+#files li{
+  border-bottom: 1px solid rgba(112, 112, 112, 0.7);
+}
+#dock > li:hover {background-position:-40px 0px;}
+
+/* panels */
+#dock ul li {padding:5px;}
+/*#dock ul li:hover {background: rgba(112, 112, 112, 0.27);}*/
+/*#dock ul li.header, #dock ul li .header:hover {background: rgba(112, 112, 112, 0.36);}*/
+
+#dock > li:hover ul {display:block;}
+#dock > li ul {position:absolute; top:0px; right:-160px;
+  z-index:-1;width:180px; display:none;
+  color: #4b4b4b;
+  background-color: rgba(255, 255, 255, 0.67); border:solid 1px rgba(107, 107, 107, 0.62); padding:0px; margin:0px; list-style:none;}
+#dock > li ul.docked { display:block;z-index:-2;}
+
+.dock-keleyi-com,.undock{float:right;}
+.undock {display:none;}
+#content {margin: 10px 0 0 60px;}
+#top{
+  color: hotpink;
+}
+#top:hover{
+  cursor: pointer;
 }

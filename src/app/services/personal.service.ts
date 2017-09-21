@@ -12,9 +12,7 @@ export class PersonalService {
   }
 
   upload(user, callback) {
-    // console.log('接收到的数据');
-    // console.log(user);
-    // callback('登录成功');
+    alert('上');
     this.http.post(this.url + '/upload', user).subscribe(function (result) {
         callback(result);
       },
@@ -79,6 +77,15 @@ myshop(body, callback ) {
   }
   updatehome(body,callback ) {
     this.http.post(this.url + '/updatehome', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  change(body,callback ) {
+    this.http.post(this.url + '/change', body).subscribe(function (result) {
         callback(result);
       },
       function (error) {

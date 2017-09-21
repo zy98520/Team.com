@@ -103,7 +103,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/index/1',
+    redirectTo: '/index',
     pathMatch: 'full'
   },
   {
