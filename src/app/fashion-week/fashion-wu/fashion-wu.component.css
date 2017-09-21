@@ -1,3 +1,18 @@
+
+@media screen and (max-width:768px ){
+  .tt1{
+    display: none;
+  }
+  .tt2{
+    display: none;
+  }
+  .tt4{
+    display: none;
+  }
+}
+
+
+
 .n01{
   width: 133px;
   height: 143px ;
