@@ -15,8 +15,8 @@ export class FashionWeekComponent implements OnInit {
     'new13', 'new14', 'new15', 'new16', 'new17', 'new18']];
   milan= [['mi4', 'mi2', 'mi3', 'mi4', 'mi5', 'mi6', 'mi7', 'mi8'], ['mi11', 'mi2', 'mi3', 'mi4', 'mi5',
     'mi16', 'ba10', 'ba9']];
-  paris= [['lon1', 'new2', 'new3', 'new4', 'new5', 'new6', 'new7', 'new8'], [ 'new11', 'new12',
-    'new13', 'new14', 'new15', 'new16', 'new17', 'new18']];
+  paris= [['lun1', 'lun2', 'lun3', 'lun4', 'lun5', 'lun6', 'lun7', 'lun8'], [ 'lun11', 'lun12',
+    'lun13', 'lun14', 'lun15', 'lun16', 'lun9', 'lun10']];
   url1: string;
   url2: string;
   show(ny) {
