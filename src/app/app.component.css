@@ -46,7 +46,6 @@
   list-style: none;
   background-color: #000000;
   background-clip: padding-box;
-  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
@@ -67,6 +66,12 @@ left:-4px;
   background-color: rgba(165, 165, 165, 0.68);
 }
 
+#user_nav li{
+  text-align: center;
+  vertical-align: middle;
+  margin-top:15px;
+  color:white;
+}
 /*body{*/
   /*margin:0px;*/
   /*font-family:Arial,*/

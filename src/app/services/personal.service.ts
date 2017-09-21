@@ -12,9 +12,7 @@ export class PersonalService {
   }
 
   upload(user, callback) {
-    // console.log('接收到的数据');
-    // console.log(user);
-    // callback('登录成功');
+    alert('上');
     this.http.post(this.url + '/upload', user).subscribe(function (result) {
         callback(result);
       },
@@ -32,4 +30,76 @@ export class PersonalService {
       }
     )
   }
+myshop(body, callback ) {
+  this.http.post(this.url + '/myshop', body ).subscribe(function (result) {
+      callback(result);
+    },
+    function (error) {
+      console.log(error.message);
+    }
+  )
+}
+  delshop(body, callback ) {
+    this.http.post(this.url + '/delshop', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addhome(body,callback ) {
+  this.http.post(this.url + '/addhome',body).subscribe(function (result) {
+      callback(result);
+    },
+    function (error) {
+      console.log(error.message);
+    }
+  )
+}
+  showhome(body,callback ) {
+    this.http.post(this.url + '/showhome', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  delhome(body,callback ) {
+    this.http.post(this.url + '/delhome', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  updatehome(body,callback ) {
+    this.http.post(this.url + '/updatehome', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  change(body,callback ) {
+    this.http.post(this.url + '/change', body).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  // ordershow(callback ) {
+  //   this.http.post(this.url + '/ordershow').subscribe(function (result) {
+  //       callback(result);
+  //     },
+  //     function (error) {
+  //       console.log(error.message);
+  //     }
+  //   )
+  // }
 }

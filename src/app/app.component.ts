@@ -1,25 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import {GlobalPropertyService} from './services/global-property.service'
 
+import {Router} from '@angular/router';
+import {PersonalService} from './services/personal.service';
+
 declare var $ :any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [PersonalService],
 })
 export class AppComponent  implements OnInit {
-tel: string;
-name: string;
+name='';
   _hiddenNavs:boolean;
-
+icon:any;mes;
 constructor(
-  private  glo:GlobalPropertyService
-) {
-
-}
+  private  glo:GlobalPropertyService,
+  private perSer: PersonalService,
+  private router: Router,
+) {}
   ngOnInit() {
+  this.name=sessionStorage.getItem('username');
+  this.icon=sessionStorage.getItem('icon');
+    // this.name = that. router.snapshot.paramMap.get('val');
     this._hiddenNavs=this.glo.hiddenNavs;
+    let that = this;
+    // const body={'tel':sessionStorage.getItem('userId')}
+    // that.perSer.myshop(body, function (result) {
+    //   if ( result.StateCode==0){} else {
+    //     that.mes= result;
+    //
+    //   }
+    // })
     function Add_Data() {
       let top = $("#fix1").offset().top;
       let title = $("#title1").offset().top;
@@ -39,9 +53,6 @@ constructor(
       }
     };
     $(window).scroll(Add_Data);
-
-    this.tel= sessionStorage .getItem('userId');
-    this.name = sessionStorage .getItem('username');
     $(document).ready(function () {
       var docked = 0;
 
@@ -61,10 +72,6 @@ constructor(
         $(this).parent().find(".undock").show();
         $(this).hide();
 
-        // if (docked > 0)
-        //   $("#content").css("margin-right", "250px");
-        // else
-        //   $("#content").css("margin-right", "60px");
       });
 
       $("#dock .undock").click(function () {
@@ -81,11 +88,6 @@ constructor(
         });
         $(this).parent().find(".dock-keleyi-com").show();
         $(this).hide();
-
-        // if (docked > 0)
-        //   $("#content").css("margin-right", "250px");
-        // else
-        //   $("#content").css("margin-right", "60px");
       });
 
       $("#dock li").hover(function () {
@@ -94,18 +96,6 @@ constructor(
         $(this).find("ul.free").animate({ right: "-180px" }, 200);
       });
     });
-    // $("#top").click(function () {
-    //   var speed=200;//滑动的速度
-    //   $('body,html').animate({ scrollTop: 0 }, speed);
-    //   return false;
-    // });
-    // if($(document).scrollTop()==0){
-    //   $("#top").css('display','none')
-    // }
-    // else{
-    //   $("#top").css('display','block')
-    //
-    // }
     $(function(){
       $(document).scroll(function(){
         if($(document).scrollTop() > 100){
@@ -125,7 +115,7 @@ constructor(
     this._hiddenNavs=this.glo.hiddenNavs;
   }
   end(){
-    sessionStorage.setItem('userId','');
-    this.tel = sessionStorage .getItem('userId');
+    sessionStorage.setItem('username','');
+    this.name= sessionStorage.getItem('username');
   }
 }

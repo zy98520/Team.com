@@ -12,8 +12,14 @@
   float: left;
   margin-left:50px;
   margin-top:70px;
-  position: relative;
+position:relative;;
 }
+/*.left img{*/
+  /*object-fit: cover;*/
+  /*width:100%;*/
+  /*height:100%;*/
+  /*position: relative;*/
+/*}*/
 #d3{
   width:100px;
   height:100px;
@@ -36,6 +42,7 @@
 }
 
 
+}
 .right{
   width:500px;
   height:600px;

@@ -1,3 +1,9 @@
+<!--<div class="container-fluid">-->
+  <!--&lt;!&ndash;<form class="form-horizontal" id="upload_form">&ndash;&gt;-->
+    <!--&lt;!&ndash;<input type="file" id="upload_file"  name="user_icon">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div id="preview" ></div>&ndash;&gt;-->
+  <!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--</div>-->
 <div class="big_con">
 <div class="container" >
   <div class="row">
@@ -6,9 +12,7 @@
     <div class="col-md-12 col-lg-12">
       <div class="big">
         <div class="first">
-          <p id="phone">
-            <img src="../../assets/personal_images/1439880982560.jpg" height="75" width="75">
-          </p>
+          <div id="preview1"><img src="../../assets/icon/{{back[0].icon}}" ></div>
           <p id="suki">Wendy Suki<br>Web Designer</p>
         </div>
         <div class="first">
@@ -40,9 +44,16 @@
     <div class="col-md-12 col-lg-12">
     <h2 class="center">About Me</h2>
     <p class="line">_____</p>
-    <p class="picture1">
-      <img src="../../assets/personal_images/picture.jpg" height="60" width="60" class="picture">
-    </p>
+      <div class="container-fluid">
+      </div>
+<div id="header">
+      <form class="form-horizontal" id="upload_form">
+        <input type="file" id="upload_file"  name="user_icon">
+    <div id="preview">
+      <img src="../../assets/icon/{{back[0].icon}}" >
+    </div>
+      </form>
+</div>
   </div>
     <div class="col-md-12 col-lg-12">
       <div class="icon">
@@ -88,9 +99,9 @@
         <h5 class="icon_first_introduce">
           &nbsp;&nbsp;&nbsp;&nbsp;评价
         </h5>
-        <h5 class="icon_first_introduce">
+        <a routerLink="/shapping-car" routerLinkActive="active"><h5 class="icon_first_introduce">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;购物车
-        </h5>
+        </h5></a>
         <h5 class="icon_first_introduce">我的物流
         </h5>
       </div>
@@ -109,9 +120,9 @@
               <img src="../../assets/personal_images/top_arrow.png" height="25" width="25">
             </p>
             <li *ngFor="let item of def;let index=index" (click)="dianji(index)">
-              <img src="../../assets/personal_images/{{item}}.jpg" height="80" width="80">
+              <img src="../../assets/personal_images/{{item}}" height="80" width="80">
             </li>
-            <input class="confirm_pic" type="button" value="确认" *ngIf=fsq>
+            <input class="confirm_pic"(click)="change()" type="button" value="确认" *ngIf=fsq>
             <p class="bottom_arrow" (click)="bottom()">
               <img  id="bottom_id" src="../../assets/personal_images/left_arrow.png" height="25" width="25">
             </p>
@@ -124,7 +135,7 @@
 
 
       </div>
-  <img id="wallpaper" src="../../assets/personal_images/{{def1}}.jpg">
+  <img id="wallpaper" src="../../assets/{{back[0].background}}">
     </div>
 </div>
 

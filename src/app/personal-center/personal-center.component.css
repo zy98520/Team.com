@@ -11,6 +11,12 @@
   width:1400px;
   overflow: hidden;
 }
+#header{ width:70px;
+  height:70px;
+  position: relative;
+  left:450px;
+  background-color: grey;
+  border-radius:40px;}
 
 .change{
   width:180px;
@@ -42,8 +48,26 @@
   opacity:0;
   position: absolute;
   top:56px;
-  left:20px;
+  left:20px;}
+
+#upload_file{
+  z-index:2;
+  border-radius:40px;
+  width:70px;
+  height:70px;
+  display: block;
+  position: relative;
+  opacity: 0;
+  background-color: yellow;
 }
+#preview{
+  overflow:hidden;
+  border-radius:35px;
+  width:70px;
+  height:70px;
+  position:relative;
+  top:-70px;
+ }
 .wallpaper ul{
   list-style: none;
   position: absolute;
@@ -59,7 +83,16 @@
   top:-720px;
   left:-215px;
 }
-
+#preview1{
+  width:70px;
+  height:70px;
+  border-radius:40px;
+}
+#preview1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .wallpaper p{
 margin-left:-12px;
 
@@ -91,6 +124,8 @@ margin-left:-12px;
   top:-1000px;
   left:30px;
 }
+#preview img{width:100%;
+height:100%;object-fit:cover;}
 .big{
   width:700px;
   height:250px;

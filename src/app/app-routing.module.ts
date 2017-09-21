@@ -30,10 +30,6 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'showboys',
-    component: BoysComponent
-  },
-  {
     path: 'regist',
     component: RegistComponent
   },
@@ -45,10 +41,6 @@ const routes: Routes = [
     path: 'loves',
   component: LovesComponent
 },
-  {
-    path: 'comment',
-    component: SharesComponent
-  },
   {
     path: 'fashion-week',
     component: FashionWeekComponent
@@ -70,6 +62,10 @@ const routes: Routes = [
     component: SharesComponent
   },
   {
+    path: 'shares-area',
+    component: SharesAreaComponent
+  },
+  {
     path: 'girls',
     component: GirlsComponent
   },
@@ -86,7 +82,7 @@ const routes: Routes = [
     component: PersonalCenterComponent
   },
   {
-    path: 'shopping',
+    path: 'shopping/:id',
     component: ShoppingComponent
   },
   {
@@ -102,12 +98,16 @@ const routes: Routes = [
     component: PaytoComponent
   },
   {
+    path: 'index',
+    component: IndexComponent
+  },
+  {
     path: 'shares-area',
     component: SharesAreaComponent
   },
   {
     path: '',
-    redirectTo: '/index/1',
+    redirectTo: '/index',
     pathMatch: 'full'
   },
   {

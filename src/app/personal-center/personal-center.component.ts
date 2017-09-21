@@ -10,12 +10,14 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
+mes: any ;
 n:any;
+tu:any;back:any;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
-  shuzu=[['kt1','kt2','kt3','kt4','kt5'],['fj1','fj2','fj3','fj4','fj5'],
-    ['xq1','xq2','xq3','xq4','xq5'],['mx2','mx1','mx5','mx3','mx4']];
+  shuzu=[['kt1.jpg','kt2.jpg','kt3.jpg','kt4.jpg','kt5.jpg'],['fj1.jpg','fj2.jpg','fj3.jpg','fj4.jpg','fj5.jpg'],
+    ['xq1.jpg','xq2.jpg','xq3.jpg','xq4.jpg','xq5.jpg'],['mx2.jpg','mx1.jpg','mx5.jpg','mx3.jpg','mx4.jpg']];
    def:any;
    def1:string;
    fsq:any;
@@ -37,8 +39,10 @@ n:any;
      }
    }
    dianji(index){
-   this.def1=this.def[index];
-     this.fsq=true;
+     let def='personal_images/'+this.def[index];
+   this.back[0].background=def;
+   this.fsq=true;
+   this.tu =def;
    }
 
 
@@ -48,7 +52,9 @@ n:any;
     this.def1=this.shuzu[1][4];
     this.def=this.shuzu[0];
     const that = this;
+    that.showicon();
     $(function () {
+      const those = that;
       $('.change').click(function () {
         $('.wallpaper').animate({
           opacity:'1',
@@ -58,51 +64,53 @@ n:any;
         $('.wallpaper').animate({
           height:'toggle',
         },2000,'linear');
-
-
-
       });
-
-
       $('#upload_file').change(function (e) {
-        that.checkin();
         const file = e.target.files[0];
         preview(file);
-        that.upload();
+        those.upload();
       });
       function preview(file) {
         const img = new Image();
         img.src = URL.createObjectURL(file);
         const url = img.src;
-        const $img = $(img);
+        const $img =$(img);
         img.onload = function () {
           URL.revokeObjectURL(url);
           $('#preview').empty().append($img);
+          $('#preview1').empty().append($img);
         }
       }
     })
   }
-  checkin(){
-    if(sessionStorage.getItem('userId')){
-      const body ={ "telephone": sessionStorage.getItem('userId')};
-      this.personSer.getUserIcon (body, function (result) {
-        sessionStorage.setItem('icon', result[0].icon);
-        $('#preview').append(`<img src='../../public/uploads/${result[0].icon}'>`);
-      })
-    }
-    else { alert('你还未登陆，即将跳转至登录页面');
-      this.router.navigate(['/login']);}
+  showicon(){
+     let that=this;
+    const body ={ "telephone": sessionStorage.getItem('userId')};
+    this.personSer.getUserIcon (body, function (result) {
+      // $('#preview').empty().append(`<img src='../../assets/${result[0].icon}' width="70px" height="70px" >`);
+      // $('#preview1').empty().append(`<img src='../../assets/${result[0].icon}'width="70px" height="70px" >`);
+      sessionStorage.setItem('icon',result[0].icon);
+      that.back=result;
+    })
   }
   upload() {
     const formdata = new FormData($('#upload_form')[0]);
     formdata.append("userId", sessionStorage.getItem('userId'));
     const that = this;
-    that.personSer.upload (formdata, function (result) {
-      if (result.stateCode==1){
-        alert('上传成功');
-      }else {
+    alert('shang');
+    that.personSer.upload(formdata, function (result) {
+      if (result.stateCode==0){
         alert('上传失败');
+      }else {
+        alert('上传成功');
       }
+    })
+  }
+  change(){
+    const that = this;
+    let lu=that.tu;
+    alert(lu);
+    that.personSer.change({'tu':lu,'tel':sessionStorage.getItem('userId')},function (result) {
     })
   }
 }
