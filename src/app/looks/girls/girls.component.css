@@ -108,6 +108,8 @@
   color:#dbff88;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: none;
+
 }
 .container ul{
   list-style: none;
@@ -128,6 +130,10 @@
   margin-top:6px;
   display: none;
 
+}
+.buy:hover{
+  cursor: pointer;
+  opacity: 0.5;
 }
 .buy1{
   margin-left:40px;

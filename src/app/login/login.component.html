@@ -3,6 +3,7 @@
 
   <div class="login1">
     <div class="text">欢迎回来！请登录</div>
+    <div class="login_ti"><span class=" fa fa-minus-circle"></span><p>{{login_res}}</p></div>
     <div class="col-md-3 col-lg-3">
   <form #loginForm="ngForm">
     <div class="form-group">
@@ -12,9 +13,11 @@
     <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
          class="tel1">
       <div *ngIf="tel.errors.required">
+        <span class=" fa fa-minus-circle"></span>
         请输入手机号
       </div>
       <div *ngIf="tel.errors.pattern">
+        <span class=" fa fa-minus-circle"></span>
         号码格式不正确
       </div>
     </div>
@@ -26,9 +29,11 @@
     <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
          class="tel1">
       <div *ngIf="pass.errors.required">
+        <span class=" fa fa-minus-circle"></span>
         密码不能为空
       </div>
       <div *ngIf="pass.errors.minlength">
+        <span class=" fa fa-minus-circle"></span>
         密码大于六位
       </div>
     </div>
@@ -37,9 +42,5 @@
       <div routerLink="/regist" class="zhuce">还没账号？ 去注册>></div>
 
     </div>
-<div class="col-md-3 col-lg-3">
-  {{ login_res}}
-</div>
-<!--<input type="text" [(ngModel)]="_val">-->
 </div>
 </div>

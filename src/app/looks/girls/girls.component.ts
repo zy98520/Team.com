@@ -84,12 +84,10 @@ export class GirlsComponent implements OnInit {
       scroll(2750);
     });
     $('.chang').click(function () {
-      scroll(3780);
       clear();
       scroll(3800);
     });
     $('.qing').click(function () {
-      scroll(4800);
       clear();
       scroll(4820);
     });

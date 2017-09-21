@@ -31,13 +31,14 @@ body{
 .yi ul{
   position: relative;
   overflow: hidden;
-  margin: 0 25px 25px 0;
+  margin: 20px 20px 20px 0;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   float: left;
   width: 222px;
   height: 394px;
   list-style: none;
+
 }
 .yi ul:hover{
   cursor: pointer;
