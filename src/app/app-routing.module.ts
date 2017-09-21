@@ -31,6 +31,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'start',
+    component: StartComponent
+  },
+  {
     path: 'regist',
     component: RegistComponent
   },
