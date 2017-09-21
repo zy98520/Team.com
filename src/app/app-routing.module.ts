@@ -21,6 +21,7 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 const routes: Routes = [
@@ -99,6 +100,10 @@ const routes: Routes = [
   {
     path: 'payto',
     component: PaytoComponent
+  },
+  {
+    path: 'shares-area',
+    component: SharesAreaComponent
   },
   {
     path: '',

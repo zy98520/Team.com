@@ -29,17 +29,12 @@
   top: 70px;
   width: 200px;
   height: 200px;
-  /*background-image: url("../../assets/shopping_images/big1.png");*/
+  background-image: url("../../assets/shopping_images/big1.png");
   border: 1px solid #C4C3C3;
   overflow:hidden;
   display: none;
 }
-.h{
-  width: 800px;
-  height: 1200px;
-  position:absolute;
-  background-color: #ff1611;
-}
+
 
 .right{
   width:500px;
@@ -158,7 +153,6 @@
   width: 200px;
   height:30px;
   margin-top:20px;
-  /*background-color: #0000ff;*/
 }
 .number_left{
   float:left;
@@ -229,7 +223,6 @@
   width:530px;
   height:65px;
   margin-top:5px;
-  /*background-color: #ecff5b;*/
 }
 .promise_left{
   float:left;

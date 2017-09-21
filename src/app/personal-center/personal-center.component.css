@@ -1,3 +1,11 @@
+.row{
+  width:1000px;
+  height:1000px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:3;
+
+}
 .big_con{
   height:990px;
   width:1400px;
@@ -70,14 +78,7 @@ margin-left:-12px;
 #bottom_id{
   margin-top:-25px;
 }
-.row{
-  width:1000px;
-  height:1000px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index:3;
 
-}
 #big{
   z-index:2;
   position: relative;

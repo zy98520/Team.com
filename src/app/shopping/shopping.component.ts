@@ -82,7 +82,6 @@ export class ShoppingComponent implements OnInit {
 
           $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 300);
           if (e.clientX > 605 || e.clientX <250) {
-            // alert(e.clientX)
             $('#d3').css('opacity', '0');
             $('#d4').css('display', 'none');
           }
@@ -98,11 +97,11 @@ export class ShoppingComponent implements OnInit {
 
             if (e.clientY <= 275) {
               $('#d3').css('top', 0);
-              $('.h').css({left:(1200 - (e.clientX) / 625 * 1200 + 100)+'px',top:(0)+'px'});
+              $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 100).css('background-position-y',0);
             }
             else {
 
-              $('.h').css({left:(1200 - (e.clientX) / 625 * 1200 + 97)+'px',top:(1200 - (e.clientY) / 590 * 1200 + 612)+'px'});
+              $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y',1200 - (e.clientY) / 590 * 1200 + 612);
 
             }
 

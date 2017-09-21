@@ -15,6 +15,7 @@ import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
 import { PayComponent } from './personal-center/pay/pay.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 import {AppRoutingModule} from './app-routing.module';
@@ -57,6 +58,7 @@ import { PaytoComponent } from './personal-center/payto/payto.component';
     RegistComponent,
     PayComponent,
     PaytoComponent,
+    SharesAreaComponent,
   ],
   imports: [
     BrowserModule,
