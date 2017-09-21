@@ -10,6 +10,7 @@ declare var $: any;
   providers: [UsersService],
 })
 export class SharesComponent implements OnInit {
+  comments:any;
   constructor(
     private userSer: UsersService,
     private router: Router,
@@ -42,6 +43,29 @@ export class SharesComponent implements OnInit {
 
 
     });
+    let that = this;
+    that.userSer.commentShow(function (result) {
+        that.comments= result;
+    })
+    $(document).scrollTop(0);
+
+  }
+  sendshare(comment) {
+    const body = {'com': comment .form.value.com, telephone: sessionStorage.getItem('userId')};
+    let that = this;
+    if (sessionStorage.getItem('userId')){
+      that.userSer.comment(body, function (result) {
+        if ( result.StateCode==0){
+          alert("发送失败");
+        }else {
+          that.comments.unshift(result[0][0]);
+        }
+      })
+    }
+    else {
+      alert('你还未登陆，即将跳转至登录页面');
+      that.router.navigate(['/login']); }
+
 
   }
 

@@ -11,6 +11,7 @@ declare var $: any;
   providers: [UsersService]
 })
 export class LoginComponent implements OnInit {
+
   login_res: string;
   tel: string = '';
   name:string = '';
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
     let that = this;
     that.userSer.login(login_form.form.value, function (result) {
       if ( result.StateCode == 0){
+        $('.login_ti span').css('display','block');
         that.login_res = '用户名或密码错误！';
       }else {location.reload();
         that.tel = login_form.form.value.userId;
