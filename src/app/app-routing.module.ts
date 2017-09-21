@@ -34,13 +34,17 @@ const routes: Routes = [
     component: RegistComponent
   },
   {
-    path: 'index/:val',
+    path: 'index',
     component: IndexComponent
   },
   {
     path: 'loves',
   component: LovesComponent
 },
+  {
+    path: 'comment',
+    component: SharesComponent
+  },
   {
     path: 'fashion-week',
     component: FashionWeekComponent
@@ -107,7 +111,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/index',
+    redirectTo: '/start',
     pathMatch: 'full'
   },
   {

@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="body" style="width: 100%">
-<div class="logo2" style="text-align: center"><a href=""><img src="../assets/looks-loves-img/logo2.png"></a></div>
+<div *ngIf="!_hiddenNavs" class="logo2" style="text-align: center"><a href=""><img src="../assets/looks-loves-img/logo2.png"></a></div>
   <a id="title1" class="col-md-12"></a>
 <nav id="fix1" class="navbar ng1" *ngIf="!_hiddenNavs">
   <div class="container-fluid">
@@ -17,8 +17,8 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav " style="margin-left: 200px">
-        <li><a href="#" [routerLink]="['/index','我是默认值']" routerLinkActive="active">首页<span class="sr-only">(current)</span></a></li>
+      <ul class="nav navbar-nav ng3" style="margin-left: 200px">
+        <li><a href="#" routerLink="/index" routerLinkActive="active">首页<span class="sr-only">(current)</span></a></li>
         <li><a href="#" routerLink="/looks" routerLinkActive="active">穿搭</a>
           <ul class="dropdown">
             <li routerLink="/boys">男生搭</li>
@@ -59,6 +59,7 @@
     </div>
   </div>
 </nav>
+  <div>
   <ul id="dock">
     <li id="links"><span class="fa fa-user"></span>
       <ul class="free">
@@ -91,6 +92,7 @@
     <li id="top"><span class="fa fa-chevron-up"></span>顶部
     </li>
   </ul>
+  </div>
   <div class="row">
     <router-outlet #outlet>
     </router-outlet>

@@ -435,7 +435,6 @@ pre{
   background: rgba(0, 0, 0, 0.62);
   position: absolute;
   margin-top:-300px;
-  z-index: 4;
   text-align: center;
   padding: 20px 10px ;
   color: white;
@@ -692,21 +691,6 @@ width: 140px;
 .share-2 {
   -webkit-animation:mymove  ease-in-out  6s infinite;
 }
-.share_bg .share2 .share-left{
-  width: 29px;
-  height: 70px;
-  margin-left: -40px;
-  margin-top: 0px;
-  background-image: url("../../assets/index-img/left-share.png");
-}
-.share_bg .share2 .share-right{
-  width: 29px;
-  height: 70px;
-  margin-left: 350px;
-  margin-top: -70px;
-  background-image: url("../../assets/index-img/right-share.png");
-}
-
 @-webkit-keyframes mymove
 { 0% {
   opacity:1;
