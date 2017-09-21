@@ -22,6 +22,7 @@ import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.compo
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
 import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -78,6 +79,10 @@ const routes: Routes = [
     component: LooksComponent
   },
   {
+    path: 'search/:json',
+    component: SearchComponent
+  },
+  {
     path: 'personal-center',
     component: PersonalCenterComponent
   },
@@ -103,7 +108,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/index',
+    redirectTo: '/index/1',
     pathMatch: 'full'
   },
   {

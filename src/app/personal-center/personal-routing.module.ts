@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { PersonalCenterComponent } from './personal-center.component';
 import { ShappingCarComponent } from '../shopping/shapping-car/shapping-car.component';
 import { PayComponent } from '../personal-center/pay/pay.component';
+import { SearchComponent } from '../search/search.component';
 const routes: Routes = [
 
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
         path: 'getUserIcon',
         component: PersonalCenterComponent,
       },
+
       {
         path: 'pay',
         component: PayComponent,

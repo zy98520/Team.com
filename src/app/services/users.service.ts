@@ -18,7 +18,6 @@ function (error) {
 );
 }
   regist(user, callback) {
-
     this.http.post(this.url + '/regist', user).subscribe(function (result) {
         callback(result);
       },
@@ -81,9 +80,8 @@ function (error) {
       }
     )
   }
-  showloves(callback ) {
-    alert('11');
-    this.http.post(this.url + '/showloves','').subscribe(function (result) {
+  showloves(body,callback ) {
+    this.http.post(this.url + '/showloves',body).subscribe(function (result) {
         callback(result);
       },
       function (error) {
@@ -91,6 +89,7 @@ function (error) {
       }
     )
   }
+
   addshop (body, callback ) {
     this.http.post(this.url + '/addshop', body ).subscribe(function (result) {
         callback(result);

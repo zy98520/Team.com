@@ -11,7 +11,9 @@ declare var $: any
   providers: [UsersService]
 })
 export class LovesComponent implements OnInit {
-loves:any;
+loves:any;n=0;
+  a=[72,80,88,96,104];
+number=['1','2','3','4','5'];
   constructor(
     private userSer: UsersService,
     private router: Router,
@@ -21,13 +23,7 @@ loves:any;
   }
 
   ngOnInit() {
-    let that=this;
-    that.userSer.showloves( function (result) {
-      if ( result.StateCode == 0){
-      }else {
-        that.loves=result[0];
-      }
-    })
+this.show(0);
 
   }
 godetail(id){
@@ -35,9 +31,22 @@ godetail(id){
 }
 pra(index){
   let that=this;
-  $('#'+index).css('background-position-x','-3px').css('background-position-y','-5px');
-  that.loves[index].praise=that.loves[index].praise+1;
-  that.userSer.addloves({'id': that.loves[index].goodsid},function (result) {
+  that.n=index;
+  if(that.n==index){
+    that.n = that.n + 1;
+    $('#' + index).css('background-position-x', '-3px').css('background-position-y', '-5px');
+    that.loves[index].praise = that.loves[index].praise + 1;
+    that.userSer.addloves({'id': that.loves[index].goodsid}, function (result) {
+    })
+  }
+}
+show(index){
+  let that=this;
+  that.userSer.showloves({'start':that.a[index]},function (result) {
+    if ( result.StateCode == 0){
+    }else {
+      that.loves=result;
+    }
   })
 }
 }

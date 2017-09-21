@@ -1,3 +1,5 @@
-<p>
-  search works!
-</p>
+<ul *ngFor="let item of json;let index=index">
+  <li><img src="http://localhost:3000/images/{{item.goodspic}}" (click)="godetail(item.goodsid)"></li>
+  <li>MyLove时尚{{item.goodsname}}</li>
+  <li>￥{{item.goodsprice}} <span class="pra"><span id="{{index}}" class="xin"></span><span class="pra1">{{item.praise}}</span></span></li>
+</ul>

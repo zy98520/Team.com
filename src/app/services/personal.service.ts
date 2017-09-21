@@ -10,9 +10,7 @@ export class PersonalService {
 
   constructor(private http: HttpClient) {
   }
-
   upload(user, callback) {
-    alert('上');
     this.http.post(this.url + '/upload', user).subscribe(function (result) {
         callback(result);
       },
@@ -23,6 +21,15 @@ export class PersonalService {
   }
   getUserIcon(user, callback) {
     this.http.post(this.url + '/getUserIcon', user).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  search(body,callback ) {
+    this.http.post(this.url + '/search',body).subscribe(function (result) {
         callback(result);
       },
       function (error) {
@@ -48,6 +55,15 @@ myshop(body, callback ) {
       }
     )
   }
+  // all(body, callback ) {
+  //   this.http.post(this.url + '/all', body ).subscribe(function (result) {
+  //       callback(result);
+  //     },
+  //     function (error) {
+  //       console.log(error.message);
+  //     }
+  //   )
+  // }
   addhome(body,callback ) {
   this.http.post(this.url + '/addhome',body).subscribe(function (result) {
       callback(result);

@@ -13,27 +13,24 @@ declare var $ :any;
   providers: [PersonalService],
 })
 export class AppComponent  implements OnInit {
-name='';
   _hiddenNavs:boolean;
-icon:any;mes;
+icon:any;mes;name;tel;
+search1:any;
 constructor(
   private  glo:GlobalPropertyService,
   private perSer: PersonalService,
   private router: Router,
 ) {}
   ngOnInit() {
-  this.name=sessionStorage.getItem('username');
-  this.icon=sessionStorage.getItem('icon');
-    // this.name = that. router.snapshot.paramMap.get('val');
+  this.tel= sessionStorage.getItem('userId');
+  this.icon= sessionStorage.getItem('icon');
+    this.name=sessionStorage.getItem('username');
     this._hiddenNavs=this.glo.hiddenNavs;
     let that = this;
-    // const body={'tel':sessionStorage.getItem('userId')}
-    // that.perSer.myshop(body, function (result) {
-    //   if ( result.StateCode==0){} else {
-    //     that.mes= result;
-    //
-    //   }
-    // })
+    const body={'tel':sessionStorage.getItem('userId')}
+    that.perSer.myshop(body, function (result) {
+        that.mes = result;
+    })
     function Add_Data() {
       let top = $("#fix1").offset().top;
       let title = $("#title1").offset().top;
@@ -115,7 +112,18 @@ constructor(
     this._hiddenNavs=this.glo.hiddenNavs;
   }
   end(){
-    sessionStorage.setItem('username','');
-    this.name= sessionStorage.getItem('username');
+    sessionStorage.setItem('userId','');
+    this.tel= sessionStorage.getItem('userId');
+  }
+  goshop(){
+    this.router.navigate(['/shapping-car']);
+  }
+  search(f){
+    let that = this;
+    const body={'word':f.form.value.search};
+    that.perSer.search(body, function (result) {
+      that.router.navigate(['/search',result]);
+      that.search1=result;
+    })
   }
 }

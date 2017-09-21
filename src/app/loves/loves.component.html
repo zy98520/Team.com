@@ -17,12 +17,13 @@
     </div>
     <div class="yi col-md-12 col-md-offset-1">
       <ul *ngFor="let love of loves;let index=index">
-        <li><img src="../../assets/{{love.goodspic}}" (click)="godetail(love.goodsid)"></li>
+        <li><img src="http://localhost:3000/images/{{love.goodspic}}" (click)="godetail(love.goodsid)"></li>
         <li>MyLove时尚{{love.goodsname}}</li>
         <li>￥{{love.goodsprice}} <span class="pra"><span id="{{index}}" class="xin" (click)="pra(index)"></span><span class="pra1">{{love.praise}}</span></span></li>
       </ul>
     </div>
-
   </div>
 </div>
-<img src="../../assets/xin.jpg"style="margin-left:200px;" alt="">
+<div class="col-sm-12 col-md-6 " style="height:60px;margin-left: 35%">
+  <a><input class="b" type="button" *ngFor="let item of number;let index=index" value="{{item}}"(click)="show(index)"></a>
+</div>

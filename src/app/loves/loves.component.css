@@ -71,3 +71,14 @@ width:50px;
 font-size: 1.2em;
 
 }
+.b{width:50px;
+height:30px;
+  border:1px solid rgba(0, 0, 0, 0.43);
+background-color:white;
+  margin-right:8px;
+}
+.b:hover{
+  background-color: lightgrey;
+}
+.b a:link{background-color: rgba(128, 128, 128, 0.73);
+}

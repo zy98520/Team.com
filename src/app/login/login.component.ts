@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   login_res: string;
   tel: string = '';
   name:string = '';
-  // _val:string='';
+  n;
 
   constructor( private userSer: UsersService,
                private router: Router,
@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
   toLogin(login_form) {
     let that = this;
+    that.n=0;
     that.userSer.login(login_form.form.value, function (result) {
       if ( result.StateCode == 0){
         that.login_res = '用户名或密码错误！';
@@ -35,7 +36,8 @@ export class LoginComponent implements OnInit {
         that.name=result[0].username;
         sessionStorage.setItem('userId', that.tel);
         sessionStorage.setItem('username',that.name);
-        that.router.navigate(['/index'],that.name);
+        sessionStorage.setItem('icon',result[0].icon);
+        that.router.navigate(['/index']);
       }
     })
   }

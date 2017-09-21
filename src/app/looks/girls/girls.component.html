@@ -1,6 +1,6 @@
 <div class="girl" >
 <div class="big-girl">
-  <img class="img-responsive" src="../../../assets/girls-img/big-girl.jpg">
+  <img class="img-responsive" src="../../../../server/public/images/girls-img/big-girl.jpg">
 </div>
   <div >
   <a id="title" class="col-md-12"></a>
@@ -19,7 +19,7 @@
     <div class="sweet" id="sweet" *ngFor="let mes of qq[0]">
       <ul>
         <li>
-          <img src="../../../assets/{{mes.goodspic}}">
+          <img src="http://localhost:3000/images/{{mes.goodspic}}">
           <div class="name">{{mes.goodsname}}</div>
           <div class="price">￥{{mes.goodsprice}} </div>
           <div class="buy1" (click)="godetail(mes.goodsid)">立即购买</div>
@@ -45,7 +45,7 @@
     <div class="soft" id="soft" *ngFor="let mes of qq[2]">
       <ul>
         <li>
-          <img src="../../../assets/{{mes.goodspic}}">
+          <img src="http://localhost:3000/images/{{mes.goodspic}}">
           <div class="name">文艺清新系带收腰碎花雪纺连...</div>
           <div class="price">￥149.00 </div>
           <div class="buy3" (click)="godetail(mes.goodsid)">立即购买</div>
@@ -57,7 +57,7 @@
       <div class="longleg" id="longleg" *ngFor="let mes of qq[3]">
         <ul>
           <li>
-            <img src="../../../assets/{{mes.goodspic}}">
+            <img src="http://localhost:3000/images/{{mes.goodspic}}">
             <div class="name">圆领t恤女短袖宽松韩范...</div>
             <div class="price">￥99.00 </div>
             <div class="buy4" (click)="godetail(mes.goodsid)">立即购买</div>
@@ -69,7 +69,7 @@
       <div class="cutage" id="cutage" *ngFor="let mes of qq[4]">
         <ul>
           <li>
-            <img src="../../../assets/{{mes.goodspic}}">
+            <img src="http://localhost:3000/images/{{mes.goodspic}}">
             <div class="name">自制清新系带收腰无袖夏季...</div>
             <div class="price">￥109.00 </div>
             <div class="buy5" (click)="godetail(mes.goodsid)">立即购买</div>

@@ -53,7 +53,11 @@ tu:any;back:any;
     this.def=this.shuzu[0];
     const that = this;
     that.showicon();
-    $(function () {
+
+  }
+
+  ngAfterContentInit(){
+    const that = this;
       const those = that;
       $('.change').click(function () {
         $('.wallpaper').animate({
@@ -75,34 +79,34 @@ tu:any;back:any;
         img.src = URL.createObjectURL(file);
         const url = img.src;
         const $img =$(img);
+        console.log($img);
         img.onload = function () {
           URL.revokeObjectURL(url);
-          $('#preview').empty().append($img);
           $('#preview1').empty().append($img);
+          $('#preview').empty().append($img);
         }
       }
-    })
+
   }
   showicon(){
      let that=this;
     const body ={ "telephone": sessionStorage.getItem('userId')};
     this.personSer.getUserIcon (body, function (result) {
-      // $('#preview').empty().append(`<img src='../../assets/${result[0].icon}' width="70px" height="70px" >`);
-      // $('#preview1').empty().append(`<img src='../../assets/${result[0].icon}'width="70px" height="70px" >`);
-      sessionStorage.setItem('icon',result[0].icon);
       that.back=result;
+      sessionStorage.setItem('icon',result[0].icon);
     })
   }
   upload() {
     const formdata = new FormData($('#upload_form')[0]);
     formdata.append("userId", sessionStorage.getItem('userId'));
     const that = this;
-    alert('shang');
     that.personSer.upload(formdata, function (result) {
       if (result.stateCode==0){
         alert('上传失败');
       }else {
         alert('上传成功');
+        that.mes = result;
+
       }
     })
   }
