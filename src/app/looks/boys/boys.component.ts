@@ -41,24 +41,25 @@ export class BoysComponent implements OnInit {
   url3:string;
   url4:string;
   shows:any;
-  show(ny, start, end) {
-    let that = this;
-    const body = {'start': start , 'end' : end };
-    that.userSer.showboys(body, function (result) {
-      if(result.StateCode==0){alert('erro');}
-      else {
-        that.shows= result;
-      }
-    })
-    that.url2 = ny[0];
-    that.url3 = ny[1];
-    that.url4= ny[2];
-
-  }
   constructor(
     private userSer: UsersService,
     private router: Router,
   ) {
+  }
+  show(ny, start, end) {
+    let that = this;
+    const body = {'start': start, 'end': end};
+    that.userSer.showboys(body, function (result) {
+      if (result.StateCode == 0) {
+        alert('erro');
+      }
+      else {
+        that.shows = result;
+      }
+    })
+    that.url2 = ny[0];
+    that.url3 = ny[1];
+    that.url4 = ny[2];
   }
 
   ngOnInit() {

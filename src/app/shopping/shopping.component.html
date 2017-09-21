@@ -2,31 +2,31 @@
   <div class="row">
     <div class="col-md-12 col-lg-12">
       <div class="outer">
+        <div class="left">
         <div id="d1">
-          <img  src="../../assets/shopping_images/big.png">
+          <img src="../../assets/{{detail[0].goodspic}}" >
           <div id="d3">
-
           </div>
         </div>
-        <div id="d4">
 
+        <div id="d4" style='background-image: url("http://localhost:3000/images/{{detail[0].goodspicb}}")'>
         </div>
         <div class="right">
           <div class="cname">
-            <B>宿本秋装新款文艺流苏拼接衬衫裙显瘦中长款连衣<br>裙长袖直筒A字裙</B>
+            <B>{{detail[0].goodsname}}</B>
           </div>
           <div class="price">
             <div class="priceCenter">
             <span class="priceCenter_inner">
                  <p class="priceCenter_inner_name">促销价:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                 <p class="priceCenter_inner_price">￥105.40</p>
+                 <p class="priceCenter_inner_price">￥{{detail[0].goodsprice}}</p>
             </span>
               <span class="priceCenter_inner">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 评价：23
-                 累计销量：94
+                 累计销量：{{detail[0].goodsnumber}}
             </span>
             </div>
             <div class="priceDown">
@@ -46,30 +46,30 @@
               &nbsp;联系客服</div>
           </div>
           <div class="picture">
-            <div class="picture_right">颜色:</div>
+            <!--<div class="picture_right">颜色:</div>-->
             <div class="picture_right">
               <img src="../../assets/personal_images/1439880982560.jpg" height="50" width="50">
             </div>
           </div>
           <div class="size">
             <div class="size_left">尺码:</div>
-            <input type="button" id="size_right_id" class="size_right" value="S" #btn (click)="size_click(btn)">
+            <input type="button" id="size_right_id" class="size_right" value="S" #btn (click)="size_click('#Szhijiao','block','S')">
             <img id="Szhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
-            <input type="button" id="size_right_id1" class="size_right" value="M" #btn1  (click)="size1_click(btn1)">
+            <input type="button" id="size_right_id1" class="size_right" value="M" #btn1  (click)="size_click('#Mzhijiao','block','M')">
             <img id="Mzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
-            <input type="button" id="size_right_id2" class="size_right" value="L" #btn  (click)="size2_click(btn)">
+            <input type="button" id="size_right_id2" class="size_right" value="L" #btn  (click)="size_click('#Lzhijiao','block','L')">
             <img id="Lzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
 
           </div>
           <div class="number">
             <div class="number_left">数量:</div>
-            <input type="button" id="number_right_id" class="number_right" value="-" #btn (click)="numClick(btn)" >
-            <input type="text" id="number_center_id" class="number_center" value="1" #btn (click)="numClick1(btn)">
-            <input type="button" id="number_right_id1" class="number_right" value="+" #btn (click)="numClick2(btn)">
+            <input type="button" id="number_right_id" class="number_right" value="-" #btn (click)="numClick()" >
+            <input type="text" id="number_center_id" class="number_center" value="1">
+            <input type="button" id="number_right_id1" class="number_right" value="+" #btn (click)="numClick2()">
           </div>
           <div class="purchase">
-            <input type="button" id="purchase_left_id" class="purchase_left" value="立即购买" #btn (click)="pur(btn)">
-            <input type="button" id="purchase_left_id1" class="purchase_left" value="加入购物车" #btn (click)="pur1(btn)">
+            <input type="button" id="purchase_left_id" class="purchase_left" value="立即购买" #btn (click)="pur(1)">
+            <input type="button" id="purchase_left_id1" class="purchase_left" value="加入购物车" #btn (click)="pur(0)">
           </div>
           <div class="feature">
             <div class="feature_left">商品特色:</div>
@@ -99,7 +99,7 @@
         </div>
         <div class="cpm" id="cpm_id">
           <div class="shop_infor">选择商品信息
-            <input id="cancel_id" class="cancel" type="button" value="X" #btn (click)="cel(btn)">
+            <input id="cancel_id" class="cancel" type="button" value="X" #btn (click)="cel()">
           </div>
 
           <div class="color">
@@ -110,23 +110,25 @@
           </div>
           <div class="size1">
             <div class="size_left1">尺码:</div>
-            <input type="button" id="size_right2_id1" class="size_right" value="S" #btn (click)="size_click1(btn)">
+            <input type="button" id="size_right2_id1" class="size_right" value="S" #btn (click)="size_click1('#Szhijiao1','block','S')">
             <img id="Szhijiao1" src="../../assets/shopping_images/gou.png" height="15"  width="15">
-            <input type="button"id="size_right2_id2" class="size_right" value="M" #btn (click)="size_click2(btn)">
+            <input type="button"  id="size_right2_id2" class="size_right" value="M"  (click)="size_click1('#Mzhijiao1','block','M')">
             <img id="Mzhijiao1" src="../../assets/shopping_images/gou.png" height="15" width="15">
-            <input type="button" id="size_right2_id3" class="size_right" value="L" #btn (click)="size_click3(btn)">
+            <input type="button" id="size_right2_id3" class="size_right" value="L"  (click)="size_click1('#Lzhijiao1','block','L')">
             <img id="Lzhijiao1" src="../../assets/shopping_images/gou.png" height="15" width="15">
+
           </div>
           <div class="number1">
             <div class="number_left1">数量:</div>
-            <input type="button" id="number_right2_id" class="number_right2" value="-" #btn (click)="numClick3(btn)" >
-            <input type="text" id="number_center_id2" class="number_center2" value="1" >
-            <input type="button" id="number_right2_id1" class="number_right2" value="+" #btn (click)="numClick4(btn)">
+            <input type="button" id="number_right2_id" class="number_right2" value="-" #btn (click)="numClick3()" >
+            <input type="text" id="number_center_id2"name="num" class="number_center2" value="1" >
+            <input type="button" id="number_right2_id1" class="number_right2" value="+" #btn (click)="numClick4()">
           </div>
-          <input type="button" class="confirm" value="确认">
+          <input type="button" class="confirm" value="确认" (click)="load()">
         </div>
       </div>
     </div>
-
   </div>
 </div>
+
+

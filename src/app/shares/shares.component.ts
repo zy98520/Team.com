@@ -10,12 +10,7 @@ declare var $: any;
   providers: [UsersService],
 })
 export class SharesComponent implements OnInit {
-comments:any;
-pan:string='';
-   index1:any;
- sum= 0;
- backcomment:any;
-
+  comments:any;
   constructor(
     private userSer: UsersService,
     private router: Router,
@@ -74,26 +69,4 @@ pan:string='';
 
   }
 
-  refresh () {
-    location.reload();
-  }
-  display(b)
-  {this.pan= b;}
-  add(num){
-    this.sum = this.sum+ num;
-  }
-  backsend(index, form)
-  {
-    let that=this;
-    const body = {'backcom': form.form.value.backcom,'shareid':that.comments [index].shareid,
-      'telephone': sessionStorage.getItem('userId')};
-    that.userSer.backComment(body, function ( result) {
-    if(result.StateCode==0){
-   alert("失败");
-    }else {
-  that.backcomment= result;
-  that.index1 = 'false';
-    }
-  })
-  }
 }

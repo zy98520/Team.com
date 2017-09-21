@@ -1,16 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import {UsersService} from '../../services/users.service';
 
-declare let $ :any;
+import {Router} from '@angular/router';
+declare var $ :any;
 @Component({
   selector: 'app-girls',
   templateUrl: './girls.component.html',
-  styleUrls: ['./girls.component.css']
+  styleUrls: ['./girls.component.css'],
+  providers: [UsersService]
 })
 export class GirlsComponent implements OnInit {
-
-  constructor() { }
+  qq:any;
+  constructor(
+    private userSer: UsersService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    let that=this;
+    this.userSer.showgirls(function (result) {
+      if ( result.StateCode==0){
+      }else {
+        that.qq= result;
+      }
+    })
     $(document).ready(function () {
       $('ul.nav > li').click(function (e) {
         e.preventDefault();
@@ -41,11 +54,9 @@ export class GirlsComponent implements OnInit {
           clearInterval(timer);
         }
         else if ($(document).scrollTop() > s) {
-
           $(document).scrollTop($(document).scrollTop()-10) ;
         }
         else if ($(document).scrollTop()<s){
-
           $(document).scrollTop($(document).scrollTop()+10) ;
         }
 
@@ -73,10 +84,12 @@ export class GirlsComponent implements OnInit {
       scroll(2750);
     });
     $('.chang').click(function () {
+      scroll(3780);
       clear();
       scroll(3800);
     });
     $('.qing').click(function () {
+      scroll(4800);
       clear();
       scroll(4820);
     });
@@ -87,4 +100,8 @@ export class GirlsComponent implements OnInit {
     $(document).scrollTop(0);
 
   }
+godetail(id){
+  let that=this;
+  that.router.navigate(['/shopping',id] );
+}
 }

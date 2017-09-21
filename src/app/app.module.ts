@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
-import { PayComponent } from './personal-center/pay/pay.component';
+
 
 
 import {AppRoutingModule} from './app-routing.module';
@@ -27,16 +27,26 @@ import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.compone
 import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { GlobalPropertyService } from './services/global-property.service';
 import { PaytoComponent } from './personal-center/payto/payto.component';
 import { StartComponent } from './start/start.component';
+import { PayComponent } from './personal-center/pay/pay.component';
 
 
 
+
+
+
+
+
+import {GlobalPropertyService} from './services/global-property.service';
+import { MyorderComponent } from './personal-center/myorder/myorder.component';
+import { MyflowComponent } from './personal-center/myflow/myflow.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 @NgModule({
   declarations: [
+    PayComponent,
     AppComponent,
     LooksComponent,
     IndexComponent,
@@ -56,8 +66,10 @@ import { StartComponent } from './start/start.component';
     ShappingCarComponent,
     PersonalCenterComponent,
     RegistComponent,
-    PayComponent,
+    MyorderComponent,
+    MyflowComponent,
     PaytoComponent,
+    SharesAreaComponent,
     StartComponent,
   ],
   imports: [
@@ -66,7 +78,7 @@ import { StartComponent } from './start/start.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GlobalPropertyService ],
+  providers: [GlobalPropertyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
