@@ -21,16 +21,13 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'showboys',
-    component: BoysComponent
   },
   {
     path: 'regist',
@@ -44,10 +41,6 @@ const routes: Routes = [
     path: 'loves',
   component: LovesComponent
 },
-  {
-    path: 'comment',
-    component: SharesComponent
-  },
   {
     path: 'fashion-week',
     component: FashionWeekComponent
@@ -69,6 +62,10 @@ const routes: Routes = [
     component: SharesComponent
   },
   {
+    path: 'shares-area',
+    component: SharesAreaComponent
+  },
+  {
     path: 'girls',
     component: GirlsComponent
   },
@@ -85,7 +82,7 @@ const routes: Routes = [
     component: PersonalCenterComponent
   },
   {
-    path: 'shopping',
+    path: 'shopping/:id',
     component: ShoppingComponent
   },
   {
@@ -101,8 +98,12 @@ const routes: Routes = [
     component: PaytoComponent
   },
   {
+    path: 'index',
+    component: IndexComponent
+  },
+  {
     path: '',
-    redirectTo: '/index/1',
+    redirectTo: '/index',
     pathMatch: 'full'
   },
   {

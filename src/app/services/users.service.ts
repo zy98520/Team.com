@@ -54,7 +54,7 @@ function (error) {
       }
     )
   }
-  showboys (body, callback ) {
+  showboys( body, callback ) {
     this.http.post(this.url + '/showboys', body).subscribe(function (result) {
         callback(result);
       },
@@ -63,4 +63,60 @@ function (error) {
       }
     )
   }
+  showgirls( callback ) {
+    this.http.post(this.url + '/showgirls','').subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  showdetails (body, callback ) {
+    this.http.post(this.url + '/showdetails', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  showloves(callback ) {
+    alert('11');
+    this.http.post(this.url + '/showloves','').subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addshop (body, callback ) {
+    this.http.post(this.url + '/addshop', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addthum (body, callback ) {
+    this.http.post(this.url + '/addthum', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
+  addloves (body, callback ) {
+    this.http.post(this.url + '/addloves', body ).subscribe(function (result) {
+        callback(result);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    )
+  }
 }
+

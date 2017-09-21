@@ -188,5 +188,6 @@ export class IndexComponent implements OnInit {
       $("#share_txt1-3").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
 
     })
+
   }
 }
