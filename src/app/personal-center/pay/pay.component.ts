@@ -29,8 +29,8 @@ export class PayComponent implements OnInit {
       }else {
         that.address=result;
       }
-    })
 
+    });
   }
   addhome(addForm){
     var form=addForm.form.value;

@@ -112,6 +112,14 @@ const routes: Routes = [
     component: PaytoComponent
   },
   {
+    path: 'index',
+    component: IndexComponent
+  },
+  {
+    path: 'shares-area',
+    component: SharesAreaComponent
+  },
+  {
     path: '',
     redirectTo: '/start',
     pathMatch: 'full'

@@ -79,8 +79,11 @@ n:any;
         if( result.StateCode==0){alert('erro');}
         else {
           that.detail= result;
+
         }
       })
+
+
     $(function () {
       $('#d1').mousemove(function (e) {
         $('#d4').css('display', 'block');
@@ -89,7 +92,6 @@ n:any;
 
           $('#d3').css('left', e.clientX - 265).css('top', e.clientY - 300);
           if (e.clientX > 605 || e.clientX <250) {
-            // alert(e.clientX)
             $('#d3').css('opacity', '0');
             $('#d4').css('display', 'none');
           }
@@ -109,6 +111,9 @@ n:any;
             }
             else {
               $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y',1200 - (e.clientY) / 590 * 1200 + 612);
+
+              $('#d4').css('background-position-x',1200 - (e.clientX) / 625 * 1200 + 97).css('background-position-y',1200 - (e.clientY) / 590 * 1200 + 612);
+
             }
 
           }

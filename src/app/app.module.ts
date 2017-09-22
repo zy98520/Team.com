@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule}  from '@angular/common/http';
 
 
 
@@ -15,6 +15,8 @@ import { LovesComponent } from './loves/loves.component';
 import { SharesComponent } from './shares/shares.component';
 import { RegistComponent } from './regist/regist.component';
 
+
+import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 
 
 import {AppRoutingModule} from './app-routing.module';
@@ -41,7 +43,7 @@ import { PayComponent } from './personal-center/pay/pay.component';
 import {GlobalPropertyService} from './services/global-property.service';
 import { MyorderComponent } from './personal-center/myorder/myorder.component';
 import { MyflowComponent } from './personal-center/myflow/myflow.component';
-import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
+
 
 
 @NgModule({
