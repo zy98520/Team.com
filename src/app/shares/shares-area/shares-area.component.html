@@ -19,24 +19,125 @@
       <div id="ever" *ngFor="let comment of comments;let index=index;" class="col-xs-12 col-sm-10">
         <div class="col-xs-3" style="background:rgba(255,192,203,0.42); height:50px;">
           <span><i></i></span><span><p>{{comment.username}}</p><p>
-                            {{comment.sharedate}}</p></span></div>
-        <div class="col-xs-12 col-sm-10 " id="show"><p>{{comment.sharetext}}</p>
-          <p style="text-align: right"><span class="glyphicon glyphicon-thumbs-up" (click)="add(index)" id="praise">
-          </span><input type="button" id="num1" value={{comment.thum}}>
-            &nbsp; &nbsp; <span class="glyphicon glyphicon-pencil" (click)="display(index)"></span></p></div>
-        <div id={{comment.add}} class="col-xs-12 col-sm-10"  style="height:auto;min-height:0px;width:400px;">
+<div class="content">
+  <div class="row bigc">
+    <form #comForm="ngForm" class="form-horizontal">
+      <div class="text_div ">
+      <div class="row send_area"><textarea  name="com" id="comment" #com="ngModel" [(ngModel)]="_comment"
+                 class="col-xs-6  col-xs-offset-3 col-sm-6 col-sm-offset-3" cols="30" rows="5">
+       </textarea></div>
 
+        <div class="row" style="margin-top: 5px">
+          <div class="col-xs-2 col-xs-offset-7 col-md-1 col-md-offset-8 wen ">
+          <input type="file" style="margin-right:-40px">
+            <span style="font-size: 18px; margin-right: -40px" class="glyphicon glyphicon-picture pic font-size: 20px" aria-hidden="true"></span>
+         </div>
+          <div class="col-xs-1 col-md-1">
+          <div class="send" ><input class="send" id="btn1" (click)="sendshare(comForm)" type="button" value="发送"></div>
+          </div>
         </div>
-        <div *ngIf="comment.state" class="col-xs-12 col-sm-8">
-        <textarea name="backcom" id="backcom" class="col-xs-12 col-sm-6 col-sm-offset-3"
+
+        <div class="col-xs-12" style="height:50px;background-color: rgba(88,88,88,0.58);color:white;line-height: 50px;">    <div style="text-align: center">评论显示区</div></div>
+
+
+        <p style="text-align: right"><a (click)="refresh()" style="cursor: pointer">刷新</a></p></div>
+          <div class="col-lg-2" style="height: 600px;background-color: rgba(94,94,97,0.08)">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel " style="background-color: rgba(147,147,150,0.22) ;color:white ">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      我的收藏
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    笑死我了 拍的时候笑了N次场”我的秒拍作品，一起来看~
+                    <img src="../../../assets/index-img/pic2-1x.jpg"/></div>
+                </div>
+              </div>
+              <div class="panel" style="background-color: rgba(147,147,150,0.22) ;color:white ">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    我的赞
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    hhf 今天我买了一件新衣服
+                    <img  src="../../../assets/index-img/pic1-1.jpg"/></div>
+                </div>
+              </div>
+              <div class="panel " style="background-color: rgba(147,147,150,0.22) ;color:white ">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                     我的转发
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <div class="col-lg-8 " id="container">
+        <div id="ever" *ngFor="let comment of comments;let index=index;" class="col-xs-12 col-sm-12">
+          <div class="col-xs-3" style="background:rgba(255,255,255,0.65); height:50px;">
+            <span class="col-xs-2"><i><img class="img-circle" src="../../../assets/index-img/pic2-2.jpg" height="30" width="30"/></i></span><span><p>{{comment.username}}</p><p>
+                            {{comment.sharedate}}</p></span></div>
+          <div class="col-xs-12 col-sm-12 " id="show"><p>{{comment.sharetext}}</p>
+            <div class="pics">
+              <div class="row">
+                <div class="col-xs-6 col-md-3">
+                  <a  class="thumbnail">
+                    <img src="../../../assets/shares_images/shares1.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <a  class="thumbnail">
+                    <img src="../../../assets/shares_images/shares2.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <a  class="thumbnail">
+                    <img src="../../../assets/shares_images/shares3.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                  <a  class="thumbnail">
+                    <img src="../../../assets/shares_images/shares4.jpg" alt="...">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <p style="text-align: right"><span class="glyphicon glyphicon-thumbs-up" (click)="add(index)" id="praise">
+          </span><input type="button" id="num1" value={{comment.thum}}>
+              &nbsp; &nbsp; <span class="glyphicon glyphicon-pencil" (click)="display(index)"></span></p></div>
+          <div id={{comment.add}} class="col-xs-12 col-sm-10" style="height:auto;min-height:0px;width:400px;">
+
+          </div>
+          <div *ngIf="comment.state" class="col-xs-12 col-sm-8 review_area ">
+        <textarea name="backcom" id="backcom" class="col-xs-12 col-sm-6 col-sm-offset-3 "
                   #comback="ngModel" [(ngModel)]="_commentback"></textarea>
-          <input type="button" name="backcom" value="发送" (click)="backsend(index,comForm)" class="btn">
-          <input type="button" value="取消" (click)="cancel(index)" class="btn">
+            <div class="review_btn">
+              <button type="button" name="backcom" (click)="backsend(index,comForm)" class="btn">发送</button>
+              <button type="button"  (click)="cancel(index)" class="btn">取消</button>
+          </div>
+          </div>
+
         </div>
 
       </div>
+<div class="col-lg-2"></div>
 
-    </div>
-
-  </form>
+    </form>
+  </div>
 </div>
