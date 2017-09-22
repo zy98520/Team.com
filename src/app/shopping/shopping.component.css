@@ -38,7 +38,7 @@ position:relative;;
   border: 1px solid #C4C3C3;
   overflow:hidden;
   display: none;
-
+background-size:800px 1200px;
 }
 .right{
   width:500px;

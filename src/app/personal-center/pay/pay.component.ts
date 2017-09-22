@@ -16,6 +16,7 @@ export class PayComponent implements OnInit {
   x2=false;
   homeid:any;
   every:any;
+  arr3=['姑苏区','常熟市',];  arr1=['江苏','江西','山东'];  arr2=['苏州','南京','无锡'];
   constructor(
     private perSer: PersonalService,
     private router: Router,
@@ -29,47 +30,9 @@ export class PayComponent implements OnInit {
         that.address=result;
       }
     })
-    $(function () {
-      function objInt(obj) {
-        return $(obj).html('<option>请选择</option>');
-      }
-      var arrData={
-        江苏:{苏州:'姑苏区,常熟市',
-          上海:'1号,型号1-2-2'},
-        江西:{萍乡:'莲花县,上栗县',
-          宜春:'袁州区,高安市'},
-        山东:{济南:'长清区,天桥区',
-          青岛:'市北区,市南区'}
-      };
-      $.each(arrData,function(pro){
-        $('#province_id').append('<option>'+pro+'</option>');
-      });
-      $('#province_id').change(function(){
-        objInt('#city_id');
-        objInt('#area_id');
-        $.each(arrData,function(pro,pS){
-          if($('#province_id option:selected').text()==pro){
-            $.each(pS,function(city,are){
-              $('#city_id').append('<option>'+city+'</option>');
-            });
-            $('#city_id').change(function(){
-              objInt('#area_id');
-              $.each(pS,function(city,are){
-                if($('#city_id option:selected').text()==city){
-                  $.each(are.split(","),function(){
-                    $('#area_id').append('<option>'+this+'</option>');
-                  })
-                }
-              })
-            });
-          }
-        })
-      });
 
-    });
   }
   addhome(addForm){
-    alert(addForm.form.value.name);
     var form=addForm.form.value;
     var address=form.shen+form.city+form.qu;
     const body={'address':address,'you':form.you,'detail':form.detail,'name':

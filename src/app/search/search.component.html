@@ -1,5 +1,7 @@
-<ul *ngFor="let item of json;let index=index">
-  <li><img src="http://localhost:3000/images/{{item.goodspic}}" (click)="godetail(item.goodsid)"></li>
-  <li>MyLove时尚{{item.goodsname}}</li>
-  <li>￥{{item.goodsprice}} <span class="pra"><span id="{{index}}" class="xin"></span><span class="pra1">{{item.praise}}</span></span></li>
+<div class="col-sm-12 col-md-10 col-md-offset-1" style="min-height:500px">
+  <ul id="s" *ngFor="let item of res;let index=index">
+  <li ><img src="http://localhost:3000/images/{{item.goodspic}}" (click)="godetail(item.goodsid)"></li>
+  <li style="max-width:220px">MyLove时尚{{item.goodsname}}</li>
+  <li>￥{{item.goodsprice}}</li>
 </ul>
+</div>

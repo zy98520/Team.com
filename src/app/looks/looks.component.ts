@@ -20,6 +20,7 @@ export class LooksComponent implements OnInit {
     $(".text").mouseout(function () {
       $(".text").removeClass('animated'+ 'animated pulse')
     })
+    $(document).scrollTop(0);
   }
 
 }

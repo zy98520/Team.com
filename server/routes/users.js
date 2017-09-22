@@ -61,7 +61,9 @@ router.post('/showgirls', function(request, response, next) {
   });
 });
 router.post('/showloves', function(request, response, next) {
-  mysql.showlovessql(function (res) {
+  var start=request.body.start;
+  console.log(start);
+  mysql.showlovessql(start,function (res) {
     console.log(res);
     if (res.length ==0)
       response.json({"StateCode":0});
@@ -69,6 +71,7 @@ router.post('/showloves', function(request, response, next) {
     response.end();
   });
 });
+
 router.post('/showdetails', function(request, response, next) {
    var id=request.body.id1;
     console.log(id);

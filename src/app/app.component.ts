@@ -120,10 +120,7 @@ constructor(
   }
   search(f){
     let that = this;
-    const body={'word':f.form.value.search};
-    that.perSer.search(body, function (result) {
-      that.router.navigate(['/search',result]);
-      that.search1=result;
-    })
+    let word=f.form.value.search;
+    that.router.navigate(['/search',word]);
   }
 }

@@ -82,8 +82,8 @@ tu:any;back:any;
         console.log($img);
         img.onload = function () {
           URL.revokeObjectURL(url);
-          $('#preview1').empty().append($img);
           $('#preview').empty().append($img);
+          // $('#preview').empty().append($img);
         }
       }
 
@@ -113,7 +113,6 @@ tu:any;back:any;
   change(){
     const that = this;
     let lu=that.tu;
-    alert(lu);
     that.personSer.change({'tu':lu,'tel':sessionStorage.getItem('userId')},function (result) {
     })
   }

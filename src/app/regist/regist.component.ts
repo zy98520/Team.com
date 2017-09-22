@@ -28,10 +28,10 @@ export class RegistComponent implements OnInit {
     that.userSer.regist (reg.form.value, function (result) {
       if ( result.StateCode ==0){
         that.regist_res = '用户名已被注册！';
-      }else {
+      }else { that.regist_res = '';
         sessionStorage.setItem('userId', reg.form.value.userId);
-        sessionStorage.setItem('username', result[0].username);
-        // sessionStorage.setItem('icon','icon_default.jpg');
+        sessionStorage.setItem('username',reg.form.value.username);
+        sessionStorage.setItem('icon','icon_default.jpg');
         location.reload();
         alert( "注册成功");
         that.router.navigate(['/index']);

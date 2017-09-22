@@ -58,6 +58,7 @@
 #preview1{
   width:70px;
   height:70px;
+  margin-left: 28%;
 }
 .wallpaper ul{
   list-style: none;
@@ -126,7 +127,7 @@ margin-left:-12px;
   height: 150px;
   margin-top: 40px;
   margin-left:40px;
-  float: left;
+  float: left;text-align: center;
 }
 p{
   color: #FDFDFB;

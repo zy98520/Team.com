@@ -6,21 +6,23 @@ exports.sql={
     addUser:'insert into user(telephone,password,username,email) values(?,?,?,?)',
     addiconid:'call regist(?,@res)',
     createToken:'update user set token=? where telephone=?',
-    getUserIcon:'select user_icon.icon,user_icon.background from user inner join user_icon ON user.id=user_icon.user_id where user.telephone=? ',
+    getUserIcon:'select user_icon.icon,user_icon.background,username,telephone,email from user inner join user_icon ON user.id=user_icon.user_id where user.telephone=? ',
     addUserIcon:'call addUserIcon(?,?,@res)',
     changesql:'update user_icon set background=? where user_id=(select id from user where telephone=?)',
-
+    // getall:'call alls(?)',
 };
 exports.goodssql={
     getpic:'select goodspic,goodsid from usergoods limit ?,?',
   getpicg:'call girlsshow()',
-  getpicl:'call lovesshow()',
+  getpicl:'select * from usergoods limit ?,8',
+  search:'select * from usergoods where goodsname like ?',
     getAll:'SELECT * from usergoods where goodspic=?'
 }
 
 exports.comsql={
     insertcommend:'call insertcommend(?,?,@res)',
-    showcommend:'select * from share order by sharedate desc limit 5',
+    showcommend:'call commentshows()',
+
     insertback:'call insertback(?,?,?,@res)',
      addthum:'update share set thum=? where shareid=?',
     showdetail:'select * from usergoods where goodsid=?',

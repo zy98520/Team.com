@@ -22,6 +22,7 @@ import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.compo
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
 import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
+import { StartComponent } from './start/start.component';
 import { SearchComponent } from './search/search.component';
 
 
@@ -31,17 +32,25 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'start',
+    component: StartComponent
+  },
+  {
     path: 'regist',
     component: RegistComponent
   },
   {
-    path: 'index/:val',
+    path: 'index',
     component: IndexComponent
   },
   {
     path: 'loves',
   component: LovesComponent
 },
+  {
+    path: 'comment',
+    component: SharesComponent
+  },
   {
     path: 'fashion-week',
     component: FashionWeekComponent
@@ -103,12 +112,8 @@ const routes: Routes = [
     component: PaytoComponent
   },
   {
-    path: 'index',
-    component: IndexComponent
-  },
-  {
     path: '',
-    redirectTo: '/index/1',
+    redirectTo: '/start',
     pathMatch: 'full'
   },
   {

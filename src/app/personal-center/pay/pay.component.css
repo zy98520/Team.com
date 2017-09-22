@@ -95,6 +95,8 @@ body{
   margin-left:40px;
   margin-top:15px;
   position: relative;
+  float:left;
+
 }
 .name{
   margin-top:8px;

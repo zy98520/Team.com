@@ -25,7 +25,7 @@ export class SharesAreaComponent implements OnInit {
   ngOnInit() {
     let that = this;
     that.userSer.commentShow(function (result) {
-      that.comments= result;
+      that.comments= result[0];
     })
   }
   sendshare(comment) {
@@ -72,9 +72,9 @@ export class SharesAreaComponent implements OnInit {
     that.comments[index].add = index+'s';
     this.userSer.backComment(body, function ( result) {
       if(result.StateCode!==0){
-        $('#'+ index + 's').append(`<div id="backshow"><span>${result[0][0].backname}</span>:&nbsp;&nbsp;
+        $('#'+ index + 's').append(`<div id="backshow"><div><span>${result[0][0].backname}</span>:&nbsp;&nbsp;
                <span>${result[0][0].backtext}</span>&nbsp;&nbsp;
-                <span>${result[0][0].backdate}</span></div>`);
+                <span>${result[0][0].backdate}</span></div></div>`);
         that.comments[index].state=false;
       }else {
         alert('erro');

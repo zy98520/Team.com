@@ -12,13 +12,13 @@
     <div class="col-md-12 col-lg-12">
       <div class="big">
         <div class="first">
-          <div id="preview1"><img src="http://localhost:3000/uploads/icon/{{back[0].icon}}"></div>
-          <p id="suki">Wendy Suki<br>Web Designer</p>
+          <div id="preview1"><img src="http://localhost:3000/uploads/icon/15059672185510.561373803997431.jpeg"></div>
+          <p id="suki">{{back[0].username}}<br>Web Designer</p>
         </div>
         <div class="first">
           <h3>Contact</h3>
-          <p>1185745180@qq.com</p>
-          <p>15797717014</p>
+          <p>{{back[0].email}}</p>
+          <p>{{back[0].telephone}}</p>
           <p>Richmond.China</p>
         </div>
         <div class="first">
@@ -51,6 +51,7 @@
         <input type="file" id="upload_file"  name="user_icon">
     <div id="preview">
       <img src="http://localhost:3000/uploads/icon/{{back[0].icon}}" >
+
     </div>
       </form>
 </div>

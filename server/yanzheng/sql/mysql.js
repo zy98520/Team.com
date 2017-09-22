@@ -35,7 +35,8 @@ exports.regsql=function (tel,pass,name,email,callback) {
         }
         client.query('SELECT password from user where telephone=?',[tel], function (error, result) {
             try {
-                    if (result.password) {
+              console.log(result);
+              if (result.length>0) {
                         callback(0);
                         return;
                     }
@@ -92,6 +93,22 @@ var addUser=function (tel,pass,name,email) {
             client.release();
         })
     })
+}
+exports.all=function(telephone,callback) {
+  pool.getConnection(function (error,client) {
+    if(error){
+      return
+    }
+    client.query(sql.getall,[telephone],function (error,result) {
+      if(error) {
+        console.log(error.message+' from getpasswordbyid');
+        callback('e004');
+        return;
+      }
+      callback(result);
+      client.release();
+    })
+  })
 }
 exports.change=function(tu,tel,callback) {
   pool.getConnection(function (error,client) {
@@ -157,13 +174,27 @@ exports.showgirlssql=function (callback) {
     });
   });
 };
-exports.showlovessql=function (callback) {
+exports.showlovessql=function (start,callback) {
   pool.getConnection(function (error,client) {
     if(error){
       console.log(error.message);
       return;
     }
-    client.query(goodssql.getpicl,function (error,result) {
+    client.query(goodssql.getpicl,[start],function (error,result) {
+      if(error)
+      {callback('e005');}
+      callback(result);
+      client.release();
+    });
+  });
+};
+exports.searchsql=function (word,callback) {
+  pool.getConnection(function (error,client) {
+    if(error){
+      console.log(error.message);
+      return;
+    }
+    client.query(goodssql.search,['%'+word+'%'],function (error,result) {
       if(error)
       {callback('e005');}
       callback(result);

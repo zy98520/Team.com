@@ -77,16 +77,16 @@
               <span class="xinghao">*</span>
             </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select type="text" id="province_id" name="shen" #shen="ngModel"  [(ngModel)]="_shen">
-              <option>请选择</option>
+              <option *ngFor="let item of arr1">{{item}}</option>
             </select>
           </li>
           <li>
             市：&nbsp;&nbsp;
-            <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city"><option>请选择</option></select>
+            <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city"><option *ngFor="let item of arr2">{{item}}</option></select>
           </li>
           <li>
             区：&nbsp;&nbsp;
-            <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu"><option>请选择</option></select>
+            <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu"><option *ngFor="let item of arr3">{{item}}</option></select>
           </li>
         </ul>
       </div>
@@ -161,7 +161,7 @@
       </div>
 
     <ul class="cancel_address">
-      <input class="cancel_address_id" *ngIf=x1 [disabled]="!addForm.valid" type="button" value="确认地址" (click)="addhome(addForm)">
+      <input class="cancel_address_id" *ngIf=x1 type="button" value="确认地址" (click)="addhome(addForm)">
       <input class="cancel_address_id" type="button" *ngIf=x2 value="确认修改" (click)="update(addForm)">
       <input (click)="cancel()" id="cancel_address_id1"type="button" value="取消">
     </ul>

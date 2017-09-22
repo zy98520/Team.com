@@ -13,16 +13,20 @@ declare var $: any
   providers: [PersonalService],
 })
 export class SearchComponent implements OnInit {
-json:any;
+  res:any;
   constructor(
     private personSer: PersonalService,
     private router: Router,
     private route: ActivatedRoute,
   ) { }
   ngOnInit() {
-    this.json= this. route.snapshot.paramMap.get('json');
+    let that=this;
+    const json= this. route.snapshot.paramMap.get('json');
+    that.personSer.search({'word':json}, function (result) {
+      that.res=result;
+    })
   }
 godetail(id){
-  this.router.navigate(['/index',id]);
+  this.router.navigate(['/shopping',id]);
 }
 }

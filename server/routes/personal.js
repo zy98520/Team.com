@@ -7,8 +7,8 @@ var util=require('../yanzheng/server/util')
 var t = require('../yanzheng/chuli/test');
 var mysql=require('../yanzheng/sql/mysql');
 var formidable=require('formidable');
-//
-// var AVATAR_UPLOAD_FOLDER=require('../../src');
+
+var AVATAR_UPLOAD_FOLDER='/uploads/';
 var fs=require('fs');
 router.post('/upload', function (request, response, next) {
     var form = new formidable.IncomingForm();   //创建上传表单
@@ -39,7 +39,7 @@ router.post('/upload', function (request, response, next) {
             response.json({"stateCode":'e005'});
             return;
         } else{
-            form.uploadDir ="../../src/assets/icon/";   //设置上传目录
+            form.uploadDir ="../public"+AVATAR_UPLOAD_FOLDER+"icon/"; //设置上传目录
             form.keepExtensions = true;     //保留后缀
             form.maxFieldsSize = 2 * 1024;   //文件大小
             var avatarName = util.createUnique() + '.' + extName;
@@ -74,6 +74,18 @@ router.post('/getUserIcon', function (req, res, next) {
         }
     })
 });
+// router.post('/all', function (req, res, next) {
+//   var tel=req.body.tel;
+//   console.log(tel);
+//   mysql.all(tel,function (result) {
+//     console.log(result);
+//     if(result.length==0){
+//      res.json({"StateCode":0});
+//     }else {
+//       res.json(result);
+//     }
+//   })
+// });
 router.post('/change', function (req, res, next) {
   var tu=req.body.tu;
   var tel=req.body.tel;
@@ -86,6 +98,17 @@ router.post('/change', function (req, res, next) {
       res.json(result);
     }
   })
+});
+router.post('/search', function(request, response, next) {
+  var word=request.body.word;
+  console.log(word);
+  mysql.searchsql( word,function (res) {
+    console.log(res);
+    if (res.length ==0)
+      response.json({"StateCode":0});
+    else  response.json(res);
+    response.end();
+  });
 });
 router.post('/myshop', function (req, res, next) {
     var tel=req.body.tel;

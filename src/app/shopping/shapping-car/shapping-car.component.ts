@@ -83,12 +83,9 @@ none:any;or:[''];
     back(){
       this.router.navigate(['/personal-center']);
     }
-    // gopay (){let that=this;
-    // const body={'tel': sessionStorage.getItem('userId'),}
-    //   that.perSer.ordershow( function (result) {
-    //     if ( result.StateCode==0){that.none='空空如也~~~~';} else {
-    //     }
-    //   })
+    gopay (){
+      this.router.navigate(['/pay']);
+    }
     //   this.router.navigate(['/pay']);
     // }
 }
