@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../../services/users.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -10,7 +9,6 @@ declare var $: any;
   templateUrl: './shares-area.component.html',
   styleUrls: ['./shares-area.component.css'],
   providers: [UsersService],
-  // providers: [UsersService],
 })
 export class SharesAreaComponent implements OnInit {
   comments:any;
@@ -46,10 +44,10 @@ export class SharesAreaComponent implements OnInit {
       alert('你还未登陆，即将跳转至登录页面');
       that.router.navigate(['/login']); }
   }
+
   refresh () {
     location.reload();
   }
-
   display(index)
   {let comment=this.comments;
     comment[index].state='true';}

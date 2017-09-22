@@ -22,12 +22,17 @@ import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.compo
 import { PayComponent } from './personal-center/pay/pay.component';
 import { PaytoComponent } from './personal-center/payto/payto.component';
 import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
+import { StartComponent } from './start/start.component';
 
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'start',
+    component: StartComponent
   },
   {
     path: 'regist',
