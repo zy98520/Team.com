@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class PersonalService {
-  url: string = 'http://localhost:3000/personal';
+  url: string = 'http://10.40.4.78:3000/personal';
 
   constructor(private http: HttpClient) {
   }

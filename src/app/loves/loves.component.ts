@@ -45,7 +45,7 @@ show(index){
   that.userSer.showloves({'start':that.a[index]},function (result) {
     if ( result.StateCode == 0){
     }else {
-      that.loves=result;
+      that.loves=result[0];
     }
   })
 }

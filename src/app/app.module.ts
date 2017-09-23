@@ -43,6 +43,7 @@ import { PayComponent } from './personal-center/pay/pay.component';
 import {GlobalPropertyService} from './services/global-property.service';
 import { MyorderComponent } from './personal-center/myorder/myorder.component';
 import { MyflowComponent } from './personal-center/myflow/myflow.component';
+import { EditorComponent } from './editor/editor.component';
 
 
 
@@ -73,6 +74,7 @@ import { MyflowComponent } from './personal-center/myflow/myflow.component';
     PaytoComponent,
     SharesAreaComponent,
     StartComponent,
+    EditorComponent,
   ],
   imports: [
     BrowserModule,
