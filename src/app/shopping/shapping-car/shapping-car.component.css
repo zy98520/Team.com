@@ -1,6 +1,7 @@
 ul{list-style: none;
 }
 
+
 #comment_head{
   width:1375px;
   height:80px;
@@ -22,7 +23,6 @@ ul{list-style: none;
 #comment_head li{
   float: left;
   margin-left:0px;
-
   color: #FDFDFB;
 }
 .slideCircle{
@@ -61,135 +61,166 @@ ul{list-style: none;
   background-color: rgba(176, 176, 176, 0.51);
 }
 
-
 .top{
-  width:1360px;
-  height:100px;
-  margin-top:60px;
-  margin-left:-100px;
-}
-.center{
-  width:1360px;
-  height:110px;
-  padding-top:25px;
-  background-color: rgba(217, 217, 217, 0.33);
-  margin-left:-100px;
-  margin-top:20px;
-}
-#singlePrice_id{
-  margin-left:-20px;
-}
-.Line1 li{
-  float: left;
-  font-size:1em;
-  font-weight:600;
-  width:220px;
-  text-align: center;
+  width:1000px;
   height:60px;
-  margin-left:-10px;
-
-}
-.Line2 li{
-  float: left;
-  font-size:1em;
-  margin-left:-10px;
-  width:220px;
-  height:60px;
-  text-align: center;
+  margin-top:50px;
+  margin-left:65px;
 
 }
 .Line1{
-  width:1400px;
+  width:1000px;
   height:60px;
   line-height:60px;
   font-size:14px;
   background-color: rgba(217, 217, 217, 0.33);
 
 }
+.Line1 li{
+  font-weight:600;
+}
+
+.center{
+  width:998px;
+  height:100px;
+  margin-left:65px;
+}
+
+.Line2{
+  width:999px;
+  height:100px;
+  padding-top:22px;
+  border-bottom:1px solid gainsboro;
+  border-left:1px solid gainsboro;
+  border-right:1px solid gainsboro;
+}
+
+.Line1 li,.Line2 li{
+  float: left;
+  font-size:1em;
+  width:160px;
+  height:60px;
+  text-align: center;
+
+}
+.Line2 li{
+  margin-left:20px;
+  width:140px;
+}
+
+.del{
+  background-color: #FDFDFB;
+  border:1px solid gainsboro;
+  width:45px;
+  height:25px;
+}
+.del:hover{
+  background-color: pink;
+}
+#del_id{
+  width:60px;
+  height:40px;
+  border:1px solid grey;
+  background-color: white;
+  font-size: 16px;
+
+}
+.jia_jian{
+  width: 160px;
+  height: 80px;
+  float: left;
+  margin-left:20px;
+
+}
+
+#jian_id,#jia_id,#shuzi_id{
+  border:1px solid grey;
+  width:26px;
+  background-color: #FDFDFB;
+  height:26px;
+  text-align: center;
+}
+#price{
+  margin-left:-9px;
+}
+
+.bottom{
+  width:1000px;
+  height:60px;
+  margin-bottom:20px;
+  padding-top:5px;
+  margin-left:65px;
+  background-color: rgba(217, 217, 217, 0.33);
+
+}
+#quan_id_bottom{
+  margin-left:24px;
+}
+#total_del_id{
+  width:60px;
+  height:30px;
+  line-height: 30px;
+  border:1px solid gainsboro;
+  background-color: white;
+  font-size:12px;
+
+}
+#total_del_id:hover,#pay_id:hover{
+  background-color: rgba(255, 22, 17, 0.53);
+}
 .Line_bottom{
-  width:1400px;
+  width:1000px;
   height:60px;
   line-height:60px;
 }
 .Line_bottom li{
   float: left;
   font-size:1em;
-  margin-left:20px;
-  width:240px;
+  width:160px;
   height:60px;
-}
-.Line2{
-  width:1400px;
-  height:120px;
-}
-#del_id{
-  width:60px;
-  height:40px;
-  border:1px solid grey;
-  margin-left:55px;
-  background-color: white;
-  font-size: 16px;
-
-}
-
-.jia_jian{
-  width: 160px;
-  height: 80px;
-  float: left;
-  margin-left:35px;
-
-}
-#jian_id{
-  border:1px solid grey;
-  width:30px;
-  background-color: #FDFDFB;
-  height:30px;
-  margin-left: 34px;
-  text-align: center;
-}
-#jia_id,#shuzi_id{
-  border:1px solid grey;
-  width:30px;
-  background-color: #FDFDFB;
-  height:30px;
-  text-align: center;
-}
-.bottom{
-  width:1360px;
-  height:100px;
-  margin-left:-110px;
-  margin-bottom:40px;
-  padding-top:25px;
-  margin-top:65px;
-  background-color: rgba(217, 217, 217, 0.33);
-
-}
-
-#quan_id_bottom{
-  margin-left:70px;
-}
-#total_del_id{
-  width:60px;
-  height:40px;
-  line-height: 40px;
-  border: none;
-  background-color: white;
-  font-size:12px;
-
+  margin-left:30px;
 }
 .goods_num{
-  width:200px;
-  margin-left:80px;
+  width:150px;
 
 }
 #pay_id{
-  width:100px;
-  height:40px;
-  margin-left:50px;
-  margin-top:20px;
-  line-height:40px;
+  width:60px;
+  height:30px;
+  background-color: #FDFDFB;
   border:1px solid grey;
+  margin-top:5px;
+  line-height:30px;
+  margin-left:40px;
+
 }
-.pay{
+
+.bottom_left{
+  width:1000px;
+  height:60px;
+  line-height:60px;
+  margin-bottom:20px;
+  margin-left:65px;
+  color: #ff1611;
+  text-align: center;
+  background-color: rgba(255, 243, 186, 0.46);
+
+}
+.ys{
+  color: #ff1611;
+}
+.bottom_bot{
+  width:1100px;
+  height:400px;
+  margin-bottom:20px;
+  margin-left:28px;
+}
+.bottom_bot li{
+  width:200px;
+  height:400px;
   float: left;
+  margin-right:65px;
+}
+.pic{
+  margin-bottom: 20px;
 }

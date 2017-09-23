@@ -3,9 +3,9 @@
     <form #comForm="ngForm" class="form-horizontal">
       <div class="text_div ">
       <div class="row send_area">
-        <textarea  name="com" id="comment" #com="ngModel" [(ngModel)]="_comment"
-                 class="col-xs-6  col-xs-offset-3 col-sm-6 col-sm-offset-3" cols="30" rows="5">
-       </textarea></div>
+        <textarea  name="com" id="comment" #com="ngModel" [(ngModel)]="_comment" class="col-xs-6  col-xs-offset-3 col-sm-6 col-sm-offset-3" cols="30" rows="5">
+       </textarea>
+      </div>
 
         <div class="row" style="margin-top: 5px">
           <div class="col-xs-2 col-xs-offset-7 col-md-1 col-md-offset-8 wen ">
@@ -67,11 +67,17 @@
               </div>
             </div>
           </div>
+
       <div class="col-lg-8 " id="container">
         <div id="ever" *ngFor="let comment of comments;let index=index;" class="col-xs-12 col-sm-12">
           <div class="col-xs-3" style="background:rgba(255,255,255,0.65); height:50px;">
-            <span class="col-xs-2"><i><img class="img-circle" src="http://localhost:3000/uploads/icon/{{comment.icon}}" height="30" width="30"/></i></span><span><p>{{comment.username}}</p><p>
-                            {{comment.sharedate}}</p></span></div>
+            <span class="col-xs-2">
+              <i>
+              <img class="img-circle" src="http://localhost:3000/uploads/icon/{{comment.icon}}" height="30" width="30"/>
+              </i>
+            </span><span><p>{{comment.username}}</p><p>
+                            {{comment.sharedate}}</p>
+          </span></div>
           <div class="col-xs-12 col-sm-12 " id="show"><p>{{comment.sharetext}}</p>
             <div class="pics">
               <div class="row">
@@ -101,12 +107,10 @@
             <p style="text-align: right"><span class="glyphicon glyphicon-thumbs-up" (click)="add(index)" id="praise">
           </span><input type="button" id="num1" value={{comment.thum}}>
               &nbsp; &nbsp; <span class="glyphicon glyphicon-pencil" (click)="display(index)"></span></p></div>
-          <div id={{comment.add}} class="col-xs-12 col-sm-10" style="height:auto;min-height:0px;width:400px;">
+          <div id={{comment.add}} class="col-xs-12 col-sm-10" style="height:auto;min-height:0px;width:400px;"></div>
 
-          </div>
           <div *ngIf="comment.state" class="col-xs-12 col-sm-8 review_area ">
-        <textarea name="backcom" id="backcom" class="col-xs-12 col-sm-6 col-sm-offset-3 "
-                  #comback="ngModel" [(ngModel)]="_commentback"></textarea>
+        <textarea name="backcom" id="backcom" class="col-xs-12 col-sm-6 col-sm-offset-3 " #comback="ngModel" [(ngModel)]="_commentback"></textarea>
             <div class="review_btn">
               <button type="button" name="backcom" (click)="backsend(index,comForm)" class="btn">发送</button>
               <button type="button"  (click)="cancel(index)" class="btn">取消</button>

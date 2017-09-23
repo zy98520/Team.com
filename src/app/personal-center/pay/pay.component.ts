@@ -12,17 +12,39 @@ declare var $: any ;
 export class PayComponent implements OnInit {
   address:any;
   state1:any;
+  a:any;
+  b:any;
+  c:any;
+  d:any;
   x1=true;
   x2=false;
   homeid:any;
   every:any;
-  arr3=['姑苏区','常熟市',];  arr1=['江苏','江西','山东'];  arr2=['苏州','南京','无锡'];
+  // arr3=['姑苏区','常熟市',];  arr1=['江苏','江西','山东'];  arr2=['苏州','南京','无锡'];
+  shuzu={
+    'jiangsu':{
+       'suzhou':['姑苏区','常熟市'],
+      'nanjing':['南京区','南京市'],
+    },
+  'jiangxi':{
+    'pingx':['萍乡区','萍乡市'],
+    'yichun':['宜春区','宜春市']
+  }
+  };
   constructor(
     private perSer: PersonalService,
     private router: Router,
   ) { }
 
   ngOnInit() {
+     alert(this.shuzu[0]);
+    // this.b=Object.keys(this.shuzu.jiangsu);
+    this.b=Object.keys(this.a);
+    this.a=Object.keys(this.shuzu);
+    // this.b=Object.keys(this.a);;
+    alert(this.b);
+    this.c=this.shuzu.jiangsu.suzhou;
+
     let that=this;
     that.perSer.showhome({'tel':sessionStorage.getItem('userId')},function (result) {
       if ( result.StateCode==0) {

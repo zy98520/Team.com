@@ -28,3 +28,21 @@ a{cursor: pointer;}
   object-fit: cover;
 }
 ul{list-style: none;}
+#backshow{
+  min-height:40px;
+  width:867px;
+  text-align: left;
+  padding-top:10px;
+  background-color: rgba(163, 163, 163, 0.35);
+  border-top:1px solid #ffffff;
+  margin-left:-15px;
+}
+.a{
+  color:red;
+  font-size:18px;
+}
+#backshow p{
+  margin-left:35px;
+  margin-top:5px;
+}
+

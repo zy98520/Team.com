@@ -80,7 +80,6 @@ ul{
   background-color: #b0b0b0;
 }
 
-
 #head_id{
   width:1128px;
   height:70px;
@@ -98,6 +97,17 @@ ul{
   font-weight:400;
 
 }
+.cloth_time span{
+  float: left;
+}
+.djs{
+  width:60px;
+  height:20px;
+}
+.a1,.b,.c{
+  color: #ff1611;
+}
+
 #clothName_id{
   font-size:16px;
   font-weight: 600;

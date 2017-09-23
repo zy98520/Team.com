@@ -4,10 +4,6 @@
 .send_area{
   margin-top: 20px;
 }
-/*#big{*/
-  /*margin-left:auto;*/
-  /*margin-right: auto;*/
-/*}*/
 .bigc{
   margin-top: -20px;
 background-image:  url("../../../assets/personal_images/xq4.jpg");
@@ -34,7 +30,7 @@ background-color: #ffad8d;
 }
 .pics{
   min-width: 590px;
- max-width: 620px;
+  max-width: 620px;
   margin: 0 auto;
   min-height: 60px;
 }
@@ -87,5 +83,8 @@ text-align: center;
 }
 .pics a img{
   width: 200px;
-  height: 280px;
+  height: 240px;
 }
+
+
+
