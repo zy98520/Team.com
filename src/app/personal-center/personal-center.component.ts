@@ -54,6 +54,8 @@ tu:any;back:any;
     const that = this;
     that.showicon();
 
+
+
   }
 
   ngAfterContentInit(){

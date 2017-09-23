@@ -32,22 +32,23 @@
             <input class="quan" id="quan_id" name="quan" type="checkbox" (change)="quan(mes)">
             全选</li>
           <li>商品信息</li>
-          <li>单价(元)</li>
+          <li>&nbsp;单价(元)</li>
           <li>数量    </li>
           <li>小计(元)</li>
           <li>操作</li>
         </ul>
       </div>
-      <p></p>
+
       <div class="center" *ngFor="let mes1 of mes;let index=index">
-        <ul class="Line2"  id="line_id">
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ul class="Line2">
+          <li>&nbsp;&nbsp;
             <input id="{{index}}" name="dang" type="checkbox" (click)="dan(index)">
-            <img  src="http://localhost:3000/images/{{mes1.goodspic}}" height="70" width="41">
+            <img  src="http://owo22ooz3.bkt.clouddn.com/{{mes1.goodspic}}" height="60" width="60">
           </li>
           <li><a href="#">{{mes1.goodsname}}</a></li>
           <li id="singlePrice_id">{{mes1.goodsprice}}</li>
           <div class="jia_jian">
+            &nbsp;&nbsp;
             <input type="button" id="jian_id"  value="-" (click)="les(index)">
             <input type="text" id="shuzi_id" value={{mes1.shopsum}}>
             <input type="button" id="jia_id"  value="+" (click)="add(index)">
@@ -59,21 +60,72 @@
           </li>
         </ul>
       </div>
+
       <div class="bottom">
         <ul class="Line_bottom">
           <li>
-            <input class="quan" id="quan_id_bottom"  name="quan" type="checkbox" (change)="quan(mes)">
+            <input id="quan_id_bottom" name="quan" type="checkbox" (change)="quan(mes)">
             全选
           </li>
-          <li><input type="button" id="total_del_id" value="删除"></li>
+          <li><input type="button" id="total_del_id" value="批量删除"></li>
           <li >
-            <span class="goods_num">共有<span id="goods_num_id"></span>件商品</span>
+            <span class="goods_num">共有<span id="goods_num_id">1</span>件商品</span>
           </li>
           <li ><span class="sumPrice">总计￥:<span id="sumPrice_id">{{sum}}</span></span></li>
           <li>
-            <input type="button"  id="pay_id" (click)="gopay()" disabled value="去付款 &nbsp;>">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button"  id="pay_id" (click)="gopay()" disabled value="去付款">
           </li>
 
+        </ul>
+      </div>
+
+      <div class="bottom_left">
+        你可能会喜欢的衣服
+      </div>
+
+      <div class="bottom_bot">
+        <ul>
+        <li class="bot1">
+         <p class="pic"><img src="../../../assets/shopping-car-images/boys1.jpg" height="240" width="200"/></p>
+         <p>可爱小清新时尚潮流可爱超级无敌</p>
+         <p class="ys">RMB&nbsp;207.00</p>
+         <p>
+           <span>总销量：<span>10000</span></span>
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           <span>评价：<span>399</span></span>
+         </p>
+        </li>
+        <li class="bot2">
+          <p  class="pic"><img src="../../../assets/shopping-car-images/boys2.jpg" height="240" width="200"/></p>
+          <p>可爱小清新时尚潮流可爱超级无敌</p>
+          <p class="ys">RMB&nbsp;207.00</p>
+          <p>
+            <span>总销量：<span>10000</span></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>评价：<span>399</span></span>
+          </p>
+        </li>
+        <li class="bot3">
+          <p class="pic"><img src="../../../assets/shopping-car-images/boys3.jpg" height="240" width="200"/></p>
+          <p>可爱小清新时尚潮流可爱超级无敌</p>
+          <p class="ys">RMB&nbsp;207.00</p>
+          <p>
+            <span>总销量：<span>10000</span></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>评价：<span>399</span></span>
+          </p>
+        </li>
+        <li class="bot4">
+          <p class="pic"><img src="../../../assets/shopping-car-images/boys4.jpg" height="240" width="200"/></p>
+          <p>可爱小清新时尚潮流可爱超级无敌</p>
+          <p class="ys">RMB&nbsp;207.00</p>
+          <p>
+            <span>总销量：<span>10000</span></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>评价：<span>399</span></span>
+          </p>
+        </li>
         </ul>
       </div>
     </div>

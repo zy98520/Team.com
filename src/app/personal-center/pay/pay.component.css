@@ -156,12 +156,15 @@ ul{
   margin-top:-30px;
   clear: both;
 }
-
+#province_id{
+  border:1px solid darkgrey;
+}
 
 .main_address{
   width:800px;
   height:40px;
   margin-top:40px;
+  margin-left:37px ;
   margin-bottom:20px;
 }
 .main_address li{
@@ -387,12 +390,15 @@ a{cursor: pointer;}
   margin-top:17px;
 }
 .btn_goods{
-  border:none;
+  border:1px solid grey;
   width:90px;
   height:30px;
   margin-top:13px;
-  background-color:yellow;
+  background-color:white;
   margin-left:20px;
+}
+.btn_goods:hover{
+  background-color: pink;
 }
 
 

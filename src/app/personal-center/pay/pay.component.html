@@ -76,17 +76,19 @@
             <p  class="province">省:
               <span class="xinghao">*</span>
             </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select type="text" id="province_id" name="shen" #shen="ngModel"  [(ngModel)]="_shen">
-              <option *ngFor="let item of arr1">{{item}}</option>
+            <select type="text" id="province_id" name="shen" (click)="sh()" #shen="ngModel"  [(ngModel)]="_shen">
+              <option *ngFor="let item of a;let index=index">{{item}}</option>
             </select>
           </li>
           <li>
             市：&nbsp;&nbsp;
-            <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city"><option *ngFor="let item of arr2">{{item}}</option></select>
+            <select type="text" id="city_id" #city="ngModel" name="city" [(ngModel)]="_city">
+              <option *ngFor="let item of b">{{item}}</option></select>
           </li>
           <li>
             区：&nbsp;&nbsp;
-            <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu"><option *ngFor="let item of arr3">{{item}}</option></select>
+            <select type="text" id="area_id" #qu="ngModel"  [(ngModel)]="_qu" name="qu">
+              <option *ngFor="let item of c">{{item}}</option></select>
           </li>
         </ul>
       </div>
@@ -206,8 +208,6 @@
 
 
     </div>
-
-
 
 
     </div>
