@@ -10,9 +10,12 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
+
 mes: any ;
-n:any;
-tu:any;back:any;
+n:any;state:any;
+tu:any;back:any;statem:any;
+  state1:any;state2;
+regist_res: string;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
@@ -45,15 +48,38 @@ tu:any;back:any;
    this.tu =def;
    }
 
+  showm(){
+     this.statem=true;
+}
+hid(){
+  this.statem=false;
+}
 
-
+  toregist (reg) {
+  this.statem=false;}
+  //   let that = this;
+  //
+  //   that.userSer.regist (reg.form.value, function (result) {
+  //     if ( result.StateCode ==0){
+  //       that.regist_res = '用户名已被注册！';
+  //     }else { that.regist_res = '';
+  //       sessionStorage.setItem('userId', reg.form.value.userId);
+  //       sessionStorage.setItem('username',reg.form.value.username);
+  //       sessionStorage.setItem('icon','icon_default.jpg');
+  //       location.reload();
+  //       alert( "注册成功");
+  //       that.router.navigate(['/index']);
+  //     }
+  //
+  //   })
+  // }
   ngOnInit() {
      this.n=1;
     this.def1=this.shuzu[1][4];
     this.def=this.shuzu[0];
     const that = this;
     that.showicon();
-
+   this.statem=false;
   }
 
   ngAfterContentInit(){
@@ -115,6 +141,24 @@ tu:any;back:any;
     let lu=that.tu;
     that.personSer.change({'tu':lu,'tel':sessionStorage.getItem('userId')},function (result) {
     })
+  }
+  showb(){
+    this.state=true;
+  }
+  textname(){
+    this.state1=true;
+  }
+  textput(){
+    this.state2=true;
+  }
+  updaten(myForm){
+    this.state1=false;
+    this.back[0].username=myForm.form.value.username;
+  }
+  updaten1(myForm){
+    this.state2=false;
+    this.back[0].email=myForm.form.value.useremail;
+
   }
 }
 

@@ -72,28 +72,28 @@ export class GirlsComponent implements OnInit {
     }
     $('.tian').click (function () {
       clear();
-      scroll(520);
+      scroll(120);
     });
     $('.thin').click(function () {
       clear();
-      scroll(1650);
+      scroll(1250);
 
     });
     $('.wen').click(function () {
       clear();
-      scroll(2750);
+      scroll(2290);
     });
     $('.chang').click(function () {
       clear();
-      scroll(3800);
+      scroll(3350);
     });
     $('.qing').click(function () {
       clear();
-      scroll(4820);
+      scroll(4450);
     });
     $('.xia').click(function () {
       clear();
-      scroll(520);
+      scroll(120);
     });
     $(document).scrollTop(0);
 
