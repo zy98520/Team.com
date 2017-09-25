@@ -43,8 +43,10 @@
           <div class="serve">
             <span class="serve_left">客服:</span>
             <div class="serve_right">
-              <a target="_blank" href="http://amos.alicdn.com/getcid.aw?v=2&uid=wendy%E8%8B%8Fki&site=cntaobao&s=2&groupid=0&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=wendy%E8%8B%8Fki&site=cntaobao&s=2&charset=utf-8" alt="call me" title="call me" /></a>
-          </div>
+              <a target="_blank" href="http://amos.alicdn.com/getcid.aw?v=2&uid=wendy%E8%8B%8Fki&site=cntaobao&s=2&groupid=0&charset=utf-8">
+                <img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=wendy%E8%8B%8Fki&site=cntaobao&s=2&charset=utf-8" alt="call me" title="call me" />
+              </a>
+            </div>
           <div class="picture">
             <!--<div class="picture_right">颜色:</div>-->
             <div class="picture_right">
@@ -53,18 +55,18 @@
           </div>
           <div class="size">
             <div class="size_left">尺码:</div>
-            <input type="button" id="size_right_id" class="size_right" value="S" #btn (click)="size_click('#Szhijiao','block','S')">
-            <img id="Szhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
-            <input type="button" id="size_right_id1" class="size_right" value="M" #btn1  (click)="size_click('#Mzhijiao','block','M')">
-            <img id="Mzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
-            <input type="button" id="size_right_id2" class="size_right" value="L" #btn  (click)="size_click('#Lzhijiao','block','L')">
-            <img id="Lzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"/>
+            <input type="button" id="size_right_id" class="size_right" value="S" (click)="size_click(1)">
+            <img id="Szhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15" *ngIf='gou1==1' >
+            <input type="button" id="size_right_id1" class="size_right" value="M" #btn1  (click)="size_click(2)">
+            <img id="Mzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"  *ngIf='gou1==2'>
+            <input type="button" id="size_right_id2" class="size_right" value="L" #btn  (click)="size_click(3)">
+            <img id="Lzhijiao" src="../../assets/shopping_images/gou.png" height="15" width="15"  *ngIf='gou1==3'>
 
           </div>
           <div class="number">
             <div class="number_left">数量:</div>
             <input type="button" id="number_right_id" class="number_right" value="-" #btn (click)="numClick()" >
-            <input type="text" id="number_center_id" class="number_center" value="1">
+            <input type="text" class="number_center" value="1">
             <input type="button" id="number_right_id1" class="number_right" value="+" #btn (click)="numClick2()">
           </div>
           <div class="purchase">
@@ -97,9 +99,9 @@
           </div>
           <div class="payment"></div>
         </div>
-        <div class="cpm" id="cpm_id">
+        <div class="cpm" id="cpm_id" *ngIf=xs>
           <div class="shop_infor">选择商品信息
-            <input id="cancel_id" class="cancel" type="button" value="X" #btn (click)="cel()">
+            <input id="cancel_id" class="cancel" type="button" value="X" (click)="cel()">
           </div>
 
           <div class="color">
@@ -110,11 +112,11 @@
           </div>
           <div class="size1">
             <div class="size_left1">尺码:</div>
-            <input type="button" id="size_right2_id1" class="size_right" value="S" #btn (click)="size_click1('#Szhijiao1','block','S')">
+            <input type="button" id="size_right2_id1" class="size_right" value="S" #btn (click)="size_click1()">
             <img id="Szhijiao1" src="../../assets/shopping_images/gou.png" height="15"  width="15">
-            <input type="button"  id="size_right2_id2" class="size_right" value="M"  (click)="size_click1('#Mzhijiao1','block','M')">
+            <input type="button"  id="size_right2_id2" class="size_right" value="M"  (click)="size_click2()">
             <img id="Mzhijiao1" src="../../assets/shopping_images/gou.png" height="15" width="15">
-            <input type="button" id="size_right2_id3" class="size_right" value="L"  (click)="size_click1('#Lzhijiao1','block','L')">
+            <input type="button" id="size_right2_id3" class="size_right" value="L"  (click)="size_click3()">
             <img id="Lzhijiao1" src="../../assets/shopping_images/gou.png" height="15" width="15">
 
           </div>

@@ -12,44 +12,32 @@ declare var $: any ;
 export class ShoppingComponent implements OnInit {
 detail:any;
 size1: any;
+gou1=1;
+  xs=false;
 n:any;
   constructor(
     private userSer: UsersService,
     private router: Router,
     private route: ActivatedRoute,
   ) {}
-  size_click(name, state, size ) {
-    $('#Szhijiao').css({'display': 'none'});
-    $('#Mzhijiao').css({'display': 'none'});
-    $('#Lzhijiao').css({'display': 'none'});
-    $(name).css({'display': state});
-    $('#Szhijiao1').css({'display': 'none'});
-    $('#Mzhijiao1').css({'display': 'none'});
-    $('#Lzhijiao1').css({'display': 'none'});
-    $(name+ '1' ).css({'display': state});
-   this.size1= size;
-  }
-  size_click1(name, state, size) {
-    $('#Szhijiao1').css({'display': 'none'});
-    $('#Mzhijiao1').css({'display': 'none'});
-    $('#Lzhijiao1').css({'display': 'none'});
-    $(name).css({'display': state});
-    this.size1= size;
+  size_click(n) {
+    this.gou1=n;
   }
 
+
   numClick() {
-    var num = $ ('#number_center_id').val();
+    var num = $ ('.number_center').val();
     num--;
     if (num >= 1) {
-      $('#number_center_id').val(num);
+      $('.number_center').val(num);
     }
-    $('#number_center_id2').val($('#number_center_id').val());
+    $('#number_center_id2').val($('.number_center').val());
   }
   numClick2() {
-    var num = $ ('#number_center_id').val();
+    var num = $ ('.number_center').val();
     num++;
-    $('#number_center_id').val(num);
-    $('#number_center_id2').val($('#number_center_id').val());
+    $('.number_center').val(num);
+    $('#number_center_id2').val($('.number_center').val());
   }
   numClick3() {
     var num = $ ('#number_center_id2').val();
@@ -64,11 +52,11 @@ n:any;
     $('#number_center_id2').val(num);
   }
   cel() {
-    $('#cpm_id').css({'display': 'none'});
+    this.xs=false;
   }
   pur(n) {
     let that=this;
-    $('#cpm_id').css({'display': 'block'});
+    that.xs=true;
     this.n = n;
   }
   ngOnInit() {

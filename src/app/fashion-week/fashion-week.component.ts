@@ -8,7 +8,9 @@ declare let $: any;
 })
 export class FashionWeekComponent implements OnInit {
 
-
+  street1=['street1.jpg','street2.jpg','street10.jpg','street3.jpg','street5.jpeg',
+    'street8.jpg','street6.jpeg','street4.jpg','street9.jpg',
+    'street11.jpg','street13.jpg','street7.jpeg'];
   newyok= [['lun1', 'lun2', 'lun3', 'lun4', 'lun5', 'lun6', 'lun7', 'lun8'], [ 'lun11', 'lun12',
   'lun13', 'lun14', 'lun15', 'lun16', 'lun9', 'lun10']];
   lundon= [['new1', 'new2', 'new3', 'new4', 'new5', 'new6', 'new7', 'new8'], [ 'new11', 'new12',

@@ -37,13 +37,9 @@ export class PayComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-     alert(this.shuzu[0]);
-    // this.b=Object.keys(this.shuzu.jiangsu);
+    this.b=Object.keys(this.shuzu.jiangsu);
     this.b=Object.keys(this.a);
     this.a=Object.keys(this.shuzu);
-    // this.b=Object.keys(this.a);;
-    alert(this.b);
-    this.c=this.shuzu.jiangsu.suzhou;
 
     let that=this;
     that.perSer.showhome({'tel':sessionStorage.getItem('userId')},function (result) {
