@@ -72,9 +72,11 @@ export class SharesAreaComponent implements OnInit {
     that.comments[index].add = index+'s';
     this.userSer.backComment(body, function ( result) {
       if(result.StateCode!==0){
-        $('#'+ index + 's').append(`<div id="backshow"><div><span>${result[0][0].backname}</span>:&nbsp;&nbsp;
-               <span>${result[0][0].backtext}</span>&nbsp;&nbsp;
-                <span>${result[0][0].backdate}</span></div></div>`);
+        $('#'+ index + 's').append(`<div class="col-sm-12 col-md-8" id="backshow">
+              <span class="a">${result[0][0].backname}&nbsp;:</span>&nbsp;&nbsp;
+              <span>${result[0][0].backtext}</span>&nbsp;&nbsp;
+              <p class="b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${result[0][0].backdate}</p>
+              </div>`);
         that.comments[index].state=false;
       }else {
         alert('erro');

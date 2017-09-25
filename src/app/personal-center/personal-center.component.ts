@@ -10,7 +10,6 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
-
 mes: any ;
 n:any;state:any;
 tu:any;back:any;statem:any;
