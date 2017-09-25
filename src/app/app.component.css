@@ -27,6 +27,7 @@
 .ng4 a{
   color: #0b050e;
   font-weight: 400;
+  font-size: 14px;
 }
 .ng3 li a:hover{
   color: white;
