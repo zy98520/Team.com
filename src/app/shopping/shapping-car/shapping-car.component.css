@@ -82,7 +82,7 @@ ul{list-style: none;
 
 .center{
   width:998px;
-  height:100px;
+  min-height:105px;
   margin-left:65px;
 }
 
