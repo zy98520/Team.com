@@ -6,6 +6,19 @@
   z-index:3;
 
 }
+.edit{
+  z-index: 101;
+  color: white;
+  float: right;
+  position: relative;
+  top: 40px;
+  left: 10px;
+  font-size: 14px;
+}
+.edit:hover{
+  color: #d6d6d6;
+  cursor: pointer;
+}
 .big_con{
   height:990px;
   width:1400px;

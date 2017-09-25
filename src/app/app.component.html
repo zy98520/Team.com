@@ -65,7 +65,7 @@
       <ul class="free">
         <li class="header"><a class="dock-keleyi-com">固定</a><a class="undock">隐藏</a></li>
         <div *ngIf=!tel>你还没有登陆呢~~~</div>
-        <div *ngIf= tel><li><img class="img-circle" src="http://localhost:3000/uploads/icon/{{icon}}" width="100px"height="110px"></li>
+        <div *ngIf= tel><li><img class="img-circle" src="http://owo22ooz3.bkt.clouddn.com/{{icon}}" width="100px"height="110px"></li>
         <li>用户名：<span>{{name}}</span></li></div>
         <li><button>我的订单</button></li>
       </ul>
@@ -75,7 +75,7 @@
         <li class="header"><a class="dock-keleyi-com">固定</a><a class="undock">隐藏</a></li>
         <li>我的购物车</li><div  *ngIf=tel>
         <li *ngFor="let item of mes">
-          <span><img width="80" height="120" (click)="goshop()" src="http://localhost:3000/images/{{item.goodspic}}"></span>
+          <span><img width="80" height="120" (click)="goshop()" src="http://owo22ooz3.bkt.clouddn.com/{{item.goodspic}}"></span>
           <span style="width: 80px;height: 50px;display: inline-block">{{item.goodsname}}</span>
         </li>
       </div>

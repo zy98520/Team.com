@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule}  from '@angular/common/http';
-
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { PayComponent } from './personal-center/pay/pay.component';
 import {GlobalPropertyService} from './services/global-property.service';
 import { MyorderComponent } from './personal-center/myorder/myorder.component';
 import { MyflowComponent } from './personal-center/myflow/myflow.component';
+import { RepeatPasswordDirective } from './repeat-password.directive';
 
 
 
@@ -74,9 +75,11 @@ import { MyflowComponent } from './personal-center/myflow/myflow.component';
     PaytoComponent,
     SharesAreaComponent,
     StartComponent,
+    RepeatPasswordDirective,
 
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

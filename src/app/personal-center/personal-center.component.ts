@@ -10,10 +10,11 @@ declare var $: any
   providers: [PersonalService]
 })
 export class PersonalCenterComponent implements OnInit {
-
 mes: any ;
-n:any;
-tu:any;back:any;statem:any;  regist_res: string;
+n:any;state:any;
+tu:any;back:any;statem:any;
+  state1:any;state2;
+regist_res: string;
   constructor(private personSer: PersonalService,
               private router: Router) {
   }
@@ -139,6 +140,24 @@ hid(){
     let lu=that.tu;
     that.personSer.change({'tu':lu,'tel':sessionStorage.getItem('userId')},function (result) {
     })
+  }
+  showb(){
+    this.state=true;
+  }
+  textname(){
+    this.state1=true;
+  }
+  textput(){
+    this.state2=true;
+  }
+  updaten(myForm){
+    this.state1=false;
+    this.back[0].username=myForm.form.value.username;
+  }
+  updaten1(myForm){
+    this.state2=false;
+    this.back[0].email=myForm.form.value.useremail;
+
   }
 }
 

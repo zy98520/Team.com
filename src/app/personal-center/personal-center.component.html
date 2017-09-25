@@ -4,8 +4,13 @@
   <div class="row">
 
     <div id="big">
-    <div class="col-md-12 col-lg-12">
-      <div class="big">
+      <div class="edit" (click)="showb()">编辑资料 <span class="glyphicon glyphicon-edit"></span></div>
+
+      <div class="col-md-12 col-lg-12">
+        <form class="form-horizontal" #myform="ngForm">
+
+        <div class="big">
+
         <div class="first">
           <div id="preview1"><img src="http://owo22ooz3.bkt.clouddn.com/15059672185510.561373803997431.jpeg"></div>
           <p id="suki">{{back[0].username}}<br>Web Designer</p>
@@ -73,9 +78,83 @@
 
         </div>
 
+          <!--<div id="preview1"><img src="http://owo22ooz3.bkt.clouddn.com/15059672185510.561373803997431.jpeg"></div>-->
+          <!--<p id="suki">{{back[0].username}}-->
+          <!--<input *ngIf=state1 name="username" (keyup.enter)="updaten(myform)" (blur)="updaten(myform)" type="text" class="form-control tel" #username="ngModel"  [(ngModel)]="_username" placeholder="用户名" required>-->
+          <!--&nbsp;<span *ngIf=state class="glyphicon glyphicon-pencil bian" (click)="textname()"></span></p>-->
+          <!--<p>Web Designer</p>-->
+          <!--<p (click)="showm()" style="margin-top: -5px">修改密码</p>-->
+
+          <!--<div *ngIf="statem" class="animated zoomIn" style="z-index: 4;border-radius: 15px ;position: absolute;width: 400px;height: 400px;left: 180px;box-shadow: 1px 1px 10px 3px #5e5e5e;background-color: rgba(232,236,255,0.93)" >-->
+            <!--<form class="form-horizontal" #myForm="ngForm" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded">-->
+
+                  <!--<h4 style="margin-top: 40px;margin-bottom: 30px">修改密码</h4>-->
+
+                <!--<div class="pa" style="text-align: center;color: black">-->
+                  <!--<div class="form-group" style="color: black">当前密码:&nbsp;-->
+                    <!--<input type="password" class="form-control tel" #pass="ngModel" minlength="6"  [(ngModel)]="_password" id="password" name="userPassword" placeholder="原始密码" required>-->
+                  <!--</div>-->
+                  <!--<div class="control-group ">-->
+                  <!--<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"-->
+                       <!--class="tel1" style="margin-left: 40px">-->
+                    <!--<div *ngIf="pass.errors.required">-->
+                      <!--<span class=" fa fa-minus-circle"></span>密码不能为空-->
+                    <!--</div>-->
+                    <!--<div *ngIf="pass.errors.minlength">-->
+                      <!--<span class=" fa fa-minus-circle"></span>密码大于六位数！-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="form-group" style="color: black"> 新密码: &nbsp; &nbsp;-->
+                    <!--<input type="password" class="form-control tel" #pass1="ngModel" minlength="6"  [(ngModel)]="_password1" id="password1" name="userPassword" placeholder="新密码" required>-->
+                  <!--</div>-->
+                  <!--<div class="control-group ">-->
+                    <!--<div *ngIf="pass1.invalid && (pass1.dirty || pass1.touched)"-->
+                         <!--class="tel1">-->
+                      <!--<div *ngIf="pass1.errors.required">-->
+                        <!--<span class=" fa fa-minus-circle"></span>密码不能为空-->
+                      <!--</div>-->
+                      <!--<div *ngIf="pass1.errors.minlength">-->
+                        <!--<span class=" fa fa-minus-circle"></span>密码大于六位数！-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash;<div class="form-group col-md-12 col-lg-12">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label style="display: inline" class="control-label " for="userPassword2">确认密码</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div style="color: black" >&ndash;&gt;-->
+                      <!--&lt;!&ndash;<input type="password" id="userPassword2" #pass2="ngModel" [(ngModel)]="_password2" class="form-control tel"  placeholder="确认密码">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--<div style="color: black">确认密码:&nbsp;-->
+                    <!--<input type="password" id="userPassword2" #pass2="ngModel" [(ngModel)]="_password2" class="form-control tel"  placeholder="确认密码">-->
+                  <!--</div>-->
+                  <!--<div class="control-group ">-->
+                    <!--<div *ngIf="pass2.invalid && (pass2.dirty || pass2.touched)"-->
+                         <!--class="tel1">-->
+                      <!--<div *ngIf="pass2!==pass">-->
+                        <!--<span class=" fa fa-minus-circle"></span>两次密码不一致！-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+
+                <!--</div> </form>-->
+                  <!--&lt;!&ndash;<button class="btn btn-default" style="margin-bottom: 10px" data-dismiss ='modal' (click)="hid()">确认</button>&ndash;&gt;-->
+                 <!--&lt;!&ndash;<button class="btn btn-default" style="margin-bottom: 10px" data-dismiss ='modal' (click)="hid()">退出</button>&ndash;&gt;-->
+            <!--<button type="button" id="btnregist" class="login" (click)=" toregist(myForm)">确认</button>-->
+            <!--<button type="button"  class="login" style="margin-left: 20px" (click)=" hid()">退出</button>-->
+
+
+          <!--</div>-->
+
+        <!--</div>-->
+
         <div class="first">
           <h3>Contact</h3>
-          <p>{{back[0].email}}</p>
+          <p>{{back[0].email}}
+            <input *ngIf=state2 id="email" name="useremail" (keyup.enter)="updaten1(myform)" (blur)="updaten1(myform)" type="text" class="form-control tel" pattern="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$" #email="ngModel" [(ngModel)]="_email" placeholder="邮箱" required >
+
+            <span *ngIf=state class="glyphicon glyphicon-pencil bian" (click)="textput()"></span>
+          </p>
           <p>{{back[0].telephone}}</p>
           <p>Richmond.China</p>
         </div>
@@ -98,6 +177,7 @@
           <p class="sencond1">Follow my behance<br>listen</p>
         </div>
       </div>
+        </form>
   </div>
     <div class="col-md-12 col-lg-12">
     <h2 class="center">About Me</h2>

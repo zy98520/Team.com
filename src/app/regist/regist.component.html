@@ -1,100 +1,149 @@
 <div  class="col-md-12 login-bg">
   <div routerLink="/index" class="logo3"><img src="../../assets/looks-loves-img/logo3.png"></div>
   <div class="login1">
-  <div class="row col-md-5 ">
-    <form class="form-horizontal" #myForm="ngForm" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded">
-      <div class="form-group  col-lg-12 col-md-12" >
-        <label for="userId01" class="control-label col-lg-2">Telephone</label>
-        <div class="col-lg-12 col-md-12">
-          <input type="text" class="form-control tel" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="userId01" name="userId" placeholder="手机号" required>
-        </div>
-      </div>
-      <div class="control-group col-md-12 col-lg-12">
-        <div><p>{{regist_res}}</p></div>
-        <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
-             class="tel1">
-          <div *ngIf="tel.errors.required">
-            <span class=" fa fa-minus-circle"></span>号码不能为空
-          </div>
-          <div *ngIf="tel.errors.pattern">
-            <span class=" fa fa-minus-circle"></span>号码格式不正确
+    <div class="row col-md-5 ">
+      <form [formGroup]="registerForm" class="form-horizontal" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded" >
+
+        <div class="form-group col-lg-12 col-md-12" >
+          <label for="userId01">Telephone:</label>
+          <input class="form-control tel" type="text" id="userId01"  name="userId" formControlName="tel" required>
+          <!-- 可以通过表单的onValueChanged事件，读到当前的错误信息，写到指定字段里 -->
+          <div *ngIf="formErrors.tel" class="error tel1">
+            <span class=" fa fa-minus-circle"></span>{{ formErrors.tel }}
           </div>
         </div>
-      </div>
-      <div class="form-group col-lg-12 col-md-12">
-        <label class=" control-label  col-lg-2" for="usePassword">password</label>
-        <div class="col-lg-12 col-md-12">
-          <input type="password" minlength="6" id="usePassword" #pass="ngModel" class="form-control tel" [(ngModel)]="_password" name="userPassword" placeholder="密码" required>
+        <fieldset class="form-group col-lg-12 col-md-12" aria-required="true" formGroupName="passwordGroup" required>
+          <label for="usePassword">password:</label>
+          <input type="password" class="form-control tel" id="usePassword" name="userPassword" formControlName="password1" required (keyup)="password1ValChanged()"  >
+          <span *ngIf="formErrors['passwordGroup.password1']" class="error tel1">
+    <span class=" fa fa-minus-circle"></span>{{ formErrors['passwordGroup.password1'] }}
+    </span>
+          <label for="password2">checkpass:</label>
+          <input type="password" id="password2" class="form-control tel" name="password2" formControlName="password2" required>
+          <span *ngIf="formErrors['passwordGroup.password2']" class="error tel1">
+    <span class=" fa fa-minus-circle"></span>{{ formErrors['passwordGroup.password2'] }}
+  </span>
+        </fieldset>
+        <div>
+          <label for="userName">username:</label>
+          <!--给input设置一个本地变量，可以读取errors显示错误信息-->
+          <input type="text"  class="form-control tel" id="userName" name="username"  formControlName="userName" required>
+          <span *ngIf="formErrors['userName']" class="error tel1">
+    <span class=" fa fa-minus-circle"></span>{{ formErrors['userName'] }}
+    </span>
         </div>
-      </div>
-      <div class="control-group col-md-12 col-lg-12">
-        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
-             class="tel1">
-          <div *ngIf="pass.errors.required">
-            <span class=" fa fa-minus-circle"></span>密码不能为空
-          </div>
-          <div *ngIf="pass.errors.minlength">
-            <span class=" fa fa-minus-circle"></span>密码大于六位数！
-          </div>
-        </div>
-      </div>
-      <div class="form-group col-md-12 col-lg-12">
-        <label class="control-label  col-lg-2" for="userPassword2">checkpassword</label>
-        <div class="col-lg-12 col-md-12">
-          <input type="password" id="userPassword2" #pass2="ngModel" [(ngModel)]="_password2"  class="form-control tel"  placeholder="确认密码"  required>
-        </div>
-      </div>
-      <div class="control-group col-md-12 col-lg-12">
-        <div *ngIf="pass2.invalid && (pass2.dirty || pass2.touched)"
-             class="tel1">
-          <div *ngIf="pass2.errors.required">
-          <span class=" fa fa-minus-circle"></span>密码不能为空
-        </div>
-          <div *ngIf="pass2!==pass">
-            <span class=" fa fa-minus-circle"></span>两次密码不一致！
+          <label for="email">email:</label>
+          <input type="text"  class="form-control tel" id="email" name="userEmail" formControlName="email" required>
+          <!-- 可以通过表单的onValueChanged事件，读到当前的错误信息，写到指定字段里 -->
+          <div *ngIf="formErrors.email" class="error tel1">
+            <span class=" fa fa-minus-circle"></span>{{ formErrors.email }}
           </div>
 
-        </div>
-      </div>
-      <div class="form-group col-md-12 col-lg-12">
-        <label class="control-label col-lg-2" for="username">username</label>
-        <div class="col-lg-12 col-md-12">
-          <input type="text" #username="ngModel" id="username" #name="ngModel" [(ngModel)]="_username"  pattern="^1[34578]\d{9}$" name="username"  class="form-control tel"  placeholder="用户名" required >
-        </div>
-      </div>
-      <div class="control-group col-md-12 col-lg-12">
-        <div *ngIf="name.invalid && (name.dirty ||name.touched)"
-             class="tel1">
-          <div *ngIf="name.errors.required">
-            <span class=" fa fa-minus-circle"></span>用户名不能为空
-          </div>
-          <div *ngIf="name.errors.pattern">
-            <span class=" fa fa-minus-circle"></span>用户名输入有误！
-          </div>
-
-        </div>
-      </div>
-      <div class="form-group col-md-12 col-lg-12">
-        <label class="control-label  col-lg-2" for="age">Email</label>
-        <div class="col-lg-12 col-md-12">
-          <input type="text" id="age" pattern="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$" #age="ngModel" [(ngModel)]="_age"  class="form-control tel" name="userEmail" placeholder="邮箱" required >
-        </div>
-      </div>
-      <div class="control-group col-md-12 col-lg-12">
-        <div *ngIf="age.invalid && (age.dirty || age.touched)"
-             class="tel1">
-          <div *ngIf="age.errors.required">
-            <span class=" fa fa-minus-circle"></span>邮箱不能为空
-          </div>
-          <div *ngIf="age.errors.pattern">
-            <span class=" fa fa-minus-circle"></span>邮箱输入有误！
-          </div>
-
-        </div>
-      </div>
-      <button type="button" id="btnregist" (click)="toregist(myForm)" [disabled]="myForm.form.invalid" class="login" style="margin-left:185px">注册</button>
-    </form>
-    <div routerLink="/login" class="zhuce">已有账号，去登录>></div>
+        <button type="button" class="login" style="margin-left:185px" id="btnregist"
+                [disabled]="!registerForm.valid" (click)="toregist(registerForm)">注册</button>
+      </form>
+      <div routerLink="/login" class="zhuce">已有账号，去登录>></div>
+    </div>
   </div>
 </div>
-  </div>
+<!--<div  class="col-md-12 login-bg">-->
+  <!--<div routerLink="/index" class="logo3"><img src="../../assets/looks-loves-img/logo3.png"></div>-->
+  <!--<div class="login1">-->
+  <!--<div class="row col-md-5 ">-->
+    <!--<form class="form-horizontal" #myForm="ngForm" style="margin-top: 50px"  enctype="application/x-www-form-urlencoded">-->
+      <!--<div class="form-group  col-lg-12 col-md-12" >-->
+        <!--<label for="userId01" class="control-label col-lg-2">Telephone</label>-->
+        <!--<div class="col-lg-12 col-md-12">-->
+          <!--<input type="text" class="form-control tel" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone" id="userId01" name="userId" placeholder="手机号" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="control-group col-md-12 col-lg-12">-->
+        <!--<div><p>{{regist_res}}</p></div>-->
+        <!--<div *ngIf="tel.invalid && (tel.dirty || tel.touched)"-->
+             <!--class="tel1">-->
+          <!--<div *ngIf="tel.errors.required">-->
+            <!--<span class=" fa fa-minus-circle"></span>号码不能为空-->
+          <!--</div>-->
+          <!--<div *ngIf="tel.errors.pattern">-->
+            <!--<span class=" fa fa-minus-circle"></span>号码格式不正确-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;<fieldset ngModelGroup="passwordGroup" #passwordGroup="ngModelGroup" aria-required="true">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="password1">密码:</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="password" id="password1" name="password1" [(ngModel)]="formData.password1" #password1="ngModel"  required minlength="8">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="password2">重复密码:</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;使用自定义的校验器，加入repeatPassword指令，传入第一个密码输入框的ngModel,即用#password1="ngModel"声明的password1&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="password" id="password2" name="password2" [(ngModel)]="formData.password2" [repeatPassword]="password1">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span *ngIf="formErrors['passwordGroup.password2']" class="error">&ndash;&gt;-->
+      <!--&lt;!&ndash;{{ formErrors['passwordGroup.password2'] }} </span>&ndash;&gt;-->
+      <!--&lt;!&ndash;</fieldset>&ndash;&gt;-->
+      <!--<div class="form-group col-lg-12 col-md-12">-->
+        <!--<label class=" control-label  col-lg-2" for="usePassword">password</label>-->
+        <!--<div class="col-lg-12 col-md-12">-->
+          <!--<input type="password" minlength="6" id="usePassword" #pass="ngModel" class="form-control tel" [(ngModel)]="_password" name="userPassword" placeholder="密码" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="control-group col-md-12 col-lg-12">-->
+
+        <!--&lt;!&ndash;<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"&ndash;&gt;-->
+             <!--&lt;!&ndash;class="tel1">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div *ngIf="pass.errors.required">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span class=" fa fa-minus-circle"></span>密码不能为空&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div *ngIf="pass.errors.minlength">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span class=" fa fa-minus-circle"></span>密码大于六位数！&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--</div>-->
+      <!--<div class="form-group col-md-12 col-lg-12">-->
+        <!--<label class="control-label  col-lg-2" for="userPassword2">checkpassword</label>-->
+        <!--<div class="col-lg-12 col-md-12">-->
+          <!--<input type="password"  [repeatPassword]="pass" id="userPassword2"  #pass2="ngModel" [(ngModel)]="_password2" class="form-control tel"  placeholder="确认密码" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="control-group col-md-12 col-lg-12">-->
+        <!--&lt;!&ndash;<small [hidden]="pass2.valid ||  (pass2.pristine && !f.submitted)">&ndash;&gt;-->
+          <!--&lt;!&ndash;Password mismatch&ndash;&gt;-->
+        <!--&lt;!&ndash;</small>&ndash;&gt;-->
+        <!--<div *ngIf="pass2.invalid && (pass2.dirty || pass2.touched)"-->
+             <!--class="tel1"><span class=" fa fa-minus-circle"></span>两次密码不一致！-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group col-md-12 col-lg-12">-->
+        <!--<label class="control-label col-lg-2" for="username">username</label>-->
+        <!--<div class="col-lg-12 col-md-12">-->
+          <!--<input type="text" #username="ngModel" id="username" [(ngModel)]="_username" name="username"  class="form-control tel"  placeholder="用户名" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="control-group col-md-12 col-lg-12">-->
+        <!--<div *ngIf="username.invalid && (username.dirty || username.touched)"-->
+             <!--class="tel1">-->
+          <!--<div *ngIf="username.errors.required">-->
+            <!--<span class=" fa fa-minus-circle"></span>用户名 不能为空-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group col-md-12 col-lg-12">-->
+        <!--<label class="control-label  col-lg-2" for="age">Email</label>-->
+        <!--<div class="col-lg-12 col-md-12">-->
+          <!--<input type="text" id="age" pattern="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$" #age="ngModel" [(ngModel)]="_age"  class="form-control tel" name="userEmail" placeholder="邮箱" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="control-group col-md-12 col-lg-12">-->
+        <!--<div *ngIf="age.invalid && (age.dirty || age.touched)"-->
+             <!--class="tel1">-->
+          <!--<div *ngIf="age.errors.pattern">-->
+            <!--<span class=" fa fa-minus-circle"></span>邮箱输入有误！-->
+          <!--</div>-->
+          <!--<div *ngIf="age.errors.required">-->
+            <!--<span class=" fa fa-minus-circle"></span>邮箱不能为空-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<button type="button" id="btnregist" (click)="toregist(myForm)" class="login" style="margin-left:185px" [disabled]="!myForm.form.valid">注册</button>-->
+    <!--</form>-->
+    <!--<div routerLink="/login" class="zhuce">已有账号，去登录>></div>-->
+  <!--</div>-->
+<!--</div>-->
+  <!--</div>-->
