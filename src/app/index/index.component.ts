@@ -8,59 +8,63 @@ declare var $ :any;
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+hdp1=[{'pic':'m1.jpg','c':'c1'},{'pic':'m2.jpg','c':'c2'},{'pic':'m3.jpg','c':'c3'},{'pic':'m4.jpg','c':'c4'},{'pic':'m5.jpg','c':'c5'},{'pic':'paris_logo.jpg','c':'c3-logo'},{'pic':'m6.jpg','c':'c6'}];
+hdp2=[{'pic':'m2-1.jpg','c':'c1'},{'pic':'m2-2.jpg','c':'c2'},{'pic':'m2-3.jpg','c':'c3'},{'pic':'m2-4.jpg','c':'c4'},{'pic':'m2-5.jpg','c':'c5'},{'pic':'m2-6.jpg','c':'c6'},{'pic':'milan_logo.jpg','c':'c2-logo'}];
+hdp3=[{'pic':'m3-1.jpg','c':'c1'},{'pic':'m3-2.jpg','c':'c2'},{'pic':'m3-3.jpg','c':'c3'},{'pic':'m3-4.jpg','c':'c4'},{'pic':'m3-5.jpg','c':'c5'},{'pic':'lundon_logo.jpg','c':'c4-logo'},{'pic':'m3-6.jpg','c':'c6'}];
+hdp4=[{'pic':'m4-1.jpg','c':'c1'},{'pic':'m4-2.jpg','c':'c2'},{'pic':'m4-3.jpg','c':'c3'},{'pic':'m4-4.jpg','c':'c4'},{'pic':'m4-5.jpg','c':'c5'},{'pic':'m4-6.jpg','c':'c6'},{'pic':'newyork_logo.jpg','c':'c2-logo'}];
+lun=['1.jpg','2.jpg','3.jpg','4.jpg'];
 
   constructor(
     private router:Router,
   ) {}
   ngOnInit() {
-    $(function(){
-      var c = 0
-      function timer(){
+    $(function () {
+      var c = 0;
+      function timer() {
         c++;
-        c=(c==6)?0:c;
+        c = (c == 6) ? 0 : c;
         //获得序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       }
-      var time = setInterval(timer,3000);
-      $('.fl_s').hover(function(){
+      var time = setInterval(timer, 3000);
+      $('.fl_s').hover(function () {
         //清除定时器//显示图片
         clearInterval(time);
-        $('.ups').css({'display':'block'});
-      },function(){
+        $('.ups').css({'display': 'block'});
+      }, function () {
         //回调函数//恢复定时器//隐藏图片
-        $('.fl_s .ups').css({'display':'block'});
-        time = setInterval(timer,3000);
+        $('.fl_s .ups').css({'display': 'block'});
+        time = setInterval(timer, 3000);
       });
       //右单击
-      $('.fl_s .btn_right').click(function(){
+      $('.fl_s .btn_right').click(function () {
         c++;
-        c=(c==6)?0:c;
+        c = (c == 6) ? 0 : c;
         //获得的序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       });
       //左单击
-      $('.fl_s .btn_left').click(function(){
+      $('.fl_s .btn_left').click(function () {
         c--;
-        c=(c==0)?0:c;
+        c = (c == 0) ? 0 : c;
         //获得序号
         $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
         $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
       })
       //点击圆点变换
-      $('.fl_s .dos .dor a').hover(function(){
+      $('.fl_s .dos .dor a').hover(function () {
         //获得序号
         var n = $(this).index();
-
         $('.fl_s .tu img').eq(n).stop().show().siblings().hide();
-
         $('.fl_s .dos .dor a').eq(n).stop().addClass('dors').siblings().removeClass('dors');
       })
-    })
+    });
+
     var t;
     var index = 0;
-    t = setInterval(play, 3000)
+    t = setInterval(play, 3000);
     function play() {
       index++;
       if (index > 6) {
@@ -74,8 +78,8 @@ export class IndexComponent implements OnInit {
         "border": ""
       })
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-    };
-    $("#lunbobox ul li").hover(function() {
+    }
+    $("#lunbobox ul li").hover(function () {
       $(this).addClass("lito").siblings().removeClass("lito");
       $(this).css({
         "background": "#bababa",
@@ -85,13 +89,13 @@ export class IndexComponent implements OnInit {
       })
       var index = $(this).index();
       $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-    })
+    });
     $("#lunbobox ul li,.lunbo a img").hover(
-      function() {
+      function () {
         $('#toright,#toleft').show()
         clearInterval(t);
       },
-      function() {
+      function () {
         t = setInterval(play, 2000)
         function play() {
           index++;
@@ -106,7 +110,7 @@ export class IndexComponent implements OnInit {
           })
           $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
         }
-      })
+      });
     var i = 0;
     var imgWidth = $("#show-area ul li").width();
     var clone = $("#show-area ul li").first().clone();
@@ -114,11 +118,11 @@ export class IndexComponent implements OnInit {
     var size = $("#show-area ul li").length;//得到所有li的个数
     $("#button-left").click(function () {
       Toleft();
-    })
+    });
     //右按钮
     $("#button-right").click(function () {
       Toright();
-    })
+    });
     function Toleft() {
       i++;
       if (i == size) {
@@ -139,55 +143,38 @@ export class IndexComponent implements OnInit {
       // $("#controler div").eq(i).addClass("onclick").siblings().removeClass("onclick");
 
     }
-    $(function () {
-      var index=0;
-      var word;
-      word=$("#w").text();
-      setInterval(type, 300);
-      function type(){
-        var typePanel = $("#aa");
-        typePanel.html(word.substring(0,index++));
-        if(index==word.length-5)
-        { $("#w").text('');
-          index=0;}
 
-        if(index % 3 == 0){
-          typePanel.addClass("") ;
-        }else if(index % 3 == 1){
-          typePanel.addClass("saying") ;
+    $(function () {
+      var index = 0;
+      var word;
+      word = $("#w").text();
+      setInterval(type, 300);
+      function type() {
+        var typePanel = $("#aa");
+        typePanel.html(word.substring(0, index++));
+        if (index == word.length - 5) {
+          $("#w").text('');
+          index = 0;
+        }
+
+        if (index % 3 == 0) {
+          typePanel.addClass("");
+        } else if (index % 3 == 1) {
+          typePanel.addClass("saying");
         }
       }
-    })
-    $(".hit1").on("mouseenter",function() {
-
-      $("#share_txt1-1").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
-        .css("display","block")
-    })
-    $(".hit1").on("mouseleave",function() {
-
-      $("#share_txt1-1").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
-
-    })
-    $(".hit2").on("mouseenter",function() {
-
-      $("#share_txt1-2").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
-        .css("display","block")
-    })
-    $(".hit2").on("mouseleave",function() {
-
-      $("#share_txt1-2").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
-
-    })
-    $(".hit3").on("mouseenter",function() {
-
-      $("#share_txt1-3").css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
-        .css("display","block")
-    })
-    $(".hit3").on("mouseleave",function() {
-
-      $("#share_txt1-3").css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
-
-    })
+    });
+  }
+  a(name,name1) {
+    $(name).on("mouseenter", function () {
+      $(name1).css({height: "0", top: "100px"}).animate({height: "200px", top: "0"}, 800)
+        .css("display", "block")
+    });
+    $(name).on("mouseleave", function () {
+      $(name1).css({height: "200px", top: "0px"}).animate({height: "0", top: "100px"}, 800)
+    });
 
   }
+
+
 }

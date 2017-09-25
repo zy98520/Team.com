@@ -37,8 +37,6 @@
           <li><a><img src="../../assets/index-img/focusc.jpg"></a></li>
           <li><a><img src="../../assets/index-img/focuse.png"></a></li>
           <li><a><img src="../../assets/index-img/focusb.jpg"></a></li>
-          <!--<li><a><img src="../../assets/index-img/focusg.jpg"></a></li>-->
-          <!--<li><a><img src="../../assets/index-img/focush.jpg"></a></li>-->
         </ul>
         <div id="button-left" title="下一张" ><img src="../../assets/index-img/right.png"></div>
         <div id="button-right" title="上一张" ><img src="../../assets/index-img/left.png"></div>
@@ -95,10 +93,7 @@
         <div class="middle_right">
           <div id="lunbobox">
             <div class="lunbo">
-              <a ><img src="../../assets/index-img/1.jpg"></a>
-              <a ><img src="../../assets/index-img/2.jpg"></a>
-              <a ><img src="../../assets/index-img/3.jpg"></a>
-              <a ><img src="../../assets/index-img/4.jpg"></a>
+              <a *ngFor="let item of lun"><img src="../../assets/index-img/{{item}}"></a>
             </div>
             <ul>
               <li></li>
@@ -175,7 +170,6 @@
   </div>
 </div>
   <div class="col-md-12 head2"><img src="../../assets/index-img/head4.jpg"></div>
-
   <div class="fashion col-md-12">
     <div class="fashion1">
       <div class="model_title">
@@ -188,11 +182,26 @@
         </ul>
       </div>
       <ul class="fashionInfo1" >
-        <li class="img1"><img src="../../assets/index-img/part1.jpg"/><p><span>韩孝珠在《W-两个世界》里面的表现可圈可点，空气感刘海+经典的韩式妆容，让人大呼美丽。出道以来她出演的多部电影电视剧都获得不错的奖项，不会因为名利而改变自己MORE </span></p></li>
-        <li class="img2"><img src="../../assets/index-img/fashion-stars2.jpg" height="260" width="220"/><p><span>张天爱封面大片展完美LOOK 演绎婀娜攻气两种苏</span></p></li>
-        <li class="img2"><img src="../../assets/index-img/fashion-stars3.jpg" height="260" width="220"/><p><span>吴亦凡的国际影响力一直不容小觑吴亦凡EP《6》创7项纪录 史上最快突破百万专辑</span></p></li>
-        <li class="img3"><img src="../../assets/index-img/fashion-stars4.jpg" height="240" width="460"/><p><span>不惧盛夏高温，付辛博高温演绎雅痞风，在演员、演唱道路上稳扎稳打，不仅有颜，还颇有实力，自然也成为时尚界的宠儿。</span></p></li>
-        <li class="img4"><img src="../../assets/index-img/fashion-stars5.jpg" height="520" width="320"/><p><span>江铠同演绎时尚摩登的都市女郎特质，时而头发微乱，徜徉花海，尽显小女人的慵懒可爱。江铠同在《爱闪亮》的拍摄过程中，戏份重又太过投入，每天都累得精疲力尽，常常收工回去已经“目光呆滞”，朋友甚至戏谑江铠同“感觉不会再爱了”。</span></p></li>
+        <li class="img1">
+          <img src="../../assets/index-img/part1.jpg"/>
+          <p><span>韩孝珠在《W-两个世界》里面的表现可圈可点，空气感刘海+经典的韩式妆容，让人大呼美丽。出道以来她出演的多部电影电视剧都获得不错的奖项，不会因为名利而改变自己MORE </span></p>
+        </li>
+        <li class="img2">
+          <img src="../../assets/index-img/fashion-stars2.jpg" height="260" width="220"/>
+          <p><span>张天爱封面大片展完美LOOK 演绎婀娜攻气两种苏</span></p>
+        </li>
+        <li class="img2">
+          <img src="../../assets/index-img/fashion-stars3.jpg" height="260" width="220"/>
+          <p><span>吴亦凡的国际影响力一直不容小觑吴亦凡EP《6》创7项纪录 史上最快突破百万专辑</span></p>
+        </li>
+        <li class="img3">
+          <img src="../../assets/index-img/fashion-stars4.jpg" height="240" width="460"/>
+          <p><span>不惧盛夏高温，付辛博高温演绎雅痞风，在演员、演唱道路上稳扎稳打，不仅有颜，还颇有实力，自然也成为时尚界的宠儿。</span></p>
+        </li>
+        <li class="img4">
+          <img src="../../assets/index-img/fashion-stars5.jpg" height="520" width="320"/>
+          <p><span>江铠同演绎时尚摩登的都市女郎特质，时而头发微乱，徜徉花海，尽显小女人的慵懒可爱。江铠同在《爱闪亮》的拍摄过程中，戏份重又太过投入，每天都累得精疲力尽，常常收工回去已经“目光呆滞”，朋友甚至戏谑江铠同“感觉不会再爱了”。</span></p>
+        </li>
       </ul>
     </div>
     <!--秀场-->
@@ -202,26 +211,16 @@
           <div class="carousel-inner " role="listbox"  style="background-color: #fffcf9">
             <div class="item " style="background-color:#F3E6D5" >
               <div class="fashion2">
-                <a class="c1"><img src="../../assets/index-img/m1.jpg" height="540" width="360"/></a>
-                <a class="c2"><img src="../../assets/index-img/m2.jpg" height="540" width="360"/></a>
-                <a class="c3"><img src="../../assets/index-img/m3.jpg" height="540" width="360"/></a>
-                <a class="c4"><img src="../../assets/index-img/m4.jpg" height="540" width="360"/></a>
-                <a class="c5"><img src="../../assets/index-img/m5.jpg" height="540" width="360"/></a>
-                <a class="c3-logo"><img src="../../assets/index-img/paris_logo.jpg" ></a>
-                <a class="c6"><img src="../../assets/index-img/m6.jpg" height="540" width="360"/></a>
+                <a *ngFor="let item of hdp1" class={{item.c}}>
+                  <img src="../../assets/index-img/{{item.pic}}">
+                </a>
               </div>
               <div class="carousel-caption">
               </div>
             </div>
             <div class="item" style="background-color: rgba(0,0,0,0.99)" >
               <div class="fashion2">
-                <a class="c1"><img src="../../assets/index-img/m2-1.jpg" height="540" width="360"/></a>
-                <a class="c2"><img src="../../assets/index-img/m2-2.jpg" height="540" width="360"/></a>
-                <a class="c3"><img src="../../assets/index-img/m2-3.jpg" height="540" width="360"/></a>
-                <a class="c4"><img src="../../assets/index-img/m2-4.jpg" height="540" width="360"/></a>
-                <a class="c5"><img src="../../assets/index-img/m2-5.jpg" height="540" width="360"/></a>
-                <a class="c6"><img src="../../assets/index-img/m2-6.jpg" height="540" width="360"/></a>
-                <a class="c2-logo"><img src="../../assets/index-img/milan_logo.jpg" ></a>
+                <a *ngFor="let item of hdp2" class={{item.c}}><img src="../../assets/index-img/{{item.pic}}"></a>
               </div>
 
               <div class="carousel-caption">
@@ -230,13 +229,7 @@
             </div>
             <div class="item active" style="background-color:#ffffff" >
               <div class="fashion2">
-                <a class="c1"><img src="../../assets/index-img/m3-1.jpg" height="540" width="360"/></a>
-                <a class="c2"><img src="../../assets/index-img/m3-2.jpg" height="540" width="360"/></a>
-                <a class="c3"><img src="../../assets/index-img/m3-3.jpg" height="540" width="360"/></a>
-                <a class="c4"><img src="../../assets/index-img/m3-4.jpg" height="540" width="360"/></a>
-                <a class="c5"><img src="../../assets/index-img/m3-5.jpg" height="540" width="360"/></a>
-                <a class="c3-logo"><img src="../../assets/index-img/lundon_logo.jpg" ></a>
-                <a class="c6"><img src="../../assets/index-img/m3-6.jpg" height="540" width="360"/></a>
+                <a *ngFor="let item of hdp3" class={{item.c}}><img src="../../assets/index-img/{{item.pic}}"></a>
               </div>
 
               <div class="carousel-caption">
@@ -245,13 +238,7 @@
             </div>
             <div class="item" style="background-color: #3C3C3C" >
               <div class="fashion2">
-                <a class="c1"><img src="../../assets/index-img/m4-1.jpg" height="540" width="360"/></a>
-                <a class="c2"><img src="../../assets/index-img/m4-2.jpg" height="540" width="360"/></a>
-                <a class="c3"><img src="../../assets/index-img/m4-3.jpg" height="540" width="360"/></a>
-                <a class="c4"><img src="../../assets/index-img/m4-4.jpg" height="540" width="360"/></a>
-                <a class="c5"><img src="../../assets/index-img/m4-5.jpg" height="540" width="360"/></a>
-                <a class="c6"><img src="../../assets/index-img/m4-6.jpg" height="540" width="360"/></a>
-                <a class="c2-logo"><img src="../../assets/index-img/newyork_logo.jpg" ></a>
+                <a *ngFor="let item of hdp4" class={{item.c}}><img src="../../assets/index-img/{{item.pic}}"></a>
               </div>
 
               <div class="carousel-caption">
@@ -259,7 +246,6 @@
               </div>
             </div>
           </div>
-
           <!-- Controls -->
           <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -272,22 +258,25 @@
         </div>
       </div>
     </div>
-  <div class="col-md-12 head2"><img src="../../assets/index-img/head5.jpg">
-    <h2 routerLink="/shares" style="margin-left:150px;text-align: center">分享</h2></div>
+  <div class="col-md-12 head2">
+    <img src="../../assets/index-img/head5.jpg">
+    <h2 routerLink="/shares" style="margin-left:150px;text-align: center">分享</h2>
+  </div>
+
     <div class="col-md-12 share">
       <ul>
-        <li class="hit1"><img src="../../assets/index-img/index-cp.jpg"/>
+        <li class="hit1" (mouseenter)="a('.hit1','#share_txt1-1')"><img src="../../assets/index-img/index-cp.jpg"/>
           <div class="cen1">
             <div id="share_txt1-1" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
             绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
           </div>
 
         </li>
-        <li class="hit2"><img src="../../assets/index-img/share2.jpg"/> <div class="cen1">
+        <li class="hit2" (mouseenter)="a('.hit2','#share_txt1-2')"><img src="../../assets/index-img/share2.jpg"/> <div class="cen1">
           <div id="share_txt1-2" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
             绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
         </div></li>
-        <li class="hit3"><img src="../../assets/index-img/share3.jpg"/><div class="cen1">
+        <li class="hit3" (mouseenter)="a('.hit3','#share_txt1-3')"><img src="../../assets/index-img/share3.jpg"/><div class="cen1">
           <div id="share_txt1-3" class="share_txt1-1"><br><br> <br>城市璀璨星空下，总有相似的情节在悄悄上演。阳光男孩任嘉伦牵手个性女孩姚星彤，演
             绎那个勾起你我回忆的浪漫故事。的浪漫故事。当她遇见他，那次命中注定的初次邂逅，一见钟情的魔法就已在彼此心间点燃。...</div>
         </div></li>
@@ -303,7 +292,6 @@
           <div class="share-left"></div>
           <div class="share-right"></div>
           <img class="share-1" src="../../assets/index-img/pic2-1x.jpg"/>
-
           <img class="share-2" src="../../assets/index-img/pic2-1.jpg"/>
 
         </div>

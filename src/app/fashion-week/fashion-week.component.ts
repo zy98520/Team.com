@@ -67,19 +67,11 @@ export class FashionWeekComponent implements OnInit {
         }
       });
     }
-    // $(document).scrollTop()
-    // $(document).ready(function () {
-    //   $(window).scroll(function () {
-    //     if ($(window).scrollTop() >= 100) {
-    //      $('#wei').classList("animated flipInY");
-    //     }
-    //   });
-    // });
+
     var segmentWidth = 0;
     $("#container #content li").each(function(){
       segmentWidth+= $(this).outerWidth(true);
     });
-
     $("#container #content li").clone().appendTo($("#container #content"));
 
     run(50000);
@@ -99,32 +91,12 @@ export class FashionWeekComponent implements OnInit {
       run(time);
     });
     this.show(this.newyok);
-    $('#review1').mouseenter(function () {
-      $('#a').fadeIn(600);
-    });
-    $('#review1').mouseleave(function () {
-      $('#a').fadeOut(600);
-    });
-    $('#review3').mouseenter(function () {
-      $('#c').fadeIn(600);
-    });
-    $('#review3').mouseleave(function () {
-      $('#c').fadeOut(600);
-    });
-    $('#review5').mouseenter(function () {
-      $('#e').fadeIn(600);
-    });
-    $('#review5').mouseleave(function () {
-      $('#e').fadeOut(600);
-    });
-    $('#review6').mouseenter(function () {
-      $('#f').fadeIn(600);
-    });
-    $('#review6').mouseleave(function () {
-      $('#f').fadeOut(600);
-    });
-
-
+  }
+  b(name){
+      $(name).fadeIn(600);
+  }
+  f(name1){
+    $(name1).fadeOut(600);
   }
   public ying(): void {
     this.router.navigateByUrl('fashion-ying');
