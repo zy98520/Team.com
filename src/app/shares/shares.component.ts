@@ -11,6 +11,7 @@ declare var $: any;
 })
 export class SharesComponent implements OnInit {
   comments:any;
+  wz=true;
   constructor(
     private userSer: UsersService,
     private router: Router,
@@ -37,6 +38,10 @@ export class SharesComponent implements OnInit {
         $('.shares_content').addClass('test4').addClass('shares_content1');
       });
       $('.submit').click(function () {
+        $('.shares_content').removeClass('test4').removeClass('shares_content1');
+        $('.row').removeClass('test3');
+      });
+      $('.lose').click(function () {
         $('.shares_content').removeClass('test4').removeClass('shares_content1');
         $('.row').removeClass('test3');
       });
@@ -68,5 +73,7 @@ export class SharesComponent implements OnInit {
 
 
   }
-
+  qu(){
+    this.wz=false;
+  }
 }

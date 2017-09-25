@@ -200,7 +200,7 @@ body {
 .camera1{
   position: absolute;
   top:0px;
-  left:0px;
+  left:2px;
   opacity:0;
 }
 .camera{
@@ -278,31 +278,43 @@ body {
 }
 .shares_content_right input{
   margin-bottom:34px;
-  width:250px;
   text-align: center;
   border:1px solid #090404;
 
 }
 .clothes_types{
   margin-top:8px;
-  /*width:180px;*/
+  width:250px;
   height:40px;
 }
 .clothes_name{
-  /*width:200px;*/
+  width:250px;
   height:60px;
 }
 .clothes_price{
-  /*width:200px;*/
+  width:250px;
   height:60px;
 }
 .clothes_feeling{
-  /*width:200px;*/
+  width:250px;
   height:80px;
 }
 .submit{
   background-color: white;
-  width:40px;
+  width:100px;
+  height:35px;
+  margin-right:45px;
+}
+.submit:hover,.lose:hover{
+  background-color: pink;
+}
+.btn{
+  width:280px;
+  height:80px;
+}
+.lose{
+  background-color: white;
+  width:100px;
   height:35px;
 }
 
