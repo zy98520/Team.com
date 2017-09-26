@@ -16,11 +16,7 @@ import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.compone
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
 import { LoginComponent } from './login/login.component';
 import { RegistComponent } from './regist/regist.component';
-import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
-import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { PayComponent } from './personal-center/pay/pay.component';
-import { PaytoComponent } from './personal-center/payto/payto.component';
 import { SharesAreaComponent } from './shares/shares-area/shares-area.component';
 import { StartComponent } from './start/start.component';
 import { SearchComponent } from './search/search.component';
@@ -91,25 +87,10 @@ const routes: Routes = [
     path: 'search/:json',
     component: SearchComponent
   },
-  {
-    path: 'personal-center',
-    component: PersonalCenterComponent
-  },
+
   {
     path: 'shopping/:id',
     component: ShoppingComponent
-  },
-  {
-    path: 'shapping-car',
-    component: ShappingCarComponent
-  },
-  {
-    path: 'pay',
-    component: PayComponent
-  },
-  {
-    path: 'payto',
-    component: PaytoComponent
   },
   {
     path: 'index',

@@ -4,27 +4,47 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { PersonalCenterComponent } from './personal-center.component';
-import { ShappingCarComponent } from '../shopping/shapping-car/shapping-car.component';
-import { PayComponent } from '../personal-center/pay/pay.component';
-import { SearchComponent } from '../search/search.component';
+import { MyflowComponent } from './myflow/myflow.component';
+import { MyorderComponent } from './myorder/myorder.component';
+import { PayComponent } from './pay/pay.component';
+import { PaytoComponent } from './payto/payto.component';
+import { CenterComponent } from './center/center.component';
+import { ShappingCarComponent } from './shapping-car/shapping-car.component';
+
 const routes: Routes = [
 
   {
-    path: 'personal',
+    path: 'personal-center',
     component: PersonalCenterComponent,
     children: [
       {
-        path: 'upload',
-        component: PersonalCenterComponent,
+        path: '',
+        component: CenterComponent,
+      },
+      {
+        path: 'center',
+        component: CenterComponent,
       },
       {
         path: 'shapping-car',
         component: ShappingCarComponent,
       },
       {
-        path: 'getUserIcon',
-        component: PersonalCenterComponent,
+        path: 'payto',
+        component: PaytoComponent,
       },
+      {
+        path: 'myorder',
+        component:MyorderComponent,
+      },
+      {
+        path: 'myflow',
+        component: MyflowComponent,
+      },
+      // {
+      //   path: 'getUserIcon',
+      //   component: PersonalCenterComponent,
+      // },
 
       {
         path: 'pay',
@@ -39,5 +59,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PersonalRoutingModule {
+export class PersonalCenterRoutingModule {
 }

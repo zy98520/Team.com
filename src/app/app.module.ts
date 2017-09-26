@@ -26,12 +26,8 @@ import { FashionWeekComponent } from './fashion-week/fashion-week.component';
 import { FashionYingComponent } from './fashion-week/fashion-ying/fashion-ying.component';
 import { FashionWuComponent } from './fashion-week/fashion-wu/fashion-wu.component';
 import { FashionOuComponent } from './fashion-week/fashion-ou/fashion-ou.component';
-import { PersonalCenterComponent } from './personal-center/personal-center.component';
 import { ShoppingComponent } from './shopping/shopping.component';
-import { ShappingCarComponent } from './shopping/shapping-car/shapping-car.component';
-import { PaytoComponent } from './personal-center/payto/payto.component';
 import { StartComponent } from './start/start.component';
-import { PayComponent } from './personal-center/pay/pay.component';
 
 
 
@@ -41,15 +37,13 @@ import { PayComponent } from './personal-center/pay/pay.component';
 
 
 import {GlobalPropertyService} from './services/global-property.service';
-import { MyorderComponent } from './personal-center/myorder/myorder.component';
-import { MyflowComponent } from './personal-center/myflow/myflow.component';
 import { RepeatPasswordDirective } from './repeat-password.directive';
+import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 
 
 @NgModule({
   declarations: [
-    PayComponent,
     AppComponent,
     LooksComponent,
     IndexComponent,
@@ -64,14 +58,8 @@ import { RepeatPasswordDirective } from './repeat-password.directive';
     FashionYingComponent,
     FashionWuComponent,
     FashionOuComponent,
-    PersonalCenterComponent,
     ShoppingComponent,
-    ShappingCarComponent,
-    PersonalCenterComponent,
     RegistComponent,
-    MyorderComponent,
-    MyflowComponent,
-    PaytoComponent,
     SharesAreaComponent,
     StartComponent,
     RepeatPasswordDirective,
@@ -80,6 +68,7 @@ import { RepeatPasswordDirective } from './repeat-password.directive';
     ReactiveFormsModule,
     BrowserModule,
     FormsModule,
+    PersonalCenterModule,
     AppRoutingModule,
     HttpClientModule
   ],
