@@ -154,6 +154,7 @@ export class CenterComponent implements OnInit {
   }
   updaten1(myForm){
     this.state2=false;
+    this.state=false;
     this.back[0].email=myForm.form.value.useremail;
 
   }

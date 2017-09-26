@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule}  from '@angular/common/http';
-import { ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -37,7 +36,6 @@ import { StartComponent } from './start/start.component';
 
 
 import {GlobalPropertyService} from './services/global-property.service';
-import { RepeatPasswordDirective } from './repeat-password.directive';
 import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 
@@ -63,11 +61,9 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
     RegistComponent,
     SharesAreaComponent,
     StartComponent,
-    RepeatPasswordDirective,
 
   ],
   imports: [
-    ReactiveFormsModule,
     BrowserModule,
     FormsModule,
     PersonalCenterModule,
