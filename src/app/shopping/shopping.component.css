@@ -138,26 +138,22 @@ background-size:800px 1200px;
   position:absolute;
   left:565px;
   top:379px;
-  display:none;
 }
 #Mzhijiao{
   position:absolute;
   left:620px;
   top:379px;
-  display:none;
 }
 #Lzhijiao{
   position:absolute;
   left:675px;
   top:379px;
-  display:none;
 }
 
 .number{
   width: 200px;
   height:30px;
   margin-top:20px;
-  /*background-color: #0000ff;*/
 }
 .number_left{
   float:left;
@@ -186,7 +182,6 @@ background-size:800px 1200px;
   width:440px;
   height:50px;
   margin-top:20px;
-  /*background-color: #1eabff;*/
 }
 .purchase_left{
   width:150px;
@@ -208,7 +203,6 @@ background-size:800px 1200px;
   width:500px;
   height: 32px;
   margin-top:45px;
-  /*background-color: #1eabff;*/
 }
 .feature_left{
   float:left;
@@ -228,7 +222,6 @@ background-size:800px 1200px;
   width:530px;
   height:65px;
   margin-top:5px;
-  /*background-color: #ecff5b;*/
 }
 .promise_left{
   float:left;
@@ -343,7 +336,6 @@ background-size:800px 1200px;
   left: 490px;
   background-color: #ffffff;
   border:1px solid red;
-  display:none;
 }
 #Szhijiao1{
   position:absolute;

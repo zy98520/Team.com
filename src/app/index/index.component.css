@@ -63,8 +63,6 @@ img:hover{
   position: relative;
   top: -75px;
   left: 830px;
-  /*right: 350px;*/
-  /*bottom: 35px;*/
 }
 .dor{
   width: 440px;
@@ -76,7 +74,6 @@ img:hover{
   height: 4px;
   width:30px;
   background: rgba(255, 255, 255, 0.67);
-  /*border-radius: 10px;*/
   margin-right: 5px;
   display: inline-block;
   cursor: pointer;
@@ -85,12 +82,9 @@ img:hover{
 .dor .dors{
   width: 30px;
   height: 4px;
-  /*border-radius: 10px;*/
   margin-bottom: -4px;
   position: relative;
   top: -4px;
-  /*line-height:30px;*/
-  /*border: 3px solid ;*/
   background-color: #b99422;
 }
 body{
@@ -191,7 +185,6 @@ a{
 
 }
 .hot li{
-  /*margin-left: 20px;*/
   padding-top: 20px;
   line-height: 30px;
   width: 345px;
@@ -374,7 +367,7 @@ a{
   margin-top: -100px;
 }
 .love3-bottom{
-  /*margin-left: 20px;*/
+
   margin-top: 30px;
 }
 .saying{
@@ -386,21 +379,16 @@ a{
   background: none;
   padding-left: 0;
   overflow-x: hidden;
-  /*max-width: 522px;*/
+
 }
 .saying:after {
   content: "_";
   color:#465765;
   font-size: 18px;
   line-height:60px;
-  /*display: inline-block;*/
-  /*vertical-align: baseline;*/
-  /*opacity: 1;*/
   animation: caret 500ms infinite;
 }
-pre{
-  /*padding-left: 0;*/
-}
+
 .fashion1{
   width: 100%;
   height: 635px;
@@ -547,6 +535,15 @@ pre{
   width: 100%;
   height: 100%;
 }
+.c1 img,.c2 img,.c3 img,.c4 img,.c5 img,.c6 img{
+  height:540px;
+  width:360px;
+}
+.c3-logo img,.c2-logo img,.c4-logo img{
+  width:272px;
+  height:300px;
+
+}
 .c1{width: 292px;
   height: 440px;
   left: 85px;
@@ -591,9 +588,13 @@ pre{
   left: 85px;
   top: 644px;
 }
-.c3-logo{
+.c4-logo{
   left: 855px;
   top: 84px;
+}
+.c3-logo{
+  left:900px;
+  top:0px;
 }
 .share{
   text-align: center;

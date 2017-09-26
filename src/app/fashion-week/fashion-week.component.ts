@@ -8,7 +8,9 @@ declare let $: any;
 })
 export class FashionWeekComponent implements OnInit {
 
-
+  street1=['street1.jpg','street2.jpg','street10.jpg','street3.jpg','street5.jpeg',
+    'street8.jpg','street6.jpeg','street4.jpg','street9.jpg',
+    'street11.jpg','street13.jpg','street7.jpeg'];
   newyok= [['lun1', 'lun2', 'lun3', 'lun4', 'lun5', 'lun6', 'lun7', 'lun8'], [ 'lun11', 'lun12',
   'lun13', 'lun14', 'lun15', 'lun16', 'lun9', 'lun10']];
   lundon= [['new1', 'new2', 'new3', 'new4', 'new5', 'new6', 'new7', 'new8'], [ 'new11', 'new12',
@@ -65,19 +67,11 @@ export class FashionWeekComponent implements OnInit {
         }
       });
     }
-    // $(document).scrollTop()
-    // $(document).ready(function () {
-    //   $(window).scroll(function () {
-    //     if ($(window).scrollTop() >= 100) {
-    //      $('#wei').classList("animated flipInY");
-    //     }
-    //   });
-    // });
+
     var segmentWidth = 0;
     $("#container #content li").each(function(){
       segmentWidth+= $(this).outerWidth(true);
     });
-
     $("#container #content li").clone().appendTo($("#container #content"));
 
     run(50000);
@@ -97,32 +91,12 @@ export class FashionWeekComponent implements OnInit {
       run(time);
     });
     this.show(this.newyok);
-    $('#review1').mouseenter(function () {
-      $('#a').fadeIn(600);
-    });
-    $('#review1').mouseleave(function () {
-      $('#a').fadeOut(600);
-    });
-    $('#review3').mouseenter(function () {
-      $('#c').fadeIn(600);
-    });
-    $('#review3').mouseleave(function () {
-      $('#c').fadeOut(600);
-    });
-    $('#review5').mouseenter(function () {
-      $('#e').fadeIn(600);
-    });
-    $('#review5').mouseleave(function () {
-      $('#e').fadeOut(600);
-    });
-    $('#review6').mouseenter(function () {
-      $('#f').fadeIn(600);
-    });
-    $('#review6').mouseleave(function () {
-      $('#f').fadeOut(600);
-    });
-
-
+  }
+  b(name){
+      $(name).fadeIn(600);
+  }
+  f(name1){
+    $(name1).fadeOut(600);
   }
   public ying(): void {
     this.router.navigateByUrl('fashion-ying');

@@ -42,6 +42,7 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +64,7 @@ import {PersonalCenterModule} from './personal-center/personal-center.module';
     SharesAreaComponent,
     StartComponent,
     RepeatPasswordDirective,
+
   ],
   imports: [
     ReactiveFormsModule,

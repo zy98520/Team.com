@@ -46,58 +46,42 @@ export class GirlsComponent implements OnInit {
       }
     };
     $(window).scroll(Add_Data);
-    function scroll(s) {
-      let timer = null;
-      // var h = document.body.scrollTop;
-      timer = setInterval(function () {
-        if ($(document).scrollTop()==s){
-          clearInterval(timer);
-        }
-        else if ($(document).scrollTop() > s) {
-          $(document).scrollTop($(document).scrollTop()-10) ;
-        }
-        else if ($(document).scrollTop()<s){
-          $(document).scrollTop($(document).scrollTop()+10) ;
-        }
 
-      }, 1);
-    }
-    function clear() {
-      $('.tian').css('');
-      $('.thin').css('');
-      $('.wen').css('');
-      $('.chang').css('');
-      $('.qing').css('');
-      $('.xia').css('');
-    }
-    $('.tian').click (function () {
-      clear();
-      scroll(120);
-    });
-    $('.thin').click(function () {
-      clear();
-      scroll(1250);
 
-    });
-    $('.wen').click(function () {
-      clear();
-      scroll(2290);
-    });
-    $('.chang').click(function () {
-      clear();
-      scroll(3350);
-    });
-    $('.qing').click(function () {
-      clear();
-      scroll(4450);
-    });
-    $('.xia').click(function () {
-      clear();
-      scroll(120);
-    });
+
+
     $(document).scrollTop(0);
 
   }
+  clear() {
+  $('.tian').css('');
+  $('.thin').css('');
+  $('.wen').css('');
+  $('.chang').css('');
+  $('.qing').css('');
+  $('.xia').css('');
+}
+  h(shu){
+     this.clear();
+      this.scroll(shu);
+  }
+scroll(s) {
+  let timer = null;
+  // var h = document.body.scrollTop;
+  timer = setInterval(function () {
+    if ($(document).scrollTop()==s){
+      clearInterval(timer);
+    }
+    else if ($(document).scrollTop() > s) {
+      $(document).scrollTop($(document).scrollTop()-10) ;
+    }
+    else if ($(document).scrollTop()<s){
+      $(document).scrollTop($(document).scrollTop()+10) ;
+    }
+
+  }, 1);
+}
+
 godetail(id){
   let that=this;
   that.router.navigate(['/shopping',id] );

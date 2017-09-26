@@ -2,8 +2,6 @@
   <img  src="../../assets/images/fashion.jpg "  class="img-responsive"  >
 </div>
 
-
-
 <div>
   <div class="show_title col-lg-12 col-md-12 col-sm-12"><img class="img-responsive p1_title" src="../../assets/images/p1_tit.png"  ></div>
     <div class="btns ">
@@ -62,31 +60,32 @@
   </div>
 </div>
 
-
 <div class=" col-lg-12 col-lg-offset-3  col-md-12 col-md-offset-3 col-sm-12 col-sm-offset-2 show_review">
   <div class="review"><span>Show&秀评专栏Reviews</span></div>
 
 </div>
+
 <div class="container-fluid" style="clear: both">
   <div class="review_show" >
-    <div id="review1" >
+    <div id="review1" (mouseenter)="b('#a')" (mouseleave)="f('#a')" >
       <div id="a">有人说古老的米兰时装周已经新意不再，可我却认为它亮点不断。在米兰时装周开始的前一天晚上，我意识到自己需要变得更加随心所欲一些，去尝试以前一直想要尝试的发型。第二天一早我就已经置身Tommy（意大利最出色的发型师）的美发沙龙My Place Studio了，他和他的剪刀正在那儿等着我。只是改变了一下刘海，一个全新的Patricia就诞生了。</div>
     </div>
 
-    <div  id="review2" > <div id="b"><h3>Colin McDowell：巴黎时装周的起源</h3>
+    <div  id="review2"> <div id="b"><h3>Colin McDowell：巴黎时装周的起源</h3>
       如今，人们早已对巴黎、米兰、伦敦和纽约四大时装周习以为常。世界各地更是出现了许许多多的全新时装周。而作为行业内当之无愧的王者，巴黎时装周又是缘何而起呢？</div>
-      <div id="review3"><div id="c">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
+      <div id="review3" (mouseenter)="b('#c')" (mouseleave)="f('#c')" ><div id="c">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
         一切终于步入正轨：大衣几乎只在秀台上才能看到，在如此温暖的天气里，穿梭于大街小巷的我们都已卸去了厚重的“围裹”。</div>
       </div>
       <div id="review4"></div>
-      <div id="review5"><div id="e">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
+      <div id="review5" (mouseenter)="b('#e')" (mouseleave)="f('#e')"><div id="e">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
         一切终于步入正轨：大衣几乎只在秀台上才能看到，在如此温暖的天气里，穿梭于大街小巷的我们都已卸去了厚重的“围裹”。</div>
       </div>
-      <div id="review6"><div id="f">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
+      <div id="review6" (mouseenter)="b('#f')" (mouseleave)="f('#f')"><div id="f">巴黎时装周期间，空气中已经开始洋溢着春天的气息，还有比这更美好的时刻吗？
         一切终于步入正轨：大衣几乎只在秀台上才能看到，在如此温暖的天气里，穿梭于大街小巷的我们都已卸去了厚重的“围裹”。</div>
       </div>
     </div>
   </div>
+
   <div class="container" >
     <div class="street_title  ">
       <img src="../../assets/images/ti.jpg" class="img-responsive" >
@@ -94,18 +93,7 @@
     <div class="street" >
       <div id="container">
         <ul id="content">
-          <li><a href="#"> <img src="../../assets/images/street1.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street2.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street10.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street3.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street5.jpeg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street8.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street6.jpeg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street4.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street9.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street11.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street13.jpg" ></a></li>
-          <li><a href="#"> <img src="../../assets/images/street7.jpeg" ></a></li>
+          <li *ngFor="let item of street1"><a href="#"> <img src="../../assets/images/{{item}}" ></a></li>
         </ul>
       </div>
 
